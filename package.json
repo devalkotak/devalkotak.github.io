@@ -1,0 +1,33 @@
+{
+  "name": "devalkotak.github.io",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "content": "python scripts/build_content.py",
+    "content:inspect": "python scripts/inspect_content.py",
+    "content:check": "python scripts/inspect_content.py --strict",
+    "predev": "npm run content",
+    "dev": "next dev",
+    "build": "npm run content && next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^12.42.0",
+    "lucide-react": "^1.22.0",
+    "next": "14.2.35",
+    "react": "^18",
+    "react-dom": "^18",
+    "shiki": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

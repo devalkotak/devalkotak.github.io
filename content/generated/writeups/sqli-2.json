@@ -1,0 +1,21 @@
+{
+  "blocks": [],
+  "category": "Apprentice",
+  "date": "2026-04-09",
+  "id": "33d042e6-0b87-80bc-b265-deb5de247fae",
+  "properties": {
+    "Name": "SQLi - 2",
+    "Source": "Portswigger",
+    "Status": true,
+    "Tags": [
+      "SQLi"
+    ],
+    "Type": "Apprentice",
+    "URL": null
+  },
+  "slug": "sqli-2",
+  "tags": [
+    "SQLi"
+  ],
+  "title": "SQLi - 2"
+}

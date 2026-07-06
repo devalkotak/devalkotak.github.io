@@ -1,0 +1,2509 @@
+{
+  "blocks": [
+    {
+      "id": "340042e6-0b87-800e-b48d-e6402fb045f3",
+      "richText": [],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-807d-ae8d-c28401d1df51",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80ab-9ba5-ef21deafaddc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The goal is to login in to the game using SSH. The host is "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "bandit.labs.overthewire.org "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "on port number "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "2220"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ". The username is "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "bandit0"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and the password is "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "bandit0"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ". Once logged in go to Level 1 to find out how to beat Level 1"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-809f-9cd7-d59ac7974c87",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8041-8c18-ec4460d91526",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "To connect from linux using ssh use "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit1@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and you will be greeted by a welcome screen with rules and tips."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8094-ab55-c49151781315",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80ac-b9ac-d72ef6bcfe0b",
+          "type": "image",
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2d5f1900-4766-4243-8d4f-dc887fd03460/e2c27b91-4668-454f-965b-6332f598f25b/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB466XB5KAU5U%2F20260630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260630T092355Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJIMEYCIQDDs9yYB974qdarDYkrV9Za%2B8ZssGy841uu2N9S7RAoFQIhAOJ44u0kzgWlA%2BeP%2Bk95N09JaOQJmVzjUj8KphPf1dUGKogECML%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNjM3NDIzMTgzODA1IgwaGjy%2FZcPuuB3Bnkcq3AOrOxyT9zCuDni8lniGecQWPQ74Ne9OoCbdbkK0%2FGO8xhFzamn9kG2u0tM%2F4OzC6MnnEuqWcEE1GaBIXazyr3zBWXCrY8TE%2F1ZXd%2FWz85%2F2DxQhbGoZMi38JWUSF6riNdWO0BJdsQuOqXlixjleFE60yqCO0pUu8lOxPy7WIETDdpv4gN6zFSwaVA1cjZq9G2stu7M9TFPk5K8TE2Gcuf1pu5o9gauZGWJL9JRUCNp7eyKIMtuRgJUbDV3nKPwuo%2F3DCgHSdOD%2B6XxiM00Y2lWz9oYH3pFyz2cmQMLZCVyAqtnfEL7UU4pqyspv676xDcyD87p%2BW7yGr1o2Fftd6xAiPQ3iVS7KNLe7vwRQu2RYI4u4%2BonEdaX3VurrM0KeqUHxSzxB6MwD8RHxQNVHAeHp5TM7iSefUGLk2sz9KDMEBtnWJ4o48X9RgUqnaDRZwVAjDzG9gD4LzxQy1p%2FeoysuRZMrYeBF%2FqJd%2FD9plaU6Pg9OUW3%2F9Uj8%2FGcfs6fzE4b2inMnx6zwFEGm6tJ3dxwrhREd%2Baaa90lZS5wRPOAVMjFjz7s38tUcZeWe%2FXQq%2FgTasF5IH1iUzv3yJmHM31VRxeZunpLHrjXtLTOy24%2F7lXzaGbvg5RkCLnSZ8zChj47SBjqkAbvWiowy8QrPMb%2FmmFpWdCJhFuxh1asWfdWYyNsWMtnQSQZ8O6bub9ElX1Jqp9l48Sw9w7Zci%2Bp3yw8aB07oW6MNOEBFsNB7pcCz%2BWXKxnlnLXrWjNz3rymvYkd2bm85kiNF2VKEQuZqYviOdc5vgcQtHON1GTUqRcojMKd4iKToxVuk7jcjoy95b7tdcY1nyGsnPkdHl%2BJf7YsgFxpLlBPtEChI&X-Amz-Signature=d9fc0d5075d7ab9307b779dcbed937daa391d043c7c22782f8d999612b892336&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+        },
+        {
+          "id": "340042e6-0b87-80a6-a7eb-f5d790ed8e44",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lessons Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80c4-bdb7-c823281a31fb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://www.ssh.com/ssh/command/",
+              "italic": false,
+              "plainText": "ssh command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "340042e6-0b87-809b-86bf-f1cc734d599b",
+          "richText": [],
+          "type": "paragraph"
+        }
+      ],
+      "id": "340042e6-0b87-8068-8ade-d75d436dc76d",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 0"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-80f2-812f-c438c838c8af",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-802d-ac36-ce3f73f1c2cf",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in a file called readme located in the home directory. Use this password to log in to user "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "bandit1"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " on the same host and port."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80ac-b316-fb2c7cdf5540",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-809f-9f81-f289c95f49ad",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "When we ssh into the machine you will be placed in the home directory. We confirm that using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "pwd"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " . Then we use "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ls"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to list out our directory where we\u2019ll find a readme file. We use the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command to list out its content to find the password for our next level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80d3-91ba-d36b244f2af0",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80f0-9e9d-eade773c9e4c",
+          "type": "image",
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2d5f1900-4766-4243-8d4f-dc887fd03460/058570c0-2fb3-4e2d-9497-1b46ee16f972/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4662W4YN7JS%2F20260630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260630T092355Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIDzu4Lm0pskyZcS%2FfdzuiModKoflR4TA3NZDh6w1dizUAiAQzkQsh8iKqBcB%2FVhLj%2BtUnsZB9DAOasU%2BK4shm7ujQyqIBAjB%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMaNzRYBfDkORQfm3nKtwD49%2BfUpeEANw1y9M%2FIh%2FcNAp3TKcJx8iXi8SsQNU8fF8VtoL6bgIifk1T6HUrQ%2F54FMPd2%2BN29R6DD913inKy5vTRvXS4SZalQ%2F2X5AHOgFFzRpLeMXsJ75nnM%2FOkKWqPUUSnsaYIkX72sJ0%2Bp5uHZl5NCKPpTLKOQDCk3fqORrWLek5Gf8cfIaPIkN4wTLjuqXHnQmSGaO%2F0PYp93JitNFpI6nfHD09b2CXFQnEoV5vgJwPGew8m%2B%2Bn7RS48CmaPrDCYdt2tqCdRn9gWQXDWQkRYpS7DwZ5oCtun6sbFgUAqE4dQvKN9eBVTtrntZR2elwYaf81VhSWmrM%2F2uEyXx%2B0lj1%2FpxTZkVhq12HeO7sf98V7jKgtip1pokSHVMTAoCdRvIF2OvLpC%2Bi09Ifbyjg4U2iaK7I7od48wJXw1lUoHkXl0o3W%2BmovxEgqnYOQNT7vnOViy05wWApWB6a3C%2B%2BBTLSU%2FhqqhVd8Gtf%2FSYdyiOi%2B1iAAky3gSj0x5HjGThNIONntgOQUBngExJZ%2FrQiXYUaM8o2I0xu7UOMbyBilZaNfw9M%2Bid1tHeUQcp0vP16%2FaEVvD2MZPtphwZQrrEkhe9V6W6oODS0r%2BbMjcChmQ9cUizrEj7EiFLqUwluuN0gY6pgGiR4lg5TvWZZiKqaMGWhQCNYMoUdXAW8CfbuXfLde9vbZWQ1zOtJTdoU0JBtEQbz70cOyQ4xuVxwt3hGA1e6X6Z8I7LoLX3JmSSb00uNAXPdi6EOxLz9sl7d0uxYiEnSb%2BNxfIddOdoxxm9QKM8KThVXCwotQ%2FlF7kz3E%2FQUi9Jnj2Y9JEsV7%2Bs3F5NRj9iTVtcpfauiXKzv2Ky5hU%2FcoeC18FNlBU&X-Amz-Signature=35362dfc9c13b9606a53f108cf2fa404d548b1a3d310de5f1d5ad7ab0e8e36e3&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+        },
+        {
+          "id": "340042e6-0b87-80bb-ab72-d92333815ad9",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8068-82bf-c50f6f19727b",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80ab-a149-de93a5dc6b81",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8070-b5d4-f6ccee0175cc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://www.digitalocean.com/community/tutorials/basic-linux-navigation-and-file-management#viewing-files",
+              "italic": false,
+              "plainText": "Linux directory navigation basics"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "340042e6-0b87-8095-b247-ee9d8dd70fc3",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/cat.html",
+              "italic": false,
+              "plainText": "cat command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "340042e6-0b87-803b-a716-f78bb17e4f9a",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 0 \u2192 Level 1"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-807a-a735-cb39c74ea86f",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-801c-82b8-ed11d6381aa2",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in a files called \u201c-\u201d located in the home directory"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80b5-98cf-ec3353676d57",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80b4-b93e-d67b7931defd",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit1@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80a7-86ad-d84fcad6827e",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Similar to the last level, but the catch is password is stored in a file name which is \u201c-\u201d . In case of such special character based names and other special cases we need to reference the file using relative/absolute path. This is because \u201c-\u201d can be used to reference parameters with the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command (ex: "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat -h"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " )."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8032-a266-c65638279000",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80f2-a67f-dab94814a67a",
+          "type": "image",
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2d5f1900-4766-4243-8d4f-dc887fd03460/feed4ef3-268a-4944-9542-ae89df0efb45/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4667ZMI6S5R%2F20260630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260630T092356Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJGMEQCIELQStKLENwpvRrsVl87DQYRBljIQMt%2FZbN7hEaNXK9oAiBtObm3U6a2j6%2F3PF%2BAIWvumX7DZU82QksUSF3zQpt9hyqIBAjC%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDYzNzQyMzE4MzgwNSIMirc1M%2ByAMt1mU2mfKtwD2KwyGT5LWJWLNYS6HKMYxdr5ZV8sZ7feODlBtuOazkWa%2BzjBnW1q5HJUemTO%2FMPPOKcXdUYukjMlRhtRdPUT0yCSMnzZBseKR48yJ5IUfPMDF%2Bu5WcviOOMsMyeyFHMNcmob%2BhgHlkUgHEoVvm0XDC6VxM8YlD5ovvcYPcgSxqe6JHil%2FbIGrYkrPpasTkQEtXdOUas10%2FrU2jVt2AlcOq1jvkgt0s5zDLABT5JAc4pGcHplL5UFtCg2E76DKPlo4jXLTLywmwn3ZSqxi1PFM7nEmCWfPDAkVoOvh0wuggXWXnIcfr3oRo6pFyAOSQ2L29Yck8dsy4MjdoO%2BVIhnyGpib%2F5apeICjUmdfoodWD3MoN15vwE%2FStE2o4mc2TeFXOFOyh09Zcr7y2mIn4aYVP1xTKZYXC6%2F1jAeRyGdwgLgwEeUBOfewp25C%2FBM4TpEQHIvnRfcRroaGuXQgRsOmrHem%2FWZbrBNtm3rbyPM3nZRRh1wwTxCM6Sb1ElRkOGU24yMvyBXuHkDpzCG1wRykmBoQC%2F7Xt1HeHXfRAG3yseqlP8Y9gUCDFVWqo5TN2M1w%2FJVbyOWrliYAoTQdbO0MFN%2FfpneRglPgZt4P6ps8dq%2BLgE87ZtTztiZBRQwzY%2BO0gY6pgFkXKINZYBXaTjG4DsfetODxzAePkzXJaitivvWxXGVnnRE339xa1nLflBl1fkp%2BcUleVsjyXmF20JjVv75aW73kW8TFS%2BhHEuMgS2muVLOgPJQ1BBjnPrPgN5vJh74u7BfZhLwwsOLbRnJ4CJqU9wvoYeFz1xRxnvofnBRichzEU5h7HIkgw4CVY16HTSxJaTMzKTYlmzLmoacQbgRX1uPp6W5ZX3X&X-Amz-Signature=14492df99caf6075817a42c19581a08400f12d81554c99904dd593365d28a49d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+        },
+        {
+          "id": "340042e6-0b87-804b-b780-eb913537d6f3",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80da-98ce-fc6c8e2aff9b",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "263JGJPfgU6LtdEvgfWU1XP5yac29mFx"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80fa-b30e-ccbd0d0e3559",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8079-8322-f29c8b1979be",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://linux.die.net/abs-guide/special-chars.html",
+              "italic": false,
+              "plainText": "Advanced Bash-scripting Guide - Chapter 3 - Special Characters"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "340042e6-0b87-8080-8a3a-d98a53b8b34a",
+          "richText": [],
+          "type": "paragraph"
+        }
+      ],
+      "id": "340042e6-0b87-8052-899a-e8e9d5dc20a6",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 1 \u2192 Level 2"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-80ab-9013-c92c2298e636",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8017-9f92-c77069fb59ec",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in a file called\u00a0\u201d--spaces in this filename--\u201d located in the home directory"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80c1-8e7f-f67a92672392",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-807e-9ccf-fd641a2eed22",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit2@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8006-9b81-f18704bcc91d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Similar to the last level the file name has dashes and spaces in it in the home directory. When you try to cat out the filename as is, since there are dashes at the start and spaces in the name of the file, the command first assumes the dashes to be the start of a parameter (ex: "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat --help"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " )and then assumes each word separated by space to be a separate file (ex: "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat file1 file2"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " )."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80f9-8834-dabe8b152e30",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We hence use relative path once again and put the filename inside quotes so it can consider everything as a single filename. Alternatively we can us escape sequences ( "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "\\ "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " instead of "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": " "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " )."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80fe-a541-ded342c6f8b7",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8019-94f0-c79bf4ab95ac",
+          "type": "image",
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/2d5f1900-4766-4243-8d4f-dc887fd03460/e63a7fc6-41da-4c07-aa30-d334320619be/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAZI2LB4663GTDCPZD%2F20260630%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20260630T092357Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEPn%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLXdlc3QtMiJHMEUCIQDDHicg9YN5wYqTqbWehTHSkmlUabJbY0oviWgXE5C1sQIgLPj%2BNgzSKuadQBrb62%2B%2FG8oQ9fn8pjpd1b0e513YLOIqiAQIwv%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAAGgw2Mzc0MjMxODM4MDUiDFbpUJuRoTOMfvTGBCrcA6Xtn%2FUEU2QXlf1WEhhkVQnDJVmc4AKTiW83svpSHk9ly8O8dHK9xQiZ2lQt1HBScEy3RWIEgnKE8lAPBA6QGE0MNOBVWXfcAePvcI9or6KholhOFej06%2BTb%2FBNl79SVBbwxa7PtIJPK5MCEKhwe6pomjbFH8ki12aN8Hcjb5QlESGYtXuwIwsrSLHboB3r%2F%2B8A9i7%2FX0QkZTMqz62ELcnauvC82YGRSPz9%2BgF6Nbn7AIhKrCzpTWDdyQBXmjWyW2HQtq70wf2fDjvArZH9ER5MjgJUhEYhF0vTUorv6CNmn5e%2F5ys5AJqmvVx4qiE4Bu8IyrbUVAr6bkAkrOYnYHfu6d64LSvf16k1X1PsoT9SjK5A75MY6TmJRXgM3FFQP3BQDoNbokNCT5cADECEkY%2BC8iF1wkyN%2FZ8TFpqMHAQhF3hUpPO8VIQY6Ve4we02xHQlMBahjKhE9faxMYdjLC3ERwwGRjWsxnyjtx1KivYdvnFN1sqU2eSWPYRicH0uoibx3iqj531mL4ScIPAWDE5pRqfkFTeV6gfPQU8ilxuIlO2wKcMGNIZ0rMY1zgtpWiSV0Od8BdYaqTKEbbFY4Kg6AId1JWf7ptDn2C3Ecmt0mALRdSxJJA7qBdf3GMJOPjtIGOqUB7rBeGRChrCte2Mqm6Rd2BkCkt7%2BI7EPsDpEQAkNwU4N8Dbfd8g2sEdlIFapeSHbghgRrE%2FaIZ%2BB64b1567qUG7W3Jmk%2BK1ybmjePojnah0kZCzHtYAFZCV2rYljy186BbRT4NmdGYq0cG2ha0O6nJYDZBNg0SBF1yygOQ7Oce9Ar0bKXkG3dYtm6dsXfH975MNTHfxSjtWLVnD0eVX4AWWm3z4Y0&X-Amz-Signature=ccca894347e98432d15f136551c81ccfe60cf3d753dc7756fea52db5c6ec350d&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject"
+        },
+        {
+          "id": "340042e6-0b87-80c0-960d-e855928aa592",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80ca-88c4-dfbc19247ad7",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://www.tecmint.com/manage-linux-filenames-with-special-characters/",
+              "italic": false,
+              "plainText": "Dealing with Filenames with spaces/special characters"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "340042e6-0b87-800c-a224-f8303e0b540d",
+          "richText": [],
+          "type": "paragraph"
+        }
+      ],
+      "id": "340042e6-0b87-809f-aaba-e3d6d627f79f",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 2 \u2192 Level 3"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-80a4-a04e-e0b126d614c5",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80b4-99f9-c8e74d45af44",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in a hidden file in the \u201c"
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "inhere"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "\u201d directory"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80c4-94e7-ea61d3809b64",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8040-abaf-ffed74a71808",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit3@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8081-be8d-e134b1751cab",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We navigate into the inhere directory. On using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ls"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " we don\u2019t find anything in it. We use "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ls -la"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to list of all files including hidden ones. We find a file named \u201c.hidden\u201d which gives us the password for the next level when we "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " it out."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80be-88e3-c539cb1913db",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-806c-ae6b-eb698847077f",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80d9-a502-f9301b2a88d5",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-808f-9db8-cc45605479ca",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8041-91f8-e1206d86c9be",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80a2-b4b5-cd74081a1f94",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://www.tecmint.com/manage-linux-filenames-with-special-characters/",
+              "italic": false,
+              "plainText": "Dealing with Filenames with spaces/special characters"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "340042e6-0b87-8081-a2b9-ec67d35affe5",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 3 \u2192 Level 4\u2026\u2026"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "340042e6-0b87-8014-9bbf-e2879d687203",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8031-9f77-f6c7782ba810",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in the only human-readable file in the\u00a0\u201d"
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "inhere\u201d"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "\u00a0directory. Tip: if your terminal is messed up, try the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "reset"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8076-98e9-cadb375ca1fe",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8092-9313-ce08debb6995",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit4@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80dd-9ae2-f236f56523c3",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Navigate to the \u201cinhere\u201d directory and list all files which reveal 10 files (-file00 to -file09). We use the linux wildcard (*) to cat through all files in a single command. We find the key in -file07 "
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-80d3-90cd-d0308aae53ae",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8014-af64-eabe03de2dd3",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-80bc-a058-fee74dae81f3",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8041-a61a-db7a73801bb4",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8026-8292-d3f45ec6a1cf",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "340042e6-0b87-8037-84e4-f8198b016040",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "340042e6-0b87-8002-80dd-d97ac4650b07",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://ryanstutorials.net/linuxtutorial/wildcards.php",
+              "italic": false,
+              "plainText": "Linux Wildcards"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "340042e6-0b87-8076-8553-f0fa85eb75e1",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 4 \u2192 Level 5"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "341042e6-0b87-8034-8d20-f909e8129b67",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8083-9697-ce47b778495d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in a file somewhere under the inhere directory and has all of the following properties:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8039-af23-fa635194f9fb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "human-readable"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-809c-ab45-da3b1c614046",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "1033 bytes in size"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-804f-880c-f7ea197739cc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "not executable"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-80be-8a59-c1f66db540c6",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-807e-8333-fea0ac9b6bd7",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit5@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8058-8071-ca60e75b9b84",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Navigate to the inhere directory. On listing content we find 20 directories each with a couple of files. Since we know the exact file size of our target file (1033 byte). We use the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "du"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command with "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "-ab"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to display all files with size in byte. We can the pipe output and use "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "grep"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to search for 1033 to obtain the path to our target file. We then "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " out the file to obtain the password."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8076-9e25-ea30ca5f92ea",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8085-bb58-e002bdb60918",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8014-be78-e40eeb418284",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8085-9b92-f3bee1df69a3",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8099-8121-efe2d98046aa",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-803d-8cbc-d2ea9f77f9cb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/du.html",
+              "italic": false,
+              "plainText": "du command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-80c7-9fbe-d09ac47fb2fa",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/grep.html",
+              "italic": false,
+              "plainText": "grep command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8026-be3e-e2cdaaf39dff",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/pipe.html",
+              "italic": false,
+              "plainText": "How to pipe"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8095-b884-dc76a6b2f366",
+          "richText": [],
+          "type": "paragraph"
+        }
+      ],
+      "id": "341042e6-0b87-80b4-8636-ec98c90f2229",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 5 \u2192 Level 6"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "341042e6-0b87-802f-b3e5-d418202ff5c4",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-80c4-962f-e0ef939ea5f5",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored somewhere on the server and has all of the following properties:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-805d-8854-c6120e58cbe8",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "owned by user bandit7"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8056-9a09-fcfb528c8286",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "owned by group bandit6"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8041-9ca5-cbc705ddf94e",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "33 bytes in size"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8001-885f-d3076b926518",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8099-afbe-d59d82ee8df6",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit6@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8086-88d3-de13afca1834",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We find no files in the home directory. We start to execute "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "find /"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to search the entire filesystem starting from the root directory. We add the parameters "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "-user bandit7"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "-group bandit6"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", and "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "-size 33"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to filter for the exact file we need based on its ownership and size. Since we encounter many permission denied errors during the search, we use "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "2/dev/null"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to redirect the standard error stream away from our terminal and into the trash. This leaves us with a clean output showing only the single file path that matches our criteria. We then run "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ls -l"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " on that path to confirm the file size is exactly 33 bytes in the long list format. Finally, we cat the file to read its contents and retrieve the password for the next level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-806f-96dc-d405181b1ca3",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-809c-ab02-fba5ebf72319",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-803d-93db-c4ef2682f6c9",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-803b-9f6e-c25eae94b402",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-807b-956e-d445687d5f44",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8042-8343-cc158b79844d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/mkdir.html",
+              "italic": false,
+              "plainText": "Create a directory"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-80d4-ad4f-e31987ee3903",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://man7.org/linux/man-pages/man1/find.1.html",
+              "italic": false,
+              "plainText": "find command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-801a-af7e-e99a1bd3cb2f",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/output_redirection_operator.html",
+              "italic": false,
+              "plainText": "Output Redirection"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "341042e6-0b87-80eb-8810-f0ae04b6beda",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 6 \u2192 Level 7"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "341042e6-0b87-807e-8a34-e5490a9d2c94",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8066-9284-ce88b7136efb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in the file data.txt next to the word millionth."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80ca-8a1d-ef31d8d26178",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-80a7-8a67-cc80cc8b35d3",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit7@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80e3-bb92-eac3f7601615",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We find \u201cdata.txt\u201d in the home directory, we realize its too long. To be specific 98567 lines of data, each beginning with a word and being followed by a text with 33 characters. To find our key we pipe the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " output and "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "grep"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " the word \u2018millionth\u2019 to find the password to our next level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80c4-87a1-eb78b3b6243e",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80f2-bfbc-fa72a6a9a3d4",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-80ef-8912-febb2b377c03",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8031-8bfa-f6e0b3608d25",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8028-b5a2-dd5aa0d453e1",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8045-a6e3-e882176f2a35",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8024-9f0a-fe492b085f78",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/grep.html",
+              "italic": false,
+              "plainText": "grep command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-8051-8f1c-e44dab560bc7",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/pipe.html",
+              "italic": false,
+              "plainText": "how to pipe"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "341042e6-0b87-802a-8064-e198eea7f7cb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/wc.html",
+              "italic": false,
+              "plainText": "word count command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "341042e6-0b87-80e0-b8cb-c31978fdb270",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 7 \u2192 Level 8"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "341042e6-0b87-8030-b5bf-fba4de4bbcc7",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-800e-b5f4-ce3b9b251fcc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The password for the next level is stored in the file data.txt and is the only line of text that occurs only once"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80b8-a562-cdb0a9e8de47",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-80ad-9998-e516ab02a889",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit8@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-80f1-95dd-cfb1a3ad1018",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We find \u201cdata.txt\u201d in the home directory, we realize its too long. To be specific 1001 lines of data, with duplicates all around the file and just one unique line with our password."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "342042e6-0b87-8024-925a-fe4d5e578bf2",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "We pipe the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "cat"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " output to "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "sort"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command and pipe it further to the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "uniq"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command that identifies unique lines. We get to know there are 101 unique lines. We then add the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "-u"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " switch in the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "uniq"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " command to get the only unique line which is not being repeated in the whole file. That is our password for the next level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8053-9d6b-e24b7d07447b",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-8008-a838-cdfdcd2ce16e",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8066-a532-cbf2ae415f7c",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "341042e6-0b87-800d-bfa5-d5213b0737d0",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "341042e6-0b87-8035-b6e8-edfe9777e58f",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "342042e6-0b87-808e-b5e8-e562c85f84b2",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/grep.html",
+              "italic": false,
+              "plainText": "grep command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "342042e6-0b87-803f-9ed5-f7aa50ff55ea",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/pipe.html",
+              "italic": false,
+              "plainText": "how to pipe"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "342042e6-0b87-8041-aa8c-c5570f980404",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://www.linfo.org/wc.html",
+              "italic": false,
+              "plainText": "word count command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "342042e6-0b87-804d-8732-d39453128f04",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": "http://man7.org/linux/man-pages/man1/uniq.1.html",
+              "italic": false,
+              "plainText": "uniq command"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "341042e6-0b87-80c9-9d0a-e562f5552277",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 8 \u2192 Level 9"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "children": [
+        {
+          "id": "343042e6-0b87-809c-9aac-e333fcda8f79",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level Goal"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "343042e6-0b87-8065-9572-d203cb2d4816",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "343042e6-0b87-80c8-a5e3-cd10be44f5a1",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Solution"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "343042e6-0b87-80e5-b74e-c9ba2349f163",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Log in using "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ssh -p 2220 bandit9@bandit.labs.overthewire.org"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and password obtained in last level."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "343042e6-0b87-80de-b549-ecfc4781450a",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "343042e6-0b87-8024-8b67-d3e58743c145",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Screenshots"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "343042e6-0b87-803b-92bc-e6bebede5a65",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "343042e6-0b87-80ed-b64c-e0861c3e1e4c",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Flag"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "343042e6-0b87-8065-b6f6-cba9b1bac38d",
+          "richText": [],
+          "type": "paragraph"
+        },
+        {
+          "id": "343042e6-0b87-8080-854b-ce9a04129c81",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Lesson Learnt"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "343042e6-0b87-8066-862b-d708b21060dc",
+          "richText": [],
+          "type": "paragraph"
+        }
+      ],
+      "id": "343042e6-0b87-8010-9c87-f62d3954d3c3",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level 9 \u2192 Level 10"
+        }
+      ],
+      "type": "heading_1"
+    },
+    {
+      "id": "340042e6-0b87-80ef-ba10-c600d5f1024c",
+      "type": "unsupported"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-04-12",
+  "id": "340042e6-0b87-80c4-8767-ffa2f598961e",
+  "properties": {
+    "Name": "Bandit",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "bandit",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Bandit"
+}

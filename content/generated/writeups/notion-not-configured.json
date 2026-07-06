@@ -1,0 +1,26 @@
+{
+  "blocks": [
+    {
+      "id": "notion-placeholder-body",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "This unlinked page exists so Next.js static export can build the dynamic writeup route before Notion credentials are configured."
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "category": "System",
+  "date": "2026-06-30",
+  "id": "notion-placeholder",
+  "slug": "notion-not-configured",
+  "tags": [
+    "notion",
+    "static-export"
+  ],
+  "title": "Notion writeups are not configured"
+}
