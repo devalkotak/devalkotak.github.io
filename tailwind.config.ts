@@ -24,6 +24,12 @@ const config: Config = {
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
+      transitionDuration: {
+        DEFAULT: "300ms",
+      },
+      transitionTimingFunction: {
+        DEFAULT: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
     },
   },
   plugins: [],

@@ -76,7 +76,7 @@ export default function ResourceExplorer({ resources }: ResourceExplorerProps) {
 
   return (
     <section className="mt-8">
-      <div className="border border-border bg-surface p-3">
+      <div className="panel-3d border border-border p-3">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="relative min-w-0 flex-1">
             <Search
@@ -92,9 +92,11 @@ export default function ResourceExplorer({ resources }: ResourceExplorerProps) {
             />
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
-              {filteredResources.length}/{resources.length}
-            </span>
+            {hasActiveFilters ? (
+              <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
+                {filteredResources.length}/{resources.length}
+              </span>
+            ) : null}
             <button
               type="button"
               onClick={() => setFiltersOpen((value) => !value)}
@@ -247,7 +249,7 @@ function ResourceRow({ resource }: { resource: ResourceItem }) {
         href={resource.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex min-h-40 items-start justify-between gap-4 border border-border bg-surface p-5 transition hover:border-accent/50 hover:bg-surfaceHover"
+        className="panel-3d group flex min-h-40 items-start justify-between gap-4 border border-border p-5 transition hover:border-accent/50"
       >
         {content}
       </a>
@@ -255,7 +257,7 @@ function ResourceRow({ resource }: { resource: ResourceItem }) {
   }
 
   return (
-    <article className="flex min-h-40 items-start justify-between gap-4 border border-border bg-surface p-5">
+    <article className="panel-3d flex min-h-40 items-start justify-between gap-4 border border-border p-5">
       {content}
     </article>
   );

@@ -12,7 +12,7 @@ export default function WriteupRow({ writeup }: WriteupRowProps) {
   return (
     <Link
       href={`/writeups/${writeup.slug}`}
-      className="group relative flex min-h-40 flex-col justify-between border border-border bg-surface p-5 transition hover:border-accent/50 hover:bg-surfaceHover"
+      className="panel-3d group relative flex min-h-40 flex-col justify-between border border-border p-5 transition hover:border-accent/50"
     >
       <span className="absolute left-0 top-0 h-full w-1 origin-left scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100" />
       <div className="flex items-start justify-between gap-4 pl-2">

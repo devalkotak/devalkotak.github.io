@@ -3,17 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --color-background: #080808;
-  --color-surface: #111111;
-  --color-surface-hover: #161616;
-  --color-border: #1f1f1f;
-  --color-foreground: #e8e8e8;
+  --color-background: #030303;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #101010;
+  --color-border: #1a1a1a;
+  --color-foreground: #ededed;
   --color-body: #cccccc;
-  --color-muted: #666666;
+  --color-muted: #6b6b6b;
   --color-faint: #333333;
-  --color-accent: #00ff9d;
-  --color-code: #0d0d0d;
-  --color-accent-muted: rgba(0, 255, 157, 0.15);
+  --color-accent: #ffb000;
+  --color-code: #060606;
+  --color-accent-muted: rgba(255, 176, 0, 0.15);
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 * {
@@ -30,9 +31,24 @@ body {
   min-height: 100vh;
   color: var(--color-body);
   background:
-    linear-gradient(180deg, rgba(0, 255, 157, 0.025), transparent 280px),
+    radial-gradient(1100px 480px at 50% -120px, rgba(255, 176, 0, 0.045), transparent 70%),
+    radial-gradient(900px 900px at 85% 110%, rgba(255, 176, 0, 0.015), transparent 65%),
     var(--color-background);
   font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 a {
@@ -41,7 +57,7 @@ a {
 }
 
 ::selection {
-  color: #080808;
+  color: #030303;
   background: var(--color-accent);
 }
 
@@ -63,5 +79,27 @@ a {
   .wide-shell {
     width: min(100% - 32px, 1080px);
     margin-inline: auto;
+  }
+
+  .panel-3d {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0) 42%),
+      var(--color-surface);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.045),
+      0 1px 2px rgba(0, 0, 0, 0.7),
+      0 10px 28px -14px rgba(0, 0, 0, 0.85);
+    transition:
+      box-shadow 0.45s var(--ease-smooth),
+      border-color 0.45s var(--ease-smooth),
+      background-color 0.45s var(--ease-smooth);
+  }
+
+  .panel-3d:hover {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.07),
+      0 2px 4px rgba(0, 0, 0, 0.7),
+      0 20px 48px -18px rgba(0, 0, 0, 0.9),
+      0 0 32px -10px rgba(255, 176, 0, 0.16);
   }
 }

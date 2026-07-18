@@ -59,7 +59,7 @@ export default function WriteupExplorer({ writeups }: WriteupExplorerProps) {
 
   return (
     <section className="mt-8">
-      <div className="border border-border bg-surface p-3">
+      <div className="panel-3d border border-border p-3">
         <div className="flex flex-col gap-3 lg:flex-row lg:items-center">
           <div className="relative min-w-0 flex-1">
             <Search
@@ -75,9 +75,11 @@ export default function WriteupExplorer({ writeups }: WriteupExplorerProps) {
             />
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
-              {filteredWriteups.length}/{writeups.length}
-            </span>
+            {hasActiveFilters ? (
+              <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
+                {filteredWriteups.length}/{writeups.length}
+              </span>
+            ) : null}
             <button
               type="button"
               onClick={() => setFiltersOpen((value) => !value)}

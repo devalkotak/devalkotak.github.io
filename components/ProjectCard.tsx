@@ -3,7 +3,6 @@
 import { ExternalLink, FolderGit2, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import type { PortfolioProject } from "@/lib/types";
-import { easing } from "@/lib/animations";
 
 type ProjectCardProps = {
   project: PortfolioProject;
@@ -26,9 +25,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   return (
     <motion.article
-      whileHover={{ y: -2 }}
-      transition={{ duration: 0.2, ease: easing }}
-      className="group flex min-h-48 flex-col justify-between border border-border bg-surface p-5 transition-colors hover:border-accent/40 hover:bg-surfaceHover"
+      whileHover={{ y: -4 }}
+      transition={{ type: "spring", stiffness: 260, damping: 22, mass: 0.5 }}
+      className="panel-3d group flex min-h-48 flex-col justify-between border border-border p-5 hover:border-accent/40"
     >
       <div>
         <div className="flex items-start justify-between gap-4">
