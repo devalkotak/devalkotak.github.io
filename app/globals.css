@@ -56,6 +56,12 @@ a {
   text-decoration: none;
 }
 
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 ::selection {
   color: #030303;
   background: var(--color-accent);
@@ -93,6 +99,13 @@ a {
       box-shadow 0.45s var(--ease-smooth),
       border-color 0.45s var(--ease-smooth),
       background-color 0.45s var(--ease-smooth);
+  }
+
+  .cursor-blink::after {
+    content: "▌";
+    margin-left: 2px;
+    color: var(--color-accent);
+    animation: cursor-blink 1.1s steps(2) infinite;
   }
 
   .panel-3d:hover {

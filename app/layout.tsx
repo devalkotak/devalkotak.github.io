@@ -19,7 +19,7 @@ const jetBrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Deval Kotak",
   description:
-    "Portfolio for Deval Kotak, a security engineer and systems builder in Mumbai.",
+    "Deval Kotak — engineer in Mumbai. Security work, market experiments, community projects, and articles on all three.",
   metadataBase: new URL("https://devalkotak.github.io"),
 };
 

@@ -6,9 +6,10 @@ import { useEffect, useState } from "react";
 import { ExternalLink, Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/projects", label: "Projects" },
-  { href: "/writeups", label: "Writeups" },
-  { href: "/resources", label: "Resources" },
+  { href: "/#work", label: "Work" },
+  { href: "/#articles", label: "Articles" },
+  { href: "/#life", label: "Life" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export default function Nav() {
@@ -26,16 +27,12 @@ export default function Nav() {
           href="/"
           className="mono-heading text-sm font-semibold text-foreground transition hover:text-accent"
         >
-          dk
+          ~/dk
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">
           {links.map((link) => (
-            <NavLink
-              key={link.href}
-              href={link.href}
-              active={isActive(pathname, link.href)}
-            >
+            <NavLink key={link.href} href={link.href}>
               {link.label}
             </NavLink>
           ))}
@@ -68,11 +65,7 @@ export default function Nav() {
       >
         <div className="flex flex-col gap-6">
           {links.map((link) => (
-            <NavLink
-              key={link.href}
-              href={link.href}
-              active={isActive(pathname, link.href)}
-            >
+            <NavLink key={link.href} href={link.href} onNavigate={() => setOpen(false)}>
               {link.label}
             </NavLink>
           ))}
@@ -93,30 +86,21 @@ export default function Nav() {
 
 function NavLink({
   href,
-  active,
+  onNavigate,
   children,
 }: {
   href: string;
-  active: boolean;
+  onNavigate?: () => void;
   children: React.ReactNode;
 }) {
   return (
     <Link
       href={href}
-      className={`group relative text-sm transition ${
-        active ? "text-accent" : "text-body hover:text-foreground"
-      }`}
+      onClick={onNavigate}
+      className="group relative text-sm text-body transition hover:text-foreground"
     >
       {children}
-      <span
-        className={`absolute -bottom-1 left-0 h-px bg-accent transition-transform duration-200 ${
-          active ? "w-full scale-x-100" : "w-full origin-left scale-x-0 group-hover:scale-x-100"
-        }`}
-      />
+      <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100" />
     </Link>
   );
-}
-
-function isActive(pathname: string, href: string) {
-  return pathname === href || pathname.startsWith(`${href}/`);
 }
