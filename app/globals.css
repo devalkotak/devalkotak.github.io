@@ -14,6 +14,9 @@
   --color-accent: #58a6ff;
   --color-code: #060606;
   --color-accent-muted: rgba(88, 166, 255, 0.15);
+  --color-ok: #3fb950;
+  --color-warn: #d29922;
+  --color-danger: #f85149;
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 

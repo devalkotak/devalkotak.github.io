@@ -19,6 +19,9 @@ const config: Config = {
         faint: "var(--color-faint)",
         accent: "var(--color-accent)",
         code: "var(--color-code)",
+        ok: "var(--color-ok)",
+        warn: "var(--color-warn)",
+        danger: "var(--color-danger)",
       },
       fontFamily: {
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
