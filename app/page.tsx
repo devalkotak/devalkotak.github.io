@@ -8,6 +8,7 @@ import {
 import AnimatedPage from "@/components/AnimatedPage";
 import CursorGlow from "@/components/CursorGlow";
 import SessionBlock from "@/components/SessionBlock";
+import VisitorAudit from "@/components/VisitorAudit";
 import { getPortfolioProjectState } from "@/lib/github";
 import { getPublishedWriteups } from "@/lib/notion";
 import { getResources } from "@/lib/resources";
@@ -181,49 +182,46 @@ export default async function Home() {
         </div>
       </SessionBlock>
 
-      {/* fresh off the blog */}
-      {writeups.length > 0 && (
-        <SessionBlock className="relative z-10 border-t border-border py-10">
-          <div className="flex items-baseline justify-between gap-4">
+      {/* complimentary security audit */}
+      <SessionBlock className="relative z-10 border-t border-border py-10">
+        <div className="grid gap-8 lg:grid-cols-[minmax(16rem,1fr)_1.4fr]">
+          <div>
             <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-              fresh off the blog
+              complimentary audit
             </p>
-            <Link
-              href="/blog"
-              className="mono-heading text-xs text-muted transition hover:text-accent"
+            <h2 className="mt-4 text-2xl font-semibold leading-snug text-foreground">
+              You&apos;ve been on this page for a while. Want me to check you
+              for vulnerabilities?
+            </h2>
+          </div>
+          <VisitorAudit />
+        </div>
+      </SessionBlock>
+
+      {/* changelog of a person */}
+      <SessionBlock className="relative z-10 border-t border-border py-10">
+        <p className="mono-heading text-xs uppercase tracking-widest text-accent">
+          changelog of a person
+        </p>
+        <div className="mt-6 space-y-0">
+          {CHANGELOG.map((entry, i) => (
+            <div
+              key={entry.version}
+              className={`grid gap-x-8 gap-y-1 py-4 sm:grid-cols-[8rem_1fr] ${
+                i > 0 ? "border-t border-border/60" : ""
+              }`}
             >
-              all writeups →
-            </Link>
-          </div>
-          <div className="mt-4 divide-y divide-border/60">
-            {writeups.slice(0, 3).map((writeup) => (
-              <Link
-                key={writeup.id}
-                href={`/blog/${writeup.slug}`}
-                className="group flex items-baseline justify-between gap-4 py-3"
-              >
-                <span className="min-w-0">
-                  <span className="block text-sm font-medium leading-6 text-foreground transition group-hover:text-accent sm:truncate">
-                    {writeup.title}
-                  </span>
-                  <span className="mono-heading mt-0.5 block text-[11px] text-muted">
-                    {writeup.category}
-                    {writeup.tags.slice(0, 2).map((tag) => (
-                      <span key={tag}> · {tag}</span>
-                    ))}
-                  </span>
-                </span>
-                <time
-                  className="mono-heading shrink-0 text-xs text-muted"
-                  dateTime={writeup.date}
-                >
-                  {formatDate(writeup.date)}
-                </time>
-              </Link>
-            ))}
-          </div>
-        </SessionBlock>
-      )}
+              <p className="mono-heading text-sm text-accent">{entry.version}</p>
+              <div>
+                <p className="text-sm font-medium leading-6 text-foreground">
+                  {entry.title}
+                </p>
+                <p className="mt-1 text-sm leading-6 text-muted">{entry.note}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </SessionBlock>
 
       {/* index */}
       <SessionBlock className="relative z-10 border-t border-border py-4">
@@ -269,12 +267,6 @@ export default async function Home() {
   );
 }
 
-function formatDate(date: string) {
-  return new Intl.DateTimeFormat("en", {
-    month: "short",
-    year: "numeric",
-  }).format(new Date(date));
-}
 
 type IndexRow = {
   href: string;
@@ -283,6 +275,34 @@ type IndexRow = {
   note: string;
   meta: string;
 };
+
+const CHANGELOG = [
+  {
+    version: "v2026.07",
+    title: "Taught a CVE scanner the difference between present and exploitable.",
+    note: "It is still processing the betrayal. The findings queue has never been shorter.",
+  },
+  {
+    version: "v2026.01",
+    title: "Vice President, DJS ISACA.",
+    note: "Turns out the title comes bundled with meetings. Working on a patch.",
+  },
+  {
+    version: "v2025.06",
+    title: "Cybersecurity internship, JioStar.",
+    note: "Production: where elegant theories go to get humbled at scale.",
+  },
+  {
+    version: "v2024.02",
+    title: "The markets phase peaks.",
+    note: "Order books, microstructure, backtests. The spreadsheets remain; the obsession rotated.",
+  },
+  {
+    version: "v2023.09",
+    title: "Optiverse paused at 150,000+ students.",
+    note: "Still the largest number on this site, and the one I defend hardest.",
+  },
+] as const;
 
 function CurrentItem({
   label,
