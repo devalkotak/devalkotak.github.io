@@ -75,10 +75,12 @@ def main() -> int:
     projects_payload = build_projects_payload(generated_at)
     writeups_payload, details, replace_writeup_details = build_writeups_payload(generated_at)
     resources_payload = build_resources_payload(generated_at)
+    optiverse_payload = build_optiverse_payload(generated_at)
 
     write_json(GENERATED_DIR / "projects.json", projects_payload)
     write_json(GENERATED_DIR / "writeups.json", writeups_payload)
     write_json(GENERATED_DIR / "resources.json", resources_payload)
+    write_json(GENERATED_DIR / "optiverse.json", optiverse_payload)
 
     if replace_writeup_details:
         reset_writeups_dir()
@@ -315,6 +317,78 @@ def build_resources_payload(generated_at: str) -> dict[str, Any]:
             "error": str(error),
             "resources": previous_resources,
         }
+
+
+def build_optiverse_payload(generated_at: str) -> dict[str, Any]:
+    token = os.environ.get("NOTION_API_KEY")
+    page_id = os.environ.get("NOTION_OPTIVERSE_PAGE_ID")
+
+    if not token or not page_id:
+        return {
+            "generatedAt": generated_at,
+            "error": None,
+            "title": None,
+            "blocks": [],
+        }
+
+    try:
+        page = None
+        notion_version = "2022-06-28"
+        for version in ("2022-06-28", "2025-09-03"):
+            try:
+                page = request_json(
+                    f"https://api.notion.com/v1/pages/{page_id}",
+                    headers=notion_headers(token, version),
+                )
+                notion_version = version
+                break
+            except ContentFetchError as error:
+                last_error = error
+        if page is None:
+            raise last_error or ContentFetchError("Notion page fetch failed")
+
+        title_property = next(
+            (
+                value
+                for value in (page.get("properties") or {}).values()
+                if isinstance(value, dict) and value.get("type") == "title"
+            ),
+            None,
+        )
+        title = property_text(title_property) or None
+        blocks = fetch_notion_blocks(token, notion_version, page_id)
+
+        return {
+            "generatedAt": generated_at,
+            "error": None,
+            "title": title,
+            "blocks": blocks,
+        }
+    except ContentFetchError as error:
+        previous = read_existing_optiverse()
+        if previous:
+            return {
+                "generatedAt": generated_at,
+                "error": str(error),
+                "title": previous.get("title"),
+                "blocks": previous.get("blocks") or [],
+            }
+        return {
+            "generatedAt": generated_at,
+            "error": str(error),
+            "title": None,
+            "blocks": [],
+        }
+
+
+def read_existing_optiverse() -> dict[str, Any] | None:
+    try:
+        payload = json.loads((GENERATED_DIR / "optiverse.json").read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return None
+    if not isinstance(payload, dict) or not isinstance(payload.get("blocks"), list):
+        return None
+    return payload
 
 
 def query_notion_pages(

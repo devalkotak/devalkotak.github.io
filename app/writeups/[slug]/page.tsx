@@ -15,5 +15,5 @@ export default function WriteupRedirectPage({
 }: {
   params: { slug: string };
 }) {
-  return <Redirect to={`/articles/${params.slug}/`} />;
+  return <Redirect to={`/blog/${params.slug}/`} />;
 }

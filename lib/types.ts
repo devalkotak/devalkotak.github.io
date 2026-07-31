@@ -67,3 +67,9 @@ export type ResourceLoadState = {
   resources: ResourceItem[];
   error: string | null;
 };
+
+export type OptiverseContent = {
+  title: string | null;
+  blocks: NotionBlock[];
+  error: string | null;
+};

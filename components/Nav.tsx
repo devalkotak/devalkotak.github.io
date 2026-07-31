@@ -3,13 +3,15 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import { ExternalLink, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/#work", label: "Work" },
-  { href: "/#articles", label: "Articles" },
-  { href: "/#life", label: "Life" },
-  { href: "/#contact", label: "Contact" },
+  { href: "/projects", label: "Projects" },
+  { href: "/resume", label: "Resume" },
+  { href: "/resources", label: "Resources" },
+  { href: "/blog", label: "Blog" },
+  { href: "/optiverse", label: "Optiverse" },
+  { href: "/security", label: "Security" },
 ];
 
 export default function Nav() {
@@ -36,15 +38,6 @@ export default function Nav() {
               {link.label}
             </NavLink>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-1 text-sm text-body transition hover:text-accent"
-          >
-            Resume
-            <ExternalLink size={13} />
-          </a>
         </div>
 
         <button
@@ -69,15 +62,6 @@ export default function Nav() {
               {link.label}
             </NavLink>
           ))}
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-sm text-body transition hover:text-accent"
-          >
-            Resume
-            <ExternalLink size={13} />
-          </a>
         </div>
       </div>
     </header>

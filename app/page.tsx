@@ -120,6 +120,13 @@ export default async function Home() {
                   Projects load from GitHub repos tagged portfolio.
                 </p>
               )}
+              <Link
+                href="/projects"
+                className="mono-heading mt-5 flex items-center gap-1 text-xs text-accent hover:underline"
+              >
+                see all projects
+                <ArrowRight size={12} />
+              </Link>
             </TrackCard>
           </Tilt3D>
 
@@ -158,10 +165,10 @@ export default async function Home() {
 
         {writeups.length > 0 ? (
           <div className="mt-6 divide-y divide-border">
-            {writeups.map((writeup) => (
+            {writeups.slice(0, 5).map((writeup) => (
               <Link
                 key={writeup.id}
-                href={`/articles/${writeup.slug}`}
+                href={`/blog/${writeup.slug}`}
                 className="group flex items-baseline justify-between gap-4 py-4"
               >
                 <span className="min-w-0">
@@ -189,6 +196,13 @@ export default async function Home() {
             No articles published yet.
           </p>
         )}
+        <Link
+          href="/blog"
+          className="mono-heading mt-6 flex items-center gap-1 text-xs text-accent hover:underline"
+        >
+          see all writeups
+          <ArrowRight size={12} />
+        </Link>
       </section>
 
       {/* life */}
@@ -213,6 +227,13 @@ export default async function Home() {
             occasional life update. The terminal aesthetic stays. The content
             refuses to fit in one directory.
           </p>
+          <Link
+            href="/optiverse"
+            className="mono-heading flex w-fit items-center gap-1 text-xs text-accent hover:underline"
+          >
+            before all that, there was optiverse
+            <ArrowRight size={12} />
+          </Link>
         </div>
       </section>
 
@@ -227,15 +248,13 @@ export default async function Home() {
             devalktk@gmail.com
             <Mail size={14} />
           </a>
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/resume"
             className="inline-flex h-10 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
           >
             Resume
             <ArrowUpRight size={14} />
-          </a>
+          </Link>
         </div>
       </section>
     </AnimatedPage>
