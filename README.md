@@ -1,7 +1,22 @@
 # devalkotak.github.io
 
-Personal portfolio for Deval Kotak. The site is a static-exported Next.js app
-with a Python content pipeline for GitHub projects, Notion writeups, and resources.
+Personal site for Deval Kotak. The site is a static-exported Next.js app
+with a Python content pipeline for GitHub projects, Notion writeups, and
+resources. It is a real multi-page site, not a single scrolling page:
+
+| Route | Source |
+| --- | --- |
+| `/` | Static (home / hero, teasers link out to the pages below) |
+| `/projects` | GitHub, repos tagged `portfolio` |
+| `/blog` (+ `/blog/[slug]`) | Notion, writeups database |
+| `/resources` | Notion, resources database |
+| `/optiverse` | Notion, single standalone page (see below) |
+| `/resume` | Static PDF embed, `public/resume.pdf` |
+| `/security` | Static |
+
+`/writeups`, `/writeups/[slug]`, and `/articles/[slug]` still exist as
+redirects into `/blog` for link compatibility — do not delete them without
+checking for inbound links first.
 
 ## Technical Decisions
 
@@ -32,6 +47,14 @@ or Notion parsing.
 Resources exists because reference links are useful when they stay practical.
 External resources are generated into JSON and can later come from a separate
 Notion database.
+
+Optiverse is a student mentorship project co-founded before this site, kept
+on its own page instead of folded into Projects because it isn't code. It
+syncs from a **standalone Notion page**, deliberately separate from the
+original OptiverseHQ org workspace (that one stays untouched — this page is
+a redesigned copy meant for the site only). Its content, tone, and layout
+live entirely in Notion; the site just renders whatever blocks are there
+through the same `NotionRenderer` used for writeups.
 
 Writeups and resources use browser-side search, filters, and sort controls over the
 generated JSON. This keeps navigation practical as the content count grows while
@@ -79,6 +102,7 @@ That command rewrites:
 - `content/generated/writeups.json`
 - `content/generated/writeups/<slug>.json`
 - `content/generated/resources.json`
+- `content/generated/optiverse.json`
 
 Production builds call the same pipeline automatically:
 
@@ -89,6 +113,22 @@ npm run build
 Use `npm run content:check` when you want the generated content inspection to
 fail on source errors or malformed generated rows.
 
+### Refresh and push from anywhere
+
+`scripts/build_content.py` resolves its paths off its own file location, not
+the current working directory, so it can be run from anywhere as long as an
+`.env` with the right keys sits next to the repo root:
+
+```bash
+python /path/to/devalkotak.github.io/scripts/build_content.py --push
+```
+
+`--push` commits and pushes `content/generated/` if (and only if) it
+changed — it stages nothing else, so it's safe to run against a working tree
+that has unrelated local changes. No-ops with a message if content didn't
+change. Options: `--remote` (default `origin`), `--branch` (default: current
+branch), `--message` (default: `content: refresh from github/notion`).
+
 ## Environment
 
 ```env
@@ -97,6 +137,7 @@ NOTION_DATA_SOURCE_ID=your_notion_data_source_id
 NOTION_DATABASE_ID=optional_legacy_database_id
 NOTION_RESOURCES_DATA_SOURCE_ID=optional_resources_data_source_id
 NOTION_RESOURCES_DATABASE_ID=optional_legacy_resources_database_id
+NOTION_OPTIVERSE_PAGE_ID=optional_optiverse_page_id
 NOTION_REFRESH_WRITEUP_DETAILS=false
 GITHUB_TOKEN=optional_for_higher_rate_limits
 ```
@@ -108,7 +149,10 @@ their own `NOTION_RESOURCES_DATA_SOURCE_ID` or
 fallback. Without Notion writeup credentials, the Writeups page renders an empty
 state. Without a resources database, the Resources page renders an empty state.
 Without a GitHub token, the Projects page still works under the public API rate
-limit.
+limit. `NOTION_OPTIVERSE_PAGE_ID` is a single Notion page ID (not a
+database) — the page must be shared with the same integration behind
+`NOTION_API_KEY` ("Connections" menu in Notion) or the fetch 404s and the
+Optiverse page renders an empty state.
 
 Existing writeup detail pages reuse cached generated block JSON by default so a
 slow Notion block tree does not wipe or stall local builds. Set
