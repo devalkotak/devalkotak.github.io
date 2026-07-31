@@ -6,7 +6,11 @@ import {
   Mail,
 } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
+import BreakMeBox from "@/components/BreakMeBox";
 import CursorGlow from "@/components/CursorGlow";
+import HomeMischief from "@/components/HomeMischief";
+import HonestyBadge from "@/components/HonestyBadge";
+import NoCookieBanner from "@/components/NoCookieBanner";
 import SessionBlock from "@/components/SessionBlock";
 import VisitorAudit from "@/components/VisitorAudit";
 import { getPortfolioProjectState } from "@/lib/github";
@@ -68,6 +72,8 @@ export default async function Home() {
   return (
     <AnimatedPage className="wide-shell relative overflow-hidden">
       <CursorGlow />
+      <HomeMischief />
+      <NoCookieBanner />
 
       {/* manifesto hero */}
       <section className="relative z-10 pb-16 pt-4">
@@ -195,6 +201,35 @@ export default async function Home() {
             </h2>
           </div>
           <VisitorAudit />
+        </div>
+      </SessionBlock>
+
+      {/* break me */}
+      <SessionBlock className="relative z-10 border-t border-border py-10">
+        <div className="grid gap-8 lg:grid-cols-[minmax(16rem,1fr)_1.4fr]">
+          <div>
+            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
+              try to break this
+            </p>
+            <h2 className="mt-4 text-2xl font-semibold leading-snug text-foreground">
+              An input field, on a security engineer&apos;s site, daring you
+              to inject something.
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-muted">
+              Go on. You were thinking it.
+            </p>
+          </div>
+          <BreakMeBox />
+        </div>
+      </SessionBlock>
+
+      {/* honesty */}
+      <SessionBlock className="relative z-10 border-t border-border py-10">
+        <p className="mono-heading text-xs uppercase tracking-widest text-accent">
+          receipts
+        </p>
+        <div className="mt-6">
+          <HonestyBadge />
         </div>
       </SessionBlock>
 
