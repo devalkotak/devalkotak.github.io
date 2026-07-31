@@ -75,6 +75,25 @@ a {
     text-wrap: balance;
   }
 
+  .dot-grid {
+    background-image: radial-gradient(
+      circle,
+      rgba(237, 237, 237, 0.055) 1px,
+      transparent 1px
+    );
+    background-size: 26px 26px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 75% 90% at 50% 20%,
+      black 30%,
+      transparent 75%
+    );
+    mask-image: radial-gradient(
+      ellipse 75% 90% at 50% 20%,
+      black 30%,
+      transparent 75%
+    );
+  }
+
   .mono-heading {
     font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
     letter-spacing: 0;

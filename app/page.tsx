@@ -70,19 +70,20 @@ export default async function Home() {
   ];
 
   return (
-    <AnimatedPage className="wide-shell relative overflow-hidden">
+    <AnimatedPage className="wide-shell relative overflow-hidden pb-28">
       <CursorGlow />
       <HomeMischief />
       <NoCookieBanner />
 
       {/* manifesto hero */}
-      <section className="relative z-10 pb-16 pt-4">
-        <p className="mono-heading text-sm text-muted">
+      <section className="relative z-10 pb-20 pt-4">
+        <div className="dot-grid pointer-events-none absolute -inset-x-8 -top-8 bottom-0" aria-hidden="true" />
+        <p className="mono-heading relative text-sm text-muted">
           deval kotak <span className="text-accent">/</span> mumbai{" "}
           <span className="text-accent">/</span> application security
         </p>
 
-        <div className="mt-10 space-y-2">
+        <div className="relative mt-12 space-y-2">
           <h1 className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
             I break systems{" "}
             <span className="text-muted">to understand them.</span>
@@ -93,14 +94,22 @@ export default async function Home() {
           </p>
         </div>
 
-        <p className="mt-8 max-w-xl text-base leading-8 text-body">
+        <p className="relative mt-9 max-w-xl text-base leading-8 text-body">
           Security engineer in the making — Python tooling that separates real
           vulnerabilities from noise. There was a markets phase, there is a
           mentorship org with 150,000 students, and there will be more
           detours. This site logs all of it.
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center gap-3">
+        <div className="relative mt-10 flex flex-wrap items-center gap-3">
+          <span className="inline-flex h-10 items-center gap-2.5 border border-ok/40 bg-ok/5 px-4 text-sm text-body">
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ok opacity-60" />
+              <span className="relative inline-flex size-2 rounded-full bg-ok" />
+            </span>
+            open to security engineering roles
+          </span>
+          <span className="mx-1 hidden h-6 w-px bg-border sm:block" />
           <SocialLink href="https://github.com/devalkotak" label="GitHub">
             <GitBranch size={18} />
           </SocialLink>
@@ -110,18 +119,12 @@ export default async function Home() {
           <SocialLink href="mailto:devalktk@gmail.com" label="Email">
             <Mail size={18} />
           </SocialLink>
-          <span className="mono-heading ml-2 text-xs text-muted">
-            open to security engineering roles
-          </span>
         </div>
       </section>
 
-      {/* currently */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-          currently
-        </p>
-        <div className="mt-5 grid gap-x-8 gap-y-5 sm:grid-cols-3">
+      {/* ch.01 — currently */}
+      <Chapter number="01" label="currently">
+        <div className="grid gap-x-8 gap-y-5 sm:grid-cols-3">
           <CurrentItem
             label="building"
             value="reachability-cve-triage"
@@ -138,34 +141,29 @@ export default async function Home() {
             detail="after a cybersecurity internship at JioStar"
           />
         </div>
-      </SessionBlock>
+      </Chapter>
 
-      {/* life */}
-      <SessionBlock id="life" className="relative z-10 border-t border-border py-10">
-        <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
-          <div>
-            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-              off the clock
+      {/* ch.02 — off the clock */}
+      <Chapter number="02" label="off the clock">
+        <div className="grid gap-8 lg:grid-cols-[1fr_auto]">
+          <div className="max-w-xl space-y-4 text-base leading-8 text-body">
+            <p>
+              Not everything here compiles. I co-founded{" "}
+              <Link href="/optiverse" className="text-accent hover:underline">
+                Optiverse
+              </Link>
+              , a student-run mentorship org that reached 150,000+ students
+              before we hit pause — still the work I measure everything else
+              against. I went through a proper quantitative-markets phase
+              too; the notes survive, the obsession rotated.
             </p>
-            <div className="mt-5 space-y-4 text-base leading-8 text-body">
-              <p>
-                Not everything here compiles. I co-founded{" "}
-                <Link href="/optiverse" className="text-accent hover:underline">
-                  Optiverse
-                </Link>
-                , a student-run mentorship org that reached 150,000+ students
-                before we hit pause — still the work I measure everything else
-                against. I went through a proper quantitative-markets phase
-                too; the notes survive, the obsession rotated.
-              </p>
-              <p>
-                The common thread: take a system apart, figure out who it
-                actually serves, write down what you found.
-              </p>
-            </div>
+            <p>
+              The common thread: take a system apart, figure out who it
+              actually serves, write down what you found.
+            </p>
           </div>
           <div className="flex flex-col justify-end gap-4 lg:items-end">
-            <p className="mono-heading text-right text-xs leading-6 text-muted">
+            <p className="mono-heading text-xs leading-6 text-muted lg:text-right">
               breaking things since before it was a job title
             </p>
             <div className="flex flex-wrap items-center gap-3">
@@ -186,63 +184,53 @@ export default async function Home() {
             </div>
           </div>
         </div>
-      </SessionBlock>
+      </Chapter>
 
-      {/* complimentary security audit */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <div className="grid gap-8 lg:grid-cols-[minmax(16rem,1fr)_1.4fr]">
-          <div>
-            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-              complimentary audit
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold leading-snug text-foreground">
-              You&apos;ve been on this page for a while. Want me to check you
-              for vulnerabilities?
-            </h2>
+      {/* ch.03 — proof */}
+      <Chapter
+        number="03"
+        label="proof, not claims"
+        intro="Three demonstrations. Everything below runs on your side of the screen, on real data, with nothing sent anywhere."
+      >
+        <div className="space-y-10">
+          <div className="grid gap-6 lg:grid-cols-[minmax(14rem,0.9fr)_1.6fr]">
+            <div>
+              <h3 className="text-xl font-semibold leading-snug text-foreground">
+                You&apos;ve been here a while. Want me to check you for
+                vulnerabilities?
+              </h3>
+            </div>
+            <VisitorAudit />
           </div>
-          <VisitorAudit />
-        </div>
-      </SessionBlock>
 
-      {/* break me */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <div className="grid gap-8 lg:grid-cols-[minmax(16rem,1fr)_1.4fr]">
-          <div>
-            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-              try to break this
-            </p>
-            <h2 className="mt-4 text-2xl font-semibold leading-snug text-foreground">
-              An input field, on a security engineer&apos;s site, daring you
-              to inject something.
-            </h2>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              Go on. You were thinking it.
-            </p>
+          <div className="grid gap-6 lg:grid-cols-[1.6fr_minmax(14rem,0.9fr)]">
+            <div className="order-2 lg:order-1">
+              <BreakMeBox />
+            </div>
+            <div className="order-1 lg:order-2 lg:text-right">
+              <h3 className="text-xl font-semibold leading-snug text-foreground">
+                An input field, on a security engineer&apos;s site, daring
+                you to inject something.
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-muted">
+                Go on. You were thinking it.
+              </p>
+            </div>
           </div>
-          <BreakMeBox />
-        </div>
-      </SessionBlock>
 
-      {/* honesty */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-          receipts
-        </p>
-        <div className="mt-6">
-          <HonestyBadge />
+          <div className="border-t border-border/60 pt-8">
+            <HonestyBadge />
+          </div>
         </div>
-      </SessionBlock>
+      </Chapter>
 
-      {/* changelog of a person */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-          changelog of a person
-        </p>
-        <div className="mt-6 space-y-0">
+      {/* ch.04 — changelog */}
+      <Chapter number="04" label="changelog of a person">
+        <div>
           {CHANGELOG.map((entry, i) => (
             <div
               key={entry.version}
-              className={`grid gap-x-8 gap-y-1 py-4 sm:grid-cols-[8rem_1fr] ${
+              className={`grid gap-x-8 gap-y-1 py-4 sm:grid-cols-[6rem_1fr] ${
                 i > 0 ? "border-t border-border/60" : ""
               }`}
             >
@@ -256,19 +244,16 @@ export default async function Home() {
             </div>
           ))}
         </div>
-      </SessionBlock>
+      </Chapter>
 
-      {/* index */}
-      <SessionBlock className="relative z-10 border-t border-border py-4">
-        <p className="mono-heading pt-6 text-xs uppercase tracking-widest text-accent">
-          the full map
-        </p>
-        <div className="mt-2 divide-y divide-border">
+      {/* ch.05 — the full map */}
+      <Chapter number="05" label="the full map" spacious>
+        <div className="divide-y divide-border border-y border-border">
           {index.map((row) => (
             <Link
               key={row.href}
               href={row.href}
-              className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 py-6 sm:grid-cols-[3.5rem_minmax(11rem,max-content)_1fr_auto] sm:gap-x-8"
+              className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 px-2 py-7 transition-all duration-300 hover:bg-surface hover:pl-5 sm:grid-cols-[3.5rem_minmax(11rem,max-content)_1fr_auto] sm:gap-x-8"
             >
               <span className="mono-heading text-xs text-faint transition group-hover:text-accent sm:text-sm">
                 {row.number}
@@ -291,17 +276,17 @@ export default async function Home() {
                   className="text-faint transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
                 />
               </span>
-              <span className="col-span-2 col-start-2 mt-2 text-xs text-muted sm:hidden">
-                {row.note} · {row.meta}
+              <span className="col-span-2 col-start-2 mt-2 grid text-xs text-muted sm:hidden">
+                <span>{row.note}</span>
+                <span className="mono-heading mt-0.5 text-faint">{row.meta}</span>
               </span>
             </Link>
           ))}
         </div>
-      </SessionBlock>
+      </Chapter>
     </AnimatedPage>
   );
 }
-
 
 type IndexRow = {
   href: string;
@@ -338,6 +323,48 @@ const CHANGELOG = [
     note: "Still the largest number on this site, and the one I defend hardest.",
   },
 ] as const;
+
+function Chapter({
+  number,
+  label,
+  intro,
+  spacious,
+  children,
+}: {
+  number: string;
+  label: string;
+  intro?: string;
+  spacious?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <SessionBlock
+      className={`relative z-10 border-t border-border ${spacious ? "py-16" : "py-12"}`}
+    >
+      <div className="grid gap-6 lg:grid-cols-[9rem_1fr] lg:gap-10">
+        <div className="lg:sticky lg:top-28 lg:self-start">
+          <p className="mono-heading text-xs text-faint">ch.{number}</p>
+          <p className="mono-heading mt-1 text-xs uppercase tracking-widest text-accent">
+            {label}
+          </p>
+          {intro && (
+            <p className="mt-3 hidden text-xs leading-5 text-muted lg:block">
+              {intro}
+            </p>
+          )}
+        </div>
+        <div>
+          {intro && (
+            <p className="mb-6 text-sm leading-6 text-muted lg:hidden">
+              {intro}
+            </p>
+          )}
+          {children}
+        </div>
+      </div>
+    </SessionBlock>
+  );
+}
 
 function CurrentItem({
   label,

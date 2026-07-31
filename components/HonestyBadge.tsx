@@ -71,7 +71,10 @@ function Claim({
 }) {
   return (
     <div className="grid content-start gap-1">
-      <p className="mono-heading text-lg font-semibold text-foreground">
+      <p
+        className="mono-heading font-semibold text-foreground"
+        style={{ fontSize: "clamp(1.4rem, 2.6vw, 2rem)" }}
+      >
         {value}
       </p>
       <p className="mono-heading text-[11px] uppercase tracking-wider text-accent">
