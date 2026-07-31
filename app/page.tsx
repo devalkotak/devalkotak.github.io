@@ -1,5 +1,16 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BriefcaseBusiness,
+  FileText,
+  GitBranch,
+  Library,
+  Mail,
+  ShieldCheck,
+  Sparkles,
+  Terminal,
+} from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
 import CursorGlow from "@/components/CursorGlow";
 import SessionBlock from "@/components/SessionBlock";
@@ -15,102 +26,61 @@ const WHOAMI_LINES = [
   "This site is the log of all three.",
 ];
 
-const BANNER = [
-  "█▀▄ █▀▀ █ █ ▄▀█ █     █▄▀ █▀█ ▀█▀ ▄▀█ █▄▀",
-  "█▄▀ █▄▄ ▀▄▀ █▀█ █▄▄   █ █ █▄█  █  █▀█ █ █",
-].join("\n");
-
 export default async function Home() {
   const [projectState, writeups] = await Promise.all([
     getPortfolioProjectState(),
     getPublishedWriteups(),
   ]);
   const resources = getResources();
-  const buildDate = new Intl.DateTimeFormat("en", {
-    weekday: "short",
-    month: "short",
-    day: "2-digit",
-    year: "numeric",
-  }).format(new Date());
 
-  const home: LsRow[] = [
+  const destinations: Destination[] = [
     {
-      perms: "drwxr-xr-x",
-      name: "projects/",
       href: "/projects",
+      label: "projects/",
+      title: "Things I've shipped",
+      description: "Security tooling, market experiments, and the rest — pulled live from GitHub.",
       meta: countLabel(projectState.projects.length, "repo"),
-      comment: "shipped code — tagged portfolio or it didn't happen",
+      icon: <GitBranch size={16} />,
     },
     {
-      perms: "drwxr-xr-x",
-      name: "blog/",
       href: "/blog",
+      label: "blog/",
+      title: "Writeups",
+      description: "Things I broke, fixed, or finally understood — written up as I go.",
       meta: countLabel(writeups.length, "writeup"),
-      comment: "things I broke, fixed, or finally understood",
+      icon: <Terminal size={16} />,
     },
     {
-      perms: "drwxr-xr-x",
-      name: "resources/",
       href: "/resources",
+      label: "resources/",
+      title: "Worth bookmarking",
+      description: "Tools, references, and reading that survived the purge.",
       meta: countLabel(resources.length, "link"),
-      comment: "bookmarks that survived the purge",
+      icon: <Library size={16} />,
     },
     {
-      perms: "drwxrwx---",
-      name: "optiverse/",
       href: "/optiverse",
+      label: "optiverse/",
+      title: "The offline thread",
+      description: "A student mentorship org I co-founded. 150,000+ students later — paused, not dead.",
       meta: "150k+ students",
-      comment: "the thread that touches grass — mentorship org, paused not dead",
-      tone: "warn",
+      icon: <Sparkles size={16} />,
     },
     {
-      perms: "-r--r--r--",
-      name: "resume.pdf",
       href: "/resume",
-      meta: "1 page",
-      comment: "all of this, but in a font HR trusts",
+      label: "resume/",
+      title: "The one-pager",
+      description: "All of this, but in a format recruiters trust.",
+      meta: "PDF",
+      icon: <FileText size={16} />,
     },
     {
-      perms: "drwxr-xr-x",
-      name: "security/",
       href: "/security",
-      meta: "1 threat model",
-      comment: "how this very page defends itself",
-    },
-    {
-      perms: "-rw-------",
-      name: ".env",
-      meta: "0 B",
-      comment: "nice try.",
-      tone: "danger",
-    },
-  ];
-
-  const processes: PsRow[] = [
-    {
-      pid: "7",
-      stat: "R",
-      command: "reachability-cve-triage",
-      comment: "proving which vulnerable dependencies actually matter",
-    },
-    {
-      pid: "23",
-      stat: "S+",
-      command: "portswigger-academy",
-      comment: "one lab at a time, in order",
-    },
-    {
-      pid: "42",
-      stat: "S",
-      command: "market-microstructure",
-      comment: "the math under the ticker",
-    },
-    {
-      pid: "80",
-      stat: "LISTEN",
-      command: "open-to: security-engineering-roles",
-      comment: "the port is open — say hi",
-      tone: "warn",
+      label: "security/",
+      title: "How this site is secured",
+      description: "The threat model for the page you are reading right now.",
+      meta: "threat model",
+      icon: <ShieldCheck size={16} />,
     },
   ];
 
@@ -118,85 +88,103 @@ export default async function Home() {
     <AnimatedPage className="wide-shell relative overflow-hidden">
       <CursorGlow />
 
-      {/* motd */}
-      <section className="relative z-10 pb-10">
-        <Prompt command="cat /etc/motd" />
-        <h1 className="sr-only">Deval Kotak — security, markets, people</h1>
-        <pre
-          aria-hidden="true"
-          className="mono-heading mt-6 overflow-x-auto text-foreground"
-          style={{ fontSize: "clamp(0.55rem, 2.1vw, 1.05rem)", lineHeight: 1.25 }}
-        >
-          {BANNER}
-        </pre>
-        <p className="mono-heading mt-5 text-sm text-body sm:text-base">
-          security · markets · people —{" "}
-          <span className="text-muted">one login, three daemons</span>
+      {/* hero */}
+      <section className="relative z-10 border-b border-border pb-14">
+        <p className="mono-heading text-sm text-muted">
+          <span className="text-accent">~</span> deval kotak — mumbai
         </p>
-        <p className="mono-heading mt-2 text-xs text-muted">
-          Last login: {buildDate} from in.mumbai
+        <h1 className="mono-heading mt-6 text-5xl font-semibold leading-tight text-foreground sm:text-7xl">
+          Deval Kotak
+        </h1>
+        <p className="mono-heading mt-4 text-base text-accent sm:text-lg">
+          security · markets · people
         </p>
+
+        <div className="mt-10 max-w-2xl">
+          <p className="mono-heading text-sm text-muted">
+            <span className="text-accent">&gt;</span> whoami
+          </p>
+          <div className="mt-3">
+            <TypedIdentity lines={WHOAMI_LINES} />
+          </div>
+        </div>
+
+        <div className="mt-10 flex flex-wrap items-center gap-3">
+          <AnchorButton href="/projects" primary>
+            Projects
+          </AnchorButton>
+          <AnchorButton href="/blog">Blog</AnchorButton>
+          <AnchorButton href="/resume">Resume</AnchorButton>
+          <span className="mx-1 hidden h-6 w-px bg-border sm:block" />
+          <SocialLink href="https://github.com/devalkotak" label="GitHub">
+            <GitBranch size={18} />
+          </SocialLink>
+          <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
+            <BriefcaseBusiness size={18} />
+          </SocialLink>
+          <SocialLink href="mailto:devalktk@gmail.com" label="Email">
+            <Mail size={18} />
+          </SocialLink>
+        </div>
       </section>
 
-      {/* whoami */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <Prompt command="whoami" />
-        <div className="mt-4 max-w-3xl">
-          <TypedIdentity lines={WHOAMI_LINES} />
-        </div>
-      </SessionBlock>
-
-      {/* ls -la — the front door */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <Prompt command="ls -la ~/" />
-        <div className="mono-heading mt-4 max-w-4xl text-sm">
-          <p className="text-muted">total {home.length - 1}</p>
-          <ul className="mt-1 divide-y divide-border/60">
-            {home.map((row) => (
-              <li key={row.name}>
-                {row.href ? (
-                  <Link href={row.href} className="group block py-3">
-                    <LsLine row={row} />
-                  </Link>
-                ) : (
-                  <div className="py-3">
-                    <LsLine row={row} />
-                  </div>
-                )}
-              </li>
-            ))}
-          </ul>
+      {/* explore */}
+      <SessionBlock className="relative z-10 border-b border-border py-12">
+        <SectionHeading
+          command="explore"
+          subtitle="Six doors. Pick one — they all lead somewhere I actually work."
+        />
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {destinations.map((destination) => (
+            <Tilt3D key={destination.href}>
+              <Link
+                href={destination.href}
+                className="panel-3d group block h-full border border-border p-5 hover:border-accent/30"
+              >
+                <p className="mono-heading flex items-center justify-between text-xs text-accent">
+                  <span className="flex items-center gap-2">
+                    {destination.icon}
+                    {destination.label}
+                  </span>
+                  <ArrowUpRight
+                    size={14}
+                    className="text-muted transition group-hover:text-accent"
+                  />
+                </p>
+                <h3 className="mt-3 text-base font-semibold text-foreground transition group-hover:text-accent">
+                  {destination.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  {destination.description}
+                </p>
+                <p className="mono-heading mt-4 border-t border-border pt-3 text-[11px] text-muted">
+                  {destination.meta}
+                </p>
+              </Link>
+            </Tilt3D>
+          ))}
         </div>
       </SessionBlock>
 
       {/* now */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <Prompt command="ps aux | grep deval" />
-        <div className="mono-heading mt-4 max-w-4xl overflow-x-auto text-sm">
-          <div className="grid grid-cols-[3rem_1fr] gap-x-6 gap-y-0 sm:grid-cols-[3rem_5rem_16rem_1fr]">
-            <span className="py-1 text-[11px] uppercase tracking-wider text-muted">
-              pid
-            </span>
-            <span className="hidden py-1 text-[11px] uppercase tracking-wider text-muted sm:block">
-              stat
-            </span>
-            <span className="hidden py-1 text-[11px] uppercase tracking-wider text-muted sm:block">
-              command
-            </span>
-            <span className="py-1 text-[11px] uppercase tracking-wider text-muted">
-              <span className="sm:hidden">command</span>
-            </span>
-            {processes.map((proc) => (
-              <ProcessRow key={proc.pid} proc={proc} />
-            ))}
-          </div>
-        </div>
+      <SessionBlock className="relative z-10 border-b border-border py-12">
+        <SectionHeading command="now" subtitle="What has my attention this season." />
+        <dl className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <NowItem label="building" value="reachability-cve-triage — proving which vulnerable dependencies actually matter" />
+          <NowItem label="training" value="PortSwigger Web Security Academy, one lab at a time" />
+          <NowItem label="studying" value="market microstructure and the math under it" />
+          <NowItem label="open to" value="security engineering roles" />
+        </dl>
       </SessionBlock>
 
       {/* work */}
-      <SessionBlock id="work" className="relative z-10 scroll-mt-24 border-t border-border py-10">
-        <Prompt command="cat work/README.md" />
-        <div className="mt-6 grid gap-4 lg:grid-cols-3">
+      <SessionBlock id="work" className="relative z-10 scroll-mt-24 border-b border-border py-12">
+        <SectionHeading
+          command="work"
+          subtitle="Three threads. One is deep, two are growing."
+        />
+
+        <div className="mt-8 grid gap-4 lg:grid-cols-3">
           <Tilt3D>
             <TrackCard
               track="security/"
@@ -215,10 +203,7 @@ export default async function Home() {
                       >
                         <span className="mono-heading flex items-center justify-between gap-2 text-sm text-foreground group-hover:text-accent">
                           <span className="truncate">{project.name}</span>
-                          <ArrowUpRight
-                            size={13}
-                            className="shrink-0 text-muted group-hover:text-accent"
-                          />
+                          <ArrowUpRight size={13} className="shrink-0 text-muted group-hover:text-accent" />
                         </span>
                         <span className="mt-1 block text-xs leading-5 text-muted">
                           {project.description}
@@ -228,8 +213,8 @@ export default async function Home() {
                   ))}
                 </ul>
               ) : (
-                <p className="mono-heading mt-5 border-t border-border pt-4 text-xs text-muted">
-                  0 repos tagged portfolio. (tag something, deval.)
+                <p className="mt-5 border-t border-border pt-4 text-xs text-muted">
+                  Projects load from GitHub repos tagged portfolio.
                 </p>
               )}
             </TrackCard>
@@ -241,8 +226,8 @@ export default async function Home() {
               title="Pricing and predicting"
               body="Quantitative finance, studied from first principles. Backtests, market microstructure notes, and small pricing experiments."
             >
-              <p className="mono-heading mt-5 border-t border-border pt-4 text-xs leading-5 text-muted">
-                First entries in the works. The reading list is already long.
+              <p className="mt-5 border-t border-border pt-4 text-xs leading-5 text-muted">
+                First entries are in the works. The reading list is already long.
               </p>
             </TrackCard>
           </Tilt3D>
@@ -253,10 +238,10 @@ export default async function Home() {
               title="Showing up offline"
               body="Community and social work — the projects that help someone other than a computer. Teaching, volunteering, and organizing."
             >
-              <p className="mono-heading mt-5 border-t border-border pt-4 text-xs leading-5 text-muted">
+              <p className="mt-5 border-t border-border pt-4 text-xs leading-5 text-muted">
                 Exhibit A:{" "}
-                <Link href="/optiverse" className="text-warn hover:underline">
-                  optiverse/
+                <Link href="/optiverse" className="text-accent hover:underline">
+                  Optiverse
                 </Link>{" "}
                 — 150,000+ students reached.
               </p>
@@ -265,10 +250,10 @@ export default async function Home() {
         </div>
       </SessionBlock>
 
-      {/* about */}
-      <SessionBlock id="life" className="relative z-10 scroll-mt-24 border-t border-border py-10">
-        <Prompt command="cat about.txt" />
-        <div className="mt-5 max-w-3xl space-y-4 text-base leading-8 text-body">
+      {/* life */}
+      <SessionBlock id="life" className="relative z-10 scroll-mt-24 border-b border-border py-12">
+        <SectionHeading command="life" subtitle="The person behind the prompt." />
+        <div className="mt-6 max-w-3xl space-y-4 text-base leading-8 text-body">
           <p>
             I am an engineer in Mumbai. Security is my trade: I interned with
             the cybersecurity team at JioStar and serve as Vice President of
@@ -283,20 +268,20 @@ export default async function Home() {
             <Link href="/optiverse" className="text-accent hover:underline">
               a mentorship org
             </Link>{" "}
-            that grew past 150,000 students while I was busy pretending to be
-            a shell prompt.
+            that grew past 150,000 students.
           </p>
           <p>
-            This site collects all of it. The terminal aesthetic stays. The
-            content refuses to fit in one directory.
+            This site collects all of it: projects, writeups, and the
+            occasional life update. The terminal aesthetic stays. The content
+            refuses to fit in one directory.
           </p>
         </div>
       </SessionBlock>
 
       {/* contact */}
-      <SessionBlock id="contact" className="relative z-10 scroll-mt-24 border-t border-border py-10">
-        <Prompt command="open mailto:devalktk@gmail.com" />
-        <div className="mt-5 flex flex-wrap items-center gap-3">
+      <SessionBlock id="contact" className="relative z-10 scroll-mt-24 py-12">
+        <SectionHeading command="contact" subtitle="The inbox is open." />
+        <div className="mt-6 flex flex-wrap items-center gap-3">
           <a
             href="mailto:devalktk@gmail.com"
             className="inline-flex h-10 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-4 text-sm font-medium text-accent transition hover:border-accent"
@@ -308,97 +293,49 @@ export default async function Home() {
             href="/resume"
             className="inline-flex h-10 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
           >
-            resume
+            Resume
             <ArrowUpRight size={14} />
           </Link>
         </div>
-      </SessionBlock>
-
-      {/* logout */}
-      <SessionBlock className="relative z-10 border-t border-border py-10">
-        <Prompt command="exit" />
-        <p className="mono-heading mt-3 text-sm text-muted">
-          logout
-          <br />
-          Connection to in.mumbai closed.
-        </p>
       </SessionBlock>
     </AnimatedPage>
   );
 }
 
-type LsRow = {
-  perms: string;
-  name: string;
-  href?: string;
+type Destination = {
+  href: string;
+  label: string;
+  title: string;
+  description: string;
   meta: string;
-  comment: string;
-  tone?: "warn" | "danger";
+  icon: React.ReactNode;
 };
 
-type PsRow = {
-  pid: string;
-  stat: string;
+function SectionHeading({
+  command,
+  subtitle,
+}: {
   command: string;
-  comment: string;
-  tone?: "warn";
-};
-
-function Prompt({ command }: { command: string }) {
+  subtitle: string;
+}) {
   return (
-    <p className="mono-heading text-sm sm:text-base">
-      <span className="text-ok">deval@mumbai</span>
-      <span className="text-muted">:</span>
-      <span className="text-accent">~</span>
-      <span className="text-muted"> $ </span>
-      <span className="font-semibold text-foreground">{command}</span>
-    </p>
+    <header>
+      <h2 className="mono-heading text-lg font-semibold text-foreground">
+        <span className="text-accent">&gt;</span> {command}
+      </h2>
+      <p className="mt-2 text-sm text-muted">{subtitle}</p>
+    </header>
   );
 }
 
-function LsLine({ row }: { row: LsRow }) {
-  const nameColor =
-    row.tone === "warn"
-      ? "text-warn"
-      : row.tone === "danger"
-        ? "text-body"
-        : row.href
-          ? "text-accent"
-          : "text-body";
-  const commentColor = row.tone === "danger" ? "text-danger" : "text-muted";
-
+function NowItem({ label, value }: { label: string; value: string }) {
   return (
-    <span className="grid grid-cols-[minmax(7rem,max-content)_1fr] items-baseline gap-x-6 gap-y-1 sm:grid-cols-[7rem_9rem_8rem_1fr]">
-      <span className="hidden text-faint sm:inline">{row.perms}</span>
-      <span
-        className={`${nameColor} ${row.href ? "transition group-hover:underline" : ""}`}
-      >
-        {row.name}
-      </span>
-      <span className="hidden text-muted sm:inline">{row.meta}</span>
-      <span className={`${commentColor} col-span-2 text-xs leading-5 sm:col-span-1 sm:text-sm`}>
-        {row.comment}
-      </span>
-    </span>
-  );
-}
-
-function ProcessRow({ proc }: { proc: PsRow }) {
-  const commandColor = proc.tone === "warn" ? "text-warn" : "text-foreground";
-  return (
-    <>
-      <span className="py-1.5 text-muted">{proc.pid}</span>
-      <span
-        className={`hidden py-1.5 sm:block ${proc.tone === "warn" ? "text-warn" : "text-muted"}`}
-      >
-        {proc.stat}
-      </span>
-      <span className={`py-1.5 ${commandColor}`}>{proc.command}</span>
-      <span className="hidden py-1.5 text-muted sm:block">{proc.comment}</span>
-      <span className="col-span-2 pb-2 text-xs leading-5 text-muted sm:hidden">
-        {proc.comment}
-      </span>
-    </>
+    <div className="grid gap-1">
+      <dt className="mono-heading text-[11px] uppercase tracking-wider text-accent">
+        {label}
+      </dt>
+      <dd className="text-sm leading-6 text-body">{value}</dd>
+    </div>
   );
 }
 
@@ -420,6 +357,53 @@ function TrackCard({
       <p className="mt-3 text-sm leading-6 text-muted">{body}</p>
       {children}
     </article>
+  );
+}
+
+function AnchorButton({
+  href,
+  primary,
+  children,
+}: {
+  href: string;
+  primary?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <Link
+      href={href}
+      className={
+        primary
+          ? "inline-flex h-10 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-4 text-sm font-medium text-accent transition hover:border-accent"
+          : "inline-flex h-10 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
+      }
+    >
+      {children}
+      <ArrowRight size={14} />
+    </Link>
+  );
+}
+
+function SocialLink({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  const external = href.startsWith("http");
+  return (
+    <a
+      className="grid size-10 place-items-center border border-border bg-surface text-body transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
+      href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noopener noreferrer" : undefined}
+      aria-label={label}
+    >
+      {children}
+    </a>
   );
 }
 
