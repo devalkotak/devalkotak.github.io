@@ -109,44 +109,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* index */}
-      <SessionBlock className="relative z-10 border-t border-border py-4">
-        <div className="divide-y divide-border">
-          {index.map((row) => (
-            <Link
-              key={row.href}
-              href={row.href}
-              className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 py-6 sm:grid-cols-[3.5rem_minmax(11rem,max-content)_1fr_auto] sm:gap-x-8"
-            >
-              <span className="mono-heading text-xs text-faint transition group-hover:text-accent sm:text-sm">
-                {row.number}
-              </span>
-              <span
-                className="font-semibold leading-none text-foreground transition group-hover:text-accent"
-                style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
-              >
-                {row.title}
-              </span>
-              <span className="hidden text-sm text-muted sm:block">
-                {row.note}
-              </span>
-              <span className="flex items-center gap-3">
-                <span className="mono-heading hidden text-xs text-muted sm:inline">
-                  {row.meta}
-                </span>
-                <ArrowUpRight
-                  size={18}
-                  className="text-faint transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
-                />
-              </span>
-              <span className="col-span-2 col-start-2 mt-2 text-xs text-muted sm:hidden">
-                {row.note} · {row.meta}
-              </span>
-            </Link>
-          ))}
-        </div>
-      </SessionBlock>
-
       {/* currently */}
       <SessionBlock className="relative z-10 border-t border-border py-10">
         <p className="mono-heading text-xs uppercase tracking-widest text-accent">
@@ -218,8 +180,100 @@ export default async function Home() {
           </div>
         </div>
       </SessionBlock>
+
+      {/* fresh off the blog */}
+      {writeups.length > 0 && (
+        <SessionBlock className="relative z-10 border-t border-border py-10">
+          <div className="flex items-baseline justify-between gap-4">
+            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
+              fresh off the blog
+            </p>
+            <Link
+              href="/blog"
+              className="mono-heading text-xs text-muted transition hover:text-accent"
+            >
+              all writeups →
+            </Link>
+          </div>
+          <div className="mt-4 divide-y divide-border/60">
+            {writeups.slice(0, 3).map((writeup) => (
+              <Link
+                key={writeup.id}
+                href={`/blog/${writeup.slug}`}
+                className="group flex items-baseline justify-between gap-4 py-3"
+              >
+                <span className="min-w-0">
+                  <span className="block text-sm font-medium leading-6 text-foreground transition group-hover:text-accent sm:truncate">
+                    {writeup.title}
+                  </span>
+                  <span className="mono-heading mt-0.5 block text-[11px] text-muted">
+                    {writeup.category}
+                    {writeup.tags.slice(0, 2).map((tag) => (
+                      <span key={tag}> · {tag}</span>
+                    ))}
+                  </span>
+                </span>
+                <time
+                  className="mono-heading shrink-0 text-xs text-muted"
+                  dateTime={writeup.date}
+                >
+                  {formatDate(writeup.date)}
+                </time>
+              </Link>
+            ))}
+          </div>
+        </SessionBlock>
+      )}
+
+      {/* index */}
+      <SessionBlock className="relative z-10 border-t border-border py-4">
+        <p className="mono-heading pt-6 text-xs uppercase tracking-widest text-accent">
+          the full map
+        </p>
+        <div className="mt-2 divide-y divide-border">
+          {index.map((row) => (
+            <Link
+              key={row.href}
+              href={row.href}
+              className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 py-6 sm:grid-cols-[3.5rem_minmax(11rem,max-content)_1fr_auto] sm:gap-x-8"
+            >
+              <span className="mono-heading text-xs text-faint transition group-hover:text-accent sm:text-sm">
+                {row.number}
+              </span>
+              <span
+                className="font-semibold leading-none text-foreground transition group-hover:text-accent"
+                style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
+              >
+                {row.title}
+              </span>
+              <span className="hidden text-sm text-muted sm:block">
+                {row.note}
+              </span>
+              <span className="flex items-center gap-3">
+                <span className="mono-heading hidden text-xs text-muted sm:inline">
+                  {row.meta}
+                </span>
+                <ArrowUpRight
+                  size={18}
+                  className="text-faint transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent"
+                />
+              </span>
+              <span className="col-span-2 col-start-2 mt-2 text-xs text-muted sm:hidden">
+                {row.note} · {row.meta}
+              </span>
+            </Link>
+          ))}
+        </div>
+      </SessionBlock>
     </AnimatedPage>
   );
+}
+
+function formatDate(date: string) {
+  return new Intl.DateTimeFormat("en", {
+    month: "short",
+    year: "numeric",
+  }).format(new Date(date));
 }
 
 type IndexRow = {
