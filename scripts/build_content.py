@@ -7,10 +7,12 @@ shape handling stay in Python so the frontend remains a static renderer.
 
 from __future__ import annotations
 
+import argparse
 import json
 import os
 import shutil
 import re
+import subprocess
 import sys
 import unicodedata
 import urllib.error
@@ -65,6 +67,8 @@ UNPUBLISHED_VALUES = {
 
 
 def main() -> int:
+    args = parse_args()
+
     protected_env = set(os.environ)
     loaded_env: set[str] = set()
     load_local_env(ROOT / ".env", protected_env, loaded_env)
@@ -96,7 +100,65 @@ def main() -> int:
         f"{len(writeups_payload['writeups'])} writeup(s), "
         f"{len(resources_payload['resources'])} resource(s)"
     )
+
+    if args.push:
+        return push_content(args)
     return 0
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--push",
+        action="store_true",
+        help="commit and push content/generated after building, if it changed",
+    )
+    parser.add_argument(
+        "--remote",
+        default="origin",
+        help="git remote to push to (default: origin)",
+    )
+    parser.add_argument(
+        "--branch",
+        default=None,
+        help="git branch to push (default: current branch)",
+    )
+    parser.add_argument(
+        "--message",
+        default="content: refresh from github/notion",
+        help="commit message to use when pushing",
+    )
+    return parser.parse_args()
+
+
+def push_content(args: argparse.Namespace) -> int:
+    run_git(["add", "--", "content/generated"])
+
+    diff = subprocess.run(
+        ["git", "-C", str(ROOT), "diff", "--cached", "--quiet", "--", "content/generated"],
+    )
+    if diff.returncode == 0:
+        print("no content changes, nothing to push")
+        return 0
+
+    run_git(["commit", "-m", args.message, "--", "content/generated"])
+
+    branch = args.branch or run_git(
+        ["rev-parse", "--abbrev-ref", "HEAD"], capture=True
+    ).strip()
+    run_git(["push", args.remote, branch])
+    print(f"pushed content update to {args.remote}/{branch}")
+    return 0
+
+
+def run_git(git_args: list[str], *, capture: bool = False) -> str:
+    result = subprocess.run(
+        ["git", "-C", str(ROOT), *git_args],
+        capture_output=capture,
+        text=True,
+        check=True,
+    )
+    return result.stdout if capture else ""
 
 
 def load_local_env(
