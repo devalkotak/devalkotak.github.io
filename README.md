@@ -72,9 +72,10 @@ For local files, `.env` is loaded first and `.env.local` can override values
 from `.env`. Existing shell or CI environment variables are not overwritten by
 either file.
 
-GitHub Actions builds on push and on a daily cron. Each build runs the Python
-content generator first, so public repos and published Notion writeups
-refresh even if the frontend source code does not change.
+GitHub Actions builds on push and twice a day on a cron (02:17 and 14:17 UTC,
+so 07:47 and 19:47 IST). Each build runs the Python content generator first,
+so public repos and published Notion writeups refresh even if the frontend
+source code does not change.
 
 ## Local Development
 

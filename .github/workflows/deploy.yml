@@ -5,7 +5,8 @@ on:
     branches:
       - main
   schedule:
-    - cron: "17 2 * * *"
+    # 02:17 and 14:17 UTC, which is 07:47 and 19:47 IST.
+    - cron: "17 2,14 * * *"
   workflow_dispatch:
 
 permissions:
