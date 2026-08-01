@@ -136,15 +136,15 @@ export default async function Home() {
             style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
           >
             I&apos;m a computer engineering student working in application
-            security. Most of it comes down to judgement:{" "}
+            security.{" "}
             <span className="text-foreground">
-              knowing which odd behaviour is actually a bug
+              Most of what I know came from pulling something apart to find out
+              why it behaved strangely
             </span>
-            , and which finding is worth someone&apos;s afternoon. The rest
-            repeats, and{" "}
+            , and{" "}
             <span className="text-accent">
-              I automate that as hard as I can so the manual attention lands
-              where it counts
+              most of what I build came from not wanting to do that by hand the
+              next fifty times
             </span>
             . I{" "}
             <span className="text-foreground">secure production systems</span>{" "}
