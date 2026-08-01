@@ -28,6 +28,12 @@ export default async function BlogPage() {
         </p>
       </header>
 
+      <p className="mt-8 border-l-2 border-accent bg-surface px-4 py-3 text-sm leading-6 text-muted">
+        Heads up: my notes currently live scattered across Notion, old repos, and
+        half-finished drafts. I&apos;m consolidating them here bit by bit, so this
+        page will look thin for a while. More is on the way.
+      </p>
+
       {writeups.length > 0 ? (
         <div className="mt-8 divide-y divide-border">
           {writeups.map((writeup) => (

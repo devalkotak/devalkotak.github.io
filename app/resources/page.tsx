@@ -28,6 +28,11 @@ export default function ResourcesPage() {
         </p>
       </header>
 
+      <p className="mt-8 border-l-2 border-accent bg-surface px-4 py-3 text-sm leading-6 text-muted">
+        Heads up: this list is still being pulled together from bookmarks, notes,
+        and a few too many browser tabs. Sparse for now, growing steadily.
+      </p>
+
       {error ? (
         <p className="mt-8 border border-border bg-surface p-5 text-sm text-muted">
           Couldn&apos;t reach Notion right now: {error}
