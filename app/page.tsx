@@ -274,7 +274,7 @@ const RECORD: RecordEntry[] = [
     dates: "Feb 2026 – now",
     live: true,
     bullets: [
-      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and user access reviews run end to end.",
+      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and an end to end automated User Access Review (UAR) process.",
       "Gave the team attack surface it wasn't tracking, mapping production APIs and running VAPT on internal tools.",
       "Shipped the tooling around it too: Slackbots, Chrome extensions, and Telegram crawlers watching for piracy leaks.",
     ],
