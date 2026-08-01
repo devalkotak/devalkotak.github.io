@@ -135,23 +135,23 @@ export default async function Home() {
             className="max-w-4xl text-balance leading-[1.55] text-body"
             style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
           >
-            I&apos;m a computer engineering student who kept drifting to the
-            offensive side of things. I{" "}
-            <span className="text-foreground">secure production systems</span>{" "}
-            at JioStar, and most of what I build is tooling to make that work
-            go further:{" "}
+            I&apos;m a computer engineering student, and the way I work
+            hasn&apos;t changed much since I started. If I&apos;ve done
+            something by hand twice, I&apos;d rather spend the afternoon
+            getting it to run on its own. One person can only test so much
+            manually, and{" "}
             <span className="text-foreground">
-              triage pipelines that work out which vulnerabilities are actually
-              reachable
+              every tool I write raises that ceiling
             </span>
-            , regression engines that cover endpoints nobody has time to test
-            by hand. The pattern is always the same.{" "}
+            . So I automate the thing,{" "}
             <span className="text-accent">
-              Automate the manual part, widen what it covers, then keep
-              sharpening it until the output is worth trusting.
-            </span>{" "}
-            I&apos;ve also spent five years running organisations, including a
-            mentorship non-profit that reached{" "}
+              widen what the automation covers, then go back and sharpen it
+              until I trust what comes out
+            </span>
+            . I{" "}
+            <span className="text-foreground">secure production systems</span>{" "}
+            at JioStar. I&apos;ve also spent five years running student
+            organisations, including a mentorship non-profit that reached{" "}
             <span className="text-foreground">150,000 students</span> in 19
             countries. That&apos;s where I learned to write up a finding so
             someone will actually fix it.
