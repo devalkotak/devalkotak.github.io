@@ -8,7 +8,7 @@ const SUSPICIOUS =
 
 const SASS: string[] = [
   "Nice payload. Rendered as inert text, like everything else here.",
-  "Again? React escapes by default. This is a load-bearing feature, not luck.",
+  "Again? React escapes this by default. It is doing exactly what it should.",
   "Third attempt logged. (No it isn't. There's nothing to log to.)",
   "At this point I'd hire you for persistence. The input still doesn't execute.",
 ];
@@ -25,7 +25,7 @@ export default function BreakMeBox() {
         className="mono-heading flex items-center gap-2 text-xs text-muted"
       >
         <Bug size={14} className="text-accent" />
-        type anything — it gets reflected onto the page, raw and unsanitized*
+        type anything and it gets reflected onto the page, raw and unsanitized*
       </label>
       <input
         id="breakme"
@@ -64,8 +64,8 @@ export default function BreakMeBox() {
         </div>
       )}
       <p className="mt-4 text-[11px] leading-5 text-faint">
-        *it is sanitized. It was always sanitized. The asterisk was the first
-        red flag.
+        *it is sanitized. It always was. The asterisk should have given it
+        away.
       </p>
     </div>
   );

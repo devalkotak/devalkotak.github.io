@@ -40,12 +40,12 @@ export default function HonestyBadge() {
       <Claim
         value="#unknowable"
         label="your visitor number"
-        detail="No analytics, no counter, no idea. First time or fifteenth — genuinely can't tell."
+        detail="No analytics, no counter. First visit or fifteenth, I have no way of telling."
       />
       <Claim
         value="0 cookies, 0 trackers"
         label="stored about you"
-        detail="Open devtools, check the Application tab. Claims you can verify beat claims you have to trust."
+        detail="Open devtools and check the Application tab. You don't have to take my word for it."
       />
       <Claim
         value={
@@ -54,7 +54,7 @@ export default function HonestyBadge() {
             : "measuring…"
         }
         label="this page, for you, just now"
-        detail="Read live from your browser's Performance API. The average webpage is about 2.5 MB."
+        detail="Read from your browser's Performance API. The average webpage is around 2.5 MB."
       />
     </div>
   );

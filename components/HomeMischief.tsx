@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 const AWAY_TITLES = [
-  "wait — the audit wasn't finished",
+  "wait, the audit wasn't finished",
   "your tabs miss you",
   "still here. still not tracking you.",
   "the other tab isn't better, just louder",

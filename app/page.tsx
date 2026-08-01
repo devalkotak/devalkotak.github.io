@@ -43,14 +43,14 @@ export default async function Home() {
       href: "/resources",
       number: "03",
       title: "Resources",
-      note: "bookmarks that earned it",
+      note: "bookmarks I keep going back to",
       meta: countLabel(resources.length, "link"),
     },
     {
       href: "/optiverse",
       number: "04",
       title: "Optiverse",
-      note: "the part with humans in it",
+      note: "the non-profit I co-founded",
       meta: "150k+ students",
     },
     {
@@ -95,10 +95,10 @@ export default async function Home() {
         </div>
 
         <p className="relative mt-9 max-w-xl text-base leading-8 text-body">
-          Security engineer in the making — Python tooling that separates real
-          vulnerabilities from noise. There was a markets phase, there is a
-          mentorship org with 150,000 students, and there will be more
-          detours. This site logs all of it.
+          I write Python tooling that sorts real vulnerabilities out from the
+          noise. Before that there was a trading phase, and somewhere in the
+          middle a mentorship org that got to 150,000 students. Everything
+          I&apos;ve worked on ends up here eventually.
         </p>
 
         <div className="relative mt-10 flex flex-wrap items-center gap-3">
@@ -135,25 +135,26 @@ export default async function Home() {
             className="max-w-4xl text-balance leading-[1.55] text-body"
             style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
           >
-            I am a computer engineering student who kept ending up on the
-            offensive side of things — writing{" "}
-            <span className="text-foreground">CTF challenges</span> before I
-            was old enough to be paid for it, then{" "}
+            I&apos;m a computer engineering student who kept drifting to the
+            offensive side of things. I was writing{" "}
+            <span className="text-foreground">CTF challenges</span> before
+            anyone paid me to, and now I{" "}
             <span className="text-foreground">
-              pentesting real production systems
+              pentest production systems
             </span>{" "}
-            once I was. I build the tooling I wish existed:{" "}
+            at JioStar. Most of what I build is tooling:{" "}
             <span className="text-foreground">
-              triage pipelines that tell you which vulnerabilities are actually
+              triage pipelines that work out which vulnerabilities are actually
               reachable
             </span>
-            , regression engines that test endpoints nobody has time to test by
-            hand. Alongside it I have spent five years running organisations —
-            one of them a mentorship non-profit that reached{" "}
-            <span className="text-foreground">150,000 students</span> across 19
-            countries — which taught me the part most security people skip:{" "}
+            , regression engines that hit endpoints nobody has time to test by
+            hand. I&apos;ve also spent five years running organisations,
+            including a mentorship non-profit that reached{" "}
+            <span className="text-foreground">150,000 students</span> in 19
+            countries. That&apos;s where I learned to write up a finding so
+            someone will actually fix it,{" "}
             <span className="text-accent">
-              a finding nobody understands is a finding nobody fixes.
+              which turns out to be about as hard as finding it.
             </span>
           </p>
         </div>
@@ -162,7 +163,7 @@ export default async function Home() {
       {/* the record */}
       <Chapter
         label="the record"
-        intro="The two that matter most. Everything else — ISACA, Trinity, Buildspace — is on the resume."
+        intro="The two I'd point you at first. ISACA, Trinity and Buildspace are on the resume."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {RECORD.map((entry) => (
@@ -172,7 +173,7 @@ export default async function Home() {
 
         <div className="mt-10 flex flex-wrap items-center gap-3 border-t border-border/60 pt-8">
           <p className="mono-heading mr-auto text-xs leading-6 text-muted">
-            breaking things since before it was a job title
+            been at this since before it paid anything
           </p>
           <a
             href="mailto:devalktk@gmail.com"
@@ -193,8 +194,8 @@ export default async function Home() {
 
       {/* proof */}
       <Chapter
-        label="proof, not claims"
-        intro="Everything here runs on your side of the screen, on real data, with nothing sent anywhere."
+        label="see for yourself"
+        intro="All of this runs in your browser on real data. None of it gets sent anywhere, because there is nowhere to send it."
       >
         <div className="border border-border">
           <div className="border-b border-border bg-surface px-5 py-4 sm:px-6">
@@ -204,7 +205,7 @@ export default async function Home() {
           <div className="grid lg:grid-cols-2">
             <Demo
               title="You’ve been here a while. Want me to check you for vulnerabilities?"
-              caption="A real audit of the browser you are reading this in. Nothing leaves the tab."
+              caption="It reads the browser you are using right now. Nothing leaves the tab."
             >
               <VisitorAudit />
             </Demo>
@@ -283,12 +284,12 @@ const RECORD: RecordEntry[] = [
   {
     org: "JioStar",
     role: "Cybersecurity Intern",
-    dates: "Feb 2026 — now",
+    dates: "Feb 2026 – now",
     live: true,
     bullets: [
-      "Real pentests against production and deployment environments.",
-      "Built an AI regression engine that tests unbounded endpoints, with no-code test-case authoring.",
-      "Building an AI-backed SIEM triage pipeline that summarises alerts against history and pushes tuning advice to Slack.",
+      "Pentests against production and deployment environments.",
+      "Built an AI regression engine that runs across any number of endpoints, with no-code test case authoring.",
+      "Building a SIEM triage pipeline that summarises alerts against older ones and sends tuning suggestions to Slack.",
     ],
     metric: "production",
     metricLabel: "not a lab environment",
@@ -296,7 +297,7 @@ const RECORD: RecordEntry[] = [
   {
     org: "Optiverse",
     role: "Co-Founder",
-    dates: "Mar 2021 — now",
+    dates: "Mar 2021 – now",
     live: true,
     bullets: [
       "Ran a 250+ member student non-profit spanning 19 countries.",

@@ -100,14 +100,14 @@ function collectFindings(): Finding[] {
     id: "F-08",
     severity: dnt ? "info" : "medium",
     text: dnt
-      ? "Do Not Track is on. Adorable. Most sites ignore it — this one has nothing to ignore it with."
+      ? "Do Not Track is on. Adorable. Most sites ignore it, and this one has nothing to ignore it with."
       : "Do Not Track is off. To be fair, turning it on mostly signals optimism.",
   });
 
   findings.push({
     id: "F-09",
     severity: "high",
-    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been — but it knows how far.`,
+    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been, though it knows how far.`,
   });
 
   findings.push({
@@ -162,9 +162,8 @@ export default function VisitorAudit() {
       {findings === null ? (
         <div className="flex flex-col items-start gap-4">
           <p className="text-sm leading-6 text-muted">
-            Live reading of what your own browser hands to every page it
-            visits. Nothing leaves this tab — there is no server to send it
-            to.
+            A live reading of what your browser hands to every page it visits.
+            Nothing leaves this tab. There is no server to send it to.
           </p>
           <button
             type="button"
