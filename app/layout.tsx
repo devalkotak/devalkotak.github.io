@@ -16,11 +16,49 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const SITE_URL = "https://devalkotak.github.io";
+const SITE_TITLE = "Deval Kotak";
+const SITE_DESCRIPTION =
+  "Application security engineer in Mumbai. I break systems to understand them, and build stronger ones. Writeups, tooling, and the work behind both.";
+
 export const metadata: Metadata = {
-  title: "Deval Kotak",
-  description:
-    "Deval Kotak — engineer in Mumbai. Security work, market experiments, community projects, and articles on all three.",
-  metadataBase: new URL("https://devalkotak.github.io"),
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_TITLE,
+    template: "%s / Deval Kotak",
+  },
+  description: SITE_DESCRIPTION,
+  applicationName: SITE_TITLE,
+  authors: [{ name: "Deval Kotak", url: SITE_URL }],
+  creator: "Deval Kotak",
+  keywords: [
+    "application security",
+    "security engineer",
+    "penetration testing",
+    "security tooling",
+    "Deval Kotak",
+    "Mumbai",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: SITE_TITLE,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

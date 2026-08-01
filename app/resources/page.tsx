@@ -4,7 +4,7 @@ import AnimatedPage from "@/components/AnimatedPage";
 import { getResourceState } from "@/lib/resources";
 
 export const metadata: Metadata = {
-  title: "Resources / Deval Kotak",
+  title: "Resources",
   description:
     "Tools, references, and reading worth keeping — synced from Notion.",
 };

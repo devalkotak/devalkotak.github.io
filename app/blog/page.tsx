@@ -5,7 +5,7 @@ import AnimatedPage from "@/components/AnimatedPage";
 import { getPublishedWriteups } from "@/lib/notion";
 
 export const metadata: Metadata = {
-  title: "Blog / Deval Kotak",
+  title: "Blog",
   description:
     "Writeups on things I broke, fixed, or finally understood — security and markets both.",
 };

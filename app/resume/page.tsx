@@ -3,7 +3,7 @@ import { Download, ExternalLink, FileText } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
 
 export const metadata: Metadata = {
-  title: "Resume / Deval Kotak",
+  title: "Resume",
   description: "Deval Kotak's resume — view inline or download the PDF.",
 };
 

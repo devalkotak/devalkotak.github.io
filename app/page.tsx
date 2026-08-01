@@ -89,8 +89,8 @@ export default async function Home() {
             <span className="text-muted">to understand them.</span>
           </h1>
           <p className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            Then I automate{" "}
-            <span className="text-accent">the breaking.</span>
+            And build{" "}
+            <span className="text-accent">stronger ones.</span>
           </p>
         </div>
 

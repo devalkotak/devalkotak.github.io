@@ -5,7 +5,7 @@ import NotionRenderer from "@/components/NotionRenderer";
 import { getOptiverseContent } from "@/lib/optiverse";
 
 export const metadata: Metadata = {
-  title: "Optiverse / Deval Kotak",
+  title: "Optiverse",
   description:
     "Optiverse — a student-built mentorship project I co-founded. Paused, not forgotten.",
 };

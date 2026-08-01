@@ -3,7 +3,7 @@ import { ShieldCheck } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
 
 export const metadata: Metadata = {
-  title: "Security posture / Deval Kotak",
+  title: "Security posture",
   description:
     "How this site is built, what it collects, and what its actual attack surface is.",
 };

@@ -5,7 +5,7 @@ import Tilt3D from "@/components/Tilt3D";
 import { getPortfolioProjectState } from "@/lib/github";
 
 export const metadata: Metadata = {
-  title: "Projects / Deval Kotak",
+  title: "Projects",
   description:
     "Security tooling, market experiments, and everything else pulled live from GitHub.",
 };
