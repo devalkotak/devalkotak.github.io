@@ -303,14 +303,14 @@ const CHANGELOG = [
     note: "It is still processing the betrayal. The findings queue has never been shorter.",
   },
   {
-    version: "v2026.01",
-    title: "Vice President, DJS ISACA.",
-    note: "Turns out the title comes bundled with meetings. Working on a patch.",
+    version: "v2026.02",
+    title: "Cybersecurity internship, JioStar.",
+    note: "Production: where elegant theories go to get humbled at scale. Currently running.",
   },
   {
-    version: "v2025.06",
-    title: "Cybersecurity internship, JioStar.",
-    note: "Production: where elegant theories go to get humbled at scale.",
+    version: "v2024.07",
+    title: "Vice President, DJS ISACA.",
+    note: "Turns out the title comes bundled with meetings. Term ended Aug 2025, patch shipped.",
   },
   {
     version: "v2024.02",
