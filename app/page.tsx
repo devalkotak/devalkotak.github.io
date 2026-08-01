@@ -135,26 +135,24 @@ export default async function Home() {
             className="max-w-4xl text-balance leading-[1.55] text-body"
             style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
           >
-            I&apos;m a computer engineering student, and the way I work
-            hasn&apos;t changed much since I started. If I&apos;ve done
-            something by hand twice, I&apos;d rather spend the afternoon
-            getting it to run on its own. One person can only test so much
-            manually, and{" "}
+            I&apos;m a computer engineering student working in application
+            security. Most of it comes down to judgement:{" "}
             <span className="text-foreground">
-              every tool I write raises that ceiling
+              knowing which odd behaviour is actually a bug
             </span>
-            . So I automate the thing,{" "}
+            , and which finding is worth someone&apos;s afternoon. The rest
+            repeats, and{" "}
             <span className="text-accent">
-              widen what the automation covers, then go back and sharpen it
-              until I trust what comes out
+              I automate that as hard as I can so the manual attention lands
+              where it counts
             </span>
             . I{" "}
             <span className="text-foreground">secure production systems</span>{" "}
             at JioStar. I&apos;ve also spent five years running student
             organisations, including a mentorship non-profit that reached{" "}
             <span className="text-foreground">150,000 students</span> in 19
-            countries. That&apos;s where I learned to write up a finding so
-            someone will actually fix it.
+            countries, which is where I got good at explaining technical risk
+            to people who never asked for it.
           </p>
         </div>
       </SessionBlock>
