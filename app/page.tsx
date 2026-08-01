@@ -274,9 +274,9 @@ const RECORD: RecordEntry[] = [
     dates: "Feb 2026 – now",
     live: true,
     bullets: [
-      "Pentests against production and deployment environments.",
-      "Built an AI regression engine that runs across any number of endpoints, with no-code test case authoring.",
-      "Building a SIEM triage pipeline that summarises alerts against older ones and sends tuning suggestions to Slack.",
+      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and user access reviews run end to end.",
+      "Gave the team attack surface it wasn't tracking, mapping production APIs and running VAPT on internal tools.",
+      "Shipped the tooling around it too: Slackbots, Chrome extensions, and Telegram crawlers watching for piracy leaks.",
     ],
     metric: "production",
     metricLabel: "not a lab environment",
