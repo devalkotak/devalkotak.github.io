@@ -122,10 +122,47 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* statement */}
+      <SessionBlock className="relative z-10 border-t border-border py-14">
+        <div className="grid gap-6 lg:grid-cols-[9rem_1fr] lg:gap-10">
+          <div className="lg:sticky lg:top-28 lg:self-start">
+            <span className="mb-3 block h-px w-8 bg-accent/60" aria-hidden="true" />
+            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
+              the short version
+            </p>
+          </div>
+          <p
+            className="max-w-4xl text-balance leading-[1.55] text-body"
+            style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
+          >
+            I am a computer engineering student who kept ending up on the
+            offensive side of things — writing{" "}
+            <span className="text-foreground">CTF challenges</span> before I
+            was old enough to be paid for it, then{" "}
+            <span className="text-foreground">
+              pentesting real production systems
+            </span>{" "}
+            once I was. I build the tooling I wish existed:{" "}
+            <span className="text-foreground">
+              triage pipelines that tell you which vulnerabilities are actually
+              reachable
+            </span>
+            , regression engines that test endpoints nobody has time to test by
+            hand. Alongside it I have spent five years running organisations —
+            one of them a mentorship non-profit that reached{" "}
+            <span className="text-foreground">150,000 students</span> across 19
+            countries — which taught me the part most security people skip:{" "}
+            <span className="text-accent">
+              a finding nobody understands is a finding nobody fixes.
+            </span>
+          </p>
+        </div>
+      </SessionBlock>
+
       {/* the record */}
       <Chapter
         label="the record"
-        intro="Six places, one habit: take the system apart, then leave it measurably better than it was."
+        intro="The two that matter most. Everything else — ISACA, INNOVEX, Trinity, Buildspace — is on the resume."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {RECORD.map((entry) => (
@@ -154,61 +191,30 @@ export default async function Home() {
         </div>
       </Chapter>
 
-      {/* changelog */}
-      <Chapter label="changelog of a person">
-        <div>
-          {CHANGELOG.map((entry, i) => (
-            <div
-              key={entry.version}
-              className={`grid gap-x-8 gap-y-1 py-4 sm:grid-cols-[6rem_1fr] ${
-                i > 0 ? "border-t border-border/60" : ""
-              }`}
-            >
-              <p className="mono-heading text-sm text-accent">{entry.version}</p>
-              <div>
-                <p className="text-sm font-medium leading-6 text-foreground">
-                  {entry.title}
-                </p>
-                <p className="mt-1 text-sm leading-6 text-muted">{entry.note}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Chapter>
-
       {/* proof */}
       <Chapter
         label="proof, not claims"
-        intro="Three demonstrations. Everything below runs on your side of the screen, on real data, with nothing sent anywhere."
+        intro="Everything here runs on your side of the screen, on real data, with nothing sent anywhere."
       >
-        <div className="space-y-10">
-          <div className="grid gap-6 lg:grid-cols-[minmax(14rem,0.9fr)_1.6fr]">
-            <div>
-              <h3 className="text-xl font-semibold leading-snug text-foreground">
-                You&apos;ve been here a while. Want me to check you for
-                vulnerabilities?
-              </h3>
-            </div>
-            <VisitorAudit />
-          </div>
-
-          <div className="grid gap-6 lg:grid-cols-[1.6fr_minmax(14rem,0.9fr)]">
-            <div className="order-2 lg:order-1">
-              <BreakMeBox />
-            </div>
-            <div className="order-1 lg:order-2 lg:text-right">
-              <h3 className="text-xl font-semibold leading-snug text-foreground">
-                An input field, on a security engineer&apos;s site, daring
-                you to inject something.
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Go on. You were thinking it.
-              </p>
-            </div>
-          </div>
-
-          <div className="border-t border-border/60 pt-8">
+        <div className="border border-border">
+          <div className="border-b border-border bg-surface px-5 py-4 sm:px-6">
             <HonestyBadge />
+          </div>
+
+          <div className="grid lg:grid-cols-2">
+            <Demo
+              title="You’ve been here a while. Want me to check you for vulnerabilities?"
+              caption="A real audit of the browser you are reading this in. Nothing leaves the tab."
+            >
+              <VisitorAudit />
+            </Demo>
+            <Demo
+              title="An input field, on a security engineer’s site, daring you to inject something."
+              caption="Go on. You were thinking it."
+              divided
+            >
+              <BreakMeBox />
+            </Demo>
           </div>
         </div>
       </Chapter>
@@ -300,84 +306,33 @@ const RECORD: RecordEntry[] = [
     metric: "150,000+",
     metricLabel: "students reached",
   },
-  {
-    org: "DJS ISACA",
-    role: "Vice President",
-    dates: "Jul 2024 — Aug 2025",
-    bullets: [
-      "Authored the web-exploitation and cryptography challenges for Breachbytes 2.0, modelled on the OWASP Top 10.",
-      "Owned the technical infrastructure for SYN3ERGY 2.0, a 24-hour intercollegiate hackathon.",
-      "Taught hands-on Burp Suite and Wireshark sessions, and interviewed 80+ applicants.",
-    ],
-    metric: "80+",
-    metricLabel: "competitors, per event",
-  },
-  {
-    org: "DJS INNOVEX",
-    role: "Chairperson",
-    dates: "Oct 2025 — now",
-    live: true,
-    bullets: [
-      "Founded the organisation from nothing and wrote its operating framework.",
-      "Recruited a core team covering 9 technical domains, from AI/ML to cybersecurity.",
-      "Set the strategy for workshops, bootcamps and buildathons.",
-    ],
-    metric: "30+",
-    metricLabel: "core team, built from zero",
-  },
-  {
-    org: "DJS Trinity",
-    role: "Co-Chairperson",
-    dates: "Aug 2024 — Apr 2025",
-    bullets: [
-      "Ran a 3-day college festival end to end: budget, logistics, venue production, police permissions.",
-      "Handled 1,000+ attendees a night, including crowd control and security.",
-      "Launched new formats, among them a national-level drone race.",
-    ],
-    metric: "100",
-    metricLabel: "person team led",
-  },
-  {
-    org: "DJS Buildspace",
-    role: "Cybersecurity Mentor",
-    dates: "Aug 2024 — now",
-    live: true,
-    bullets: [
-      "Led a mentor team and wrote the curriculum across cybersecurity, ML, Web3 and full stack.",
-      "Ran seminars for first- and second-year students averaging 75 attendees.",
-    ],
-    metric: "12",
-    metricLabel: "mentors led",
-  },
 ];
 
-const CHANGELOG = [
-  {
-    version: "v2026.07",
-    title: "Taught a CVE scanner the difference between present and exploitable.",
-    note: "It is still processing the betrayal. The findings queue has never been shorter.",
-  },
-  {
-    version: "v2026.02",
-    title: "Cybersecurity internship, JioStar.",
-    note: "Production: where elegant theories go to get humbled at scale. Currently running.",
-  },
-  {
-    version: "v2024.07",
-    title: "Vice President, DJS ISACA.",
-    note: "Turns out the title comes bundled with meetings. Term ended Aug 2025, patch shipped.",
-  },
-  {
-    version: "v2024.02",
-    title: "The markets phase peaks.",
-    note: "Order books, microstructure, backtests. The spreadsheets remain; the obsession rotated.",
-  },
-  {
-    version: "v2023.09",
-    title: "Optiverse paused at 150,000+ students.",
-    note: "Still the largest number on this site, and the one I defend hardest.",
-  },
-] as const;
+function Demo({
+  title,
+  caption,
+  divided,
+  children,
+}: {
+  title: string;
+  caption: string;
+  divided?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <div
+      className={`flex flex-col p-5 sm:p-6 ${
+        divided ? "border-t border-border lg:border-l lg:border-t-0" : ""
+      }`}
+    >
+      <h3 className="max-w-md text-lg font-semibold leading-snug text-foreground">
+        {title}
+      </h3>
+      <p className="mt-2 text-sm leading-6 text-muted">{caption}</p>
+      <div className="mt-6">{children}</div>
+    </div>
+  );
+}
 
 function Chapter({
   label,

@@ -19,7 +19,7 @@ export default function BreakMeBox() {
   const suspicious = SUSPICIOUS.test(value);
 
   return (
-    <div className="border border-border bg-surface p-5 sm:p-6">
+    <div>
       <label
         htmlFor="breakme"
         className="mono-heading flex items-center gap-2 text-xs text-muted"

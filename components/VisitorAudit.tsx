@@ -158,7 +158,7 @@ export default function VisitorAudit() {
   };
 
   return (
-    <div className="border border-border bg-surface p-5 sm:p-6">
+    <div>
       {findings === null ? (
         <div className="flex flex-col items-start gap-4">
           <p className="text-sm leading-6 text-muted">
