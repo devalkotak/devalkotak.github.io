@@ -89,8 +89,8 @@ export default async function Home() {
             <span className="text-muted">to understand them.</span>
           </h1>
           <p className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            Then I prove it{" "}
-            <span className="text-accent">in writing.</span>
+            Then I automate{" "}
+            <span className="text-accent">the breaking.</span>
           </p>
         </div>
 
@@ -136,26 +136,25 @@ export default async function Home() {
             style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
           >
             I&apos;m a computer engineering student who kept drifting to the
-            offensive side of things. I was writing{" "}
-            <span className="text-foreground">CTF challenges</span> before
-            anyone paid me to, and now I{" "}
-            <span className="text-foreground">
-              pentest production systems
-            </span>{" "}
-            at JioStar. Most of what I build is tooling:{" "}
+            offensive side of things. I{" "}
+            <span className="text-foreground">secure production systems</span>{" "}
+            at JioStar, and most of what I build is tooling to make that work
+            go further:{" "}
             <span className="text-foreground">
               triage pipelines that work out which vulnerabilities are actually
               reachable
             </span>
-            , regression engines that hit endpoints nobody has time to test by
-            hand. I&apos;ve also spent five years running organisations,
-            including a mentorship non-profit that reached{" "}
+            , regression engines that cover endpoints nobody has time to test
+            by hand. The pattern is always the same.{" "}
+            <span className="text-accent">
+              Automate the manual part, widen what it covers, then keep
+              sharpening it until the output is worth trusting.
+            </span>{" "}
+            I&apos;ve also spent five years running organisations, including a
+            mentorship non-profit that reached{" "}
             <span className="text-foreground">150,000 students</span> in 19
             countries. That&apos;s where I learned to write up a finding so
-            someone will actually fix it,{" "}
-            <span className="text-accent">
-              which turns out to be about as hard as finding it.
-            </span>
+            someone will actually fix it.
           </p>
         </div>
       </SessionBlock>
