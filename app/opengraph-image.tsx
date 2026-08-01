@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
-export const alt = "Deval Kotak — application security";
+export const alt = "Deval Kotak, security engineering";
 
 export default function OpengraphImage() {
   return new ImageResponse(
@@ -23,7 +23,7 @@ export default function OpengraphImage() {
           <span style={{ color: "#58a6ff", padding: "0 10px" }}>/</span>
           mumbai
           <span style={{ color: "#58a6ff", padding: "0 10px" }}>/</span>
-          application security
+          security engineering
         </div>
 
         <div

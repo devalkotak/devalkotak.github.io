@@ -28,12 +28,9 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="Deval Kotak, home"
-          className="mono-heading group flex items-baseline gap-2 text-base font-semibold text-foreground transition hover:text-accent"
+          className="mono-heading text-base font-semibold text-foreground transition hover:text-accent"
         >
           Deval Kotak
-          <span className="hidden text-xs font-normal text-muted transition group-hover:text-accent/70 sm:inline">
-            appsec
-          </span>
         </Link>
 
         <div className="hidden items-center gap-7 md:flex">

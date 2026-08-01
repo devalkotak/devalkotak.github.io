@@ -19,7 +19,7 @@ const jetBrainsMono = JetBrains_Mono({
 const SITE_URL = "https://devalkotak.github.io";
 const SITE_TITLE = "Deval Kotak";
 const SITE_DESCRIPTION =
-  "Application security engineer in Mumbai. I break systems to understand them, and build stronger ones. Writeups, tooling, and the work behind both.";
+  "Security engineer in Mumbai. I break systems to understand them, and build stronger ones. Writeups, tooling, and the work behind both.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Deval Kotak", url: SITE_URL }],
   creator: "Deval Kotak",
   keywords: [
-    "application security",
+    "security engineering",
     "security engineer",
     "penetration testing",
     "security tooling",

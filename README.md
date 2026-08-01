@@ -7,7 +7,7 @@ resources. It is a real multi-page site, not a single scrolling page:
 | Route | Source |
 | --- | --- |
 | `/` | Static (home / hero, teasers link out to the pages below) |
-| `/projects` | GitHub, repos tagged `portfolio` |
+| `/projects` | GitHub, every public repo except this site and the profile README |
 | `/blog` (+ `/blog/[slug]`) | Notion, writeups database |
 | `/resources` | Notion, resources database |
 | `/optiverse` | Notion, single standalone page (see below) |
@@ -31,9 +31,9 @@ renders them. This keeps the frontend small while preserving the automatic
 portfolio and writeup goals.
 
 GitHub projects are fetched from `https://api.github.com/users/devalkotak/repos`
-and filtered by the `portfolio` topic. This keeps the Projects page automatic
-without showing every experiment or learning repo. `GITHUB_TOKEN` is optional and
-only raises the rate limit.
+and filtered to exclude forks, archived repos, and the two repos listed in
+`HIDDEN_REPOS` (this site's own source and the profile README). `GITHUB_TOKEN` is
+optional and only raises the rate limit.
 
 Notion is used for Blog / Writeups because writing and editing long-form notes is
 better there than in JSX. The UI never consumes raw Notion API responses.
@@ -73,7 +73,7 @@ from `.env`. Existing shell or CI environment variables are not overwritten by
 either file.
 
 GitHub Actions builds on push and on a daily cron. Each build runs the Python
-content generator first, so portfolio-tagged repos and published Notion writeups
+content generator first, so public repos and published Notion writeups
 refresh even if the frontend source code does not change.
 
 ## Local Development

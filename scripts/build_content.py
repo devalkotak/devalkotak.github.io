@@ -27,6 +27,10 @@ ROOT = Path(__file__).resolve().parents[1]
 GENERATED_DIR = ROOT / "content" / "generated"
 WRITEUPS_DIR = GENERATED_DIR / "writeups"
 GITHUB_REPOS_URL = "https://api.github.com/users/devalkotak/repos?per_page=100"
+
+# This site's own source and the profile README repo. Both are public and real,
+# neither belongs in a list of projects.
+HIDDEN_REPOS = {"devalkotak.github.io", "devalkotak"}
 NOTION_PLACEHOLDER_SLUG = "notion-not-configured"
 REQUEST_ATTEMPTS = 2
 REQUEST_TIMEOUT_SECONDS = 30
@@ -203,7 +207,9 @@ def build_projects_payload(generated_at: str) -> dict[str, Any]:
         projects = [
             normalize_repo(repo)
             for repo in repos
-            if "portfolio" in repo.get("topics", [])
+            if not repo.get("fork")
+            and not repo.get("archived")
+            and repo.get("name") not in HIDDEN_REPOS
         ]
         projects.sort(key=lambda item: item["pushedAt"], reverse=True)
 

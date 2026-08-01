@@ -1,5 +1,86 @@
 {
   "error": null,
-  "generatedAt": "2026-08-01T11:32:23Z",
-  "projects": []
+  "generatedAt": "2026-08-01T12:43:31Z",
+  "projects": [
+    {
+      "description": "AWS security risk assessment and control mapping against real infrastructure, covering CIS AWS Foundations v3.0.0, ISO 27001:2022 and the OWASP Top 10.",
+      "id": "1313170761",
+      "language": "JavaScript",
+      "name": "GRC-AWS-Lab",
+      "pushedAt": "2026-07-27T18:47:43Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/GRC-AWS-Lab"
+    },
+    {
+      "description": "Scans the whole commit history on every branch for secrets, including ones deleted in a later commit but still retrievable.",
+      "id": "1312302803",
+      "language": "Python",
+      "name": "Git-Secrets-Scanner",
+      "pushedAt": "2026-07-25T21:01:15Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/Git-Secrets-Scanner"
+    },
+    {
+      "description": "Ranks vulnerable Python dependencies by whether the vulnerable code is actually reachable from an HTTP route or CLI entry point.",
+      "id": "1284762374",
+      "language": "Python",
+      "name": "Reachability-CVE-Triage",
+      "pushedAt": "2026-07-25T20:38:16Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/Reachability-CVE-Triage"
+    },
+    {
+      "description": "Exploratory analysis of 100,000+ diabetic hospital encounters across 130 US hospitals, looking at what associates with a 30-day readmission.",
+      "id": "1194338126",
+      "language": "Jupyter Notebook",
+      "name": "Healthcare-Readmission-Analysis",
+      "pushedAt": "2026-07-25T20:33:48Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/Healthcare-Readmission-Analysis"
+    },
+    {
+      "description": "AES-256-GCM encryption with PBKDF2 key derivation and pre-encryption compression.",
+      "id": "1271563511",
+      "language": "Python",
+      "name": "Fortress-Cipher",
+      "pushedAt": "2026-07-25T20:33:43Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/Fortress-Cipher"
+    },
+    {
+      "description": "Paper-trading bot for NSE stocks on the Dhan API. Runs an SMA crossover strategy end to end without ever sending a real order.",
+      "id": "1133618802",
+      "language": "Python",
+      "name": "SMACrossoverStrategy-DhanAPI",
+      "pushedAt": "2026-07-25T20:33:35Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/SMACrossoverStrategy-DhanAPI"
+    },
+    {
+      "description": "A CRM and ERP sales warehouse rebuilt from T-SQL onto DuckDB and dbt. Clone it and you have a working star schema in about 20 seconds.",
+      "id": "1194338004",
+      "language": "TSQL",
+      "name": "Retail-Sales-Warehouse-DBT",
+      "pushedAt": "2026-07-23T11:20:02Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/Retail-Sales-Warehouse-DBT"
+    },
+    {
+      "description": "Checks a Windows host against real CIS Benchmark control IDs and reports pass or fail per control, with an ISO 27001 Annex A crosswalk.",
+      "id": "1309704899",
+      "language": "Python",
+      "name": "CIS-Compliance-Checker",
+      "pushedAt": "2026-07-23T08:25:02Z",
+      "stars": 0,
+      "topics": [],
+      "url": "https://github.com/devalkotak/CIS-Compliance-Checker"
+    }
+  ]
 }

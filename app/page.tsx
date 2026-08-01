@@ -9,7 +9,6 @@ import AnimatedPage from "@/components/AnimatedPage";
 import BreakMeBox from "@/components/BreakMeBox";
 import CursorGlow from "@/components/CursorGlow";
 import HomeMischief from "@/components/HomeMischief";
-import HonestyBadge from "@/components/HonestyBadge";
 import NoCookieBanner from "@/components/NoCookieBanner";
 import SessionBlock from "@/components/SessionBlock";
 import VisitorAudit from "@/components/VisitorAudit";
@@ -80,7 +79,7 @@ export default async function Home() {
         <div className="dot-grid pointer-events-none absolute -inset-x-8 -top-8 bottom-0" aria-hidden="true" />
         <p className="mono-heading relative text-sm text-muted">
           deval kotak <span className="text-accent">/</span> mumbai{" "}
-          <span className="text-accent">/</span> application security
+          <span className="text-accent">/</span> security engineering
         </p>
 
         <div className="relative mt-12 space-y-2">
@@ -124,19 +123,14 @@ export default async function Home() {
 
       {/* statement */}
       <SessionBlock className="relative z-10 border-t border-border py-14">
-        <div className="grid gap-6 lg:grid-cols-[9rem_1fr] lg:gap-10">
-          <div className="lg:sticky lg:top-28 lg:self-start">
-            <span className="mb-3 block h-px w-8 bg-accent/60" aria-hidden="true" />
-            <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-              the short version
-            </p>
-          </div>
+        <div>
+          <SectionLabel>whoami</SectionLabel>
           <p
-            className="max-w-4xl text-balance leading-[1.55] text-body"
-            style={{ fontSize: "clamp(1.15rem, 2.1vw, 1.6rem)" }}
+            className="mt-6 max-w-4xl text-balance leading-[1.6] text-body"
+            style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
-            I&apos;m a computer engineering student working in application
-            security.{" "}
+            I&apos;m a computer engineering student working in security
+            engineering.{" "}
             <span className="text-foreground">
               Most of what I know came from pulling something apart to find out
               why it behaved strangely
@@ -195,10 +189,6 @@ export default async function Home() {
         intro="All of this runs in your browser on real data. None of it gets sent anywhere, because there is nowhere to send it."
       >
         <div className="border border-border">
-          <div className="border-b border-border bg-surface px-5 py-4 sm:px-6">
-            <HonestyBadge />
-          </div>
-
           <div className="grid lg:grid-cols-2">
             <Demo
               title="You’ve been here a while. Want me to check you for vulnerabilities?"
@@ -332,6 +322,17 @@ function Demo({
   );
 }
 
+function SectionLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="flex items-center gap-3">
+      <span className="h-px w-8 shrink-0 bg-accent/60" aria-hidden="true" />
+      <span className="mono-heading text-xs uppercase tracking-widest text-accent">
+        {children}
+      </span>
+    </h2>
+  );
+}
+
 function Chapter({
   label,
   intro,
@@ -347,27 +348,11 @@ function Chapter({
     <SessionBlock
       className={`relative z-10 border-t border-border ${spacious ? "py-16" : "py-12"}`}
     >
-      <div className="grid gap-6 lg:grid-cols-[9rem_1fr] lg:gap-10">
-        <div className="lg:sticky lg:top-28 lg:self-start">
-          <span className="mb-3 block h-px w-8 bg-accent/60" aria-hidden="true" />
-          <p className="mono-heading text-xs uppercase tracking-widest text-accent">
-            {label}
-          </p>
-          {intro && (
-            <p className="mt-3 hidden text-xs leading-5 text-muted lg:block">
-              {intro}
-            </p>
-          )}
-        </div>
-        <div>
-          {intro && (
-            <p className="mb-6 text-sm leading-6 text-muted lg:hidden">
-              {intro}
-            </p>
-          )}
-          {children}
-        </div>
-      </div>
+      <SectionLabel>{label}</SectionLabel>
+      {intro && (
+        <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">{intro}</p>
+      )}
+      <div className="mt-8">{children}</div>
     </SessionBlock>
   );
 }

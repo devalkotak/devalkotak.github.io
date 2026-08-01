@@ -24,9 +24,8 @@ export default async function ProjectsPage() {
           Things I&apos;ve shipped
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Pulled straight from GitHub — every repo tagged{" "}
-          <code className="mono-heading text-accent">portfolio</code>. No
-          stale screenshots, no copy I forgot to update.
+          Every public repo I own, pulled straight from GitHub at build time.
+          No stale screenshots, no copy I forgot to update.
         </p>
       </header>
 
@@ -79,8 +78,7 @@ export default async function ProjectsPage() {
         </div>
       ) : (
         <p className="mt-8 border border-border bg-surface p-5 text-sm text-muted">
-          Nothing tagged <code className="mono-heading text-accent">portfolio</code>{" "}
-          on GitHub yet.
+          No public repos to show yet.
         </p>
       )}
     </AnimatedPage>
