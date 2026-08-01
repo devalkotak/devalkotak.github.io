@@ -6,7 +6,7 @@ import { getResourceState } from "@/lib/resources";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Tools, references, and reading worth keeping — synced from Notion.",
+    "Tools, references, and reading worth keeping. Synced from Notion.",
 };
 
 export default function ResourcesPage() {
@@ -23,8 +23,8 @@ export default function ResourcesPage() {
           Stuff worth bookmarking
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Tools, cheat sheets, and links I actually go back to — security and
-          markets both. Kept in Notion, mirrored here.
+          Tools, cheat sheets, and links I actually go back to. Kept in Notion,
+          mirrored here.
         </p>
       </header>
 

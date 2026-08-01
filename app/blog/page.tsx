@@ -7,7 +7,7 @@ import { getPublishedWriteups } from "@/lib/notion";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Writeups on things I broke, fixed, or finally understood — security and markets both.",
+    "Writeups on things I broke, fixed, or finally understood.",
 };
 
 export default async function BlogPage() {
@@ -24,7 +24,7 @@ export default async function BlogPage() {
           Writeups
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Things I broke, fixed, or finally understood — written up as I go.
+          Things I broke, fixed, or finally understood, written up as I go.
         </p>
       </header>
 

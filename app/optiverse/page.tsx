@@ -7,7 +7,7 @@ import { getOptiverseContent } from "@/lib/optiverse";
 export const metadata: Metadata = {
   title: "Optiverse",
   description:
-    "Optiverse — a student-built mentorship project I co-founded. Paused, not forgotten.",
+    "A student-built mentorship project I co-founded, currently on pause.",
 };
 
 export default function OptiversePage() {

@@ -4,7 +4,7 @@ import AnimatedPage from "@/components/AnimatedPage";
 
 export const metadata: Metadata = {
   title: "Resume",
-  description: "Deval Kotak's resume — view inline or download the PDF.",
+  description: "Deval Kotak's resume. View it inline or download the PDF.",
 };
 
 export default function ResumePage() {

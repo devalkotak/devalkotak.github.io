@@ -6,7 +6,7 @@ import { Cookie } from "lucide-react";
 /**
  * Parody of a consent banner. Both buttons do the same thing: nothing,
  * then dismiss. There is no storage, so the dismissal genuinely cannot
- * be remembered — which is the joke, and also true.
+ * be remembered, which is the joke, and also true.
  */
 export default function NoCookieBanner() {
   const [dismissed, setDismissed] = useState(false);
