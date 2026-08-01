@@ -162,7 +162,7 @@ export default async function Home() {
       {/* the record */}
       <Chapter
         label="the record"
-        intro="The two that matter most. Everything else — ISACA, INNOVEX, Trinity, Buildspace — is on the resume."
+        intro="The two that matter most. Everything else — ISACA, Trinity, Buildspace — is on the resume."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {RECORD.map((entry) => (
