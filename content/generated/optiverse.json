@@ -1,6 +1,422 @@
 {
-  "blocks": [],
-  "error": "https://api.notion.com/v1/pages/3ae042e6-0b87-8194-89b0-f8c0ad2f7454 returned 404: {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find page with ID: 3ae042e6-0b87-8194-89b0-f8c0ad2f7454. Make sure the relevant pages and databases are shared with your integration \\\"Portfolio\\\".\",\"additional_data\":{\"integration_id\":\"38f042e6-0b87-8164-8e07-0027ceb8afc4\"},\"request_id\":\"7a78edb9-0b5a-413f-93ac-defeebc0c4a6\"}",
-  "generatedAt": "2026-08-01T12:43:31Z",
-  "title": null
+  "blocks": [
+    {
+      "id": "31c99502-cc7d-486f-ac76-4c2a9f98a323",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Optiverse is a student-built mentorship project. No suits, no corporate off-site, just older students who've been through the noise helping younger ones figure out what they actually want."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "653c6ed7-cdda-47e6-bc46-73b70516a220",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "We ran free 1-on-1 mentorship for students aged 10\u201318: self-reflection, honest conversation, zero pressure, a certificate at the end for the ones who like proof. Mentors were students too \u2014 scattered across 18+ countries, no salaries, just people who wanted to be useful."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "fc0abdf0-4e61-4f24-8b45-d13e71389b12",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Operations are paused indefinitely right now. Not dead \u2014 recharging. If you want in when it comes back, register and wait it out with us."
+        }
+      ],
+      "type": "quote"
+    },
+    {
+      "id": "35cfe801-770e-4719-aa4e-54e8705f7eff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": "https://forms.gle/zTDZ5dNkP7bbYjP49",
+          "italic": false,
+          "plainText": "Register for the course"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "5522ace4-1df6-4e34-8e2d-30f3d8f3d9e6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The numbers, for the skeptics"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a4b5bdcb-2bf3-41fd-91d8-9794c3f09cea",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "150,000+"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " students reached"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9f72b0f3-0833-4625-a341-bb0c463c3316",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "1,000+"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " students directly mentored"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "725a7444-5c4b-4490-bfb4-89bc897120d1",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "90+"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " workshops run"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "78dc6c5e-9af5-493f-aef7-45cd8846b525",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "250+"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " team members across "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "18+ countries"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fafba38f-f716-448b-b6b4-4c9298b75bae",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "3 years"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " of doing this before hitting pause"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5331acda-d44d-4e01-b9f5-d4b44ff8ca24",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How it worked"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "90c989e6-ba33-44d5-914c-44d59f8f05aa",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Free. Always. Charging money filters out the kids who need it most, so we didn't. 4\u20136 hours, online (offline if a mentor happened to be nearby), scheduled entirely around the student and mentor's own time. No script, no forced curriculum \u2014 just a mentor who'd let you talk without judging you for it."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "768e2487-3656-4f75-bfac-59f6fb2c02bf",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The people who built it"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "0d0f3ae8-462a-4de5-bc28-36aa77a144ff",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Deval Kotak"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Co-Founder & CEO"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e8cce3bc-34d6-4594-b159-a70bf2be2181",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Aryan"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Co-Founder & President"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cf344a2a-9314-4d77-85e6-5ae63e5cfd5a",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Shivangee Talukdar"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Operations Head"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "80a75eef-cae2-464c-8c07-e98a88b76356",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Snehal Tripathi"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Media Head"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "67cd8d09-c3bf-4e9e-a40b-d81c92a0ee1a",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Najifa Anjum"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Editorial / Writing Head"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ab376d32-5b51-43da-8213-68aae5bc9afb",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hriday"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " & "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sarwesh"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u2014 Collaborations Co-Heads"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "306d41c4-c656-49a0-8178-f4e5a94b0001",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Plus a rotating crew of ops, media, and writing contributors from across the world \u2014 Riya, Hasi, Harshal, Ananya, Gunj, Isra, Upotima, Aashima, and more"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b223fb91-293e-4b78-b7f5-0de6f0ed3cbe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "We don't have open roles right now, but we're always happy to hear from people who want in when we're back."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "301a58a5-ba94-472c-b44c-394909cd1619",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Talk to us"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "daafb2b4-593c-41d4-a0f8-71cae9edb2c0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": "mailto:optiverse.go@gmail.com",
+          "italic": false,
+          "plainText": "optiverse.go@gmail.com"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " \u00b7 "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "https://www.instagram.com/optiverse.go",
+          "italic": false,
+          "plainText": "@optiverse.go"
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "error": null,
+  "generatedAt": "2026-08-01T14:24:39Z",
+  "title": "Optiverse \u2014 Site Content"
 }
