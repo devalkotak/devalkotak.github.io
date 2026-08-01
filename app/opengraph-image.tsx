@@ -13,52 +13,51 @@ export default function OpengraphImage() {
           height: "100%",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "space-between",
           background: "#030303",
-          padding: "72px 80px",
+          padding: "64px 72px",
           fontFamily: "sans-serif",
         }}
       >
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <div style={{ display: "flex", fontSize: 26, color: "#6b6b6b" }}>
-            deval kotak
-            <span style={{ color: "#58a6ff", padding: "0 12px" }}>/</span>
-            mumbai
-            <span style={{ color: "#58a6ff", padding: "0 12px" }}>/</span>
-            application security
+        <div style={{ display: "flex", fontSize: 24, color: "#6b6b6b" }}>
+          deval kotak
+          <span style={{ color: "#58a6ff", padding: "0 10px" }}>/</span>
+          mumbai
+          <span style={{ color: "#58a6ff", padding: "0 10px" }}>/</span>
+          application security
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            marginTop: 56,
+            fontSize: 64,
+            fontWeight: 700,
+          }}
+        >
+          <div style={{ display: "flex", height: 78, color: "#ededed" }}>
+            I break systems
           </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              marginTop: 64,
-              fontSize: 82,
-              fontWeight: 700,
-              lineHeight: 1.12,
-            }}
-          >
-            <div style={{ display: "flex", color: "#ededed" }}>
-              I break systems
-              <span style={{ color: "#6b6b6b", paddingLeft: 20 }}>
-                to understand them.
-              </span>
-            </div>
-            <div style={{ display: "flex", color: "#ededed" }}>
-              And build
-              <span style={{ color: "#58a6ff", paddingLeft: 20 }}>
-                stronger ones.
-              </span>
-            </div>
+          <div style={{ display: "flex", height: 78, color: "#6b6b6b" }}>
+            to understand them.
+          </div>
+          <div style={{ display: "flex", height: 78, color: "#ededed" }}>
+            And build
+            <span style={{ color: "#58a6ff", paddingLeft: 18 }}>
+              stronger ones.
+            </span>
           </div>
         </div>
+
+        <div style={{ display: "flex", flexGrow: 1 }} />
 
         <div
           style={{
             display: "flex",
             alignItems: "center",
             borderTop: "1px solid #1a1a1a",
-            paddingTop: 32,
-            fontSize: 24,
+            paddingTop: 28,
+            fontSize: 22,
             color: "#6b6b6b",
           }}
         >
@@ -72,8 +71,10 @@ export default function OpengraphImage() {
             }}
           />
           open to security engineering roles
-          <div style={{ flex: 1 }} />
-          <div style={{ color: "#58a6ff" }}>devalkotak.github.io</div>
+          <div style={{ display: "flex", flexGrow: 1 }} />
+          <div style={{ display: "flex", color: "#58a6ff" }}>
+            devalkotak.github.io
+          </div>
         </div>
       </div>
     ),
