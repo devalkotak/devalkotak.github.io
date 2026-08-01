@@ -15,7 +15,7 @@ resources. It is a real multi-page site, not a single scrolling page:
 | `/security` | Static |
 
 `/writeups`, `/writeups/[slug]`, and `/articles/[slug]` still exist as
-redirects into `/blog` for link compatibility — do not delete them without
+redirects into `/blog` for link compatibility. Do not delete them without
 checking for inbound links first.
 
 ## Technical Decisions
@@ -51,7 +51,7 @@ Notion database.
 Optiverse is a student mentorship project co-founded before this site, kept
 on its own page instead of folded into Projects because it isn't code. It
 syncs from a **standalone Notion page**, deliberately separate from the
-original OptiverseHQ org workspace (that one stays untouched — this page is
+original OptiverseHQ org workspace (that one stays untouched; this page is
 a redesigned copy meant for the site only). Its content, tone, and layout
 live entirely in Notion; the site just renders whatever blocks are there
 through the same `NotionRenderer` used for writeups.
@@ -124,7 +124,7 @@ python /path/to/devalkotak.github.io/scripts/build_content.py --push
 ```
 
 `--push` commits and pushes `content/generated/` if (and only if) it
-changed — it stages nothing else, so it's safe to run against a working tree
+changed. It stages nothing else, so it's safe to run against a working tree
 that has unrelated local changes. No-ops with a message if content didn't
 change. Options: `--remote` (default `origin`), `--branch` (default: current
 branch), `--message` (default: `content: refresh from github/notion`).
@@ -150,7 +150,7 @@ fallback. Without Notion writeup credentials, the Writeups page renders an empty
 state. Without a resources database, the Resources page renders an empty state.
 Without a GitHub token, the Projects page still works under the public API rate
 limit. `NOTION_OPTIVERSE_PAGE_ID` is a single Notion page ID (not a
-database) — the page must be shared with the same integration behind
+database). The page must be shared with the same integration behind
 `NOTION_API_KEY` ("Connections" menu in Notion) or the fetch 404s and the
 Optiverse page renders an empty state.
 
