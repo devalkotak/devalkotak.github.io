@@ -10,7 +10,7 @@ const SASS: string[] = [
   "Nice payload. Rendered as inert text, like everything else here.",
   "Again? React escapes this by default. It is doing exactly what it should.",
   "Third attempt logged. (No it isn't. There's nothing to log to.)",
-  "At this point I'd hire you for persistence. The input still doesn't execute.",
+  "Persistence noted, and genuinely respected. The input still doesn't execute.",
 ];
 
 export default function BreakMeBox() {
@@ -64,8 +64,7 @@ export default function BreakMeBox() {
         </div>
       )}
       <p className="mt-4 text-[11px] leading-5 text-faint">
-        *it is sanitized. It always was. The asterisk should have given it
-        away.
+        *it is sanitized, and always was. The asterisk was the tell.
       </p>
     </div>
   );

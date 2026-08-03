@@ -20,9 +20,9 @@ export default function SecurityPage() {
           How this site is secured
         </h1>
         <p className="mt-4 text-base leading-7 text-body">
-          I review other people&apos;s security. It is only fair to document my
-          own. This page is the threat model for the site you are reading,
-          including the parts I do not control.
+          Reviewing other people&apos;s security and documenting none of my own
+          would be a bad look. This is the threat model for the site you are
+          reading, including the parts outside my control.
         </p>
       </header>
 
@@ -42,7 +42,7 @@ export default function SecurityPage() {
           <p>
             Nothing. No analytics, no trackers, no cookies, no third-party
             scripts. Fonts are self-hosted through next/font, so font requests
-            never leave this domain. If you visit this site, I do not know.
+            never leave this domain. If you visit this site, nobody finds out.
           </p>
         </PostureSection>
 
@@ -66,19 +66,19 @@ export default function SecurityPage() {
 
         <PostureSection title="what I do not control">
           <p>
-            GitHub Pages does not allow custom response headers. That means I
-            cannot set a server-side Content-Security-Policy, X-Frame-Options,
-            or my own HSTS policy. TLS termination and HSTS come from the
-            github.io platform. A static host with no header control is a real
-            limitation, and pretending otherwise would defeat the point of this
-            page.
+            GitHub Pages does not allow custom response headers, which rules
+            out a server-side Content-Security-Policy, X-Frame-Options, or a
+            custom HSTS policy. TLS termination and HSTS come from the
+            github.io platform instead. A static host with no header control is
+            a real limitation, and pretending otherwise would defeat the point
+            of this page.
           </p>
         </PostureSection>
 
         <PostureSection title="reporting">
           <p>
-            If you find something wrong with this site, I want to know. Email
-            devalktk@gmail.com with what you found and how to reproduce it.
+            Found something wrong with this site? Email devalktk@gmail.com with
+            what you found and how to reproduce it.
           </p>
         </PostureSection>
       </div>

@@ -7,7 +7,7 @@ import { getPublishedWriteups } from "@/lib/notion";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Writeups on things I broke, fixed, or finally understood.",
+    "Writeups on things broken, fixed, or finally understood.",
 };
 
 export default async function BlogPage() {
@@ -24,14 +24,13 @@ export default async function BlogPage() {
           Writeups
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Things I broke, fixed, or finally understood, written up as I go.
+          Notes on what broke, why it broke, and what it took to fix.
         </p>
       </header>
 
       <p className="mt-8 border-l-2 border-accent bg-surface px-4 py-3 text-sm leading-6 text-muted">
-        Heads up: my notes currently live scattered across Notion, old repos, and
-        half-finished drafts. I&apos;m consolidating them here bit by bit, so this
-        page will look thin for a while. More is on the way.
+        Still consolidating years of notes out of Notion, old repos, and
+        half-finished drafts. Thin for now, growing weekly.
       </p>
 
       {writeups.length > 0 ? (

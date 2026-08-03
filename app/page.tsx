@@ -28,28 +28,28 @@ export default async function Home() {
       href: "/projects",
       number: "01",
       title: "Projects",
-      note: "things I shipped",
+      note: "code that made it out",
       meta: countLabel(projectState.projects.length, "repo"),
     },
     {
       href: "/blog",
       number: "02",
       title: "Blog",
-      note: "things I broke, then explained",
+      note: "things broken, then explained",
       meta: countLabel(writeups.length, "writeup"),
     },
     {
       href: "/resources",
       number: "03",
       title: "Resources",
-      note: "bookmarks I keep going back to",
+      note: "links worth going back to",
       meta: countLabel(resources.length, "link"),
     },
     {
       href: "/optiverse",
       number: "04",
       title: "Optiverse",
-      note: "the non-profit I co-founded",
+      note: "the student non-profit, co-founded",
       meta: "150k+ students",
     },
     {
@@ -94,10 +94,10 @@ export default async function Home() {
         </div>
 
         <p className="relative mt-9 max-w-xl text-base leading-8 text-body">
-          I write Python tooling that sorts real vulnerabilities out from the
-          noise. Before that there was a trading phase, and somewhere in the
-          middle a mentorship org that got to 150,000 students. Everything
-          I&apos;ve worked on ends up here eventually.
+          Most of the work is Python tooling that sorts real vulnerabilities
+          out from the noise. Before that came a trading phase, and in the
+          middle of it a mentorship org that reached 150,000 students. All of
+          it ends up here eventually.
         </p>
 
         <div className="relative mt-10 flex flex-wrap items-center gap-3">
@@ -129,8 +129,9 @@ export default async function Home() {
             className="mt-6 max-w-4xl text-balance leading-[1.6] text-body"
             style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
-            I&apos;m a computer engineering student working in security
-            engineering.{" "}
+            Computer engineering student, currently{" "}
+            <span className="text-foreground">securing production systems</span>{" "}
+            at JioStar.{" "}
             <span className="text-foreground">
               Most of what I know came from pulling something apart to find out
               why it behaved strangely
@@ -140,13 +141,11 @@ export default async function Home() {
               most of what I build came from not wanting to do that by hand the
               next fifty times
             </span>
-            . I{" "}
-            <span className="text-foreground">secure production systems</span>{" "}
-            at JioStar. I&apos;ve also spent five years running student
-            organisations, including a mentorship non-profit that reached{" "}
-            <span className="text-foreground">150,000 students</span> in 19
-            countries, which is where I got good at explaining technical risk
-            to people who never asked for it.
+            . Five years of student organizations before that, including a
+            mentorship non-profit across{" "}
+            <span className="text-foreground">19 countries</span> — good
+            training for explaining technical risk to people who never asked
+            for it.
           </p>
         </div>
       </SessionBlock>
@@ -154,7 +153,7 @@ export default async function Home() {
       {/* the record */}
       <Chapter
         label="the record"
-        intro="The two I'd point you at first. ISACA, Trinity and Buildspace are on the resume."
+        intro="The two worth reading first. ISACA, Trinity and Buildspace are on the resume."
       >
         <div className="grid gap-4 sm:grid-cols-2">
           {RECORD.map((entry) => (
@@ -191,14 +190,14 @@ export default async function Home() {
         <div className="border border-border">
           <div className="grid lg:grid-cols-2">
             <Demo
-              title="You’ve been here a while. Want me to check you for vulnerabilities?"
-              caption="It reads the browser you are using right now. Nothing leaves the tab."
+              title="You’ve been here a while. Want a vulnerability report on yourself?"
+              caption="Reads the browser you are using right now."
             >
               <VisitorAudit />
             </Demo>
             <Demo
               title="An input field, on a security engineer’s site, daring you to inject something."
-              caption="Go on. You were thinking it."
+              caption="Go on, you were thinking it."
               divided
             >
               <BreakMeBox />
@@ -274,8 +273,8 @@ const RECORD: RecordEntry[] = [
     dates: "Feb 2026 – now",
     live: true,
     bullets: [
-      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and an end to end automated User Access Review (UAR) process.",
-      "Gave the team attack surface it wasn't tracking, mapping production APIs and running VAPT on internal tools.",
+      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and an end-to-end automated User Access Review (UAR) process.",
+      "Surfaced attack surface the team wasn't tracking, mapping production APIs and running VAPT on internal tools.",
       "Shipped the tooling around it too: Slackbots, Chrome extensions, and Telegram crawlers watching for piracy leaks.",
     ],
     metric: "production",
@@ -288,7 +287,7 @@ const RECORD: RecordEntry[] = [
     live: true,
     bullets: [
       "Ran a 250+ member student non-profit spanning 19 countries.",
-      "Directed 90+ workshops and two internship programmes at an 8% acceptance rate.",
+      "Directed 90+ workshops and two internship programs at an 8% acceptance rate.",
       "Partnered with NGOs and earned recognition from Lady Gaga's Born This Way Foundation.",
     ],
     metric: "150,000+",

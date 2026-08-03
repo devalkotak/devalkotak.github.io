@@ -7,7 +7,7 @@ import { getOptiverseContent } from "@/lib/optiverse";
 export const metadata: Metadata = {
   title: "Optiverse",
   description:
-    "A student-built mentorship project I co-founded, currently on pause.",
+    "A student-built mentorship non-profit, co-founded in 2021, currently on pause.",
 };
 
 export default function OptiversePage() {
@@ -25,10 +25,9 @@ export default function OptiversePage() {
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
           Before the security tooling and the market notebooks, there was
-          this: a mentorship project I co-founded with a friend, run entirely
-          by students, for students. It is on pause. It is not dead. This
-          page is synced live from the source of truth, so it updates the
-          moment we do.
+          this: a mentorship project co-founded with a friend and run entirely
+          by students, for students. On pause, not dead. This page syncs from
+          the source of truth, so it updates the moment we do.
         </p>
       </header>
 

@@ -23,14 +23,14 @@ export default function ResourcesPage() {
           Stuff worth bookmarking
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Tools, cheat sheets, and links I actually go back to. Kept in Notion,
-          mirrored here.
+          Tools, cheat sheets, and references worth a second visit. Kept in
+          Notion, mirrored here.
         </p>
       </header>
 
       <p className="mt-8 border-l-2 border-accent bg-surface px-4 py-3 text-sm leading-6 text-muted">
-        Heads up: this list is still being pulled together from bookmarks, notes,
-        and a few too many browser tabs. Sparse for now, growing steadily.
+        Still being pulled together from bookmarks, notes, and too many open
+        tabs. Sparse for now, growing steadily.
       </p>
 
       {error ? (

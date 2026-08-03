@@ -21,11 +21,11 @@ export default async function ProjectsPage() {
           projects/
         </p>
         <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
-          Things I&apos;ve shipped
+          Things that shipped
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
-          Every public repo I own, pulled straight from GitHub at build time.
-          No stale screenshots, no copy I forgot to update.
+          Every public repo, pulled straight from GitHub at build time. Nothing
+          here is a stale screenshot or a description someone forgot to update.
         </p>
       </header>
 

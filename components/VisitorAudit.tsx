@@ -39,13 +39,13 @@ function collectFindings(): Finding[] {
   findings.push({
     id: "F-01",
     severity: "low",
-    text: `You're on ${platform}, running ${browser}. Your browser volunteered that before this page finished loading.`,
+    text: `You're on ${platform}, running ${browser}. Volunteered before this page finished loading.`,
   });
 
   findings.push({
     id: "F-02",
-    severity: "low",
-    text: `Screen: ${screen.width}×${screen.height} at ${window.devicePixelRatio}x pixel density. Combined with a few more of these, that's a fingerprint.`,
+    severity: "medium",
+    text: `Screen: ${screen.width}×${screen.height} at ${window.devicePixelRatio}x pixel density. Combine that with a few more of these and it stops being anonymous.`,
   });
 
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
@@ -55,8 +55,8 @@ function collectFindings(): Finding[] {
   });
   findings.push({
     id: "F-03",
-    severity: "medium",
-    text: `Your clock says ${time} in ${timezone}. I didn't ask. It told me anyway.`,
+    severity: "low",
+    text: `Your clock says ${time} in ${timezone}. Nothing here asked for that.`,
   });
 
   const cores = navigator.hardwareConcurrency;
@@ -64,7 +64,7 @@ function collectFindings(): Finding[] {
     findings.push({
       id: "F-04",
       severity: "info",
-      text: `Your device admits to ${cores} CPU cores. Handy for ad networks pricing your attention.`,
+      text: `Your device reports ${cores} CPU cores. Handy for ad networks pricing your attention.`,
     });
   }
 
@@ -73,8 +73,8 @@ function collectFindings(): Finding[] {
     id: "F-05",
     severity: "info",
     text: dark
-      ? "Dark mode user. Statistically likely to have opinions about tabs versus spaces."
-      : "Light mode. At this hour. Bold.",
+      ? "Dark mode. One more bit of entropy, handed over without a prompt."
+      : "Light mode, which is rarer, and therefore slightly more identifying.",
   });
 
   const connection = nav.connection?.effectiveType;
@@ -82,7 +82,7 @@ function collectFindings(): Finding[] {
     findings.push({
       id: "F-06",
       severity: "info",
-      text: `Connection reports as "${connection}". Yes, sites can see roughly how good your internet is.`,
+      text: `Connection reports as "${connection}". Sites can see roughly how good your internet is.`,
     });
   }
 
@@ -91,29 +91,29 @@ function collectFindings(): Finding[] {
     findings.push({
       id: "F-07",
       severity: "low",
-      text: `Language preferences: ${languages}. Another fingerprint bit, freely given.`,
+      text: `Language preferences: ${languages}. Narrows you down further than most people expect.`,
     });
   }
 
   const dnt = navigator.doNotTrack === "1";
   findings.push({
     id: "F-08",
-    severity: dnt ? "info" : "medium",
+    severity: dnt ? "info" : "low",
     text: dnt
-      ? "Do Not Track is on. Adorable. Most sites ignore it, and this one has nothing to ignore it with."
-      : "Do Not Track is off. To be fair, turning it on mostly signals optimism.",
+      ? "Do Not Track is on. Most sites ignore it, and this one has nothing to ignore it with."
+      : "Do Not Track is off, which changes very little either way.",
   });
 
   findings.push({
     id: "F-09",
-    severity: "high",
-    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been, though it knows how far.`,
+    severity: "info",
+    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been, only how far.`,
   });
 
   findings.push({
     id: "F-10",
     severity: "pass",
-    text: "Everything above came from your browser, read locally, sent nowhere, stored nowhere. A malicious page collects it before you finish reading the cookie banner.",
+    text: "Everything above was read locally and stored nowhere. A malicious page collects the same set before you finish reading its cookie banner.",
   });
 
   return findings;
@@ -163,7 +163,6 @@ export default function VisitorAudit() {
         <div className="flex flex-col items-start gap-4">
           <p className="text-sm leading-6 text-muted">
             A live reading of what your browser hands to every page it visits.
-            Nothing leaves this tab. There is no server to send it to.
           </p>
           <button
             type="button"
