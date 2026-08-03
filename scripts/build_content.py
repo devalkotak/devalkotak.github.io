@@ -351,14 +351,29 @@ def build_writeups_payload(
             payload["warnings"] = [
                 "used cached detail blocks for: " + ", ".join(cached_detail_slugs)
             ]
+            print(
+                "warning: Notion blocks unavailable, served from cache for: "
+                + ", ".join(cached_detail_slugs),
+                file=sys.stderr,
+            )
 
         return payload, details or [placeholder_writeup()], True
     except ContentFetchError as error:
+        # Falling back to committed content keeps a deploy from going blank, but
+        # it also means the site silently serves whatever it shipped last. Say so
+        # loudly: a quiet fallback here is indistinguishable from a healthy build.
+        print(f"warning: Notion writeup query failed: {error}", file=sys.stderr)
+
         previous_writeups = read_existing_rows(
             GENERATED_DIR / "writeups.json",
             "writeups",
         )
         if previous_writeups and writeup_details_exist(previous_writeups):
+            print(
+                f"warning: serving {len(previous_writeups)} writeup(s) from committed "
+                "content; edits in Notion and image mirroring are both skipped",
+                file=sys.stderr,
+            )
             return {
                 "generatedAt": generated_at,
                 "error": str(error),
@@ -510,14 +525,22 @@ def query_notion_pages(
         ),
     ]
 
-    last_error: ContentFetchError | None = None
+    # Report every attempt. Surfacing only the last one hides the modern
+    # data_sources error behind a legacy databases 404, which is misleading
+    # when the id is a data source id and the legacy endpoint could never
+    # have matched it.
+    failures: list[str] = []
     for url, version in attempts:
         try:
             return paginate_notion_query(token, version, url, body), version
         except ContentFetchError as error:
-            last_error = error
+            failures.append(f"[{version}] {error}")
 
-    raise last_error or ContentFetchError("Notion query failed")
+    raise ContentFetchError(
+        "Notion query failed; tried " + " | ".join(failures)
+        if failures
+        else "Notion query failed"
+    )
 
 
 def paginate_notion_query(
