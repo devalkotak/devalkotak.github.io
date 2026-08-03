@@ -105,6 +105,22 @@ def main() -> int:
     resources_payload = build_resources_payload(generated_at)
     optiverse_payload = build_optiverse_payload(generated_at)
 
+    # Deploying committed content after a failed Notion query silently undoes
+    # edits made since that snapshot: unchecking Status or deleting a page is
+    # reverted, and the writeup goes back up. Pages keeps the last successful
+    # deployment, so failing here leaves the site in its correct state instead
+    # of overwriting it with resurrected content. Nothing is written either, so
+    # a failed run cannot clobber the good snapshot on disk.
+    if writeups_payload.get("error") and not env_bool("ALLOW_STALE_CONTENT", False):
+        print(
+            "error: refusing to build with stale writeups (see the warning above).\n"
+            "  The last successful deploy stays live. Fix the Notion connection and\n"
+            "  rebuild, or set ALLOW_STALE_CONTENT=true to deploy the committed\n"
+            "  snapshot anyway, which can republish anything unpublished since then.",
+            file=sys.stderr,
+        )
+        return 1
+
     write_json(GENERATED_DIR / "projects.json", projects_payload)
     write_json(GENERATED_DIR / "writeups.json", writeups_payload)
     write_json(GENERATED_DIR / "resources.json", resources_payload)

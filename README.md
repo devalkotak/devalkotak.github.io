@@ -152,6 +152,7 @@ NOTION_RESOURCES_DATA_SOURCE_ID=optional_resources_data_source_id
 NOTION_RESOURCES_DATABASE_ID=optional_legacy_resources_database_id
 NOTION_OPTIVERSE_PAGE_ID=optional_optiverse_page_id
 NOTION_REFRESH_WRITEUP_DETAILS=true
+ALLOW_STALE_CONTENT=false
 GITHUB_TOKEN=optional_for_higher_rate_limits
 ```
 
@@ -166,6 +167,19 @@ limit. `NOTION_OPTIVERSE_PAGE_ID` is a single Notion page ID (not a
 database). The page must be shared with the same integration behind
 `NOTION_API_KEY` ("Connections" menu in Notion) or the fetch 404s and the
 Optiverse page renders an empty state.
+
+If the Notion writeup query fails outright, the build stops with a non-zero
+exit instead of deploying the committed snapshot. Serving that snapshot would
+silently undo anything changed since it was committed: a writeup unchecked or
+deleted in Notion goes straight back up. GitHub Pages keeps the last successful
+deployment, so failing leaves the site correct rather than overwriting it.
+`ALLOW_STALE_CONTENT=true` opts out, which is useful for shipping a frontend
+change while Notion is unreachable, at the cost of republishing anything
+unpublished since the snapshot.
+
+Unpublishing is therefore an editorial control, not a takedown. To remove
+something for good, uncheck or delete it in Notion and then refresh the
+committed snapshot with `--push` so there is nothing left to fall back to.
 
 Writeup bodies are re-fetched from Notion on every build. If Notion fails for a
 given page, that page falls back to its cached generated block JSON, so a slow
