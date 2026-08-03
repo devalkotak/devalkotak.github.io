@@ -57,10 +57,11 @@ export default function SecurityPage() {
 
         <PostureSection title="runtime surface">
           <p>
-            After the page loads, the only external requests your browser may
-            make are for images inside writeups, which can load from
-            Notion&apos;s CDN. Everything else, including all scripts and
-            styles, is served from this domain.
+            After the page loads, your browser makes no external requests at
+            all. Scripts, styles, fonts, and images are all served from this
+            domain. Screenshots inside writeups are mirrored out of Notion at
+            build time rather than hotlinked, so reading a writeup does not tell
+            Notion anything about you either.
           </p>
         </PostureSection>
 

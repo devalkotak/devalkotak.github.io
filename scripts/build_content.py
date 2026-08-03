@@ -8,6 +8,7 @@ shape handling stay in Python so the frontend remains a static renderer.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -26,7 +27,22 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 GENERATED_DIR = ROOT / "content" / "generated"
 WRITEUPS_DIR = GENERATED_DIR / "writeups"
+MEDIA_DIR = ROOT / "public" / "notion-media"
+MEDIA_ROUTE = "/notion-media"
 GITHUB_REPOS_URL = "https://api.github.com/users/devalkotak/repos?per_page=100"
+
+# Notion serves uploaded files from S3 behind a signature that expires in an
+# hour. Baking those URLs into a static export means every image 404s shortly
+# after the build, so anything on these hosts gets mirrored into public/ and
+# served from this domain instead.
+NOTION_FILE_HOSTS = (
+    "prod-files-secure.s3.us-west-2.amazonaws.com",
+    "s3.us-west-2.amazonaws.com",
+    "secure.notion-static.com",
+    "file.notion.so",
+)
+MEDIA_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg", ".avif"}
+MEDIA_MAX_BYTES = 20 * 1024 * 1024
 
 # This site's own source and the profile README repo. Both are public and real,
 # neither belongs in a list of projects.
@@ -98,12 +114,22 @@ def main() -> int:
         if not any(detail["slug"] == NOTION_PLACEHOLDER_SLUG for detail in details):
             write_json(WRITEUPS_DIR / f"{NOTION_PLACEHOLDER_SLUG}.json", placeholder_writeup())
 
+    pruned = prune_media()
+    mirrored = sum(1 for path in MEDIA_DIR.glob("*") if path.is_file()) if MEDIA_DIR.exists() else 0
+
     print(
         "generated content: "
         f"{len(projects_payload['projects'])} project(s), "
         f"{len(writeups_payload['writeups'])} writeup(s), "
-        f"{len(resources_payload['resources'])} resource(s)"
+        f"{len(resources_payload['resources'])} resource(s), "
+        f"{mirrored} image(s)"
     )
+
+    if pruned:
+        print(f"pruned {pruned} unreferenced image(s)")
+
+    for failure in MEDIA_FAILURES:
+        print(f"warning: image not mirrored, keeping expiring URL: {failure}", file=sys.stderr)
 
     if args.push:
         return push_content(args)
@@ -136,16 +162,20 @@ def parse_args() -> argparse.Namespace:
 
 
 def push_content(args: argparse.Namespace) -> int:
-    run_git(["add", "--", "content/generated"])
+    # Mirrored images ship with the JSON that references them. Splitting the two
+    # would leave the cached-content fallback pointing at files that were never
+    # committed.
+    tracked = ["content/generated", "public/notion-media"]
+    run_git(["add", "--", *tracked])
 
     diff = subprocess.run(
-        ["git", "-C", str(ROOT), "diff", "--cached", "--quiet", "--", "content/generated"],
+        ["git", "-C", str(ROOT), "diff", "--cached", "--quiet", "--", *tracked],
     )
     if diff.returncode == 0:
         print("no content changes, nothing to push")
         return 0
 
-    run_git(["commit", "-m", args.message, "--", "content/generated"])
+    run_git(["commit", "-m", args.message, "--", *tracked])
 
     branch = args.branch or run_git(
         ["rev-parse", "--abbrev-ref", "HEAD"], capture=True
@@ -790,7 +820,7 @@ def normalize_notion_block(block: dict[str, Any]) -> dict[str, Any] | None:
     if block_type == "image":
         url = image_url(typed)
         if url:
-            normalized["url"] = url
+            normalized["url"] = mirror_media(url)
 
     if block_type == "table":
         normalized["hasColumnHeader"] = typed.get("has_column_header") is True
@@ -1032,6 +1062,105 @@ def image_url(value: dict[str, Any]) -> str | None:
     external = value.get("external") or {}
     file_value = value.get("file") or {}
     return external.get("url") or file_value.get("url")
+
+
+# Hosts that refused to serve. A failed download leaves the signed URL in place
+# rather than breaking the page outright.
+MEDIA_FAILURES: list[str] = []
+MEDIA_REFERENCE_PATTERN = re.compile(rf"{MEDIA_ROUTE}/([A-Za-z0-9]+\.[A-Za-z0-9]+)")
+
+
+def mirror_media(url: str) -> str:
+    """Copy a Notion-hosted file into public/ and return its local route.
+
+    URLs that are not Notion-signed are returned untouched, so images embedded
+    by external URL keep pointing wherever they already point.
+    """
+    parsed = urllib.parse.urlparse(url)
+    if parsed.hostname not in NOTION_FILE_HOSTS:
+        return url
+
+    # The signature lives in the query string and changes every fetch. Keying
+    # on the path alone keeps the local filename stable across builds.
+    stable_key = f"{parsed.hostname}{parsed.path}"
+    digest = hashlib.sha256(stable_key.encode("utf-8")).hexdigest()[:16]
+
+    suffix = Path(urllib.parse.unquote(parsed.path)).suffix.lower()
+    if suffix not in MEDIA_EXTENSIONS:
+        suffix = ".png"
+
+    filename = f"{digest}{suffix}"
+    destination = MEDIA_DIR / filename
+    route = f"{MEDIA_ROUTE}/{filename}"
+
+    if destination.exists():
+        return route
+
+    try:
+        payload = request_bytes(url)
+    except ContentFetchError as error:
+        MEDIA_FAILURES.append(str(error))
+        return url
+
+    MEDIA_DIR.mkdir(parents=True, exist_ok=True)
+    temporary = destination.with_suffix(destination.suffix + ".part")
+    temporary.write_bytes(payload)
+    temporary.replace(destination)
+
+    return route
+
+
+def prune_media() -> int:
+    """Delete mirrored files that no generated JSON points at.
+
+    References are read back off disk rather than collected during download, so
+    images carried over from cached content still count as live. Skipped
+    entirely when a download failed, since a partial run cannot tell an orphan
+    from a file it simply did not reach.
+    """
+    if MEDIA_FAILURES or not MEDIA_DIR.exists():
+        return 0
+
+    referenced: set[str] = set()
+    for path in GENERATED_DIR.rglob("*.json"):
+        referenced.update(
+            MEDIA_REFERENCE_PATTERN.findall(path.read_text(encoding="utf-8"))
+        )
+
+    removed = 0
+    for path in MEDIA_DIR.iterdir():
+        if path.is_file() and path.name not in referenced:
+            path.unlink()
+            removed += 1
+
+    return removed
+
+
+def request_bytes(url: str) -> bytes:
+    last_error: urllib.error.URLError | TimeoutError | None = None
+
+    for attempt in range(REQUEST_ATTEMPTS):
+        request = urllib.request.Request(url, method="GET")
+
+        try:
+            with urllib.request.urlopen(
+                request,
+                timeout=REQUEST_TIMEOUT_SECONDS,
+            ) as response:
+                payload = response.read(MEDIA_MAX_BYTES + 1)
+                if len(payload) > MEDIA_MAX_BYTES:
+                    raise ContentFetchError(
+                        f"{url} is larger than {MEDIA_MAX_BYTES} bytes"
+                    )
+                return payload
+        except urllib.error.HTTPError as error:
+            raise ContentFetchError(f"{url} returned {error.code}") from error
+        except (urllib.error.URLError, TimeoutError) as error:
+            last_error = error
+            if attempt < REQUEST_ATTEMPTS - 1:
+                continue
+
+    raise ContentFetchError(f"{url} failed: {last_error}")
 
 
 def resource_sort_key(resource: dict[str, Any]) -> tuple[str, str]:

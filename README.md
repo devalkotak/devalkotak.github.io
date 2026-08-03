@@ -40,6 +40,14 @@ better there than in JSX. The UI never consumes raw Notion API responses.
 `scripts/build_content.py` converts Notion pages and blocks into plain JSON
 before Next.js sees them.
 
+Images inside Notion pages are mirrored into `public/notion-media/` during the
+same step, and the JSON points at the local copy. Notion serves uploaded files
+from S3 behind a signature that expires an hour after it is issued, so a static
+export that embedded those URLs directly would start returning 404s well before
+the next scheduled build. Filenames are a hash of the unsigned S3 path, which
+keeps them stable when Notion re-signs the same file, and orphans are pruned on
+each successful run. Images embedded in Notion by external URL are left alone.
+
 The visual components consume normalized data from `lib/` instead of direct API
 responses. This makes the design easy to change without rewriting GitHub fetches
 or Notion parsing.
