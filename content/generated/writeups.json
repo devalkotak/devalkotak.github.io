@@ -1,9 +1,6 @@
 {
   "error": null,
-  "generatedAt": "2026-08-01T14:24:39Z",
-  "warnings": [
-    "used cached detail blocks for: bandit, sqli-2, authentication-vulnerabilties-notes, sqli-notes, https-portswigger-net-web-security-sql-injection-lab-retrieve-hidden-data"
-  ],
+  "generatedAt": "2026-08-03T18:36:16Z",
   "writeups": [
     {
       "category": "Bandit",
@@ -46,46 +43,6 @@
       "title": "SQLi - 2"
     },
     {
-      "category": "Notes",
-      "date": "2026-04-09",
-      "id": "33d042e6-0b87-8072-9207-e0ef97209f04",
-      "properties": {
-        "Name": "Authentication Vulnerabilties Notes",
-        "Source": "Portswigger",
-        "Status": true,
-        "Tags": [
-          "Auth Vuln"
-        ],
-        "Type": "Notes",
-        "URL": null
-      },
-      "slug": "authentication-vulnerabilties-notes",
-      "tags": [
-        "Auth Vuln"
-      ],
-      "title": "Authentication Vulnerabilties Notes"
-    },
-    {
-      "category": "Notes",
-      "date": "2026-04-09",
-      "id": "33d042e6-0b87-809e-b373-ceabbcb7253f",
-      "properties": {
-        "Name": "SQLi Notes",
-        "Source": "Portswigger",
-        "Status": true,
-        "Tags": [
-          "SQLi"
-        ],
-        "Type": "Notes",
-        "URL": null
-      },
-      "slug": "sqli-notes",
-      "tags": [
-        "SQLi"
-      ],
-      "title": "SQLi Notes"
-    },
-    {
       "category": "Apprentice",
       "date": "2026-03-17",
       "id": "326042e6-0b87-804d-a5dd-cc7e5d0b1163",
@@ -99,7 +56,7 @@
         "Type": "Apprentice",
         "URL": "https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data"
       },
-      "slug": "https-portswigger-net-web-security-sql-injection-lab-retrieve-hidden-data",
+      "slug": "sqli-1",
       "tags": [
         "SQLi"
       ],

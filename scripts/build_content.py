@@ -52,7 +52,11 @@ REQUEST_ATTEMPTS = 2
 REQUEST_TIMEOUT_SECONDS = 30
 ROLE_ALIASES = {
     "title": ["title", "name", "post", "article", "writeup"],
-    "slug": ["slug", "urlslug", "path", "permalink", "url"],
+    # No "url" here. A lab's URL property points at the external lab, not at a
+    # desired path, so treating it as a slug source turns every PortSwigger
+    # writeup into /blog/https-portswigger-net-web-security-... Fall back to the
+    # title instead, and use an explicit Slug property to override.
+    "slug": ["slug", "urlslug", "path", "permalink"],
     "date": ["date", "published", "publisheddate", "posted", "created"],
     "category": ["category", "type", "topic", "area", "section"],
     "tags": ["tags", "tag", "topics", "labels", "keywords", "skills"],

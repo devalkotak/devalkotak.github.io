@@ -1,6 +1,6 @@
 {
   "error": null,
-  "generatedAt": "2026-08-01T14:24:39Z",
+  "generatedAt": "2026-08-03T18:36:16Z",
   "projects": [
     {
       "description": "AWS security risk assessment and control mapping against real infrastructure, covering CIS AWS Foundations v3.0.0, ISO 27001:2022 and the OWASP Top 10.",

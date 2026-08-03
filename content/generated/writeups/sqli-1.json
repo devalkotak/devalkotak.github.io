@@ -28,7 +28,7 @@
     "Type": "Apprentice",
     "URL": "https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data"
   },
-  "slug": "https-portswigger-net-web-security-sql-injection-lab-retrieve-hidden-data",
+  "slug": "sqli-1",
   "tags": [
     "SQLi"
   ],
