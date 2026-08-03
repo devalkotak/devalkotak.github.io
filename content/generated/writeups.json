@@ -1,6 +1,9 @@
 {
-  "error": "https://api.notion.com/v1/databases/33d042e6-0b87-8057-b3b7-000b312a6605/query returned 404: {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: 33d042e6-0b87-8057-b3b7-000b312a6605. Make sure the relevant pages and databases are shared with your integration \\\"Portfolio\\\".\",\"additional_data\":{\"integration_id\":\"38f042e6-0b87-8164-8e07-0027ceb8afc4\"},\"request_id\":\"505d15d8-48c8-44e4-8323-0ed28a73806f\"}",
-  "generatedAt": "2026-08-03T18:06:44Z",
+  "error": null,
+  "generatedAt": "2026-08-01T14:24:39Z",
+  "warnings": [
+    "used cached detail blocks for: bandit, sqli-2, authentication-vulnerabilties-notes, sqli-notes, https-portswigger-net-web-security-sql-injection-lab-retrieve-hidden-data"
+  ],
   "writeups": [
     {
       "category": "Bandit",
