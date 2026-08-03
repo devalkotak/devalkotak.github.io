@@ -114,6 +114,7 @@ That command rewrites:
 - `content/generated/writeups/<slug>.json`
 - `content/generated/resources.json`
 - `content/generated/optiverse.json`
+- `public/notion-media/` (images mirrored out of Notion)
 
 Production builds call the same pipeline automatically:
 
@@ -134,11 +135,12 @@ the current working directory, so it can be run from anywhere as long as an
 python /path/to/devalkotak.github.io/scripts/build_content.py --push
 ```
 
-`--push` commits and pushes `content/generated/` if (and only if) it
-changed. It stages nothing else, so it's safe to run against a working tree
-that has unrelated local changes. No-ops with a message if content didn't
-change. Options: `--remote` (default `origin`), `--branch` (default: current
-branch), `--message` (default: `content: refresh from github/notion`).
+`--push` commits and pushes `content/generated/` and `public/notion-media/`
+if (and only if) they changed. It stages nothing else, so it's safe to run
+against a working tree that has unrelated local changes. No-ops with a
+message if content didn't change. Options: `--remote` (default `origin`),
+`--branch` (default: current branch), `--message` (default:
+`content: refresh from github/notion`).
 
 ## Environment
 
@@ -149,7 +151,7 @@ NOTION_DATABASE_ID=optional_legacy_database_id
 NOTION_RESOURCES_DATA_SOURCE_ID=optional_resources_data_source_id
 NOTION_RESOURCES_DATABASE_ID=optional_legacy_resources_database_id
 NOTION_OPTIVERSE_PAGE_ID=optional_optiverse_page_id
-NOTION_REFRESH_WRITEUP_DETAILS=false
+NOTION_REFRESH_WRITEUP_DETAILS=true
 GITHUB_TOKEN=optional_for_higher_rate_limits
 ```
 
@@ -165,10 +167,11 @@ database). The page must be shared with the same integration behind
 `NOTION_API_KEY` ("Connections" menu in Notion) or the fetch 404s and the
 Optiverse page renders an empty state.
 
-Existing writeup detail pages reuse cached generated block JSON by default so a
-slow Notion block tree does not wipe or stall local builds. Set
-`NOTION_REFRESH_WRITEUP_DETAILS=true` when you intentionally want to refresh the
-full rendered body for existing writeups.
+Writeup bodies are re-fetched from Notion on every build. If Notion fails for a
+given page, that page falls back to its cached generated block JSON, so a slow
+or flaky block tree degrades one writeup instead of stalling the build. Set
+`NOTION_REFRESH_WRITEUP_DETAILS=false` to force the cache for every writeup,
+which makes local builds faster but means edits in Notion will not appear.
 
 ## Notion Database
 
@@ -198,7 +201,7 @@ NOTION_CATEGORY_PROPERTY=Category
 NOTION_TAGS_PROPERTY=Tags
 NOTION_PUBLISHED_PROPERTY=Status
 NOTION_REQUIRE_PUBLISHED=false
-NOTION_REFRESH_WRITEUP_DETAILS=false
+NOTION_REFRESH_WRITEUP_DETAILS=true
 ```
 
 `app/writeups/[slug]/page.tsx` uses `generateStaticParams()`, so published

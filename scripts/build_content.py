@@ -299,7 +299,11 @@ def build_writeups_payload(
     try:
         pages, notion_version = query_notion_pages(token, source_id)
         require_published = env_bool("NOTION_REQUIRE_PUBLISHED", False)
-        refresh_writeup_details = env_bool("NOTION_REFRESH_WRITEUP_DETAILS", False)
+        # Defaults on: the cache is a failure fallback, not a normal-path
+        # shortcut. Reusing it by default meant edits in Notion never reached
+        # the site and mirrored images were never refreshed. A Notion error
+        # still falls back to the cached blocks per page, below.
+        refresh_writeup_details = env_bool("NOTION_REFRESH_WRITEUP_DETAILS", True)
         summaries: list[dict[str, Any]] = []
         details: list[dict[str, Any]] = []
         cached_detail_slugs: list[str] = []
