@@ -129,7 +129,7 @@ export default async function Home() {
             className="mt-6 max-w-4xl text-balance leading-[1.6] text-body"
             style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
-            Computer engineering student, currently{" "}
+            Computer engineering student who just wrapped six months{" "}
             <span className="text-foreground">securing production systems</span>{" "}
             at JioStar.{" "}
             <span className="text-foreground">
@@ -270,12 +270,12 @@ const RECORD: RecordEntry[] = [
   {
     org: "JioStar",
     role: "Cybersecurity Intern",
-    dates: "Feb 2026 – now",
-    live: true,
+    dates: "Feb 2026 – Aug 2026",
+    live: false,
     bullets: [
-      "Turned manual security work into standing systems: regression testing wired into Jira and GitHub, SIEM triage that filters false positives, and an end-to-end automated User Access Review (UAR) process.",
-      "Surfaced attack surface the team wasn't tracking, mapping production APIs and running VAPT on internal tools.",
-      "Shipped the tooling around it too: Slackbots, Chrome extensions, and Telegram crawlers watching for piracy leaks.",
+      "Built an automated regression engine that turns Jira vulnerability reports into Nuclei templates end to end: 22 templates live in main, with a scheduled run reporting hits to Slack.",
+      "Shipped a SOC Slack bot for shift handovers and one-click CrowdStrike IOC blocking, still in active use by the team, plus a content-security dashboard live behind the org's HTTPS ingress.",
+      "Surfaced attack surface the team wasn't tracking: mapped production APIs, ran VAPT on internal tools, and built a Telegram crawler watching for piracy leaks across 60+ channels.",
     ],
     metric: "production",
     metricLabel: "not a lab environment",
