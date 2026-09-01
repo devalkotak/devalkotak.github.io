@@ -7,8 +7,6 @@ import {
 } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
 import BreakMeBox from "@/components/BreakMeBox";
-import CursorGlow from "@/components/CursorGlow";
-import HomeMischief from "@/components/HomeMischief";
 import NoCookieBanner from "@/components/NoCookieBanner";
 import SessionBlock from "@/components/SessionBlock";
 import VisitorAudit from "@/components/VisitorAudit";
@@ -69,25 +67,22 @@ export default async function Home() {
   ];
 
   return (
-    <AnimatedPage className="wide-shell relative overflow-hidden pb-28">
-      <CursorGlow />
-      <HomeMischief />
+    <AnimatedPage className="wide-shell relative pb-28">
       <NoCookieBanner />
 
       {/* manifesto hero */}
       <section className="relative z-10 pb-20 pt-4">
-        <div className="dot-grid pointer-events-none absolute -inset-x-8 -top-8 bottom-0" aria-hidden="true" />
         <p className="mono-heading relative text-sm text-muted">
           deval kotak <span className="text-accent">/</span> mumbai{" "}
           <span className="text-accent">/</span> security engineering
         </p>
 
         <div className="relative mt-12 space-y-2">
-          <h1 className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
+          <h1 className="display-heading text-balance font-medium leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
             I break systems{" "}
             <span className="text-muted">to understand them.</span>
           </h1>
-          <p className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
+          <p className="display-heading text-balance font-medium leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
             And build{" "}
             <span className="text-accent">stronger ones.</span>
           </p>
@@ -101,11 +96,8 @@ export default async function Home() {
         </p>
 
         <div className="relative mt-10 flex flex-wrap items-center gap-3">
-          <span className="inline-flex h-10 items-center gap-2.5 border border-ok/40 bg-ok/5 px-4 text-sm text-body">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ok opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-ok" />
-            </span>
+          <span className="inline-flex h-10 items-center gap-2.5 border border-border bg-surface px-4 text-sm text-body">
+            <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
           <span className="mx-1 hidden h-6 w-px bg-border sm:block" />
@@ -219,7 +211,7 @@ export default async function Home() {
                 {row.number}
               </span>
               <span
-                className="font-semibold leading-none text-foreground transition group-hover:text-accent"
+                className="display-heading font-medium leading-none text-foreground transition group-hover:text-accent"
                 style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
               >
                 {row.title}
@@ -324,8 +316,8 @@ function Demo({
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
     <h2 className="flex items-center gap-3">
-      <span className="h-px w-8 shrink-0 bg-accent/60" aria-hidden="true" />
-      <span className="mono-heading text-xs uppercase tracking-widest text-accent">
+      <span className="h-px w-8 shrink-0 bg-border" aria-hidden="true" />
+      <span className="mono-heading text-xs uppercase tracking-widest text-muted">
         {children}
       </span>
     </h2>
@@ -368,7 +360,7 @@ function RecordCard({
   return (
     <article className="panel-3d flex flex-col border border-border p-5 sm:p-6">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="text-lg font-semibold leading-tight text-foreground">
+        <h3 className="display-heading text-lg font-medium leading-tight text-foreground">
           {org}
         </h3>
         <p className="mono-heading flex shrink-0 items-center gap-1.5 text-[11px] text-faint">
