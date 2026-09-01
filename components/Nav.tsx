@@ -28,7 +28,7 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="Deval Kotak, home"
-          className="mono-heading text-base font-semibold text-foreground transition hover:text-accent"
+          className="display-heading text-base font-medium text-foreground transition hover:text-accent"
         >
           Deval Kotak
         </Link>
@@ -82,10 +82,10 @@ function NavLink({
     <Link
       href={href}
       onClick={onNavigate}
-      className="group relative text-sm text-body transition hover:text-foreground"
+      className="group relative text-sm text-muted transition hover:text-foreground"
     >
       {children}
-      <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-accent transition-transform duration-200 group-hover:scale-x-100" />
+      <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-foreground/40 transition-transform duration-200 group-hover:scale-x-100" />
     </Link>
   );
 }

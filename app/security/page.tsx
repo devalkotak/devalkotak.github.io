@@ -12,11 +12,11 @@ export default function SecurityPage() {
   return (
     <AnimatedPage className="content-shell">
       <header className="border-b border-border pb-8">
-        <p className="mono-heading flex items-center gap-2 text-sm text-accent">
+        <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
           <ShieldCheck size={16} />
           security posture
         </p>
-        <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
+        <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
           How this site is secured
         </h1>
         <p className="mt-4 text-base leading-7 text-body">
@@ -96,7 +96,7 @@ function PostureSection({
 }) {
   return (
     <section className="panel-3d border border-border p-5">
-      <h2 className="mono-heading text-sm font-semibold text-accent">{title}</h2>
+      <h2 className="mono-heading text-xs uppercase tracking-widest text-muted">{title}</h2>
       <div className="mt-3 text-sm leading-7 text-body">{children}</div>
     </section>
   );

@@ -25,6 +25,12 @@ const config: Config = {
       },
       fontFamily: {
         body: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: [
+          "var(--font-space-grotesk)",
+          "var(--font-inter)",
+          "system-ui",
+          "sans-serif",
+        ],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
       transitionDuration: {

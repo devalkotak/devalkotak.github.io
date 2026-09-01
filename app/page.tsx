@@ -7,8 +7,6 @@ import {
 } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
 import BreakMeBox from "@/components/BreakMeBox";
-import CursorGlow from "@/components/CursorGlow";
-import HomeMischief from "@/components/HomeMischief";
 import NoCookieBanner from "@/components/NoCookieBanner";
 import SessionBlock from "@/components/SessionBlock";
 import VisitorAudit from "@/components/VisitorAudit";
@@ -69,64 +67,61 @@ export default async function Home() {
   ];
 
   return (
-    <AnimatedPage className="wide-shell relative overflow-hidden pb-28">
-      <CursorGlow />
-      <HomeMischief />
+    <AnimatedPage className="wide-shell relative pb-28">
       <NoCookieBanner />
 
-      {/* manifesto hero */}
-      <section className="relative z-10 pb-20 pt-4">
-        <div className="dot-grid pointer-events-none absolute -inset-x-8 -top-8 bottom-0" aria-hidden="true" />
+      {/* manifesto hero — fills the first viewport on its own */}
+      <section className="relative z-10 flex min-h-[calc(100svh-10rem)] flex-col pb-16 pt-4">
         <p className="mono-heading relative text-sm text-muted">
           deval kotak <span className="text-accent">/</span> mumbai{" "}
           <span className="text-accent">/</span> security engineering
         </p>
 
-        <div className="relative mt-12 space-y-2">
-          <h1 className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            I break systems{" "}
-            <span className="text-muted">to understand them.</span>
-          </h1>
-          <p className="text-balance font-semibold leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            And build{" "}
-            <span className="text-accent">stronger ones.</span>
+        <div className="relative my-auto py-14">
+          <div className="space-y-2">
+            <h1 className="display-heading text-balance font-medium leading-[1.02] text-foreground" style={{ fontSize: "clamp(2.6rem, 8.5vw, 7rem)" }}>
+              I break systems{" "}
+              <span className="text-muted">to understand them.</span>
+            </h1>
+            <p className="display-heading text-balance font-medium leading-[1.02] text-foreground" style={{ fontSize: "clamp(2.6rem, 8.5vw, 7rem)" }}>
+              And build{" "}
+              <span className="text-accent">stronger ones.</span>
+            </p>
+          </div>
+
+          <p className="mt-10 max-w-xl text-base leading-8 text-body">
+            Most of the work is Python tooling that sorts real vulnerabilities
+            out from the noise. Before that came a trading phase, and in the
+            middle of it a mentorship org that reached 150,000 students. All of
+            it ends up here eventually.
           </p>
         </div>
 
-        <p className="relative mt-9 max-w-xl text-base leading-8 text-body">
-          Most of the work is Python tooling that sorts real vulnerabilities
-          out from the noise. Before that came a trading phase, and in the
-          middle of it a mentorship org that reached 150,000 students. All of
-          it ends up here eventually.
-        </p>
-
-        <div className="relative mt-10 flex flex-wrap items-center gap-3">
-          <span className="inline-flex h-10 items-center gap-2.5 border border-ok/40 bg-ok/5 px-4 text-sm text-body">
-            <span className="relative flex size-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ok opacity-60" />
-              <span className="relative inline-flex size-2 rounded-full bg-ok" />
-            </span>
+        <div className="relative flex flex-wrap items-center justify-between gap-4 border-t border-border pt-5">
+          <span className="mono-heading inline-flex items-center gap-3 text-sm uppercase tracking-widest text-body">
+            <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
-          <span className="mx-1 hidden h-6 w-px bg-border sm:block" />
-          <SocialLink href="https://github.com/devalkotak" label="GitHub">
-            <GitBranch size={18} />
-          </SocialLink>
-          <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
-            <BriefcaseBusiness size={18} />
-          </SocialLink>
-          <SocialLink href="mailto:devalktk@gmail.com" label="Email">
-            <Mail size={18} />
-          </SocialLink>
+          <div className="flex flex-wrap items-center gap-3">
+            <SocialLink href="https://github.com/devalkotak" label="GitHub">
+              <GitBranch size={15} />
+            </SocialLink>
+            <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
+              <BriefcaseBusiness size={15} />
+            </SocialLink>
+            <SocialLink href="mailto:devalktk@gmail.com" label="Email">
+              <Mail size={15} />
+            </SocialLink>
+          </div>
         </div>
       </section>
 
       {/* statement */}
       <SessionBlock className="relative z-10 border-t border-border py-14">
-        <div>
+        <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[11rem_1fr]">
           <SectionLabel>whoami</SectionLabel>
           <p
-            className="mt-6 max-w-4xl text-balance leading-[1.6] text-body"
+            className="max-w-3xl text-balance leading-[1.6] text-body"
             style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
             Computer engineering student who just wrapped six months{" "}
@@ -219,7 +214,7 @@ export default async function Home() {
                 {row.number}
               </span>
               <span
-                className="font-semibold leading-none text-foreground transition group-hover:text-accent"
+                className="display-heading font-medium leading-none text-foreground transition group-hover:text-accent"
                 style={{ fontSize: "clamp(1.6rem, 4vw, 2.6rem)" }}
               >
                 {row.title}
@@ -323,9 +318,8 @@ function Demo({
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="flex items-center gap-3">
-      <span className="h-px w-8 shrink-0 bg-accent/60" aria-hidden="true" />
-      <span className="mono-heading text-xs uppercase tracking-widest text-accent">
+    <h2 className="flex items-baseline gap-3 self-start lg:sticky lg:top-24">
+      <span className="mono-heading text-xs uppercase tracking-widest text-muted">
         {children}
       </span>
     </h2>
@@ -347,11 +341,15 @@ function Chapter({
     <SessionBlock
       className={`relative z-10 border-t border-border ${spacious ? "py-16" : "py-12"}`}
     >
-      <SectionLabel>{label}</SectionLabel>
-      {intro && (
-        <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">{intro}</p>
-      )}
-      <div className="mt-8">{children}</div>
+      <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[11rem_1fr]">
+        <SectionLabel>{label}</SectionLabel>
+        <div>
+          {intro && (
+            <p className="max-w-2xl text-sm leading-6 text-muted">{intro}</p>
+          )}
+          <div className={intro ? "mt-6" : ""}>{children}</div>
+        </div>
+      </div>
     </SessionBlock>
   );
 }
@@ -368,7 +366,7 @@ function RecordCard({
   return (
     <article className="panel-3d flex flex-col border border-border p-5 sm:p-6">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="text-lg font-semibold leading-tight text-foreground">
+        <h3 className="display-heading text-lg font-medium leading-tight text-foreground">
           {org}
         </h3>
         <p className="mono-heading flex shrink-0 items-center gap-1.5 text-[11px] text-faint">
@@ -421,13 +419,13 @@ function SocialLink({
   const external = href.startsWith("http");
   return (
     <a
-      className="grid size-10 place-items-center border border-border bg-surface text-body transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
+      className="inline-flex h-10 items-center gap-2.5 border border-border bg-surface px-5 text-sm text-body transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      aria-label={label}
     >
       {children}
+      {label}
     </a>
   );
 }
