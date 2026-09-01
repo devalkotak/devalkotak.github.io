@@ -70,46 +70,49 @@ export default async function Home() {
     <AnimatedPage className="wide-shell relative pb-28">
       <NoCookieBanner />
 
-      {/* manifesto hero */}
-      <section className="relative z-10 pb-20 pt-4">
+      {/* manifesto hero — fills the first viewport on its own */}
+      <section className="relative z-10 flex min-h-[calc(100svh-10rem)] flex-col pb-16 pt-4">
         <p className="mono-heading relative text-sm text-muted">
           deval kotak <span className="text-accent">/</span> mumbai{" "}
           <span className="text-accent">/</span> security engineering
         </p>
 
-        <div className="relative mt-12 space-y-2">
-          <h1 className="display-heading text-balance font-medium leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            I break systems{" "}
-            <span className="text-muted">to understand them.</span>
-          </h1>
-          <p className="display-heading text-balance font-medium leading-[1.05] text-foreground" style={{ fontSize: "clamp(2.4rem, 7vw, 5.5rem)" }}>
-            And build{" "}
-            <span className="text-accent">stronger ones.</span>
+        <div className="relative my-auto py-14">
+          <div className="space-y-2">
+            <h1 className="display-heading text-balance font-medium leading-[1.02] text-foreground" style={{ fontSize: "clamp(2.6rem, 8.5vw, 7rem)" }}>
+              I break systems{" "}
+              <span className="text-muted">to understand them.</span>
+            </h1>
+            <p className="display-heading text-balance font-medium leading-[1.02] text-foreground" style={{ fontSize: "clamp(2.6rem, 8.5vw, 7rem)" }}>
+              And build{" "}
+              <span className="text-accent">stronger ones.</span>
+            </p>
+          </div>
+
+          <p className="mt-10 max-w-xl text-base leading-8 text-body">
+            Most of the work is Python tooling that sorts real vulnerabilities
+            out from the noise. Before that came a trading phase, and in the
+            middle of it a mentorship org that reached 150,000 students. All of
+            it ends up here eventually.
           </p>
         </div>
 
-        <p className="relative mt-9 max-w-xl text-base leading-8 text-body">
-          Most of the work is Python tooling that sorts real vulnerabilities
-          out from the noise. Before that came a trading phase, and in the
-          middle of it a mentorship org that reached 150,000 students. All of
-          it ends up here eventually.
-        </p>
-
-        <div className="relative mt-10 flex flex-wrap items-center gap-3">
-          <span className="inline-flex h-10 items-center gap-2.5 border border-border bg-surface px-4 text-sm text-body">
+        <div className="relative flex flex-wrap items-end justify-between gap-6 border-t border-border pt-6">
+          <span className="inline-flex h-10 items-center gap-2.5 text-sm text-body">
             <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
-          <span className="mx-1 hidden h-6 w-px bg-border sm:block" />
-          <SocialLink href="https://github.com/devalkotak" label="GitHub">
-            <GitBranch size={18} />
-          </SocialLink>
-          <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
-            <BriefcaseBusiness size={18} />
-          </SocialLink>
-          <SocialLink href="mailto:devalktk@gmail.com" label="Email">
-            <Mail size={18} />
-          </SocialLink>
+          <div className="flex items-center gap-3">
+            <SocialLink href="https://github.com/devalkotak" label="GitHub">
+              <GitBranch size={18} />
+            </SocialLink>
+            <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
+              <BriefcaseBusiness size={18} />
+            </SocialLink>
+            <SocialLink href="mailto:devalktk@gmail.com" label="Email">
+              <Mail size={18} />
+            </SocialLink>
+          </div>
         </div>
       </section>
 
