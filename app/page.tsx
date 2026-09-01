@@ -98,7 +98,7 @@ export default async function Home() {
         </div>
 
         <div className="relative flex flex-wrap items-center justify-between gap-4 border-t border-border pt-5">
-          <span className="mono-heading inline-flex items-center gap-2.5 text-xs uppercase tracking-widest text-muted">
+          <span className="mono-heading inline-flex items-center gap-3 text-sm uppercase tracking-widest text-body">
             <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
