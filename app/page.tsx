@@ -102,15 +102,15 @@ export default async function Home() {
             <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
-          <div className="flex items-center gap-2.5">
+          <div className="flex flex-wrap items-center gap-3">
             <SocialLink href="https://github.com/devalkotak" label="GitHub">
-              <GitBranch size={16} />
+              <GitBranch size={15} />
             </SocialLink>
             <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
-              <BriefcaseBusiness size={16} />
+              <BriefcaseBusiness size={15} />
             </SocialLink>
             <SocialLink href="mailto:devalktk@gmail.com" label="Email">
-              <Mail size={16} />
+              <Mail size={15} />
             </SocialLink>
           </div>
         </div>
@@ -419,13 +419,13 @@ function SocialLink({
   const external = href.startsWith("http");
   return (
     <a
-      className="grid size-9 place-items-center border border-border bg-surface text-muted transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
+      className="inline-flex h-10 items-center gap-2.5 border border-border bg-surface px-5 text-sm text-body transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      aria-label={label}
     >
       {children}
+      {label}
     </a>
   );
 }
