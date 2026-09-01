@@ -16,11 +16,11 @@ export default function OptiversePage() {
   return (
     <AnimatedPage className="content-shell">
       <header className="border-b border-border pb-8">
-        <p className="mono-heading flex items-center gap-2 text-sm text-accent">
+        <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
           <Sparkles size={16} />
           optiverse/
         </p>
-        <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
+        <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
           A side quest that got 150,000 students
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">

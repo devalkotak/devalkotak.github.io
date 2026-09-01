@@ -15,11 +15,11 @@ export default function ResourcesPage() {
   return (
     <AnimatedPage className="content-shell">
       <header className="border-b border-border pb-8">
-        <p className="mono-heading flex items-center gap-2 text-sm text-accent">
+        <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
           <Library size={16} />
           resources/
         </p>
-        <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
+        <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
           Stuff worth bookmarking
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
@@ -28,7 +28,7 @@ export default function ResourcesPage() {
         </p>
       </header>
 
-      <p className="mt-8 border-l-2 border-accent bg-surface px-4 py-3 text-sm leading-6 text-muted">
+      <p className="mt-8 border-l-2 border-faint bg-surface px-4 py-3 text-sm leading-6 text-muted">
         Still being pulled together from bookmarks, notes, and too many open
         tabs. Sparse for now, growing steadily.
       </p>

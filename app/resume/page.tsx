@@ -12,11 +12,11 @@ export default function ResumePage() {
     <AnimatedPage className="content-shell">
       <header className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-8">
         <div>
-          <p className="mono-heading flex items-center gap-2 text-sm text-accent">
+          <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
             <FileText size={16} />
             resume/
           </p>
-          <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
+          <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
             Deval Kotak
           </h1>
         </div>

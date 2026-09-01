@@ -41,12 +41,12 @@ export default async function BlogDetailPage({
 
       <article className="mt-8">
         <header className="border-b border-border pb-8">
-          <h1 className="mono-heading text-3xl font-semibold text-foreground">
+          <h1 className="display-heading text-3xl font-medium text-foreground">
             {article.title}
           </h1>
           <div className="mt-4 flex flex-wrap items-center gap-3 text-sm text-muted">
             <time dateTime={article.date}>{article.date}</time>
-            <span className="mono-heading border border-accent/30 bg-[var(--color-accent-muted)] px-2 py-1 text-[11px] text-accent">
+            <span className="mono-heading border border-border bg-surface px-2 py-1 text-[11px] text-muted">
               {article.category}
             </span>
           </div>

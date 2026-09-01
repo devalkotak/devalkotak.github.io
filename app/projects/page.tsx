@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ArrowUpRight, GitBranch, Star } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
-import Tilt3D from "@/components/Tilt3D";
 import { getPortfolioProjectState } from "@/lib/github";
 
 export const metadata: Metadata = {
@@ -16,11 +15,11 @@ export default async function ProjectsPage() {
   return (
     <AnimatedPage className="content-shell">
       <header className="border-b border-border pb-8">
-        <p className="mono-heading flex items-center gap-2 text-sm text-accent">
+        <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
           <GitBranch size={16} />
           projects/
         </p>
-        <h1 className="mono-heading mt-4 text-3xl font-semibold text-foreground sm:text-4xl">
+        <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
           Things that shipped
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
@@ -36,13 +35,13 @@ export default async function ProjectsPage() {
       ) : projects.length > 0 ? (
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => (
-            <Tilt3D key={project.id}>
-              <a
-                href={project.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="panel-3d group block h-full border border-border p-5 hover:border-accent/30"
-              >
+            <a
+              key={project.id}
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="panel-3d group block h-full border border-border p-5 hover:border-accent/30"
+            >
                 <span className="mono-heading flex items-center justify-between gap-2 text-sm text-foreground group-hover:text-accent">
                   <span className="truncate">{project.name}</span>
                   <ArrowUpRight
@@ -71,9 +70,8 @@ export default async function ProjectsPage() {
                       {topic}
                     </span>
                   ))}
-                </div>
-              </a>
-            </Tilt3D>
+              </div>
+            </a>
           ))}
         </div>
       ) : (
