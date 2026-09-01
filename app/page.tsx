@@ -97,20 +97,20 @@ export default async function Home() {
           </p>
         </div>
 
-        <div className="relative flex flex-wrap items-end justify-between gap-6 border-t border-border pt-6">
-          <span className="inline-flex h-10 items-center gap-2.5 text-sm text-body">
+        <div className="relative flex flex-wrap items-center justify-between gap-4 border-t border-border pt-5">
+          <span className="mono-heading inline-flex items-center gap-2.5 text-xs uppercase tracking-widest text-muted">
             <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
             open to security engineering roles
           </span>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <SocialLink href="https://github.com/devalkotak" label="GitHub">
-              <GitBranch size={18} />
+              <GitBranch size={16} />
             </SocialLink>
             <SocialLink href="https://linkedin.com/in/devalkotak" label="LinkedIn">
-              <BriefcaseBusiness size={18} />
+              <BriefcaseBusiness size={16} />
             </SocialLink>
             <SocialLink href="mailto:devalktk@gmail.com" label="Email">
-              <Mail size={18} />
+              <Mail size={16} />
             </SocialLink>
           </div>
         </div>
@@ -118,10 +118,10 @@ export default async function Home() {
 
       {/* statement */}
       <SessionBlock className="relative z-10 border-t border-border py-14">
-        <div>
+        <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[11rem_1fr]">
           <SectionLabel>whoami</SectionLabel>
           <p
-            className="mt-6 max-w-4xl text-balance leading-[1.6] text-body"
+            className="max-w-3xl text-balance leading-[1.6] text-body"
             style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
             Computer engineering student who just wrapped six months{" "}
@@ -318,8 +318,7 @@ function Demo({
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <h2 className="flex items-center gap-3">
-      <span className="h-px w-8 shrink-0 bg-border" aria-hidden="true" />
+    <h2 className="flex items-baseline gap-3 self-start lg:sticky lg:top-24">
       <span className="mono-heading text-xs uppercase tracking-widest text-muted">
         {children}
       </span>
@@ -342,11 +341,15 @@ function Chapter({
     <SessionBlock
       className={`relative z-10 border-t border-border ${spacious ? "py-16" : "py-12"}`}
     >
-      <SectionLabel>{label}</SectionLabel>
-      {intro && (
-        <p className="mt-4 max-w-2xl text-sm leading-6 text-muted">{intro}</p>
-      )}
-      <div className="mt-8">{children}</div>
+      <div className="grid gap-x-12 gap-y-6 lg:grid-cols-[11rem_1fr]">
+        <SectionLabel>{label}</SectionLabel>
+        <div>
+          {intro && (
+            <p className="max-w-2xl text-sm leading-6 text-muted">{intro}</p>
+          )}
+          <div className={intro ? "mt-6" : ""}>{children}</div>
+        </div>
+      </div>
     </SessionBlock>
   );
 }
@@ -416,7 +419,7 @@ function SocialLink({
   const external = href.startsWith("http");
   return (
     <a
-      className="grid size-10 place-items-center border border-border bg-surface text-body transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
+      className="grid size-9 place-items-center border border-border bg-surface text-muted transition hover:border-accent/60 hover:bg-surfaceHover hover:text-accent"
       href={href}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
