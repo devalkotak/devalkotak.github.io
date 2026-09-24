@@ -124,9 +124,9 @@ export default async function Home() {
             className="max-w-3xl text-balance leading-[1.6] text-body"
             style={{ fontSize: "clamp(1rem, 1.5vw, 1.2rem)" }}
           >
-            Computer engineering student who just wrapped six months{" "}
-            <span className="text-foreground">securing production systems</span>{" "}
-            at JioStar.{" "}
+            Computer engineering student, ex-JioStar, where I spent six months{" "}
+            <span className="text-foreground">securing production systems</span>
+            .{" "}
             <span className="text-foreground">
               Most of what I know came from pulling something apart to find out
               why it behaved strangely
@@ -268,12 +268,12 @@ const RECORD: RecordEntry[] = [
     dates: "Feb 2026 – Aug 2026",
     live: false,
     bullets: [
-      "Built an automated regression engine that turns Jira vulnerability reports into Nuclei templates end to end: 22 templates live in main, with a scheduled run reporting hits to Slack.",
-      "Shipped a SOC Slack bot for shift handovers and one-click CrowdStrike IOC blocking, still in active use by the team, plus a content-security dashboard live behind the org's HTTPS ingress.",
-      "Surfaced attack surface the team wasn't tracking: mapped production APIs, ran VAPT on internal tools, and built a Telegram crawler watching for piracy leaks across 60+ channels.",
+      "Shipped an automated regression testing engine integrated with Jira and GitHub that cut security test-case creation from 2 hours to 20 seconds.",
+      "Automated the User Access Review process for 6,000+ users across 650+ apps every quarter, managing reminders, approvals, evidence collection, and fulfillment tracking end to end.",
+      "Built a persistent Telegram crawler fleet that surfaced 282 confirmed piracy-leak threats across 167,000+ messages scanned in 5 days without manual searching.",
     ],
-    metric: "production",
-    metricLabel: "not a lab environment",
+    metric: "6,000+",
+    metricLabel: "users under UAR governance",
   },
   {
     org: "Optiverse",
