@@ -268,8 +268,8 @@ const RECORD: RecordEntry[] = [
     dates: "Feb 2026 – Aug 2026",
     live: false,
     bullets: [
+      "Built the quarterly User Access Review workflow for 6,000+ users across 650+ apps with the GRC team and app owners, automating reminders, approvals, evidence collection and fulfillment tracking; designed and built for org-wide rollout.",
       "Shipped an automated regression testing engine integrated with Jira and GitHub that cut security test-case creation from 2 hours to 20 seconds.",
-      "Automated the User Access Review process for 6,000+ users across 650+ apps every quarter, managing reminders, approvals, evidence collection, and fulfillment tracking end to end.",
       "Built a persistent Telegram crawler fleet that surfaced 282 confirmed piracy-leak threats across 167,000+ messages scanned in 5 days without manual searching.",
     ],
     metric: "6,000+",
