@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { ArrowUpRight, Library } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
+import { FEATURES } from "@/lib/features";
 import { getResourceState } from "@/lib/resources";
 
 export const metadata: Metadata = {
@@ -10,6 +12,9 @@ export const metadata: Metadata = {
 };
 
 export default function ResourcesPage() {
+  // Hidden until the Notion database is connected. See lib/features.ts.
+  if (!FEATURES.resources) notFound();
+
   const { resources, error } = getResourceState();
 
   return (

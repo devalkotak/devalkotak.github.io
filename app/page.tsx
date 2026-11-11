@@ -13,6 +13,7 @@ import VisitorAudit from "@/components/VisitorAudit";
 import { getPortfolioProjectState } from "@/lib/github";
 import { getPublishedWriteups } from "@/lib/notion";
 import { getResources } from "@/lib/resources";
+import { FEATURES } from "@/lib/features";
 
 export default async function Home() {
   const [projectState, writeups] = await Promise.all([
@@ -64,7 +65,10 @@ export default async function Home() {
       note: "this site's own threat model",
       meta: "yes, really",
     },
-  ];
+  ]
+    .filter((row) => FEATURES.resources || row.href !== "/resources")
+    // Renumber after filtering so a hidden row never leaves a gap.
+    .map((row, position) => ({ ...row, number: String(position + 1).padStart(2, "0") }));
 
   return (
     <AnimatedPage className="wide-shell relative pb-28">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { FEATURES } from "@/lib/features";
 
 const links = [
   { href: "/projects", label: "Projects" },
@@ -12,7 +13,7 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/optiverse", label: "Optiverse" },
   { href: "/security", label: "Security" },
-];
+].filter((link) => FEATURES.resources || link.href !== "/resources");
 
 export default function Nav() {
   const pathname = usePathname();

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { FEATURES } from "@/lib/features";
 import { getPublishedWriteups } from "@/lib/notion";
 
 export const dynamic = "force-static";
@@ -13,7 +14,7 @@ const STATIC_ROUTES = [
   { path: "/optiverse", priority: 0.6 },
   { path: "/resume", priority: 0.7 },
   { path: "/security", priority: 0.4 },
-];
+].filter(({ path }) => FEATURES.resources || path !== "/resources");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const writeups = await getPublishedWriteups();
