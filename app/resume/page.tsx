@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Download, ExternalLink, FileText } from "lucide-react";
+import { Download, ExternalLink } from "lucide-react";
 import AnimatedPage from "@/components/AnimatedPage";
+import PageHeader from "@/components/PageHeader";
 
 export const metadata: Metadata = {
   title: "Resume",
@@ -10,21 +11,17 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <AnimatedPage className="content-shell">
-      <header className="flex flex-wrap items-end justify-between gap-4 border-b border-border pb-8">
-        <div>
-          <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
-            <FileText size={16} />
-            resume/
-          </p>
-          <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
-            Deval Kotak
-          </h1>
-        </div>
-        <div className="flex flex-wrap items-center gap-3">
+      <PageHeader
+        crumbs={[{ label: "resume" }]}
+        title="The formal"
+        accent="version."
+        intro="Two pages, the same work as the homepage, in the order recruiters expect."
+        aside={
+          <>
           <a
             href="/resume.pdf"
             download
-            className="inline-flex h-10 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-4 text-sm font-medium text-accent transition hover:border-accent"
+            className="inline-flex h-11 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-4 text-sm font-medium text-accent transition hover:border-accent"
           >
             Download
             <Download size={14} />
@@ -33,15 +30,16 @@ export default function ResumePage() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-10 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
+            className="inline-flex h-11 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
           >
             Open in new tab
             <ExternalLink size={14} />
           </a>
-        </div>
-      </header>
+          </>
+        }
+      />
 
-      <div className="mt-8 border border-border bg-surface">
+      <div className="mt-10 border border-border bg-surface">
         <object
           data="/resume.pdf"
           type="application/pdf"
@@ -49,7 +47,7 @@ export default function ResumePage() {
           aria-label="Deval Kotak's resume"
         >
           <p className="p-6 text-sm text-muted">
-            Your browser can&apos;t preview PDFs inline.{" "}
+            Your browser can’t preview PDFs inline.{" "}
             <a href="/resume.pdf" className="text-accent hover:underline">
               Download the resume
             </a>{" "}

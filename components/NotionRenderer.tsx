@@ -137,16 +137,18 @@ async function renderToggleBlock(block: NotionBlock) {
   );
 }
 
+// Same display face as the page titles, so article headings read as part of
+// the site rather than as code.
 function headingClass(level: 1 | 2 | 3) {
   if (level === 1) {
-    return "mono-heading inline text-3xl font-semibold text-foreground";
+    return "display-heading inline text-3xl font-medium leading-tight text-foreground";
   }
 
   if (level === 2) {
-    return "mono-heading inline text-2xl font-semibold text-foreground";
+    return "display-heading inline text-2xl font-medium leading-tight text-foreground";
   }
 
-  return "mono-heading inline text-xl font-semibold text-foreground";
+  return "display-heading inline text-xl font-medium leading-snug text-foreground";
 }
 
 function renderTableBlock(block: NotionBlock) {

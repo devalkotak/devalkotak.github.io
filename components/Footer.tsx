@@ -1,5 +1,6 @@
 import Link from "next/link";
 import writeupsPayload from "@/content/generated/writeups.json";
+import { formatDate } from "@/lib/format";
 
 // build_content.py stamps every sync; the deploy script runs it before each
 // build, so this is the date the live content was last pulled from Notion.
@@ -7,15 +8,7 @@ function syncedOn(stamp: string | undefined) {
   if (!stamp) return null;
   const date = new Date(stamp);
   if (Number.isNaN(date.getTime())) return null;
-  return {
-    iso: date.toISOString(),
-    label: date.toLocaleDateString("en-GB", {
-      day: "numeric",
-      month: "short",
-      year: "numeric",
-      timeZone: "UTC",
-    }),
-  };
+  return { iso: date.toISOString(), label: formatDate(stamp) };
 }
 
 export default function Footer() {
