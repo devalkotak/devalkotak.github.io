@@ -2,21 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Colours are stored as RGB channels so Tailwind can apply opacity
+ * modifiers (border-accent/60, bg-background/85). With plain hex variables
+ * those classes generated no CSS at all. --color-* stay available as full
+ * colours for hand-written CSS.
+ */
 :root {
-  --color-background: #0a0b0c;
-  --color-surface: #101113;
-  --color-surface-hover: #15171a;
-  --color-border: #1e2024;
-  --color-foreground: #e8eaed;
-  --color-body: #c3c7cc;
-  --color-muted: #8b9096;
-  --color-faint: #43464c;
-  --color-accent: #9fb8d0;
-  --color-code: #0e0f11;
-  --color-accent-muted: rgba(159, 184, 208, 0.1);
-  --color-ok: #85b892;
-  --color-warn: #cfb37e;
-  --color-danger: #cf8b85;
+  --rgb-background: 10 11 12; /* #0a0b0c */
+  --rgb-surface: 16 17 19; /* #101113 */
+  --rgb-surface-hover: 21 23 26; /* #15171a */
+  --rgb-border: 30 32 36; /* #1e2024 */
+  --rgb-foreground: 232 234 237; /* #e8eaed */
+  --rgb-body: 195 199 204; /* #c3c7cc */
+  --rgb-muted: 139 144 150; /* #8b9096 */
+  --rgb-faint: 67 70 76; /* #43464c */
+  --rgb-accent: 159 184 208; /* #9fb8d0 */
+  --rgb-code: 14 15 17; /* #0e0f11 */
+  --rgb-ok: 133 184 146; /* #85b892 */
+  --rgb-warn: 207 179 126; /* #cfb37e */
+  --rgb-danger: 207 139 133; /* #cf8b85 */
+
+  --color-background: rgb(var(--rgb-background));
+  --color-surface: rgb(var(--rgb-surface));
+  --color-surface-hover: rgb(var(--rgb-surface-hover));
+  --color-border: rgb(var(--rgb-border));
+  --color-foreground: rgb(var(--rgb-foreground));
+  --color-body: rgb(var(--rgb-body));
+  --color-muted: rgb(var(--rgb-muted));
+  --color-faint: rgb(var(--rgb-faint));
+  --color-accent: rgb(var(--rgb-accent));
+  --color-code: rgb(var(--rgb-code));
+  --color-ok: rgb(var(--rgb-ok));
+  --color-warn: rgb(var(--rgb-warn));
+  --color-danger: rgb(var(--rgb-danger));
+  --color-accent-muted: rgb(var(--rgb-accent) / 0.1);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
