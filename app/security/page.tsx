@@ -49,9 +49,10 @@ export default function SecurityPage() {
         <PostureSection title="content pipeline">
           <p>
             Projects and writeups are fetched at build time from the GitHub API
-            and Notion, then baked into static JSON. The API tokens involved
-            exist only in the build environment. They are never shipped to the
-            client and no client-side code talks to GitHub or Notion.
+            and Notion, then baked into static JSON. The build runs on my own
+            machine, and the API tokens live only in a local .env file that is
+            never committed. They are never shipped to the client and no
+            client-side code talks to GitHub or Notion.
           </p>
         </PostureSection>
 
@@ -65,14 +66,33 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
+        <PostureSection title="content security policy">
+          <p>
+            GitHub Pages cannot send response headers, so the policy ships as a
+            meta tag instead, placed before any script on the page. After every
+            build, a script hashes each inline script Next.js emits and writes a
+            per-page policy. Scripts run only if they come from this domain or
+            match one of those SHA-256 hashes; there is no unsafe-inline and no
+            unsafe-eval for scripts. Images, fonts and network requests are
+            limited to this domain, form submissions are blocked, the base tag
+            is pinned to this domain, and plugins and frames are off
+            everywhere except the resume page, which embeds its own PDF.
+          </p>
+          <p className="mt-3">
+            One deliberate allowance: style-src permits inline styles, because
+            React renders sizing as style attributes. Injected CSS cannot run
+            code, and the script rules above do not depend on it.
+          </p>
+        </PostureSection>
+
         <PostureSection title="what I do not control">
           <p>
-            GitHub Pages does not allow custom response headers, which rules
-            out a server-side Content-Security-Policy, X-Frame-Options, or a
-            custom HSTS policy. TLS termination and HSTS come from the
-            github.io platform instead. A static host with no header control is
-            a real limitation, and pretending otherwise would defeat the point
-            of this page.
+            A meta tag cannot carry every directive. frame-ancestors only works
+            as a real header, and so does X-Frame-Options, so this site has no
+            clickjacking protection of its own. HSTS comes from the github.io
+            platform rather than a policy I set. A static host with no header
+            control is a real limitation, and pretending otherwise would defeat
+            the point of this page.
           </p>
         </PostureSection>
 
