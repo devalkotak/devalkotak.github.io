@@ -48,6 +48,9 @@ export default function JourneyToggles({ stops }: { stops: JourneyStop[] }) {
                 <span className="mono-heading flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-widest text-muted">
                   {stop.dates}
                   {stop.now && <span className="border border-ok/60 px-1.5 text-ok">now</span>}
+                  {stop.status && (
+                    <span className="border border-border px-1.5 text-body">{stop.status}</span>
+                  )}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <span className="display-heading text-xl font-medium text-foreground transition group-hover:text-accent">

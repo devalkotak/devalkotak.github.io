@@ -7,7 +7,7 @@ import { getOptiverseContent } from "@/lib/optiverse";
 export const metadata: Metadata = {
   title: "Optiverse",
   description:
-    "A student-built mentorship non-profit, co-founded in 2021, currently on pause.",
+    "A student-built mentorship non-profit, co-founded in 2021, dormant with a relaunch in planning.",
 };
 
 export default function OptiversePage() {
@@ -19,7 +19,7 @@ export default function OptiversePage() {
         crumbs={[{ label: "optiverse" }]}
         title="A side quest that reached"
         accent="150,000 students."
-        intro="Before the security tooling and the market notebooks, there was this: a mentorship project co-founded with a friend and run entirely by students, for students. On pause, not dead. This page is pulled from the team’s own Notion on every deploy."
+        intro="Before the security tooling and the market notebooks, there was this: a mentorship project co-founded with a friend and run entirely by students, for students. Dormant for now, with a relaunch being planned around everyone’s new commitments. This page is pulled from the team’s own Notion on every deploy."
       />
 
       <div className="mt-10">

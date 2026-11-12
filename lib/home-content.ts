@@ -49,6 +49,8 @@ export type JourneyStop = {
   place: string;
   role: string;
   now?: boolean;
+  /** Short tag for a stop that is neither current nor finished. */
+  status?: string;
   workedOn: string;
   learned: string;
   contributed: string;
@@ -58,7 +60,7 @@ export type JourneyStop = {
 export const JOURNEY: JourneyStop[] = [
   {
     slug: "now",
-    dates: "Aug 2026 – now",
+    dates: "2026 – now",
     place: "Building in the open",
     role: "Independent security projects",
     now: true,
@@ -83,7 +85,7 @@ export const JOURNEY: JourneyStop[] = [
   },
   {
     slug: "djsce",
-    dates: "2022 – Jun 2026",
+    dates: "Nov 2022 – Jun 2026",
     place: "Dwarkadas J. Sanghvi College of Engineering",
     role: "B.Tech CSE (IoT, Cybersecurity, Blockchain)",
     workedOn:
@@ -95,15 +97,16 @@ export const JOURNEY: JourneyStop[] = [
   },
   {
     slug: "optiverse",
-    dates: "Mar 2021 – now",
+    dates: "Since Mar 2021",
     place: "Optiverse",
     role: "Co-founder, student non-profit",
+    status: "relaunch in planning",
     workedOn:
       "A global, remote mentorship org for students aged 11 to 17: workshops, two internship programs and NGO partnerships.",
     learned:
-      "How to run something with no budget and volunteers in 19 countries. Process beats heroics.",
+      "We never had a budget, only time and attention, and that turned out to be what changed things for the students we spoke to.",
     contributed:
-      "250+ members, 90+ workshops, 150,000+ students reached, and recognition from the Born This Way Foundation.",
+      "250+ members across 19 countries, 90+ workshops, 150,000+ students reached, and recognition from the Born This Way Foundation.",
   },
 ];
 
@@ -169,9 +172,9 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Piracy leaks get shared in Telegram channels, and finding them meant someone searching by hand.",
     did: "Built a persistent crawler fleet that passively monitors channels and flags piracy intelligence.",
     approach:
-      "Passive collection only, with filtering tuned so the output was confirmed threats, not raw keyword matches.",
+      "Passive collection only, paced to stay inside Telegram’s rate limits, with filtering tuned so the output was confirmed threats, not raw keyword matches.",
     outcome:
-      "167,000+ messages scanned in the first 5 days, with nobody searching by hand.",
+      "167,000+ messages scanned in 5 days across 3 runs, with nobody searching by hand.",
     stack: ["Python", "Telegram API", "Threat intelligence"],
   },
   {
