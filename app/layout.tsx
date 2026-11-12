@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import {
+  Instrument_Serif,
+  Inter,
+  JetBrains_Mono,
+  Space_Grotesk,
+} from "next/font/google";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import "./globals.css";
@@ -22,10 +27,18 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: "italic",
+  variable: "--font-instrument-serif",
+  display: "swap",
+});
+
 const SITE_URL = "https://devalkotak.github.io";
 const SITE_TITLE = "Deval Kotak";
 const SITE_DESCRIPTION =
-  "Security engineer in Mumbai. Breaking systems to understand them, then building stronger ones. Writeups, tooling, and the work behind both.";
+  "Security engineer in Mumbai. Breaking systems to understand them, then building stronger ones. Writeups, tooling and the work behind both.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -75,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetBrainsMono.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${inter.variable} ${jetBrainsMono.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} antialiased`}
       >
         <Nav />
         <main className="min-h-screen pt-28 pb-12">{children}</main>

@@ -39,7 +39,7 @@ function collectFindings(): Finding[] {
   findings.push({
     id: "F-01",
     severity: "low",
-    text: `You're on ${platform}, running ${browser}. Volunteered before this page finished loading.`,
+    text: `You’re on ${platform}, running ${browser}. Volunteered before this page finished loading.`,
   });
 
   findings.push({
@@ -74,7 +74,7 @@ function collectFindings(): Finding[] {
     severity: "info",
     text: dark
       ? "Dark mode. One more bit of entropy, handed over without a prompt."
-      : "Light mode, which is rarer, and therefore slightly more identifying.",
+      : "Light mode. One more bit of entropy, handed over without a prompt.",
   });
 
   const connection = nav.connection?.effectiveType;
@@ -107,7 +107,7 @@ function collectFindings(): Finding[] {
   findings.push({
     id: "F-09",
     severity: "info",
-    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been, only how far.`,
+    text: `This tab’s history stack is ${history.length} deep. A page can’t read where you’ve been, only how far.`,
   });
 
   findings.push({

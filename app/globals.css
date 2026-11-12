@@ -2,22 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+ * Colours are stored as RGB channels so Tailwind can apply opacity
+ * modifiers (border-accent/60, bg-background/85). With plain hex variables
+ * those classes generated no CSS at all. --color-* stay available as full
+ * colours for hand-written CSS. The light theme only swaps the channels;
+ * --color-* re-resolve because both rules sit on the same <html> element.
+ */
 :root {
-  --color-background: #0a0b0c;
-  --color-surface: #101113;
-  --color-surface-hover: #15171a;
-  --color-border: #1e2024;
-  --color-foreground: #e8eaed;
-  --color-body: #c3c7cc;
-  --color-muted: #8b9096;
-  --color-faint: #43464c;
-  --color-accent: #9fb8d0;
-  --color-code: #0e0f11;
-  --color-accent-muted: rgba(159, 184, 208, 0.1);
-  --color-ok: #85b892;
-  --color-warn: #cfb37e;
-  --color-danger: #cf8b85;
+  --rgb-background: 10 11 12; /* #0a0b0c */
+  --rgb-surface: 16 17 19; /* #101113 */
+  --rgb-surface-hover: 21 23 26; /* #15171a */
+  --rgb-border: 30 32 36; /* #1e2024 */
+  --rgb-foreground: 232 234 237; /* #e8eaed */
+  --rgb-body: 195 199 204; /* #c3c7cc */
+  --rgb-muted: 139 144 150; /* #8b9096 */
+  --rgb-faint: 67 70 76; /* #43464c */
+  --rgb-accent: 159 184 208; /* #9fb8d0 */
+  --rgb-code: 14 15 17; /* #0e0f11 */
+  --rgb-ok: 133 184 146; /* #85b892 */
+  --rgb-warn: 207 179 126; /* #cfb37e */
+  --rgb-danger: 207 139 133; /* #cf8b85 */
+
+  --color-background: rgb(var(--rgb-background));
+  --color-surface: rgb(var(--rgb-surface));
+  --color-surface-hover: rgb(var(--rgb-surface-hover));
+  --color-border: rgb(var(--rgb-border));
+  --color-foreground: rgb(var(--rgb-foreground));
+  --color-body: rgb(var(--rgb-body));
+  --color-muted: rgb(var(--rgb-muted));
+  --color-faint: rgb(var(--rgb-faint));
+  --color-accent: rgb(var(--rgb-accent));
+  --color-code: rgb(var(--rgb-code));
+  --color-ok: rgb(var(--rgb-ok));
+  --color-warn: rgb(var(--rgb-warn));
+  --color-danger: rgb(var(--rgb-danger));
+  --color-accent-muted: rgb(var(--rgb-accent) / 0.1);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme="light"] {
+  --rgb-background: 246 245 241; /* #f6f5f1 */
+  --rgb-surface: 239 237 231; /* #efede7 */
+  --rgb-surface-hover: 232 229 221; /* #e8e5dd */
+  --rgb-border: 220 216 206; /* #dcd8ce */
+  --rgb-foreground: 22 24 27; /* #16181b */
+  --rgb-body: 51 55 60; /* #33373c */
+  --rgb-muted: 98 103 109; /* #62676d */
+  --rgb-faint: 163 163 156; /* #a3a39c */
+  --rgb-accent: 62 100 136; /* #3e6488 */
+  --rgb-code: 236 235 230; /* #ecebe6 */
+  --rgb-ok: 63 122 77; /* #3f7a4d */
+  --rgb-warn: 138 106 44; /* #8a6a2c */
+  --rgb-danger: 161 69 61; /* #a1453d */
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -56,6 +97,55 @@ a {
   text-decoration: none;
 }
 
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: 4rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-background), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-background), transparent);
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    height: 25%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+.eq-bar {
+  height: 40%;
+  animation: eq 1.1s ease-in-out infinite;
+}
+
 @keyframes cursor-blink {
   50% {
     opacity: 0;
@@ -75,6 +165,13 @@ a {
   .mono-heading {
     font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
     letter-spacing: 0;
+  }
+
+  .serif-accent {
+    font-family: var(--font-instrument-serif), Georgia, serif;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 
   .display-heading {
