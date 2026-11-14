@@ -18,7 +18,7 @@ export default function ResourcesPage() {
   const { resources, error } = getResourceState();
 
   return (
-    <AnimatedPage className="content-shell">
+    <AnimatedPage className="wide-shell">
       <header className="border-b border-border pb-8">
         <p className="label-text flex items-center gap-2 text-xs text-muted">
           <Library size={16} />

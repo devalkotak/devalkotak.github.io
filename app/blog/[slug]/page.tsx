@@ -40,12 +40,16 @@ export default async function BlogDetailPage({
   const older = position >= 0 && position < writeups.length - 1 ? writeups[position + 1] : null;
 
   return (
-    <AnimatedPage className="content-shell">
+    <AnimatedPage className="wide-shell">
       <article>
         <PageHeader
           crumbs={[
             { label: "Blog", href: "/blog" },
-            { label: article.category },
+            // When the title already is the category (a series named after
+            // its topic), the crumb would just repeat the heading.
+            ...(article.category.trim().toLowerCase() === article.title.trim().toLowerCase()
+              ? []
+              : [{ label: article.category }]),
           ]}
           title={article.title}
           aside={
@@ -60,7 +64,7 @@ export default async function BlogDetailPage({
           }
         />
 
-        <div className="mt-10">
+        <div className="mt-10 max-w-3xl">
           <NotionRenderer blocks={article.blocks} />
         </div>
       </article>
@@ -68,7 +72,7 @@ export default async function BlogDetailPage({
       {(newer || older) && (
         <nav
           aria-label="More writeups"
-          className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-2"
+          className="mt-16 grid max-w-3xl gap-px overflow-hidden border border-border bg-border sm:grid-cols-2"
         >
           {older ? (
             <NeighbourLink href={`/blog/${older.slug}`} label="Older" title={older.title} direction="back" />

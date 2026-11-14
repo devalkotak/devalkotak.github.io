@@ -106,7 +106,7 @@ export const JOURNEY: JourneyStop[] = [
     learned:
       "We never had a budget, only time and attention, and that turned out to be what changed things for the students we spoke to.",
     contributed:
-      "250+ members across 19 countries, 90+ workshops, 150,000+ students reached, and recognition from the Born This Way Foundation.",
+      "250+ members across 18+ countries, 90+ workshops, 150,000+ students reached, and recognition from the Born This Way Foundation.",
   },
 ];
 

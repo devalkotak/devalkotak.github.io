@@ -10,18 +10,18 @@ export const metadata: Metadata = {
 
 export default function ResumePage() {
   return (
-    <AnimatedPage className="content-shell">
+    <AnimatedPage className="wide-shell">
       <PageHeader
         crumbs={[{ label: "Resume" }]}
         title="The formal"
         accent="version."
-        intro="Two pages, the same work as the homepage, in the order recruiters expect."
+        intro="Two pages, in the order recruiters expect. The homepage tells the stories; this lists everything."
         aside={
           <>
           <a
             href="/resume.pdf"
             download
-            className="inline-flex h-11 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-4 text-sm font-medium text-accent transition hover:border-accent"
+            className="inline-flex h-12 items-center gap-2.5 rounded-full bg-accent px-6 text-base font-semibold text-background transition hover:brightness-110"
           >
             Download
             <Download size={14} />
@@ -30,7 +30,7 @@ export default function ResumePage() {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 items-center gap-2 border border-border px-4 text-sm text-body transition hover:border-accent/60 hover:text-accent"
+            className="inline-flex h-12 items-center gap-2.5 rounded-full border border-border px-6 text-base font-medium text-foreground transition hover:border-accent hover:text-accent"
           >
             Open in new tab
             <ExternalLink size={14} />
@@ -39,7 +39,7 @@ export default function ResumePage() {
         }
       />
 
-      <div className="mt-10 border border-border bg-surface">
+      <div className="mx-auto mt-10 max-w-4xl overflow-hidden border border-border bg-surface">
         <object
           data="/resume.pdf"
           type="application/pdf"

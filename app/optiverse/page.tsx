@@ -14,7 +14,7 @@ export default function OptiversePage() {
   const { blocks, error } = getOptiverseContent();
 
   return (
-    <AnimatedPage className="content-shell">
+    <AnimatedPage className="wide-shell">
       <PageHeader
         crumbs={[{ label: "Optiverse" }]}
         title="A side quest that reached"
@@ -22,7 +22,7 @@ export default function OptiversePage() {
         intro="Before the security tooling and the market notebooks, there was this: a mentorship project co-founded with a friend and run entirely by students, for students. Dormant for now, with a relaunch being planned around everyone’s new commitments. This page is pulled from the team’s own Notion on every deploy."
       />
 
-      <div className="mt-10">
+      <div className="mt-10 max-w-3xl">
         {error ? (
           <p className="border border-border bg-surface p-5 text-sm text-muted">
             Couldn’t reach Notion during the last build: {error}

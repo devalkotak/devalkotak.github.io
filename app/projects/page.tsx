@@ -29,10 +29,8 @@ function repoName(url: string) {
 
 export default async function ProjectsPage() {
   const { projects, error } = await getPortfolioProjectState();
-  // Repos with a homepage story lead; the rest keep GitHub's order.
-  const ordered = [...projects].sort(
-    (a, b) => Number(STORIES.has(b.name.toLowerCase())) - Number(STORIES.has(a.name.toLowerCase())),
-  );
+  // No ranking: every repo appears in the order GitHub returns it.
+  const ordered = projects;
 
   return (
     <AnimatedPage className="wide-shell">
@@ -63,12 +61,7 @@ export default async function ProjectsPage() {
                 key={project.id}
                 className="panel-3d group flex flex-col border border-border p-5 transition hover:border-accent/40"
               >
-                <div className="flex min-h-5 items-baseline justify-end gap-3">
-                  {story && (
-                    <span className="label-text text-[11px] text-accent">
-                      Featured
-                    </span>
-                  )}
+                <div className="flex items-baseline justify-end gap-3 empty:hidden">
                 </div>
                 <h2 className="display-heading mt-3 break-words text-lg leading-snug text-foreground">
                   <a
