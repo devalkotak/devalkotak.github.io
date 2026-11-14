@@ -1,23 +1,17 @@
-"use client";
-
 import type { ReactNode } from "react";
-import { motion } from "framer-motion";
-import { pageContainer } from "@/lib/animations";
 
 type AnimatedPageProps = {
   children: ReactNode;
   className?: string;
 };
 
+/**
+ * Page entrance as plain CSS (see .page-enter in globals.css). It used to be
+ * a framer-motion wrapper that rendered at opacity 0 and waited for the
+ * script bundle, which held back first paint by about two seconds on a
+ * phone. A CSS animation starts with the HTML, needs no JavaScript, and is
+ * already shortened to nothing by the prefers-reduced-motion rule.
+ */
 export default function AnimatedPage({ children, className }: AnimatedPageProps) {
-  return (
-    <motion.div
-      className={className}
-      variants={pageContainer}
-      initial="hidden"
-      animate="show"
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={`page-enter ${className ?? ""}`}>{children}</div>;
 }

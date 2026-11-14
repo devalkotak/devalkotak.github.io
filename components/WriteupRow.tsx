@@ -18,11 +18,11 @@ export default function WriteupRow({ writeup }: WriteupRowProps) {
       <div className="flex items-start justify-between gap-4 pl-2">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-2">
-            <span className="mono-heading inline-flex border border-accent/30 bg-[var(--color-accent-muted)] px-2 py-1 text-[11px] text-accent">
+            <span className="label-text inline-flex border border-accent/30 bg-[var(--color-accent-muted)] px-2 py-1 text-xs text-accent">
               {writeup.category}
             </span>
             {source ? (
-              <span className="border border-border bg-code px-2 py-1 text-[11px] text-muted">
+              <span className="border border-border bg-code px-2 py-1 text-xs text-muted">
                 {source}
               </span>
             ) : null}

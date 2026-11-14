@@ -4,24 +4,31 @@
 
 /*
  * Colours are stored as RGB channels so Tailwind can apply opacity
- * modifiers (border-accent/60, bg-background/85). With plain hex variables
- * those classes generated no CSS at all. --color-* stay available as full
- * colours for hand-written CSS.
+ * modifiers (border-accent/60, bg-background/85). --color-* stay available
+ * as full colours for hand-written CSS. The light theme only swaps the
+ * channels; --color-* re-resolve because both rules sit on <html>.
+ *
+ * Two colours carry meaning and nothing else gets one:
+ *   accent (blue)  anything you can act on: buttons, links, active states
+ *   signal (pink)  proof and live status: impact numbers, verified marks
+ * They never share an element and never blend into a gradient.
+ * ok / warn / danger exist only for the visitor-audit results.
  */
 :root {
-  --rgb-background: 10 11 12; /* #0a0b0c */
-  --rgb-surface: 16 17 19; /* #101113 */
-  --rgb-surface-hover: 21 23 26; /* #15171a */
-  --rgb-border: 30 32 36; /* #1e2024 */
-  --rgb-foreground: 232 234 237; /* #e8eaed */
-  --rgb-body: 195 199 204; /* #c3c7cc */
-  --rgb-muted: 139 144 150; /* #8b9096 */
-  --rgb-faint: 67 70 76; /* #43464c */
-  --rgb-accent: 159 184 208; /* #9fb8d0 */
-  --rgb-code: 14 15 17; /* #0e0f11 */
-  --rgb-ok: 133 184 146; /* #85b892 */
-  --rgb-warn: 207 179 126; /* #cfb37e */
-  --rgb-danger: 207 139 133; /* #cf8b85 */
+  --rgb-background: 9 9 11; /* #09090b obsidian */
+  --rgb-surface: 17 17 21; /* #111115 */
+  --rgb-surface-hover: 24 24 30; /* #18181e */
+  --rgb-border: 38 38 46; /* #26262e */
+  --rgb-foreground: 244 244 246; /* #f4f4f6 */
+  --rgb-body: 200 200 209; /* #c8c8d1 */
+  --rgb-muted: 150 150 162; /* #9696a2 */
+  --rgb-faint: 96 96 108; /* #60606c */
+  --rgb-accent: 76 125 255; /* #4c7dff */
+  --rgb-signal: 255 79 158; /* #ff4f9e */
+  --rgb-code: 14 14 18; /* #0e0e12 */
+  --rgb-ok: 110 201 138; /* #6ec98a */
+  --rgb-warn: 229 185 92; /* #e5b95c */
+  --rgb-danger: 239 106 106; /* #ef6a6a */
 
   --color-background: rgb(var(--rgb-background));
   --color-surface: rgb(var(--rgb-surface));
@@ -32,12 +39,34 @@
   --color-muted: rgb(var(--rgb-muted));
   --color-faint: rgb(var(--rgb-faint));
   --color-accent: rgb(var(--rgb-accent));
+  --color-signal: rgb(var(--rgb-signal));
   --color-code: rgb(var(--rgb-code));
   --color-ok: rgb(var(--rgb-ok));
   --color-warn: rgb(var(--rgb-warn));
   --color-danger: rgb(var(--rgb-danger));
-  --color-accent-muted: rgb(var(--rgb-accent) / 0.1);
+  --color-accent-muted: rgb(var(--rgb-accent) / 0.12);
   --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root[data-theme="light"] {
+  --rgb-background: 247 247 250; /* #f7f7fa */
+  --rgb-surface: 255 255 255; /* #ffffff */
+  --rgb-surface-hover: 240 240 246; /* #f0f0f6 */
+  --rgb-border: 221 221 230; /* #dddde6 */
+  --rgb-foreground: 14 14 18; /* #0e0e12 */
+  --rgb-body: 54 54 66; /* #363642 */
+  --rgb-muted: 98 98 114; /* #626272 */
+  --rgb-faint: 158 158 172; /* #9e9eac */
+  --rgb-accent: 43 84 224; /* #2b54e0 */
+  --rgb-signal: 209 28 108; /* #d11c6c */
+  --rgb-code: 238 238 244; /* #eeeef4 */
+  --rgb-ok: 28 122 64; /* #1c7a40 */
+  --rgb-warn: 140 98 10; /* #8c620a */
+  --rgb-danger: 184 44 44; /* #b82c2c */
+}
+
+html[data-theme="light"] {
+  color-scheme: light;
 }
 
 * {
@@ -54,7 +83,34 @@ body {
   min-height: 100vh;
   color: var(--color-body);
   background: var(--color-background);
-  font-family: var(--font-inter), system-ui, sans-serif;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  /* Light type on a dark page reads thinner than it is, so body sits a step above regular. */
+  font-weight: 450;
+}
+
+/*
+ * Corners. :where() keeps these at zero specificity so any rounded-* utility
+ * still wins. Small bordered things are pills, controls are soft, containers
+ * are softer.
+ */
+@layer base {
+  /* One visible focus ring everywhere, in the action colour. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  :where(span, kbd).border {
+    border-radius: 9999px;
+  }
+
+  :where(button, a, input, select).border {
+    border-radius: 12px;
+  }
+
+  :where(article, aside, section, div, details, pre, table, object).border {
+    border-radius: 16px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -76,6 +132,67 @@ a {
   text-decoration: none;
 }
 
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.45s var(--ease-smooth) both;
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee::before,
+.marquee::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: 4rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-background), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-background), transparent);
+}
+
+@keyframes eq {
+  0%,
+  100% {
+    height: 25%;
+  }
+  50% {
+    height: 100%;
+  }
+}
+
+.eq-bar {
+  height: 40%;
+  background: var(--color-signal);
+  animation: eq 1.1s ease-in-out infinite;
+}
+
 @keyframes cursor-blink {
   50% {
     opacity: 0;
@@ -92,14 +209,31 @@ a {
     text-wrap: balance;
   }
 
-  .mono-heading {
-    font-family: var(--font-jetbrains-mono), ui-monospace, monospace;
+  /* Small labels: same family as everything else, a step heavier, never all caps. */
+  .label-text {
+    font-weight: 500;
     letter-spacing: 0;
   }
 
   .display-heading {
-    font-family: var(--font-space-grotesk), var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-weight: 650;
     letter-spacing: -0.02em;
+    word-spacing: 0.04em;
+  }
+
+  /*
+   * Tinted glass: the page's one way of holding colour in a block. Obsidian
+   * tinted blue and lit from a corner, so the colour reads as light, not paint.
+   */
+  .glass {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgb(var(--rgb-accent) / 0.32);
+    border-radius: 28px;
+    background:
+      radial-gradient(110% 90% at 100% 0%, rgb(var(--rgb-accent) / 0.3), transparent 58%),
+      rgb(var(--rgb-accent) / 0.07);
   }
 
   .content-shell {
@@ -113,6 +247,7 @@ a {
   }
 
   .panel-3d {
+    border-radius: 18px;
     background: var(--color-surface);
     transition:
       background-color 0.3s var(--ease-smooth),

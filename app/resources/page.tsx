@@ -18,13 +18,13 @@ export default function ResourcesPage() {
   const { resources, error } = getResourceState();
 
   return (
-    <AnimatedPage className="content-shell">
+    <AnimatedPage className="wide-shell">
       <header className="border-b border-border pb-8">
-        <p className="mono-heading flex items-center gap-2 text-xs uppercase tracking-widest text-muted">
+        <p className="label-text flex items-center gap-2 text-xs text-muted">
           <Library size={16} />
           resources/
         </p>
-        <h1 className="display-heading mt-4 text-3xl font-medium text-foreground sm:text-4xl">
+        <h1 className="display-heading mt-4 text-3xl text-foreground sm:text-4xl">
           Stuff worth bookmarking
         </h1>
         <p className="mt-4 max-w-2xl text-base leading-7 text-body">
@@ -56,7 +56,7 @@ export default function ResourcesPage() {
                       {resource.description}
                     </span>
                   )}
-                  <span className="mono-heading mt-1 block text-[11px] text-muted">
+                  <span className="label-text mt-1 block text-xs text-muted">
                     {resource.kind}
                     {resource.category && <span> · {resource.category}</span>}
                     {resource.tags.slice(0, 2).map((tag) => (

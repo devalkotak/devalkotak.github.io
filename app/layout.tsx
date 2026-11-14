@@ -1,31 +1,28 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const inter = Inter({
+// One family for everything. Variable font, so the in-between weights the
+// design uses (450 body, 650 headings) are real, not synthesised.
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
+// Only for things that are literally code: the command palette and demos.
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
 const SITE_URL = "https://devalkotak.github.io";
 const SITE_TITLE = "Deval Kotak";
 const SITE_DESCRIPTION =
-  "Security engineer in Mumbai. Breaking systems to understand them, then building stronger ones. Writeups, tooling, and the work behind both.";
+  "Security engineer in Mumbai. Breaking systems to understand them, then building stronger ones. Writeups, tooling and the work behind both.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -75,10 +72,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetBrainsMono.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${instrumentSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
+        <a
+          href="#main"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition focus:translate-y-0"
+        >
+          Skip to content
+        </a>
         <Nav />
-        <main className="min-h-screen pt-28 pb-12">{children}</main>
+        <main id="main" tabIndex={-1} className="min-h-screen pt-28 pb-12 outline-none">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

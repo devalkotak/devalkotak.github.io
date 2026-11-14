@@ -76,7 +76,7 @@ export default function WriteupExplorer({ writeups }: WriteupExplorerProps) {
           </div>
           <div className="flex shrink-0 items-center gap-2">
             {hasActiveFilters ? (
-              <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
+              <span className="label-text whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
                 {filteredWriteups.length}/{writeups.length}
               </span>
             ) : null}
@@ -89,7 +89,7 @@ export default function WriteupExplorer({ writeups }: WriteupExplorerProps) {
               <SlidersHorizontal size={14} />
               Filters
               {activeControlCount > 0 ? (
-                <span className="mono-heading text-accent">{activeControlCount}</span>
+                <span className="label-text text-accent">{activeControlCount}</span>
               ) : null}
             </button>
             <button

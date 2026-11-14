@@ -39,7 +39,7 @@ function collectFindings(): Finding[] {
   findings.push({
     id: "F-01",
     severity: "low",
-    text: `You're on ${platform}, running ${browser}. Volunteered before this page finished loading.`,
+    text: `You’re on ${platform}, running ${browser}. Volunteered before this page finished loading.`,
   });
 
   findings.push({
@@ -74,7 +74,7 @@ function collectFindings(): Finding[] {
     severity: "info",
     text: dark
       ? "Dark mode. One more bit of entropy, handed over without a prompt."
-      : "Light mode, which is rarer, and therefore slightly more identifying.",
+      : "Light mode. One more bit of entropy, handed over without a prompt.",
   });
 
   const connection = nav.connection?.effectiveType;
@@ -107,7 +107,7 @@ function collectFindings(): Finding[] {
   findings.push({
     id: "F-09",
     severity: "info",
-    text: `This tab's history stack is ${history.length} deep. A page can't read where you've been, only how far.`,
+    text: `This tab’s history stack is ${history.length} deep. A page can’t read where you’ve been, only how far.`,
   });
 
   findings.push({
@@ -187,7 +187,7 @@ export default function VisitorAudit() {
                   className="flex items-start gap-3"
                 >
                   <span
-                    className={`mono-heading mt-0.5 shrink-0 border px-1.5 py-0.5 text-[10px] uppercase tracking-wider ${style.className}`}
+                    className={`label-text mt-0.5 shrink-0 border px-1.5 py-0.5 text-[11px] ${style.className}`}
                   >
                     {style.label}
                   </span>
@@ -200,7 +200,7 @@ export default function VisitorAudit() {
           </ul>
 
           {running && (
-            <p className="mono-heading mt-4 text-xs text-muted">
+            <p className="label-text mt-4 text-xs text-muted">
               reading what you already gave me<span className="cursor-blink" />
             </p>
           )}
@@ -220,7 +220,7 @@ export default function VisitorAudit() {
               </p>
               <Link
                 href="/resume"
-                className="mono-heading inline-flex items-center gap-1 text-xs text-accent hover:underline"
+                className="label-text inline-flex items-center gap-1 text-xs text-accent hover:underline"
               >
                 conveniently, a candidate
                 <ArrowUpRight size={12} />

@@ -10,7 +10,7 @@ type NotionRendererProps = {
 export default async function NotionRenderer({ blocks }: NotionRendererProps) {
   const rendered = await Promise.all(blocks.map(renderBlock));
 
-  return <div className="space-y-6">{rendered}</div>;
+  return <div className="flex flex-col gap-5">{rendered}</div>;
 }
 
 async function renderBlock(block: NotionBlock): Promise<ReactNode> {
@@ -29,14 +29,14 @@ async function renderBlock(block: NotionBlock): Promise<ReactNode> {
       return renderHeadingBlock(block, 3);
     case "bulleted_list_item":
       return (
-        <div key={block.id} className="flex gap-3 text-base leading-8 text-body">
+        <div key={block.id} className="-my-1.5 flex gap-3 text-base leading-8 text-body">
           <span className="mt-0.5 text-accent">-</span>
           <div>{renderRichText(block.richText)}</div>
         </div>
       );
     case "numbered_list_item":
       return (
-        <div key={block.id} className="flex gap-3 text-base leading-8 text-body">
+        <div key={block.id} className="-my-1.5 flex gap-3 text-base leading-8 text-body">
           <span className="mt-0.5 text-accent">#</span>
           <div>{renderRichText(block.richText)}</div>
         </div>
@@ -83,16 +83,17 @@ async function renderBlock(block: NotionBlock): Promise<ReactNode> {
 async function renderHeadingBlock(block: NotionBlock, level: 1 | 2 | 3) {
   const children = block.children ? await Promise.all(block.children.map(renderBlock)) : [];
   const className = headingClass(level);
+  const inlineClass = headingClass(level, true);
   const content = renderRichText(block.richText);
 
   if (children.length > 0 || block.isToggleable) {
     return (
       <details key={block.id} open className="border-b border-border pb-4">
         <summary className="cursor-pointer marker:text-accent">
-          <span className={className}>{content}</span>
+          <span className={inlineClass}>{content}</span>
         </summary>
         {children.length > 0 ? (
-          <div className="mt-5 space-y-5 border-l border-border pl-4">{children}</div>
+          <div className="mt-5 flex flex-col gap-5 border-l border-border pl-4">{children}</div>
         ) : null}
       </details>
     );
@@ -131,22 +132,25 @@ async function renderToggleBlock(block: NotionBlock) {
         {label}
       </summary>
       {children.length > 0 ? (
-        <div className="mt-4 space-y-5 border-t border-border pt-4">{children}</div>
+        <div className="mt-4 flex flex-col gap-5 border-t border-border pt-4">{children}</div>
       ) : null}
     </details>
   );
 }
 
-function headingClass(level: 1 | 2 | 3) {
-  if (level === 1) {
-    return "mono-heading inline text-3xl font-semibold text-foreground";
-  }
+// Same display face as the page titles, so article headings read as part of
+// the site rather than as code. Standalone headings get space above them so a
+// section reads as a section; inside a toggle summary they stay inline.
+const HEADING_SIZE = {
+  1: "text-3xl leading-tight",
+  2: "text-2xl leading-tight",
+  3: "text-xl leading-snug",
+} as const;
+const HEADING_GAP = { 1: "mt-8", 2: "mt-6", 3: "mt-4" } as const;
 
-  if (level === 2) {
-    return "mono-heading inline text-2xl font-semibold text-foreground";
-  }
-
-  return "mono-heading inline text-xl font-semibold text-foreground";
+function headingClass(level: 1 | 2 | 3, inline = false) {
+  const base = `display-heading ${HEADING_SIZE[level]} text-foreground`;
+  return inline ? `${base} inline` : `${base} block ${HEADING_GAP[level]}`;
 }
 
 function renderTableBlock(block: NotionBlock) {

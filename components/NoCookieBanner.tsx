@@ -20,7 +20,7 @@ export default function NoCookieBanner() {
         <div className="flex items-start gap-3">
           <Cookie size={18} className="mt-0.5 shrink-0 text-accent" />
           <div>
-            <p className={`text-sm text-body ${loud ? "font-bold uppercase" : ""}`}>
+            <p className={`text-sm text-body ${loud ? "font-bold" : ""}`}>
               This site would like to store zero cookies.
             </p>
             <p className="mt-0.5 text-xs text-muted">

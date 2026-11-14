@@ -18,19 +18,15 @@ const config: Config = {
         muted: "rgb(var(--rgb-muted) / <alpha-value>)",
         faint: "rgb(var(--rgb-faint) / <alpha-value>)",
         accent: "rgb(var(--rgb-accent) / <alpha-value>)",
+        signal: "rgb(var(--rgb-signal) / <alpha-value>)",
         code: "rgb(var(--rgb-code) / <alpha-value>)",
         ok: "rgb(var(--rgb-ok) / <alpha-value>)",
         warn: "rgb(var(--rgb-warn) / <alpha-value>)",
         danger: "rgb(var(--rgb-danger) / <alpha-value>)",
       },
       fontFamily: {
-        body: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: [
-          "var(--font-space-grotesk)",
-          "var(--font-inter)",
-          "system-ui",
-          "sans-serif",
-        ],
+        body: ["var(--font-sans)", "system-ui", "sans-serif"],
+        display: ["var(--font-sans)", "system-ui", "sans-serif"],
         mono: ["var(--font-jetbrains-mono)", "ui-monospace", "monospace"],
       },
       transitionDuration: {

@@ -5,7 +5,8 @@ Runs the same three steps the old Actions workflow did, but on this machine:
 
   1. scripts/build_content.py pulls projects from GitHub and writeups,
      resources and the Optiverse page from Notion into content/generated.
-  2. `next build` exports the site to out/.
+  2. `next build` exports the site to out/, then scripts/add_csp.py gives
+     every page a hash-based Content-Security-Policy.
   3. out/ is pushed as a single commit to the gh-pages branch, which GitHub
      Pages serves when its source is set to "Deploy from a branch".
 
@@ -60,6 +61,9 @@ def main() -> int:
     if not (OUT_DIR / "index.html").exists():
         print("error: build finished but out/index.html is missing", file=sys.stderr)
         return 1
+
+    step("adding the Content-Security-Policy to every page")
+    run([sys.executable, str(ROOT / "scripts" / "add_csp.py"), str(OUT_DIR)])
 
     if args.dry_run:
         step(f"dry run: built site is in {OUT_DIR}, nothing published")
