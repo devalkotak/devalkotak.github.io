@@ -13,10 +13,10 @@ const links = [
   { href: "/#work", label: "Work" },
   { href: "/#journey", label: "Journey" },
   { href: "/#method", label: "Method" },
-  { href: "/#off-duty", label: "Off duty" },
   { href: "/projects", label: "Projects" },
   { href: "/blog", label: "Blog" },
   { href: "/resume", label: "Resume" },
+  { href: "/#off-duty", label: "Off duty" },
 ];
 
 const moreLinks = [
