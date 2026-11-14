@@ -12,8 +12,8 @@ type MethodFlowProps = {
 /**
  * Six-step chain plus a concept grid. Picking a step highlights the concepts
  * it leans on; picking a concept shows its take and where it was used. On
- * wide screens the detail sits in a sticky side panel; on narrow screens it
- * opens directly under the card that was tapped, so it never lands off screen.
+ * wide screens the detail sits in a sticky side panel beside the grid; on
+ * phones the grid collapses to chips with one detail card directly below.
  */
 export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
   const [step, setStep] = useState(0);
@@ -71,45 +71,70 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
         </p>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
-        <div className="grid gap-6 sm:grid-cols-2">
+      {/* Phones: one row of topic chips and a single card under it, so a tap
+          never opens something far down the page. */}
+      <div className="lg:hidden">
+        <p className="label-text text-xs text-muted">Topics</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          {concepts.map((item) => {
+            const related = active.concepts.includes(item.name);
+            const selected = item.name === concept.name;
+            return (
+              <button
+                key={item.name}
+                type="button"
+                onClick={() => setConceptName(item.name)}
+                aria-pressed={selected}
+                className={`rounded-full border px-3 py-1.5 text-sm font-medium transition ${
+                  selected
+                    ? "border-accent bg-[var(--color-accent-muted)] text-accent"
+                    : related
+                      ? "border-accent/50 text-foreground"
+                      : "border-border text-muted"
+                }`}
+              >
+                {item.name}
+              </button>
+            );
+          })}
+        </div>
+        <div className="panel-3d mt-4 border border-accent/40 p-5">
+          <p className="label-text text-xs text-accent">
+            {active.concepts.includes(concept.name) ? "Used in this step" : concept.group}
+          </p>
+          <ConceptDetail concept={concept} onPick={setConceptName} />
+        </div>
+      </div>
+
+      <div className="hidden gap-6 lg:grid lg:grid-cols-[1fr_20rem]">
+        <div className="grid grid-cols-2 gap-6">
           {groups.map(([group, items]) => (
             <div key={group}>
-              <p className="label-text text-xs text-muted">
-                {group}
-              </p>
+              <p className="label-text text-xs text-muted">{group}</p>
               <div className="mt-3 space-y-2">
                 {items.map((item) => {
                   const related = active.concepts.includes(item.name);
                   const selected = item.name === concept.name;
                   return (
-                    <div key={item.name}>
-                      <button
-                        type="button"
-                        onClick={() => setConceptName(item.name)}
-                        aria-pressed={selected}
-                        className={`block w-full border p-3 text-left transition ${
-                          selected
-                            ? "border-accent/70 bg-surfaceHover"
-                            : related
-                              ? "border-accent/30 bg-surface hover:border-accent/50"
-                              : "border-border hover:border-accent/30"
-                        }`}
-                      >
-                        <span className="flex items-baseline justify-between gap-2">
-                          <span className="text-sm font-medium text-foreground">{item.name}</span>
-                          {related && (
-                            <span className="label-text text-[11px] text-accent">This step</span>
-                          )}
-                        </span>
-                        <span className="mt-1 block text-xs leading-5 text-muted">{item.take}</span>
-                      </button>
-                      {selected && (
-                        <div className="border-x border-b border-accent/40 p-4 lg:hidden">
-                          <ConceptDetail concept={item} onPick={setConceptName} compact />
-                        </div>
-                      )}
-                    </div>
+                    <button
+                      key={item.name}
+                      type="button"
+                      onClick={() => setConceptName(item.name)}
+                      aria-pressed={selected}
+                      className={`block w-full border p-3 text-left transition ${
+                        selected
+                          ? "border-accent/70 bg-surfaceHover"
+                          : related
+                            ? "border-accent/30 bg-surface hover:border-accent/50"
+                            : "border-border hover:border-accent/30"
+                      }`}
+                    >
+                      <span className="flex items-baseline justify-between gap-2">
+                        <span className="text-sm font-medium text-foreground">{item.name}</span>
+                        {related && <span className="label-text text-[11px] text-accent">This step</span>}
+                      </span>
+                      <span className="mt-1 block text-xs leading-5 text-muted">{item.take}</span>
+                    </button>
                   );
                 })}
               </div>
@@ -117,7 +142,7 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
           ))}
         </div>
 
-        <aside className="panel-3d hidden self-start border border-border p-5 lg:sticky lg:top-24 lg:block">
+        <aside className="panel-3d self-start border border-border p-5 lg:sticky lg:top-24">
           <p className="label-text text-xs text-accent">
             How I think about it
           </p>
@@ -131,27 +156,18 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
 function ConceptDetail({
   concept,
   onPick,
-  compact,
 }: {
   concept: Concept;
   onPick: (name: string) => void;
-  compact?: boolean;
 }) {
   return (
     <>
-      {!compact && (
-        // Only the name is announced on change, not the whole panel.
-        <h3
-          className="display-heading mt-2 text-xl text-foreground"
-          aria-live="polite"
-        >
-          {concept.name}
-        </h3>
-      )}
-      {!compact && (
-        <p className="mt-2 text-sm italic leading-6 text-body">“{concept.take}”</p>
-      )}
-      <p className={`label-text text-xs text-muted ${compact ? "" : "mt-5"}`}>
+      {/* Only the name is announced on change, not the whole panel. */}
+      <h3 className="display-heading mt-2 text-xl text-foreground" aria-live="polite">
+        {concept.name}
+      </h3>
+      <p className="mt-2 text-sm italic leading-6 text-body">“{concept.take}”</p>
+      <p className="label-text mt-5 text-xs text-muted">
         Where I used it
       </p>
       <ul className="mt-2 space-y-1.5">

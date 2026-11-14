@@ -18,7 +18,7 @@ export default function SecurityPage() {
         intro="Reviewing other people’s security and documenting none of my own would be a bad look. This is the threat model for the site you are reading, including the parts outside my control."
       />
 
-      <div className="mt-10 max-w-3xl space-y-4">
+      <div className="mt-7 sm:mt-10 max-w-3xl space-y-4">
         <PostureSection title="architecture">
           <p>
             This is a fully static site. Every page is generated at build time

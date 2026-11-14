@@ -32,12 +32,12 @@ export default async function Home() {
   ]);
 
   return (
-    <AnimatedPage className="relative pb-20">
+    <AnimatedPage className="relative pb-12 sm:pb-20">
       <NoCookieBanner />
 
       <div className="wide-shell">
         {/* hero: the statement on the left, who is making it in the glass panel */}
-        <section id="top" className="grid items-stretch gap-8 pb-16 pt-4 lg:grid-cols-[1.25fr_0.75fr] lg:gap-10">
+        <section id="top" className="grid items-stretch gap-8 pb-12 pt-4 sm:pb-16 lg:grid-cols-[1.25fr_0.75fr] lg:gap-10">
           <div className="flex flex-col justify-center">
             <p className="inline-flex items-center gap-2.5 self-start rounded-full border border-border px-4 py-1.5 text-sm text-body">
               <span className="relative inline-flex size-2">
@@ -175,7 +175,7 @@ export default async function Home() {
         </Chapter>
 
         {/* contact: the page closes in the same glass it opened with */}
-        <SessionBlock id="contact" className="glass mt-24 scroll-mt-24 px-7 py-14 sm:px-12 sm:py-20">
+        <SessionBlock id="contact" className="glass mt-16 scroll-mt-24 px-6 py-10 sm:mt-24 sm:px-12 sm:py-20">
           <h2
             className="display-heading text-balance text-foreground"
             style={{ fontSize: "clamp(2.3rem, 6vw, 4.6rem)", lineHeight: 1.02, letterSpacing: "-0.03em", wordSpacing: "0.06em" }}
@@ -221,7 +221,7 @@ function Chapter({
   children: React.ReactNode;
 }) {
   return (
-    <SessionBlock id={id} className="relative z-10 scroll-mt-20 pt-24">
+    <SessionBlock id={id} className="relative z-10 scroll-mt-20 pt-16 sm:pt-24">
       <h2
         className="display-heading text-foreground"
         style={{ fontSize: "clamp(1.9rem, 4.2vw, 2.9rem)", lineHeight: 1.05 }}
@@ -229,7 +229,7 @@ function Chapter({
         {title}
       </h2>
       <p className="mt-3 max-w-2xl text-base leading-7 text-muted">{intro}</p>
-      <div className="mt-9">{children}</div>
+      <div className="mt-7 sm:mt-9">{children}</div>
     </SessionBlock>
   );
 }

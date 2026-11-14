@@ -18,7 +18,7 @@ type PageHeaderProps = {
  */
 export default function PageHeader({ crumbs, title, accent, intro, aside }: PageHeaderProps) {
   return (
-    <header className="border-b border-border pb-10">
+    <header className="border-b border-border pb-7 sm:pb-10">
       <nav aria-label="Breadcrumb" className="label-text text-sm text-muted">
         <Link href="/" className="transition hover:text-accent">
           Deval Kotak
@@ -38,7 +38,7 @@ export default function PageHeader({ crumbs, title, accent, intro, aside }: Page
         ))}
       </nav>
 
-      <div className="mt-8 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
+      <div className="mt-6 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
         <div className="min-w-0 max-w-3xl">
           <h1
             className="display-heading text-balance leading-[1.05] text-foreground"

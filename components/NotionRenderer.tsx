@@ -10,7 +10,8 @@ type NotionRendererProps = {
 export default async function NotionRenderer({ blocks }: NotionRendererProps) {
   const rendered = await Promise.all(blocks.map(renderBlock));
 
-  return <div className="flex flex-col gap-5">{rendered}</div>;
+  // Long URLs and identifiers wrap instead of widening the page on phones.
+  return <div className="flex min-w-0 flex-col gap-5 [overflow-wrap:anywhere]">{rendered}</div>;
 }
 
 async function renderBlock(block: NotionBlock): Promise<ReactNode> {

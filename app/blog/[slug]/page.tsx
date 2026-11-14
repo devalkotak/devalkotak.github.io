@@ -64,7 +64,7 @@ export default async function BlogDetailPage({
           }
         />
 
-        <div className="mt-10 max-w-3xl">
+        <div className="mt-7 sm:mt-10 max-w-3xl">
           <NotionRenderer blocks={article.blocks} />
         </div>
       </article>
@@ -72,7 +72,7 @@ export default async function BlogDetailPage({
       {(newer || older) && (
         <nav
           aria-label="More writeups"
-          className="mt-16 grid max-w-3xl gap-px overflow-hidden border border-border bg-border sm:grid-cols-2"
+          className="mt-12 grid max-w-3xl gap-px sm:mt-16 overflow-hidden border border-border bg-border sm:grid-cols-2"
         >
           {older ? (
             <NeighbourLink href={`/blog/${older.slug}`} label="Older" title={older.title} direction="back" />

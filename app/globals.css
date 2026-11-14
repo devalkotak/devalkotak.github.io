@@ -246,6 +246,15 @@ a {
     margin-inline: auto;
   }
 
+  /* Swipe rows on phones: still scrollable, without a scrollbar strip. */
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
   .panel-3d {
     border-radius: 18px;
     background: var(--color-surface);

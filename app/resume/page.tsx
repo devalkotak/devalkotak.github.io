@@ -39,7 +39,7 @@ export default function ResumePage() {
         }
       />
 
-      <div className="mx-auto mt-10 max-w-4xl overflow-hidden border border-border bg-surface">
+      <div className="mx-auto mt-7 sm:mt-10 max-w-4xl overflow-hidden border border-border bg-surface">
         <object
           data="/resume.pdf"
           type="application/pdf"

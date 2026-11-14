@@ -49,11 +49,11 @@ export default async function ProjectsPage() {
       />
 
       {error ? (
-        <p className="mt-10 border border-border bg-surface p-5 text-sm text-muted">
+        <p className="mt-7 sm:mt-10 border border-border bg-surface p-5 text-sm text-muted">
           Couldn’t reach GitHub during the last build: {error}
         </p>
       ) : ordered.length > 0 ? (
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-7 sm:mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ordered.map((project) => {
             const story = STORIES.get(project.name.toLowerCase());
             return (
@@ -127,7 +127,7 @@ export default async function ProjectsPage() {
           })}
         </div>
       ) : (
-        <p className="mt-10 border border-border bg-surface p-5 text-sm text-muted">
+        <p className="mt-7 sm:mt-10 border border-border bg-surface p-5 text-sm text-muted">
           No public repos to show yet.
         </p>
       )}

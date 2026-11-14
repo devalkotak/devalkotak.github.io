@@ -81,7 +81,7 @@ export default function RootLayout({
           Skip to content
         </a>
         <Nav />
-        <main id="main" tabIndex={-1} className="min-h-screen pt-28 pb-12 outline-none">
+        <main id="main" tabIndex={-1} className="min-h-screen pt-20 pb-12 sm:pt-28 outline-none">
           {children}
         </main>
         <Footer />

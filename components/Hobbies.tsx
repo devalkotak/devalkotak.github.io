@@ -3,9 +3,10 @@ import type { Hobby } from "@/lib/home-content";
 
 // One wide card, then two, then four: the grid tapers the same way the
 // copy does, so the top interest gets the most room. Small cards pair up
-// on tablets and sit four across on wide screens.
+// on tablets and sit four across on wide screens. On phones the cards
+// become a swipeable row instead of a 2,000px stack.
 const SIZE_CLASS: Record<Hobby["size"], string> = {
-  lead: "md:col-span-12 p-6 sm:p-8",
+  lead: "md:col-span-12 p-5 sm:p-8",
   mid: "md:col-span-6 p-5 sm:p-6",
   small: "md:col-span-6 lg:col-span-3 p-5",
 };
@@ -18,12 +19,12 @@ const TITLE_SIZE: Record<Hobby["size"], string> = {
 
 export default function Hobbies({ hobbies }: { hobbies: Hobby[] }) {
   return (
-    <div className="grid gap-4 md:grid-cols-12">
+    <div className="no-scrollbar -mx-4 flex snap-x snap-mandatory scroll-px-4 gap-3 overflow-x-auto px-4 pb-1 md:mx-0 md:grid md:grid-cols-12 md:gap-4 md:overflow-visible md:px-0 md:pb-0">
       {hobbies.map((hobby) => (
         <article
           key={hobby.slug}
           id={`hobby-${hobby.slug}`}
-          className={`panel-3d group relative flex scroll-mt-24 flex-col overflow-hidden border border-border transition hover:border-accent/40 ${SIZE_CLASS[hobby.size]}`}
+          className={`panel-3d group relative flex w-[82%] shrink-0 snap-start scroll-mt-24 md:w-auto flex-col overflow-hidden border border-border transition hover:border-accent/40 ${SIZE_CLASS[hobby.size]}`}
         >
           <div className="flex items-center justify-between gap-3">
             <p className="label-text text-xs text-accent">
@@ -41,7 +42,7 @@ export default function Hobbies({ hobbies }: { hobbies: Hobby[] }) {
 
           <p
             className={`mt-3 leading-7 ${
-              hobby.size === "lead" ? "max-w-xl text-base text-body" : "text-sm leading-6 text-muted"
+              hobby.size === "lead" ? "max-w-xl text-[15px] text-body sm:text-base" : "text-sm leading-6 text-muted"
             }`}
           >
             {hobby.body}

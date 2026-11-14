@@ -41,7 +41,7 @@ export default function CaseStudies({ studies }: { studies: CaseStudy[] }) {
                 >
                   {study.title}
                 </span>
-                <Metric study={study} className="mt-3 sm:hidden" />
+                <Metric study={study} className="mt-3 block sm:hidden" />
               </span>
               <Metric study={study} className="hidden text-right sm:block" />
               <span className="text-muted transition group-hover:text-accent">

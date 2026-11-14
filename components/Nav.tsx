@@ -87,7 +87,7 @@ export default function Nav() {
 
       <div
         className={`fixed right-0 top-16 h-[calc(100vh-4rem)] w-64 border-l border-border bg-background px-6 py-8 transition-transform duration-300 lg:hidden ${
-          open ? "translate-x-0" : "translate-x-full"
+          open ? "translate-x-0" : "invisible translate-x-full"
         }`}
       >
         <div className="flex flex-col gap-6">
