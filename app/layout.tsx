@@ -1,37 +1,21 @@
 import type { Metadata } from "next";
-import {
-  Instrument_Serif,
-  Inter,
-  JetBrains_Mono,
-  Space_Grotesk,
-} from "next/font/google";
+import { Instrument_Sans, JetBrains_Mono } from "next/font/google";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import "./globals.css";
 
-const inter = Inter({
+// One family for everything. Variable font, so the in-between weights the
+// design uses (450 body, 650 headings) are real, not synthesised.
+const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-sans",
   display: "swap",
 });
 
+// Only for things that are literally code: the command palette and demos.
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   variable: "--font-jetbrains-mono",
-  display: "swap",
-});
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const instrumentSerif = Instrument_Serif({
-  subsets: ["latin"],
-  weight: "400",
-  style: "italic",
-  variable: "--font-instrument-serif",
   display: "swap",
 });
 
@@ -88,7 +72,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${jetBrainsMono.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} antialiased`}
+        className={`${instrumentSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
         <Nav />
         <main className="min-h-screen pt-28 pb-12">{children}</main>

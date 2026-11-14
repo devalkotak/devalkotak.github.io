@@ -234,13 +234,13 @@ export default function CommandPalette() {
         className="flex h-9 items-center gap-2 border border-border px-2.5 text-muted transition hover:border-accent/60 hover:text-accent"
       >
         <Search size={14} />
-        <kbd className="mono-heading hidden text-[11px] sm:inline">{isMac ? "⌘K" : "Ctrl K"}</kbd>
+        <kbd className="hidden font-mono text-xs sm:inline">{isMac ? "⌘K" : "Ctrl K"}</kbd>
       </button>
 
       {toast && (
         <div
           role="status"
-          className="mono-heading fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 border border-accent/60 bg-background px-4 py-2 text-xs text-accent"
+          className="label-text fixed bottom-6 left-1/2 z-[70] -translate-x-1/2 border border-accent/60 bg-background px-4 py-2 text-xs text-accent"
         >
           {toast}
         </div>
@@ -257,10 +257,10 @@ export default function CommandPalette() {
             role="dialog"
             aria-modal="true"
             aria-label="Command menu"
-            className="w-full max-w-xl border border-border bg-background shadow-2xl"
+            className="w-full max-w-xl overflow-hidden border border-border bg-background font-mono shadow-2xl"
           >
             <div className="flex items-center gap-3 border-b border-border px-4">
-              <span className="mono-heading text-sm text-accent" aria-hidden="true">
+              <span className="label-text text-sm text-accent" aria-hidden="true">
                 &gt;
               </span>
               <input
@@ -277,11 +277,11 @@ export default function CommandPalette() {
                 aria-expanded="true"
                 aria-controls="command-results"
                 aria-activedescendant={results[active] ? `command-${results[active].id}` : undefined}
-                className="mono-heading h-12 w-full bg-transparent text-sm text-foreground placeholder:text-muted focus:outline-none"
+                className="label-text h-12 w-full bg-transparent text-sm text-foreground placeholder:text-muted focus:outline-none"
                 spellCheck={false}
                 autoComplete="off"
               />
-              <kbd className="mono-heading text-[10px] text-muted">esc</kbd>
+              <kbd className="label-text text-[11px] text-muted">esc</kbd>
             </div>
 
             <ul
@@ -291,7 +291,7 @@ export default function CommandPalette() {
               className="max-h-[50vh] overflow-y-auto py-2"
             >
               {results.length === 0 && (
-                <li className="mono-heading px-4 py-6 text-center text-xs text-muted">
+                <li className="label-text px-4 py-6 text-center text-xs text-muted">
                   command not found: {query}
                 </li>
               )}
@@ -302,7 +302,7 @@ export default function CommandPalette() {
                 return (
                   <li key={command.id} role="presentation">
                     {heading && (
-                      <p className="mono-heading px-4 pb-1 pt-3 text-[10px] uppercase tracking-widest text-muted">
+                      <p className="label-text px-4 pb-1 pt-3 text-[11px] text-muted">
                         {heading}
                       </p>
                     )}
@@ -319,7 +319,7 @@ export default function CommandPalette() {
                     >
                       <span className="truncate">{command.label}</span>
                       {command.hint && (
-                        <span className="mono-heading shrink-0 truncate text-[11px] text-muted">
+                        <span className="label-text shrink-0 truncate text-xs text-muted">
                           {command.hint}
                         </span>
                       )}
@@ -329,7 +329,7 @@ export default function CommandPalette() {
               })}
             </ul>
 
-            <p className="mono-heading flex gap-4 border-t border-border px-4 py-2 text-[10px] text-muted">
+            <p className="label-text flex gap-4 border-t border-border px-4 py-2 text-[11px] text-muted">
               <span>↑↓ move</span>
               <span>↵ open</span>
               <span>esc close</span>

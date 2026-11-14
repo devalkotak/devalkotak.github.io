@@ -13,7 +13,7 @@ export default function ToolMarquee({ items }: ToolMarqueeProps) {
         {[...items, ...items].map((item, index) => (
           <span
             key={`${item}-${index}`}
-            className="mono-heading flex items-center gap-10 whitespace-nowrap text-xs uppercase tracking-widest text-muted"
+            className="label-text flex items-center gap-10 whitespace-nowrap text-xs text-muted"
           >
             {item}
             <span className="text-faint">/</span>

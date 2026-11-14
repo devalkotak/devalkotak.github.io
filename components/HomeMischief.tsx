@@ -75,13 +75,13 @@ export default function HomeMischief() {
     >
       <div className="absolute inset-0 border-4 border-danger/60 animate-pulse" />
       <div className="relative border border-danger/60 bg-background px-5 py-4 shadow-2xl">
-        <p className="mono-heading text-xs uppercase tracking-widest text-danger">
+        <p className="label-text text-xs text-danger">
           incident mode
         </p>
         <p className="mt-1 text-sm text-body">
           Anomaly detected: visitor typed the forbidden word.
         </p>
-        <p className="mono-heading mt-1 text-xs text-muted">
+        <p className="label-text mt-1 text-xs text-muted">
           verdict: false positive. logged. carry on.
         </p>
       </div>

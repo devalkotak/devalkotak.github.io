@@ -44,15 +44,15 @@ export default async function BlogDetailPage({
       <article>
         <PageHeader
           crumbs={[
-            { label: "blog", href: "/blog" },
-            { label: article.category.toLowerCase() },
+            { label: "Blog", href: "/blog" },
+            { label: article.category },
           ]}
           title={article.title}
           aside={
-            <span className="mono-heading flex flex-wrap items-center gap-3 text-xs text-muted">
+            <span className="label-text flex flex-wrap items-center gap-3 text-xs text-muted">
               <time dateTime={article.date}>{formatDate(article.date)}</time>
               {article.tags.slice(0, 3).map((tag) => (
-                <span key={tag} className="border border-border px-2 py-0.5 text-[11px]">
+                <span key={tag} className="border border-border px-2 py-0.5 text-xs">
                   {tag}
                 </span>
               ))}
@@ -71,12 +71,12 @@ export default async function BlogDetailPage({
           className="mt-16 grid gap-px border border-border bg-border sm:grid-cols-2"
         >
           {older ? (
-            <NeighbourLink href={`/blog/${older.slug}`} label="older" title={older.title} direction="back" />
+            <NeighbourLink href={`/blog/${older.slug}`} label="Older" title={older.title} direction="back" />
           ) : (
             <span className="hidden bg-background sm:block" />
           )}
           {newer ? (
-            <NeighbourLink href={`/blog/${newer.slug}`} label="newer" title={newer.title} direction="forward" />
+            <NeighbourLink href={`/blog/${newer.slug}`} label="Newer" title={newer.title} direction="forward" />
           ) : (
             <span className="hidden bg-background sm:block" />
           )}
@@ -85,10 +85,10 @@ export default async function BlogDetailPage({
 
       <Link
         href="/blog"
-        className="mono-heading mt-8 inline-flex items-center gap-2 text-xs text-muted transition hover:text-accent"
+        className="label-text mt-8 inline-flex items-center gap-2 text-xs text-muted transition hover:text-accent"
       >
         <ArrowLeft size={14} />
-        all writeups
+        All writeups
       </Link>
     </AnimatedPage>
   );
@@ -113,12 +113,12 @@ function NeighbourLink({
         forward ? "sm:items-end sm:text-right" : ""
       }`}
     >
-      <span className="mono-heading inline-flex items-center gap-2 text-[11px] uppercase tracking-widest text-muted">
+      <span className="label-text inline-flex items-center gap-2 text-xs text-muted">
         {!forward && <ArrowLeft size={12} />}
         {label}
         {forward && <ArrowRight size={12} />}
       </span>
-      <span className="display-heading text-base font-medium leading-snug text-foreground transition group-hover:text-accent">
+      <span className="display-heading text-base leading-snug text-foreground transition group-hover:text-accent">
         {title}
       </span>
     </Link>

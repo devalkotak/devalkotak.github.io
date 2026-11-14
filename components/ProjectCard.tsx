@@ -31,7 +31,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       <div>
         <div className="flex items-start justify-between gap-4">
-          <h2 className="mono-heading break-words text-base font-semibold text-foreground">
+          <h2 className="label-text break-words text-base font-semibold text-foreground">
             {project.name}
           </h2>
           <FolderGit2 className="mt-0.5 shrink-0 text-muted group-hover:text-accent" size={17} />

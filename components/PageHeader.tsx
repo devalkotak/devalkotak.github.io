@@ -5,7 +5,7 @@ type PageHeaderProps = {
   crumbs: { label: string; href?: string }[];
   /** Main heading. */
   title: React.ReactNode;
-  /** Optional tail of the heading set in the italic serif accent. */
+  /** Optional tail of the heading, set in the muted tone. */
   accent?: string;
   intro?: React.ReactNode;
   /** Right-hand slot: buttons, counts, sync status. */
@@ -13,15 +13,15 @@ type PageHeaderProps = {
 };
 
 /**
- * Inner-page header in the same voice as the homepage hero: a mono path
- * line, a large display title with an optional serif accent, then a rule.
+ * Inner-page header in the same voice as the homepage hero: a path line,
+ * a large two-tone title, then a rule.
  */
 export default function PageHeader({ crumbs, title, accent, intro, aside }: PageHeaderProps) {
   return (
     <header className="border-b border-border pb-10">
-      <nav aria-label="Breadcrumb" className="mono-heading text-sm text-muted">
+      <nav aria-label="Breadcrumb" className="label-text text-sm text-muted">
         <Link href="/" className="transition hover:text-accent">
-          deval kotak
+          Deval Kotak
         </Link>
         {crumbs.map((crumb) => (
           <span key={crumb.label}>
@@ -41,14 +41,14 @@ export default function PageHeader({ crumbs, title, accent, intro, aside }: Page
       <div className="mt-8 flex flex-wrap items-end justify-between gap-x-10 gap-y-6">
         <div className="min-w-0 max-w-3xl">
           <h1
-            className="display-heading text-balance font-medium leading-[1.05] text-foreground"
+            className="display-heading text-balance leading-[1.05] text-foreground"
             style={{ fontSize: "clamp(2.2rem, 5.5vw, 4rem)" }}
           >
             {title}
             {accent && (
               <>
                 {" "}
-                <span className="serif-accent text-accent">{accent}</span>
+                <span className="text-muted">{accent}</span>
               </>
             )}
           </h1>

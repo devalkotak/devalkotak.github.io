@@ -12,7 +12,7 @@ export default function ResumePage() {
   return (
     <AnimatedPage className="content-shell">
       <PageHeader
-        crumbs={[{ label: "resume" }]}
+        crumbs={[{ label: "Resume" }]}
         title="The formal"
         accent="version."
         intro="Two pages, the same work as the homepage, in the order recruiters expect."

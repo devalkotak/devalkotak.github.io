@@ -16,15 +16,15 @@ export default function Footer() {
 
   return (
     <footer className="border-t border-border py-8">
-      <p className="content-shell mono-heading text-center text-[11px] leading-6 text-muted">
-        deval kotak / built with next.js /{" "}
+      <p className="content-shell label-text text-center text-xs leading-6 text-muted">
+        Deval Kotak / Built with Next.js /{" "}
         <Link href="/security" className="transition hover:text-accent">
-          how this site is secured
+          How this site is secured
         </Link>
         {synced && (
           <>
             {" "}
-            / content synced from notion{" "}
+            / Content synced from Notion{" "}
             <time dateTime={synced.iso} className="text-body">
               {synced.label}
             </time>

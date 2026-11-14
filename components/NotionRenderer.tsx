@@ -141,14 +141,14 @@ async function renderToggleBlock(block: NotionBlock) {
 // the site rather than as code.
 function headingClass(level: 1 | 2 | 3) {
   if (level === 1) {
-    return "display-heading inline text-3xl font-medium leading-tight text-foreground";
+    return "display-heading inline text-3xl leading-tight text-foreground";
   }
 
   if (level === 2) {
-    return "display-heading inline text-2xl font-medium leading-tight text-foreground";
+    return "display-heading inline text-2xl leading-tight text-foreground";
   }
 
-  return "display-heading inline text-xl font-medium leading-snug text-foreground";
+  return "display-heading inline text-xl leading-snug text-foreground";
 }
 
 function renderTableBlock(block: NotionBlock) {

@@ -100,7 +100,7 @@ export const JOURNEY: JourneyStop[] = [
     dates: "Since Mar 2021",
     place: "Optiverse",
     role: "Co-founder, student non-profit",
-    status: "relaunch in planning",
+    status: "Relaunch in planning",
     workedOn:
       "A global, remote mentorship org for students aged 11 to 17: workshops, two internship programs and NGO partnerships.",
     learned:
@@ -134,9 +134,9 @@ export type CaseStudy = {
 export const CASE_STUDIES: CaseStudy[] = [
   {
     slug: "uar",
-    tag: "access governance · jiostar",
+    tag: "Access governance at JioStar",
     title: "Quarterly access reviews across the org",
-    metric: { value: 6000, suffix: "+", label: "users · 650+ apps" },
+    metric: { value: 6000, suffix: "+", label: "users, 650+ apps" },
     source: "employer",
     problem:
       "Access reviews had to run every quarter across every application, and each app had its own owner.",
@@ -149,7 +149,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "regression",
-    tag: "test automation · jiostar",
+    tag: "Test automation at JioStar",
     title: "Security regression tests on demand",
     metric: { value: 20, display: "2h → 20s", label: "per test case" },
     source: "employer",
@@ -164,7 +164,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "telegram",
-    tag: "threat intel · jiostar",
+    tag: "Threat intel at JioStar",
     title: "Finding piracy leaks without scrolling Telegram",
     metric: { value: 282, label: "confirmed threats" },
     source: "employer",
@@ -179,7 +179,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "siem",
-    tag: "detection · jiostar",
+    tag: "Detection at JioStar",
     title: "Cutting SIEM noise before an analyst sees it",
     metric: { value: 100, suffix: "+", label: "alert definitions" },
     source: "employer",
@@ -194,7 +194,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "reachability",
-    tag: "appsec tooling · open source",
+    tag: "AppSec tooling, open source",
     title: "Which CVEs can actually reach you?",
     metric: { value: 6, display: "6 / 7", label: "self-found threats fixed" },
     source: "repo",
@@ -213,7 +213,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "iac",
-    tag: "cloud security · open source",
+    tag: "Cloud security, open source",
     title: "Catching AWS misconfigs before deploy",
     metric: { value: 23, display: "23 / 23", label: "tests passing" },
     source: "repo",
@@ -232,7 +232,7 @@ export const CASE_STUDIES: CaseStudy[] = [
   },
   {
     slug: "grc",
-    tag: "grc · open source",
+    tag: "GRC, open source",
     title: "A risk register built on real infrastructure",
     metric: { value: 21, from: 18, display: "18 → 21", label: "risks to controls" },
     source: "repo",
@@ -384,7 +384,7 @@ export type Hobby = {
 export const HOBBIES: Hobby[] = [
   {
     slug: "music",
-    kicker: "music",
+    kicker: "Music",
     title: "Strings, vocals and rhythm",
     body: "I play guitar, sing, and keep time on whatever percussion is in reach. The part I enjoy most happens before anyone plays a note: shaping the setlist, so a room’s energy builds, breathes and lands exactly where it should.",
     size: "lead",
@@ -392,7 +392,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     slug: "sports",
-    kicker: "sports",
+    kicker: "Sports",
     title: "Anything with a team and a scoreline",
     body: "Football, badminton, volleyball and cricket for the noise and the strategy. When the ground is closed, Valorant: the same teamwork, worse posture.",
     size: "mid",
@@ -400,21 +400,21 @@ export const HOBBIES: Hobby[] = [
   },
   {
     slug: "community",
-    kicker: "giving back",
+    kicker: "Giving back",
     title: "Community outreach",
     body: "I organize donation drives and do the slow part properly: finding the people who need the donations most, then showing up in person. Through Optiverse, that often means an afternoon running self-awareness sessions with students, not just a handover.",
     size: "mid",
   },
   {
     slug: "systems",
-    kicker: "systems",
+    kicker: "Systems",
     title: "A second brain in Notion",
     body: "Everything I work on, read or plan flows into a Notion system I built, so nothing that passes through gets lost.",
     size: "small",
   },
   {
     slug: "markets",
-    kicker: "markets",
+    kicker: "Markets",
     title: "Reading the tape",
     body: "Charts, strategies and a paper-trading bot that runs end to end without ever placing a real order.",
     size: "small",
@@ -425,7 +425,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     slug: "agentic",
-    kicker: "building",
+    kicker: "Building",
     title: "Small tools for people I know",
     body: "When someone close to me has a nagging problem, I build a quick full-stack or agent-driven fix for it.",
     size: "small",
@@ -433,7 +433,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     slug: "travel",
-    kicker: "travel",
+    kicker: "Travel",
     title: "Always one trip ahead",
     body: "New places, new food, new perspective. I am usually planning the next trip before I have unpacked from the last.",
     size: "small",

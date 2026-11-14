@@ -93,7 +93,7 @@ export default function ResourceExplorer({ resources }: ResourceExplorerProps) {
           </div>
           <div className="flex shrink-0 items-center gap-2">
             {hasActiveFilters ? (
-              <span className="mono-heading whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
+              <span className="label-text whitespace-nowrap border border-border bg-code px-3 py-2 text-xs text-muted">
                 {filteredResources.length}/{resources.length}
               </span>
             ) : null}
@@ -106,7 +106,7 @@ export default function ResourceExplorer({ resources }: ResourceExplorerProps) {
               <SlidersHorizontal size={14} />
               Filters
               {activeControlCount > 0 ? (
-                <span className="mono-heading text-accent">{activeControlCount}</span>
+                <span className="label-text text-accent">{activeControlCount}</span>
               ) : null}
             </button>
             <button
@@ -211,10 +211,10 @@ function ResourceRow({ resource }: { resource: ResourceItem }) {
     <>
       <span className="min-w-0">
         <span className="flex flex-wrap items-center gap-2">
-          <span className="mono-heading border border-accent/30 bg-[var(--color-accent-muted)] px-2 py-1 text-[11px] text-accent">
+          <span className="label-text border border-accent/30 bg-[var(--color-accent-muted)] px-2 py-1 text-xs text-accent">
             {resource.kind}
           </span>
-          <span className="border border-border bg-code px-2 py-1 text-[11px] text-muted">
+          <span className="border border-border bg-code px-2 py-1 text-xs text-muted">
             {resource.category}
           </span>
         </span>

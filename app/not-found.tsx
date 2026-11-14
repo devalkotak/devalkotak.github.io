@@ -11,15 +11,15 @@ const PLACES = [
 export default function NotFound() {
   return (
     <div className="wide-shell flex min-h-[calc(100svh-14rem)] flex-col justify-center py-10">
-      <p className="mono-heading text-sm text-muted">
-        deval kotak <span className="text-accent">/</span> 404
+      <p className="label-text text-sm text-muted">
+        Deval Kotak <span className="text-accent">/</span> 404
       </p>
       <h1
-        className="display-heading mt-8 text-balance font-medium leading-[1.02] text-foreground"
+        className="display-heading mt-8 text-balance leading-[1.02] text-foreground"
         style={{ fontSize: "clamp(2.6rem, 8vw, 6rem)" }}
       >
         Nothing here.{" "}
-        <span className="serif-accent text-accent">Not even a stack trace.</span>
+        <span className="text-muted">Not even a stack trace.</span>
       </h1>
       <p className="mt-6 max-w-xl text-base leading-7 text-body">
         This page is not part of the static export, so there is nothing to

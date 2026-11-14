@@ -33,7 +33,7 @@ export default function JourneyToggles({ stops }: { stops: JourneyStop[] }) {
           <li key={stop.slug} id={`journey-${stop.slug}`} className="relative scroll-mt-24">
             <span
               className={`absolute -left-[4.5px] top-[1.9rem] size-2 rounded-full ${
-                stop.now ? "bg-ok ring-4 ring-[var(--color-accent-muted)]" : isOpen ? "bg-accent" : "bg-faint"
+                stop.now ? "bg-signal ring-4 ring-signal/20" : isOpen ? "bg-accent" : "bg-faint"
               }`}
               aria-hidden="true"
             />
@@ -45,18 +45,18 @@ export default function JourneyToggles({ stops }: { stops: JourneyStop[] }) {
               className="group grid w-full grid-cols-[1fr_auto] items-center gap-4 py-5 pl-6 pr-2 text-left transition hover:bg-surface sm:pl-8"
             >
               <span className="min-w-0">
-                <span className="mono-heading flex flex-wrap items-center gap-2 text-[11px] uppercase tracking-widest text-muted">
+                <span className="label-text flex flex-wrap items-center gap-2 text-xs text-muted">
                   {stop.dates}
-                  {stop.now && <span className="border border-ok/60 px-1.5 text-ok">now</span>}
+                  {stop.now && <span className="border border-signal/60 px-2 text-signal">Now</span>}
                   {stop.status && (
-                    <span className="border border-border px-1.5 text-body">{stop.status}</span>
+                    <span className="border border-border px-2 text-body">{stop.status}</span>
                   )}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <span className="display-heading text-xl font-medium text-foreground transition group-hover:text-accent">
+                  <span className="display-heading text-xl text-foreground transition group-hover:text-accent">
                     {stop.place}
                   </span>
-                  <span className="mono-heading text-[11px] uppercase tracking-wider text-accent">
+                  <span className="label-text text-xs text-accent">
                     {stop.role}
                   </span>
                 </span>
@@ -74,9 +74,9 @@ export default function JourneyToggles({ stops }: { stops: JourneyStop[] }) {
             >
               <div className="overflow-hidden">
                 <dl className="grid gap-5 pb-7 pl-6 pr-2 sm:pl-8 md:grid-cols-3">
-                  <Field label="worked on">{stop.workedOn}</Field>
-                  <Field label="learned">{stop.learned}</Field>
-                  <Field label="contributed">{stop.contributed}</Field>
+                  <Field label="Worked on">{stop.workedOn}</Field>
+                  <Field label="Learned">{stop.learned}</Field>
+                  <Field label="Contributed">{stop.contributed}</Field>
                 </dl>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function JourneyToggles({ stops }: { stops: JourneyStop[] }) {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <dt className="mono-heading text-[11px] uppercase tracking-widest text-muted">{label}</dt>
+      <dt className="label-text text-xs text-muted">{label}</dt>
       <dd className="mt-1.5 text-sm leading-6 text-body">{children}</dd>
     </div>
   );

@@ -34,25 +34,22 @@ export default function BlogList({ writeups }: { writeups: WriteupSummary[] }) {
       )}
 
       <ol className="mt-8 divide-y divide-border border-y border-border">
-        {shown.map((writeup, index) => (
+        {shown.map((writeup) => (
           <li key={writeup.id}>
             <Link
               href={`/blog/${writeup.slug}`}
-              className="group grid grid-cols-[2.5rem_1fr_auto] items-baseline gap-x-4 px-2 py-5 transition-all duration-300 hover:bg-surface hover:pl-4 sm:grid-cols-[3rem_1fr_auto_auto] sm:gap-x-6"
+              className="group grid grid-cols-[1fr_auto] items-baseline gap-x-4 rounded-2xl px-3 py-5 transition hover:bg-surface sm:grid-cols-[1fr_auto_auto] sm:gap-x-6"
             >
-              <span className="mono-heading text-xs text-faint transition group-hover:text-accent">
-                {String(index + 1).padStart(2, "0")}
-              </span>
               <span className="min-w-0">
-                <span className="display-heading block text-lg font-medium leading-snug text-foreground transition group-hover:text-accent">
+                <span className="display-heading block text-lg leading-snug text-foreground transition group-hover:text-accent">
                   {writeup.title}
                 </span>
-                <span className="mono-heading mt-1 block text-[11px] text-muted">
-                  {[writeup.category, ...writeup.tags.slice(0, 2)].join(" · ")}
+                <span className="label-text mt-1 block text-xs text-muted">
+                  {[writeup.category, ...writeup.tags.slice(0, 2)].join(", ")}
                 </span>
               </span>
               <time
-                className="mono-heading hidden text-xs text-muted sm:block"
+                className="label-text hidden text-xs text-muted sm:block"
                 dateTime={writeup.date}
               >
                 {formatDate(writeup.date)}
@@ -85,7 +82,7 @@ function Chip({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className={`mono-heading inline-flex items-center gap-2 border px-3 py-1.5 text-xs transition ${
+      className={`label-text inline-flex items-center gap-2 border px-3 py-1.5 text-xs transition ${
         active
           ? "border-accent/70 bg-[var(--color-accent-muted)] text-accent"
           : "border-border text-muted hover:border-accent/40 hover:text-accent"

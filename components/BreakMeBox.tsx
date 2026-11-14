@@ -19,11 +19,11 @@ const SASS: string[] = [
 ];
 
 const HINTS: { payload: string; label: string }[] = [
-  { payload: "<script>alert(1)</script>", label: "script tag" },
-  { payload: "<img src=x onerror=alert(1)>", label: "event handler" },
-  { payload: "\"><svg onload=alert(1)>", label: "attribute breakout" },
+  { payload: "<script>alert(1)</script>", label: "Script tag" },
+  { payload: "<img src=x onerror=alert(1)>", label: "Event handler" },
+  { payload: "\"><svg onload=alert(1)>", label: "Attribute breakout" },
   { payload: "javascript:alert(1)", label: "URL scheme" },
-  { payload: "{{7*7}}", label: "template injection" },
+  { payload: "{{7*7}}", label: "Template injection" },
   { payload: "' OR 1=1--", label: "SQL injection" },
 ];
 
@@ -56,24 +56,24 @@ export default function BreakMeBox() {
     <div>
       <label
         htmlFor="breakme"
-        className="mono-heading flex items-center gap-2 text-xs text-muted"
+        className="label-text flex items-center gap-2 text-xs text-muted"
       >
         <Bug size={14} className="text-accent" />
-        type anything and it gets reflected onto the page, raw and unsanitized*
+        Type anything and it gets reflected onto the page, raw and unsanitized*
       </label>
       <input
         id="breakme"
         type="text"
         value={value}
         onChange={(event) => apply(event.target.value)}
-        placeholder="try something friendly, or something with angle brackets"
+        placeholder="Try something friendly, or something with angle brackets"
         autoComplete="off"
         spellCheck={false}
         className="mt-3 h-10 w-full border border-border bg-background px-3 text-sm text-foreground outline-none transition placeholder:text-faint focus:border-accent/60"
       />
 
       <div className="mt-3">
-        <p className="mono-heading text-[11px] text-muted">no ideas? borrow one:</p>
+        <p className="label-text text-xs text-muted">No ideas? Borrow one:</p>
         <div className="mt-2 flex flex-wrap gap-2">
           {HINTS.map((hint) => (
             <button
@@ -81,8 +81,8 @@ export default function BreakMeBox() {
               type="button"
               onClick={() => apply(hint.payload, true)}
               title={hint.payload}
-              aria-label={`Try a ${hint.label} payload: ${hint.payload}`}
-              className={`mono-heading border px-2.5 py-1 text-[11px] transition ${
+              aria-label={`Try a ${hint.label.toLowerCase()} payload: ${hint.payload}`}
+              className={`label-text border px-2.5 py-1 text-xs transition ${
                 value === hint.payload
                   ? "border-accent/70 text-accent"
                   : "border-border text-muted hover:border-accent/50 hover:text-accent"
@@ -96,8 +96,8 @@ export default function BreakMeBox() {
 
       {value && (
         <div className="mt-4 border-t border-border pt-4">
-          <p className="mono-heading text-[11px] uppercase tracking-wider text-muted">
-            reflected output
+          <p className="label-text text-xs text-muted">
+            Reflected output
           </p>
           <p className="mt-2 break-words text-sm leading-6 text-foreground">
             {value}
@@ -107,8 +107,8 @@ export default function BreakMeBox() {
           </p>
         </div>
       )}
-      <p className="mt-4 text-[11px] leading-5 text-faint">
-        *it is sanitized, and always was. The asterisk was the tell.
+      <p className="mt-4 text-xs leading-5 text-faint">
+        *It is sanitized, and always was. The asterisk was the tell.
       </p>
     </div>
   );

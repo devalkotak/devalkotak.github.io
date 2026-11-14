@@ -26,14 +26,14 @@ export default function Hobbies({ hobbies }: { hobbies: Hobby[] }) {
           className={`panel-3d group relative flex scroll-mt-24 flex-col overflow-hidden border border-border transition hover:border-accent/40 ${SIZE_CLASS[hobby.size]}`}
         >
           <div className="flex items-center justify-between gap-3">
-            <p className="mono-heading text-[11px] uppercase tracking-widest text-accent">
+            <p className="label-text text-xs text-accent">
               {hobby.kicker}
             </p>
             {hobby.slug === "music" && <Equalizer />}
           </div>
 
           <h3
-            className="display-heading mt-3 font-medium leading-tight text-foreground"
+            className="display-heading mt-3 leading-tight text-foreground"
             style={{ fontSize: TITLE_SIZE[hobby.size] }}
           >
             {hobby.title}
@@ -73,7 +73,7 @@ function Equalizer() {
       {[0, 1, 2, 3, 4].map((bar) => (
         <span
           key={bar}
-          className="eq-bar w-[3px] rounded-full bg-accent/70"
+          className="eq-bar w-[3px] rounded-full"
           style={{ animationDelay: `${bar * -0.23}s` }}
         />
       ))}

@@ -50,10 +50,10 @@ export default function Nav() {
         <Link
           href="/"
           aria-label="Deval Kotak, home"
-          className="display-heading flex items-center gap-2 text-base font-medium text-foreground transition hover:text-accent"
+          className="display-heading flex items-center gap-2 text-base text-foreground transition hover:text-accent"
         >
           Deval Kotak
-          <span className="inline-flex size-1.5 rounded-full bg-ok" aria-hidden="true" />
+          <span className="inline-flex size-1.5 rounded-full bg-signal" aria-hidden="true" />
         </Link>
 
         <div className="hidden items-center gap-6 lg:flex">

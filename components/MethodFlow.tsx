@@ -52,8 +52,8 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
                     : "border-border hover:border-accent/40 hover:bg-surface"
                 }`}
               >
-                <span className={`mono-heading text-[11px] ${selected ? "text-accent" : "text-muted"}`}>
-                  step {index + 1}
+                <span className={`label-text text-xs ${selected ? "text-accent" : "text-muted"}`}>
+                  Step {index + 1}
                 </span>
                 <span className="text-sm font-medium leading-snug text-foreground">
                   {item.title}
@@ -66,8 +66,8 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
 
       <div className="border-l-2 border-accent/60 pl-5">
         <p className="max-w-2xl text-base leading-7 text-body">{active.body}</p>
-        <p className="mono-heading mt-3 text-[11px] uppercase tracking-widest text-muted">
-          leans on: <span className="text-accent">{active.concepts.join(" · ")}</span>
+        <p className="label-text mt-3 text-xs text-muted">
+          Leans on <span className="text-accent">{active.concepts.join(", ")}</span>
         </p>
       </div>
 
@@ -75,7 +75,7 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
         <div className="grid gap-6 sm:grid-cols-2">
           {groups.map(([group, items]) => (
             <div key={group}>
-              <p className="mono-heading text-[11px] uppercase tracking-widest text-muted">
+              <p className="label-text text-xs text-muted">
                 {group}
               </p>
               <div className="mt-3 space-y-2">
@@ -99,7 +99,7 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
                         <span className="flex items-baseline justify-between gap-2">
                           <span className="text-sm font-medium text-foreground">{item.name}</span>
                           {related && (
-                            <span className="mono-heading text-[10px] text-accent">this step</span>
+                            <span className="label-text text-[11px] text-accent">This step</span>
                           )}
                         </span>
                         <span className="mt-1 block text-xs leading-5 text-muted">{item.take}</span>
@@ -118,8 +118,8 @@ export default function MethodFlow({ steps, concepts }: MethodFlowProps) {
         </div>
 
         <aside className="panel-3d hidden self-start border border-border p-5 lg:sticky lg:top-24 lg:block">
-          <p className="mono-heading text-[11px] uppercase tracking-widest text-accent">
-            how I think about it
+          <p className="label-text text-xs text-accent">
+            How I think about it
           </p>
           <ConceptDetail concept={concept} onPick={setConceptName} />
         </aside>
@@ -142,7 +142,7 @@ function ConceptDetail({
       {!compact && (
         // Only the name is announced on change, not the whole panel.
         <h3
-          className="display-heading mt-2 text-xl font-medium text-foreground"
+          className="display-heading mt-2 text-xl text-foreground"
           aria-live="polite"
         >
           {concept.name}
@@ -151,8 +151,8 @@ function ConceptDetail({
       {!compact && (
         <p className="mt-2 text-sm italic leading-6 text-body">“{concept.take}”</p>
       )}
-      <p className={`mono-heading text-[11px] uppercase tracking-widest text-muted ${compact ? "" : "mt-5"}`}>
-        where I used it
+      <p className={`label-text text-xs text-muted ${compact ? "" : "mt-5"}`}>
+        Where I used it
       </p>
       <ul className="mt-2 space-y-1.5">
         {concept.usedIn.map((use) => {
@@ -171,8 +171,8 @@ function ConceptDetail({
           );
         })}
       </ul>
-      <p className="mono-heading mt-5 text-[11px] uppercase tracking-widest text-muted">
-        connects to
+      <p className="label-text mt-5 text-xs text-muted">
+        Connects to
       </p>
       <div className="mt-2 flex flex-wrap gap-2">
         {concept.connects.map((name) => (
@@ -180,7 +180,7 @@ function ConceptDetail({
             key={name}
             type="button"
             onClick={() => onPick(name)}
-            className="mono-heading border border-border px-2.5 py-1 text-[11px] text-muted transition hover:border-accent/60 hover:text-accent"
+            className="label-text border border-border px-2.5 py-1 text-xs text-muted transition hover:border-accent/60 hover:text-accent"
           >
             {name}
           </button>

@@ -12,14 +12,14 @@ export default function SecurityPage() {
   return (
     <AnimatedPage className="content-shell">
       <PageHeader
-        crumbs={[{ label: "security" }]}
+        crumbs={[{ label: "Security" }]}
         title="How this site is"
         accent="secured."
         intro="Reviewing other people’s security and documenting none of my own would be a bad look. This is the threat model for the site you are reading, including the parts outside my control."
       />
 
       <div className="mt-10 space-y-4">
-        <PostureSection number="01" title="architecture">
+        <PostureSection title="architecture">
           <p>
             This is a fully static site. Every page is generated at build time
             with Next.js static export and served as plain files from GitHub
@@ -30,7 +30,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="02" title="what this site collects">
+        <PostureSection title="what this site collects">
           <p>
             Nothing. No analytics, no trackers, no cookies, no third-party
             scripts. Fonts are self-hosted through next/font, so font requests
@@ -38,7 +38,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="03" title="content pipeline">
+        <PostureSection title="content pipeline">
           <p>
             Projects and writeups are fetched at build time from the GitHub API
             and Notion, then baked into static JSON. The build runs on my own
@@ -48,7 +48,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="04" title="runtime surface">
+        <PostureSection title="runtime surface">
           <p>
             After the page loads, your browser makes no external requests at
             all. Scripts, styles, fonts, and images are all served from this
@@ -58,7 +58,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="05" title="content security policy">
+        <PostureSection title="content security policy">
           <p>
             GitHub Pages cannot send response headers, so the policy ships as a
             meta tag instead, placed before any script on the page. After every
@@ -77,7 +77,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="06" title="what I do not control">
+        <PostureSection title="what I do not control">
           <p>
             A meta tag cannot carry every directive. frame-ancestors only works
             as a real header, and so does X-Frame-Options, so this site has no
@@ -88,7 +88,7 @@ export default function SecurityPage() {
           </p>
         </PostureSection>
 
-        <PostureSection number="07" title="reporting">
+        <PostureSection title="reporting">
           <p>
             Found something wrong with this site? Email devalktk@gmail.com with
             what you found and how to reproduce it.
@@ -99,20 +99,10 @@ export default function SecurityPage() {
   );
 }
 
-function PostureSection({
-  number,
-  title,
-  children,
-}: {
-  number: string;
-  title: string;
-  children: React.ReactNode;
-}) {
+function PostureSection({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="panel-3d border border-border p-5 sm:p-6">
-      <h2 className="mono-heading text-xs uppercase tracking-widest text-muted">
-        <span className="text-accent">{number}</span> / {title}
-      </h2>
+      <h2 className="display-heading text-lg text-foreground first-letter:uppercase">{title}</h2>
       <div className="mt-3 text-sm leading-7 text-body">{children}</div>
     </section>
   );

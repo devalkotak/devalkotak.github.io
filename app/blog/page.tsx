@@ -15,13 +15,13 @@ export default async function BlogPage() {
   return (
     <AnimatedPage className="wide-shell">
       <PageHeader
-        crumbs={[{ label: "blog" }]}
+        crumbs={[{ label: "Blog" }]}
         title="Things broken,"
         accent="then explained."
         intro="Lab writeups and study notes: what broke, why it broke and what it took to fix. Written in Notion and synced here on every deploy."
         aside={
           writeups.length > 0 && (
-            <span className="mono-heading text-xs uppercase tracking-widest text-muted">
+            <span className="label-text text-xs text-muted">
               {writeups.length} writeups
             </span>
           )

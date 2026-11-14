@@ -37,13 +37,13 @@ export default async function ProjectsPage() {
   return (
     <AnimatedPage className="wide-shell">
       <PageHeader
-        crumbs={[{ label: "projects" }]}
+        crumbs={[{ label: "Projects" }]}
         title="Code that"
         accent="made it out."
         intro="Every public repo, pulled from GitHub at build time. Nothing here is a stale screenshot or a description someone forgot to update."
         aside={
           projects.length > 0 && (
-            <span className="mono-heading text-xs uppercase tracking-widest text-muted">
+            <span className="label-text text-xs text-muted">
               {projects.length} public repos
             </span>
           )
@@ -56,24 +56,21 @@ export default async function ProjectsPage() {
         </p>
       ) : ordered.length > 0 ? (
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {ordered.map((project, index) => {
+          {ordered.map((project) => {
             const story = STORIES.get(project.name.toLowerCase());
             return (
               <article
                 key={project.id}
                 className="panel-3d group flex flex-col border border-border p-5 transition hover:border-accent/40"
               >
-                <div className="flex items-baseline justify-between gap-3">
-                  <span className="mono-heading text-xs text-muted">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
+                <div className="flex min-h-5 items-baseline justify-end gap-3">
                   {story && (
-                    <span className="mono-heading text-[10px] uppercase tracking-widest text-accent">
-                      featured
+                    <span className="label-text text-[11px] text-accent">
+                      Featured
                     </span>
                   )}
                 </div>
-                <h2 className="display-heading mt-3 break-words text-lg font-medium leading-snug text-foreground">
+                <h2 className="display-heading mt-3 break-words text-lg leading-snug text-foreground">
                   <a
                     href={project.url}
                     target="_blank"
@@ -89,7 +86,7 @@ export default async function ProjectsPage() {
 
                 <div className="mt-auto flex flex-wrap items-center gap-2 pt-6">
                   {project.language && (
-                    <span className="mono-heading border border-border px-2 py-0.5 text-[11px] text-body">
+                    <span className="label-text border border-border px-2 py-0.5 text-xs text-body">
                       {project.language}
                     </span>
                   )}
@@ -99,7 +96,7 @@ export default async function ProjectsPage() {
                     .map((topic) => (
                     <span
                       key={topic}
-                      className="mono-heading border border-border px-2 py-0.5 text-[11px] text-muted"
+                      className="label-text border border-border px-2 py-0.5 text-xs text-muted"
                     >
                       {topic}
                     </span>

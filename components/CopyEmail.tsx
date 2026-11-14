@@ -20,7 +20,7 @@ export default function CopyEmail({ email }: { email: string }) {
     <button
       type="button"
       onClick={copy}
-      className="inline-flex h-11 items-center gap-2 border border-accent/60 bg-[var(--color-accent-muted)] px-5 text-sm font-medium text-accent transition hover:border-accent"
+      className="inline-flex h-12 items-center gap-2.5 rounded-full bg-accent px-6 text-base font-semibold text-background transition hover:brightness-110"
     >
       {copied ? <Check size={15} /> : <Copy size={15} />}
       <span aria-live="polite">{copied ? "Copied" : "Copy email"}</span>

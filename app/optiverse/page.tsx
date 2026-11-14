@@ -16,7 +16,7 @@ export default function OptiversePage() {
   return (
     <AnimatedPage className="content-shell">
       <PageHeader
-        crumbs={[{ label: "optiverse" }]}
+        crumbs={[{ label: "Optiverse" }]}
         title="A side quest that reached"
         accent="150,000 students."
         intro="Before the security tooling and the market notebooks, there was this: a mentorship project co-founded with a friend and run entirely by students, for students. Dormant for now, with a relaunch being planned around everyone’s new commitments. This page is pulled from the team’s own Notion on every deploy."
