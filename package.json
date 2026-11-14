@@ -8,6 +8,7 @@
     "content:check": "python scripts/inspect_content.py --strict",
     "deploy": "python scripts/deploy.py",
     "deploy:dry": "python scripts/deploy.py --dry-run",
+    "deploy:commit": "python scripts/deploy.py --commit-content",
     "refresh": "gh workflow run \"Deploy static site\" --ref main",
     "refresh:status": "gh run list --workflow \"Deploy static site\" --limit 5",
     "predev": "npm run content",
