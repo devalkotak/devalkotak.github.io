@@ -1,0 +1,2398 @@
+{
+  "blocks": [
+    {
+      "id": "5a70576d-2c42-4714-b169-45dbe614acf8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Source: Rana Khalil \u2014 Cross-Site Scripting (XSS) | Complete Guide (Web Security Academy Series). No free YouTube upload exists for this video (checked extensively \u2014 not in her channel's Playlists tab, no search hit). Transcribed locally from the downloaded video ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "D:\\Sync\\RK-WSA\\Videos\\01. Cross-Site Scripting (XSS) - Complete Guide.mp4"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "faster-whisper"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "small"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " model, CPU) since no online transcript source was available."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "id": "ce6dabb1-d334-4db9-a366-9d04032d5731",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Cross-Site Scripting lets an attacker inject malicious code or client-side scripts into an application that then executes in the victim's own browser. The key distinction from SQL injection or command injection: XSS is a "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "client-side"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " vulnerability \u2014 you're not attacking the application server, you're attacking the application's "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "users"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "66781d97-c880-4e29-9061-535bba1eee3f",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "How it works (Example)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 a banking app lets users pick English/French, passed as a "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "lang"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " parameter in the URL, which gets reflected back into the page's client-side code:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "f2f0c603-2ccf-4858-9e62-b35cae6dbfdc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The attacker probes the app and discovers the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "lang"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " parameter isn't restricted to "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "en"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "/"
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "fr"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 it accepts arbitrary strings"
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "5feae6f0-d345-491e-a496-b1a27a20218a",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "They host a malicious script on their own server ("
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "attacker-server.net"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") and construct a URL where "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "lang"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " calls that script"
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "321d6580-f10f-4013-b632-69282411d041",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Clicking the link themselves would just execute the script in the "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "attacker's own"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " browser \u2014 pointless. To have any value, the attacker needs the "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "victim"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (Alice) to click it \u2014 this variant is called "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "reflected XSS"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", and it needs a phishing component to deliver it"
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "5207fffd-0269-4cfd-a615-0bd63a710bfc",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Alice checks the link's domain before clicking (good security hygiene), sees it's genuinely her bank's domain, and clicks \u2014 reasonably, since the domain really is legitimate"
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "fbfc61bd-8414-417e-9fa6-75f83b04f8ec",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The page loads normally and she does her banking as intended \u2014 but in the background, the injected script runs in her browser, reads her cookie store for that application, and exfiltrates her session token to the attacker"
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "6338a98a-5dc2-4e14-88bf-132571cd4abe",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Why the attacker can't just host the exploit on their own server and skip all this"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": browsers enforce the "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Same-Origin Policy (SOP)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 a script on "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "attacker.com"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " cannot read the responses or cookie data belonging to "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "bank.com"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ". The only way to get at "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "bank.com"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "'s cookies is to get code to actually "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "execute as "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": true,
+              "plainText": "bank.com"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 which is exactly what injecting into the vulnerable parameter achieves, since the malicious script is now running in the context of the legitimate domain, not the attacker's."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "669ccf87-a3d5-4544-8e1b-82363b0417ec",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "What is XSS?"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "1eb47b86-20c6-4540-b4ac-eb6f21faa94b",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Reflected XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "f4078c46-9d00-4ad9-b89c-8f9048e0d1d7",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The type in the example above \u2014 user input is reflected directly back in the immediate response to the request that submitted it. Requires a phishing/delivery component, since the payload only fires when the victim is tricked into visiting a crafted URL."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "c4888b36-7b0d-4ec8-b2b0-62e6914ba262",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Stored XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "28966c4c-f4d9-4a9c-a4f3-2e5b2077d15a",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Similar to reflected, except the malicious input gets "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "stored"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " by the application (in a database, typically) and served back to "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "every"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " user who later views that content \u2014 no phishing link needed, since the payload is already sitting on a page other users will visit organically. Meaningfully more dangerous for exactly that reason: reflected XSS compromises one victim per delivered link; stored XSS can compromise everyone who visits the affected page."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "1357ab93-0fc4-4766-841c-fc081e5c2543",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Real-world precedent"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": the 2005 MySpace \"Samy\" worm. An attacker named Samy planted a stored XSS payload on his own profile page. Anyone who viewed his profile had the script execute in their browser, which (1) added Samy as their friend and (2) copied the same malicious script onto "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "their own"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " profile page \u2014 so the next person to view that victim's profile got infected too, and the cycle repeated. It spread exponentially until MySpace had to take the site offline entirely to strip the payload from every infected profile \u2014 a textbook XSS worm."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "0d30d945-1a8e-4b3e-8d8c-60c3e8f8c994",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "DOM-Based XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "a9816219-bd13-4ba5-a3da-fb1f8c5e9da5",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Harder to find and exploit than the other two. Some background first: the "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "DOM"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (Document Object Model) is the browser's in-memory representation of a page's HTML/XML \u2014 when a page loads, the browser parses the HTML into the DOM, and JavaScript on the page can read and dynamically modify that DOM at runtime."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "9ba7b82d-9097-4dba-9b80-5b16b4c7181d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "DOM-based XSS happens when client-side JavaScript takes attacker-controllable input and passes it into a "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "sink"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 a potentially dangerous function/property that can alter the page or execute code \u2014 without validating it first."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "bc3540f9-45ca-486c-a6a3-2832f3f447c1",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Contrast with reflected XSS"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", using the same idea from two different angles:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "3f6001e8-9cc0-4447-8b23-f6beb6daca84",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Reflected"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": the server inserts your input directly into the HTML response \u2014 e.g. a "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "message"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " GET parameter gets written straight into a "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<p>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " tag server-side. If unvalidated, injecting "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<script>alert(document.cookie)</script>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " works because the browser parses that injected markup as real HTML/JS when the page renders. The payload is visible if you view the page source."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "40de75e9-8c69-415a-b1e3-534a755d9e63",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "DOM-based"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": the "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "page itself never changes"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " server-side \u2014 the HTML response looks identical either way. Instead, client-side JavaScript already on the page reads your input (e.g. from a search box) and writes it into a DOM property at runtime \u2014 e.g. "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "element.innerHTML = searchValue"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ". Because "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<script>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " tags inserted via "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "innerHTML"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " don't execute per the HTML5 spec, exploiting this sink specifically needs a different payload shape \u2014 e.g. an "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<img>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " tag with a deliberately broken "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "src"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " so its "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "onerror"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " handler fires your code instead. The takeaway: the vulnerability lives entirely in how the "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "client-side script"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " handles the input, not in what the server sends back, which is exactly why it's harder to spot from the outside."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "9e0de1cc-7bd1-4655-a1f3-5cf5e2da357b",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Types of XSS"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "4cee9c87-107b-473a-8cb9-ce196f1c8269",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Once code execution is achieved in the victim's browser, the usual playbook:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "8c76a8b8-9c84-42f3-b52b-a83d16c55d58",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Impersonate the victim"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 most commonly by stealing their session token, which only works if the token is stored somewhere JavaScript can reach: a cookie without "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "HttpOnly"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " set, or "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "localStorage"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "/"
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "sessionStorage"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "6af2272c-9a9e-45f8-9223-f669f9fab759",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Perform any action the victim can perform, and read anything they can read"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 the script runs with the victim's own privileges in the application"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "548e7d24-d76a-470b-a740-e576609f12dd",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Inject a trojan login form"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " that mimics the real one, harvests credentials, and (for a more convincing attack) silently relays them to the real login endpoint too, so the victim logs in successfully and never suspects anything happened"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "ddb2997a-3403-48fa-a556-908de950aad0",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Deface the application"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " with inappropriate or politically motivated content"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "34b26aba-8ad1-4011-aafb-34fd4caea594",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "What an Attacker Can Do With XSS"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "c7ca53c9-b6fd-4606-ba3b-db5e6494f5b0",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Depends entirely on the specific XSS type found and the attacker's actual goal:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "4a9bfdf9-84d0-4f8b-a505-52a63c6af4f6",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Pure defacement: Integrity is heavily hit, Confidentiality and Availability largely untouched"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "134566f7-6a48-48b2-be2d-8cdb9c2fb89c",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Full account takeover: all three (Confidentiality, Integrity, Availability) can be affected"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "bf50e8a7-e60d-4fbb-8afe-2ac0499fca6d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Attackers routinely "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "chain"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " XSS with other bugs or with functionality normally reserved for privileged users to escalate impact dramatically \u2014 a real example cited: a Magento vulnerability where a stored XSS bug was chained into arbitrary code execution."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "2dc5eb7d-25b1-4d31-92e2-dc50c94c36c4",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "How common/critical?"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " XSS had its own dedicated OWASP Top 10 category in 2010, 2013, and 2017, but in the most recent list it was folded into the broader \"Injection\" category \u2014 currently the "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "3rd"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " most critical risk facing web applications. In direct testing experience: essentially every application tested has had at least one XSS vulnerability somewhere \u2014 it remains extremely common despite the long history of known defenses."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "854f03b5-9f7b-45e6-9671-c401fed7235e",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Impact of XSS Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "99f3c0f7-e74b-4a9a-8425-f7c774a136f6",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Methodology differs somewhat by type, so covered per type below."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "336753ed-e046-4497-b9a1-71032cd72747",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Reflected XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "24311881-5fc5-4700-a36a-cb4b6970cfc2",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Identify every endpoint where user-supplied data gets reflected back in the response"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 URL query parameters, the URL path itself, even HTTP headers in some cases."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "f47b0c7e-3521-42c8-a5be-205e2901d720",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Submit a unique, arbitrary marker string"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " at each candidate location \u2014 something short, alphanumeric, with no tag characters or special syntax, unlikely to collide with existing content or get eaten by a filter (e.g. "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "test12564"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ")."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "d7d6a975-c32d-4bc9-9a67-a5e3000cb912",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Search responses for that marker."
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " Finding it confirms the input is reflected "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "somewhere"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 it does not by itself confirm XSS, but it means that location now needs to be tested specifically."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "df3884dd-0f5e-406b-b48d-b159be6bbebc",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Determine the reflection context"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 the exact syntactic position the input lands in (inside a tag attribute value, inside a "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<script>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " block, inside a URL-bearing attribute like "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "href"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", etc.). The right payload depends entirely on this context; there's no universal payload."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "c9dc4947-4e50-45d3-a4fb-2b1221e3d3e6",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Build and test a context-specific payload"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (usually via Burp Repeater first), then "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "always confirm in an actual browser"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " before calling it vulnerable \u2014 a payload that looks reflected in a proxy response isn't proof it actually executes."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "ac619787-0c9d-442b-b6a7-05a77a9cb1d3",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Worked payload examples by context:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "children": [
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Reflection context"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Payload approach"
+                  }
+                ]
+              ],
+              "id": "05906161-ed46-437f-b830-ccd9125d9bd1",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Inside an attribute value, e.g. "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "value=\"test12564\""
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "\"><script>alert(1)</script>"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " \u2014 close the quote, close the tag, inject a new element. The resulting markup has a stray trailing "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "\">"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " from the original tag, but browsers render past minor syntax errors like this without breaking"
+                  }
+                ]
+              ],
+              "id": "d948a735-c6f1-4dcb-a868-cdb61c2ad668",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Inside an attribute value, staying inside the tag"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "\" onfocus=\"alert(1)"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " \u2014 cleaner (no dangling markup), but needs user interaction (a click/focus) to trigger, so it's the weaker of the two options"
+                  }
+                ]
+              ],
+              "id": "cc14dbf5-2142-42c2-bd36-547bfe93753c",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Inside an existing "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "<script>"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " block, e.g. "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "var a = 'test12564';"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "';alert(1);var foo='"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " \u2014 close the string with a single quote, terminate the statement, inject your code, then open a dummy variable ("
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "foo"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": ") to soak up the trailing quote from the original code so nothing errors out"
+                  }
+                ]
+              ],
+              "id": "69b8aab7-a5cb-4b72-9bd0-2c1bea57049d",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Inside an "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "href"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " attribute"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "Either the "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "javascript:"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " pseudo-protocol directly in the URL, or break out with "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "#"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " (an inert page-fragment marker) followed by an "
+                  },
+                  {
+                    "bold": false,
+                    "code": true,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "onclick"
+                  },
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": " handler"
+                  }
+                ]
+              ],
+              "id": "2c75fed3-5794-464f-bbec-d297b3f248dd",
+              "type": "table_row"
+            }
+          ],
+          "hasColumnHeader": true,
+          "id": "9e2c260a-de0b-47e4-aa83-85dac2b7a74a",
+          "type": "table"
+        },
+        {
+          "id": "c6f735fd-198c-40fd-a25c-8cc758e8f4e0",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Resource"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": PortSwigger's "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "XSS Cheat Sheet"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " lists every usable tag and event handler combination, cross-referenced against which browsers support each \u2014 used constantly in practice rather than memorizing payloads from scratch."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "3a179e7a-4a68-4b75-a6e4-1b2dcf98db6e",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Bypassing filters/defenses"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", depending on what's blocked:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "2cfc7854-2239-4216-a1db-3110a97cb3fa",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Specific tags/event handlers blocked \u2192 brute-force the XSS cheat sheet's tag list to find what's still allowed, then brute-force event handlers for that tag"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "c4700332-b566-4b40-8d9f-db5d9e30d281",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "No quotes allowed at all \u2192 build strings via "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "String.fromCharCode(...)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " instead of quoted literals"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "a71d942a-7691-4151-a000-d345eb2f4206",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Specific keywords blocked (e.g. the literal string "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "javascript"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") \u2192 break the keyword up with whitespace (including encoded whitespace like a tab character) \u2014 browsers are lenient about whitespace inside HTML/JS in ways naive filters often aren't"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "68c2a51a-fd91-4f68-8c39-304993341012",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Full technique catalog: OWASP's "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "XSS Filter Evasion Cheat Sheet"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "4ccf8988-5e35-4f37-a721-6e427f8cddde",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Stored XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "0906a502-35bf-4beb-90dc-f4f10e261de9",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Same discovery methodology as reflected \u2014 map every input vector, submit a unique marker string, look for it reflected. The real difference: "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "stored XSS content can surface in a completely different location than where it was submitted"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", so confirming it takes reviewing all of the application's content and functionality broadly, not just re-checking the same response. Once you find where the marker resurfaces, the rest of the process (determine context \u2192 build payload \u2192 confirm in browser) is identical to reflected."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "a1e896f4-5403-4b73-8255-385bdbee4af5",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "DOM-Based XSS"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "b376debd-69b1-4460-9729-4aacb45b3de0",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Genuinely harder, since the vulnerability lives in client-side logic rather than the server response."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "d1516eb0-dc96-4f5c-9cfb-9e7a0cf13ec0",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Review every piece of client-side JavaScript for "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "sinks"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 dangerous functions/properties that write attacker-influenced data into the DOM: "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "document.write"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "document.writeln"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "document.domain"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "element.innerHTML"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", and similar."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "48525420-6b9d-465d-90d9-a2916c1c1db4",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Once a sink is found, inject the unique marker string and use browser dev tools to trace the actual execution path from source (where the input enters) to sink (where it gets used dangerously) \u2014 understanding that path is what tells you the exact shape the payload needs to take."
+            }
+          ],
+          "type": "numbered_list_item"
+        },
+        {
+          "id": "ef3c0e64-c7df-4b98-86c1-40134c4948b4",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Build and test the payload against that specific sink (recall: "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<script>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " tags injected via "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "innerHTML"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " won't execute per spec \u2014 an "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "<img onerror=...>"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " or equivalent is often needed instead)."
+            }
+          ],
+          "type": "numbered_list_item"
+        }
+      ],
+      "id": "4e4e3a0b-f403-4d23-b42d-a1c087fdadb2",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How to Find and Exploit XSS Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "baa7d4f4-8200-451f-9e98-6cc81677ba4b",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Application Vulnerability Scanners"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 any decent scanner should reliably catch most "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "reflected"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " XSS, since it's comparatively mechanical to detect. Stored and DOM-based XSS are harder for scanners \u2014 some catch them, some miss them \u2014 so manual verification alongside an automated scan is standard practice, not optional. Burp Suite Pro is the personal preference cited, though free/open-source options exist across a range of budgets."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "a0d820d1-546d-4160-b4e1-50ac823d64a4",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automated Exploitation Tools"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "affb5b57-d1a4-4f6a-a40f-7bc38f622260",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Primary Defense \u2014 Output Encoding"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "97bdeb4d-587b-49e4-9ef0-a3be159bf957",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Encode all user-controllable data at the point of output, before it's rendered \u2014 this ensures it's displayed as inert "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "data"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", never interpreted as executable code. The correct encoding is "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "context-dependent"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": HTML encoding for data inserted into HTML, JavaScript encoding for data inserted into a script context, and so on \u2014 a single encoding scheme doesn't cover every context an application might reflect input into. Never hand-roll an encoding routine (same rule as with crypto) \u2014 use a well-established library for your language/framework; OWASP maintains a list of recommended options per stack."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "5dbd5f4a-3f18-44e4-80f5-eb74058506c1",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Primary Defense \u2014 Input Validation on Arrival"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "277accf8-abda-4a14-b319-89961dc95d01",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Only accept input matching what's actually expected for that field \u2014 e.g. an age field should accept integers only, nothing else. An "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "allowlist"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " is always more secure than a denylist, but a denylist is sometimes unavoidable in practice \u2014 which is exactly why input filtering is classified as a "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "defense-in-depth"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " layer rather than a complete standalone defense: a denylist is inherently incomplete against a sufficiently creative payload."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "b355622f-1a1e-48a3-b009-934fd0e53975",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Defense in Depth \u2014 Response Headers"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "7b8aba5e-69d1-4aa5-941d-d321ec7cc4b6",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "Content-Type"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " and "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "X-Content-Type-Options"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " tell the browser what format a response actually is. Set correctly, they stop a browser from executing injected HTML/JS on a response that was never meant to be interpreted as such. Doesn't apply everywhere \u2014 many pages legitimately need to serve HTML/JS \u2014 so this is a supplementary layer, not the official defense."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "cf5a85ad-2c5e-4a8b-9a8b-1ec9297bcabc",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Defense in Depth \u2014 Content Security Policy (CSP)"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "ca2f4149-7301-43df-af36-e879dafda3c4",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "A browser-enforced mechanism restricting what resources a page is allowed to load and whether the page can be framed by others (relevant to both XSS and clickjacking). Configured via the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "Content-Security-Policy"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " response header, containing one or more semicolon-separated directives. A strict example policy might allow images/scripts/AJAX/CSS only from the page's own origin and nothing else \u2014 under that policy, a script an attacker tries to load from their own server simply won't execute, since it isn't same-origin. CSP is powerful but genuinely deep enough to be its own topic; treat it as the last line of defense, not the first thing to reach for."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "3b41bfc4-806a-4239-9784-48c2cf962238",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Summary"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": output encoding and input validation on arrival are the two things you should always be doing; response headers and CSP are valuable additional layers on top, not substitutes for the first two."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "84cbe3b1-7009-4e66-8dc3-555c29cb024e",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How to Prevent XSS Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "00f25485-0c89-48ba-89ff-5d8e79d286c1",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Security Academy \u2013 Cross-Site Scripting \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://portswigger.net/web-security/cross-site-scripting",
+              "italic": false,
+              "plainText": "https://portswigger.net/web-security/cross-site-scripting"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "8c6a6232-4219-4035-a0ad-2e189a0cdb37",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Application Hacker's Handbook \u2014 Chapter 13: Attacking Users \u2014 Cross-Site Scripting"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "2614be7b-734d-4e9e-88d0-051d57f19e46",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP \u2013 Cross-Site Scripting (XSS) \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://owasp.org/www-community/attacks/xss",
+              "italic": false,
+              "plainText": "https://owasp.org/www-community/attacks/xss"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "db859376-d71d-4005-8a50-e6fdeddc4cdb",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP \u2013 XSS Prevention Cheat Sheet \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html",
+              "italic": false,
+              "plainText": "https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "18fb01c8-8ee4-452d-b727-5df2a2879b89",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP \u2013 XSS Filter Evasion Cheat Sheet \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html",
+              "italic": false,
+              "plainText": "https://cheatsheetseries.owasp.org/cheatsheets/XSS_Filter_Evasion_Cheat_Sheet.html"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "eb4baab9-53b9-489c-8107-7278225090ee",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP \u2013 Content Security Policy Cheat Sheet \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html",
+              "italic": false,
+              "plainText": "https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "e983960f-0da3-4c79-9779-75b05a2e9165",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "PortSwigger \u2013 Cross-Site Scripting (XSS) Cheat Sheet \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://portswigger.net/web-security/cross-site-scripting/cheat-sheet",
+              "italic": false,
+              "plainText": "https://portswigger.net/web-security/cross-site-scripting/cheat-sheet"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "9966ee32-e526-4015-bb66-806aa3b80bda",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Resources"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-09-24",
+  "id": "3e5042e6-0b87-81ea-a6ae-dd42cc8bd043",
+  "properties": {
+    "Name": "XSS Notes",
+    "Source": "Portswigger",
+    "Status": true,
+    "Tags": [
+      "XSS",
+      "WSA"
+    ],
+    "Type": "Notes",
+    "URL": null
+  },
+  "slug": "xss-notes",
+  "tags": [
+    "XSS",
+    "WSA"
+  ],
+  "title": "XSS Notes"
+}

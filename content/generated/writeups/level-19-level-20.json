@@ -1,0 +1,303 @@
+{
+  "blocks": [
+    {
+      "id": "bdc752e9-c45b-44be-9919-5596eab72905",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b1ccfd07-7bea-4e93-84d3-5bc6c3370532",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "To gain access to the next level we should use the "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "setuid binary"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20-do"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in the home directory. Running it without arguments shows how to use it; the password for this level is in the usual place ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/bandit_pass"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") once we've used the binary correctly."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3d199fcc-58db-42ee-971f-f63d5c23252f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "fdb3a7c9-db9a-485c-ba16-f02e61b1b927",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit19@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. We can't read "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/bandit_pass/bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " directly, since that file belongs to "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and we're logged in as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit19"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20-do"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " has its "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "setuid bit"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " set and is owned by "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", though, so when we execute it, it runs with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "'s permissions instead of ours, regardless of who invoked it. Running it bare shows it expects a command as an argument and executes that command as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", so we hand it "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat /etc/bandit_pass/bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and it reads the file on our behalf."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "6ec6bbd0-0b86-43f2-8dd3-2d964555d1be",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "404042e6-0b87-8045-9f12-c73e0d095ec3",
+      "type": "image",
+      "url": "/notion-media/7838c35e81e1bbfc.png"
+    },
+    {
+      "id": "404042e6-0b87-8024-91c0-def084875681",
+      "type": "image",
+      "url": "/notion-media/b3b49109dacc832a.png"
+    },
+    {
+      "id": "8e83a0af-c0e7-427e-85d2-e57a0f0917fe",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-812d-ac1c-d440dab74784",
+  "properties": {
+    "Name": "Level 19 \u2192 Level 20",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-19-level-20",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 19 \u2192 Level 20"
+}

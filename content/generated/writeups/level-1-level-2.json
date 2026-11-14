@@ -1,0 +1,205 @@
+{
+  "blocks": [
+    {
+      "id": "b61826b4-dc15-423d-8ed5-02df8d8cf61b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "06ab4214-c20e-4ca0-83b8-29e1826b0115",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a file called "
+        },
+        {
+          "bold": true,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " located in the home directory."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d1e2a4c3-6dcc-4b3b-b3ae-0edb435e4f56",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "6f620671-437e-43ef-8bc5-17ba0938ac6e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit1@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Similar to the last level, but the catch is the password is stored in a file whose name is "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". In cases of such special-character filenames we need to reference the file using a relative or absolute path, because "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " is otherwise read as the start of a parameter to "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (for example "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat -h"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ")."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b0e9037e-577f-420c-94fc-693681547014",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-808d-885a-cf59e0bfd0dd",
+      "type": "image",
+      "url": "/notion-media/679286773f94d6ff.png"
+    },
+    {
+      "id": "402042e6-0b87-80c1-be38-cb7e813cf0fa",
+      "type": "image",
+      "url": "/notion-media/d363a791569569f2.png"
+    },
+    {
+      "id": "8c4a8e4f-38ca-465d-b47f-7137ca34e3e9",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag- "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PK8fYLZg2hnHSz83plBL1iEPKdD3QToB"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-8115-b26f-dd9368966435",
+  "properties": {
+    "Name": "Level 1 \u2192 Level 2",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-1-level-2",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 1 \u2192 Level 2"
+}

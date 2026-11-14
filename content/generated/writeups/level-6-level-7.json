@@ -1,0 +1,293 @@
+{
+  "blocks": [
+    {
+      "id": "28017e5c-c43a-4787-b3d2-44e4e21c7eb0",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4900ac2e-eb2f-4fbc-b365-2901b133ff58",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored somewhere on the server and has all of the following properties:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "9a4ed710-5b50-4097-ac2d-103303781299",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "owned by user "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit7"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "191b6e1e-9156-4edd-8381-4bcc96253a21",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "owned by group "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit6"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9d724af8-8675-41c0-9a53-cb06b79193af",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "33 bytes"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in size"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0212e217-6f68-45a2-b711-2360bcb949f7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "71eb2d8e-1210-4a2d-aa8e-5cbe5d677bda",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit6@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. The home directory is empty, so we search the entire filesystem with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "find /"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", adding "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-user bandit7"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-group bandit6"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", and "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-size 33c"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to filter for the exact file by ownership and size. The search throws many permission-denied errors along the way, so we redirect stderr with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "2>/dev/null"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to drop that noise and leave a clean output showing only the matching path. We confirm the size with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ls -l"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on that path, then "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it to read the password."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "7b881658-2b71-476f-83b6-5b164b11cbbd",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-806c-bd90-c81abf270331",
+      "type": "image",
+      "url": "/notion-media/232fe18903e169d8.png"
+    },
+    {
+      "id": "402042e6-0b87-80e2-85fd-c45b0529d9da",
+      "type": "image",
+      "url": "/notion-media/addbc8345c46e709.png"
+    },
+    {
+      "id": "786ebc1d-e100-4241-b601-e7981b346ded",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81c2-b1e8-e7afb7f1c002",
+  "properties": {
+    "Name": "Level 6 \u2192 Level 7",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-6-level-7",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 6 \u2192 Level 7"
+}

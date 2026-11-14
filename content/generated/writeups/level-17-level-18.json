@@ -1,0 +1,247 @@
+{
+  "blocks": [
+    {
+      "id": "1d806580-4618-4bdb-a7d9-da782b24df2b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "66ceb36e-058c-4ac3-836f-0e771687215a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "There are two files in the home directory, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "passwords.old"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "passwords.new"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". The password for the next level is in there somewhere, and the password has "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "changed exactly once between the files"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "cf0a3064-bb4a-4532-8e6d-01d477bf88d7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "cd94a0ff-ccc6-4437-b634-071b0ef99f87",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit17@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Both files are large lists of candidate strings, one per line, so eyeballing them for the one line that differs isn't practical. We use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "diff"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to compare the two files line by line \u2014 it prints only the lines that changed, prefixed with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "<"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for the old version and "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ">"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for the new one. Since exactly one line changed, the "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ">"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " line from "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "diff"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "'s output is the new password."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "cbf22c31-5cba-40c9-bf65-30818baf5fab",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-80e9-bb28-d5ca7d48e70a",
+      "type": "image",
+      "url": "/notion-media/d3b131f85f300831.png"
+    },
+    {
+      "id": "402042e6-0b87-807f-a3d5-c27d99e3cd37",
+      "type": "image",
+      "url": "/notion-media/4dc4a9e1c9a5e72c.png"
+    },
+    {
+      "id": "23406245-50f3-4ed7-b5c3-f9c89c3786d6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "OQxXZjELndr90zuhOTDYBEomI0SZITXI"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81f0-b2fb-d4907369ead2",
+  "properties": {
+    "Name": "Level 17 \u2192 Level 18",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-17-level-18",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 17 \u2192 Level 18"
+}

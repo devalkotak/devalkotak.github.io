@@ -21,7 +21,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "We ran free 1-on-1 mentorship for students aged 10\u201318: self-reflection, honest conversation, zero pressure, a certificate at the end for the ones who like proof. Mentors were students too \u2014 scattered across 18+ countries, no salaries, just people who wanted to be useful."
+          "plainText": "We ran free 1-on-1 mentorship for students aged 11 to 17: self-reflection, honest conversation, zero pressure, a certificate at the end for the ones who like proof. Mentors were students too, scattered across 18+ countries, no salaries, just people who wanted to be useful."
         }
       ],
       "type": "paragraph"
@@ -34,7 +34,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "Operations are paused indefinitely right now. Not dead \u2014 recharging. If you want in when it comes back, register and wait it out with us."
+          "plainText": "Optiverse is dormant right now, and a relaunch is in planning around everyone's new commitments. If you want in when it comes back, join the waitlist and we'll reach out."
         }
       ],
       "type": "quote"
@@ -47,7 +47,7 @@
           "code": false,
           "href": "https://forms.gle/zTDZ5dNkP7bbYjP49",
           "italic": false,
-          "plainText": "Register for the course"
+          "plainText": "Join the waitlist"
         }
       ],
       "type": "paragraph"
@@ -154,26 +154,6 @@
       "type": "bulleted_list_item"
     },
     {
-      "id": "fafba38f-f716-448b-b6b4-4c9298b75bae",
-      "richText": [
-        {
-          "bold": true,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": "3 years"
-        },
-        {
-          "bold": false,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": " of doing this before hitting pause"
-        }
-      ],
-      "type": "bulleted_list_item"
-    },
-    {
       "id": "5331acda-d44d-4e01-b9f5-d4b44ff8ca24",
       "isToggleable": false,
       "richText": [
@@ -195,7 +175,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "Free. Always. Charging money filters out the kids who need it most, so we didn't. 4\u20136 hours, online (offline if a mentor happened to be nearby), scheduled entirely around the student and mentor's own time. No script, no forced curriculum \u2014 just a mentor who'd let you talk without judging you for it."
+          "plainText": "Free. Always. Charging money filters out the kids who need it most, so we didn't. The whole program was 4 to 6 hours in total, online (offline if a mentor happened to be nearby), scheduled entirely around the student and mentor's own time. No script, no forced curriculum, just a mentor who'd let you talk without judging you for it."
         }
       ],
       "type": "paragraph"
@@ -229,7 +209,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Co-Founder & CEO"
+          "plainText": ", Co-Founder"
         }
       ],
       "type": "bulleted_list_item"
@@ -249,7 +229,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Co-Founder & President"
+          "plainText": ", Co-Founder & President"
         }
       ],
       "type": "bulleted_list_item"
@@ -269,7 +249,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Operations Head"
+          "plainText": ", Operations Head"
         }
       ],
       "type": "bulleted_list_item"
@@ -289,7 +269,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Media Head"
+          "plainText": ", Media Head"
         }
       ],
       "type": "bulleted_list_item"
@@ -309,7 +289,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Editorial / Writing Head"
+          "plainText": ", Editorial / Writing Head"
         }
       ],
       "type": "bulleted_list_item"
@@ -343,7 +323,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": " \u2014 Collaborations Co-Heads"
+          "plainText": ", Collaborations Co-Heads"
         }
       ],
       "type": "bulleted_list_item"
@@ -356,7 +336,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "Plus a rotating crew of ops, media, and writing contributors from across the world \u2014 Riya, Hasi, Harshal, Ananya, Gunj, Isra, Upotima, Aashima, and more"
+          "plainText": "Plus a rotating crew of ops, media, and writing contributors from across the world: Riya, Hasi, Harshal, Ananya, Gunj, Isra, Upotima, Aashima, and more"
         }
       ],
       "type": "bulleted_list_item"
@@ -417,6 +397,6 @@
     }
   ],
   "error": null,
-  "generatedAt": "2026-08-03T18:36:16Z",
+  "generatedAt": "2026-11-14T17:00:13Z",
   "title": "Optiverse \u2014 Site Content"
 }

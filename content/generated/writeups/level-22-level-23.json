@@ -1,0 +1,238 @@
+{
+  "blocks": [
+    {
+      "id": "41d7500f-508c-4cee-8051-1f75e1256fe7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "49a542d4-9b9f-42ce-84b6-0ba403bab6c6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A program is running automatically at regular intervals from cron. We look in "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/cron.d/"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for the configuration to see what command is being executed."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d84e4017-12ab-46af-bbe1-45f42b0b7482",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "3a49bb67-f6f1-4a4a-9474-2ab311bdb675",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit22@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Same pattern as the last level: "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/cron.d/cronjob_bandit23"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " points at a script, and we "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it to see what it does. This time the output filename isn't fixed in the script \u2014 it's computed at runtime as the MD5 hash of the string "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "\"I am user bandit23\""
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (the script builds that string from "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "whoami"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", so it's really hashing whichever user runs it). Since we know the exact string the script hashes, we don't need to wait and go looking for the file \u2014 we can just compute the same MD5 hash ourselves with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "md5sum"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and read that filename directly under "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/tmp"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "59624a68-7ad2-4e1b-b8c7-404906534fc6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "404042e6-0b87-8064-8068-e653d1d05a18",
+      "type": "image",
+      "url": "/notion-media/73ecda8753980d72.png"
+    },
+    {
+      "id": "404042e6-0b87-80a0-94e7-f62bf1795036",
+      "type": "image",
+      "url": "/notion-media/8fabf3fcab22e764.png"
+    },
+    {
+      "id": "404042e6-0b87-8090-bbdd-ef80181f9c89",
+      "type": "image",
+      "url": "/notion-media/e0c187f9c7bb0798.png"
+    },
+    {
+      "id": "aef2aa68-93e6-4c77-98ee-ebcd9e4dd1af",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "gKXDTAXnIz3OBxiPjRZ2uqutUlPZrBsw"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-8154-936d-d6cf565ff7b8",
+  "properties": {
+    "Name": "Level 22 \u2192 Level 23",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-22-level-23",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 22 \u2192 Level 23"
+}

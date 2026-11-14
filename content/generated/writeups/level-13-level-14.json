@@ -1,0 +1,309 @@
+{
+  "blocks": [
+    {
+      "id": "8dbf828b-8362-4488-9dcb-24bac274d15f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "26b1b402-8f4a-47a4-9d1f-f41c4cae2ad7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/bandit_pass/bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and can only be read by user "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". For this level we don't get the next password directly \u2014 we get a "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "private SSH key"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "sshkey.private"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") that logs us in as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " instead."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a1c0c716-9a5e-48db-bb27-cd7ca2dbe266",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "95349caf-b2a4-47a3-a03e-8c91d23a707a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit13@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "sshkey.private"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " sits in the home directory, so we use it directly with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -i"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to authenticate as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " without a password. SSH refuses to use a private key file that's readable by group or others (it warns "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "UNPROTECTED PRIVATE KEY FILE!"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and aborts), so we "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "chmod 600"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it first to restrict it to our own user. Once logged in as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", the level's own password file is finally readable, since we're now that user."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b70c4985-8102-436d-a257-1e1b23747be8",
+      "richText": [],
+      "type": "paragraph"
+    },
+    {
+      "id": "f3e68d43-aba7-404a-8a44-963b92df4d53",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-80b0-87cb-fba3c4933d4e",
+      "type": "image",
+      "url": "/notion-media/8387f1f17bb2a416.png"
+    },
+    {
+      "id": "402042e6-0b87-80ef-ad44-e7eb96dea7c4",
+      "type": "image",
+      "url": "/notion-media/08f184b7d3a7e4cd.png"
+    },
+    {
+      "id": "402042e6-0b87-8090-9b34-dc51981918b7",
+      "type": "image",
+      "url": "/notion-media/d0662a58ae0c5a7f.png"
+    },
+    {
+      "id": "402042e6-0b87-80bc-8413-d2f97fb5080e",
+      "type": "image",
+      "url": "/notion-media/a9239cdafba83be6.png"
+    },
+    {
+      "id": "402042e6-0b87-803d-8bc0-c9d1abb39ff3",
+      "type": "image",
+      "url": "/notion-media/d7099693b0754576.png"
+    },
+    {
+      "id": "5c029ee2-21a3-481d-ac84-667fa2462b2f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "aaWecNkG4FhxJQxz07uiwzVP6bJiYS65"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-817e-aa2a-e3860cef2a44",
+  "properties": {
+    "Name": "Level 13 \u2192 Level 14",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-13-level-14",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 13 \u2192 Level 14"
+}

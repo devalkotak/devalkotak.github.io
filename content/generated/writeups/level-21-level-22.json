@@ -1,0 +1,233 @@
+{
+  "blocks": [
+    {
+      "id": "aea3056f-76cd-4425-9d28-2fb4997c3704",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "89f9ac2e-4ff9-4330-8e8f-a31f0fc868c1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A program is running automatically at regular intervals from "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "cron"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", the time-based job scheduler. We look in "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/cron.d/"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for the configuration to see what command is being executed."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "1a83770c-7ae7-4d02-88ae-89824bdc800f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4b4c9d4c-0ae5-4cfc-b751-505e8aa5e364",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit21@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/cron.d/cronjob_bandit22"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " names a shell script that cron runs on a schedule, so we "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " that config first to find the script's path, then "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " the script itself to see what it does. The script writes the current level's password into a file under "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/tmp"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", using a fixed, predictable filename it names in its own source. Since that file is world-readable by design (it has to be, for the next level to pick it up), we just "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it directly once cron has had time to run."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "1762045a-0c99-4f51-b3c6-00a79e1f33ef",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "404042e6-0b87-80ae-8d67-dfc5cc8b9515",
+      "type": "image",
+      "url": "/notion-media/cd9b8e0dce2fba6e.png"
+    },
+    {
+      "id": "404042e6-0b87-80a8-b830-dc0b1a004123",
+      "type": "image",
+      "url": "/notion-media/6b411450718a4c35.png"
+    },
+    {
+      "id": "56e62ea3-e6bf-4327-a7f1-61e9fb7c50b3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RYVux2rHEm9tiXHmLFzuR7Vhx6AZQMEz"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-8101-8071-c941e2642433",
+  "properties": {
+    "Name": "Level 21 \u2192 Level 22",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-21-level-22",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 21 \u2192 Level 22"
+}

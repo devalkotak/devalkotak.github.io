@@ -1,0 +1,219 @@
+{
+  "blocks": [
+    {
+      "id": "703ad345-c14f-4828-8719-1f04580cfaed",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "fbaa7607-cf88-4697-bf55-df183fd7fd19",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a file called "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "readme"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " located in the home directory. Use this password to log in to user "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit1"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on the same host and port."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "be8a7f70-4fab-4683-bade-ec47bd544152",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d38f83d8-ed91-4d60-80c1-de2eb529fea7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit0@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password from Level 0. When we SSH in we are placed in the home directory, which we confirm with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "pwd"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". We then use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ls"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to list the directory, where we find a "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "readme"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " file, and use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to print its contents and read the password for the next level."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "e42b0b50-2440-4250-ace4-d41e3041b1cd",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-807f-9e06-f4dc90489157",
+      "type": "image",
+      "url": "/notion-media/291ce53e4c653e4c.png"
+    },
+    {
+      "id": "402042e6-0b87-80dc-bd03-fb35d3d5fcb6",
+      "type": "image",
+      "url": "/notion-media/d96d7b486b84c590.png"
+    },
+    {
+      "id": "a7840194-e50a-43d3-b053-928c07d2135b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81fc-9c79-c5961bfb73ec",
+  "properties": {
+    "Name": "Level 0 \u2192 Level 1",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-0-level-1",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 0 \u2192 Level 1"
+}

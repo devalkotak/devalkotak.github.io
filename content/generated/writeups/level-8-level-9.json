@@ -1,0 +1,205 @@
+{
+  "blocks": [
+    {
+      "id": "8d6cd309-0907-40bf-baac-eb0d3a6d4f91",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "5c0df8f4-b222-47c4-a0a0-efbbed419740",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in the file "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and is the only line of text that occurs only once."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "5db3d599-caa7-47b3-a419-ab817673a9b6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b9b25b9f-4ff7-4c68-863e-84f2e1d25251",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit8@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. We find "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in the home directory and confirm it's too long to read by eye - 1001 lines, with duplicates throughout and just one unique line holding the password. We pipe "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " through "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "sort"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (so identical lines sit next to each other) and then through "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "uniq -u"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", which prints only lines that appear exactly once, leaving just the password."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "6b8f1b55-c274-40ff-8f6f-53cdd3b6f577",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-8084-aa04-fcc0e1c5cd70",
+      "type": "image",
+      "url": "/notion-media/bf86436cbb07721b.png"
+    },
+    {
+      "id": "402042e6-0b87-8060-a880-c736dbd6600e",
+      "type": "image",
+      "url": "/notion-media/c0807bfc25e73146.png"
+    },
+    {
+      "id": "2a899bda-d678-47fc-aa71-cd1db1bd28c3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-812d-9cff-d548a050be89",
+  "properties": {
+    "Name": "Level 8 \u2192 Level 9",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-8-level-9",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 8 \u2192 Level 9"
+}

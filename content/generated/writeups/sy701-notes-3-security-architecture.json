@@ -1,0 +1,4519 @@
+{
+  "blocks": [
+    {
+      "id": "ca5462de-dd6d-4d36-a0b6-b6b34511a79d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical Security Controls"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c7545348-6f42-4707-82a8-29be243d21a5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical security = protecting people, buildings, hardware, and data from real-world (non-digital) threats."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2a6bf6c9-c0f5-48a1-af3c-9b87a12650c9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "If an attacker can walk up to a box, technical controls stop mattering; physical access often beats software access controls entirely."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "2cdbabb1-5d67-4ca6-b561-54e04da395c4",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Preventive: stops entry before it happens (locks, fences, badge readers)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "7790425a-93b0-40ee-b1cc-f2e3db020bbd",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Detective: catches/records an event after it starts (cameras, motion sensors, alarms)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "249d52c1-e6d5-466a-a856-6c7ffca848a2",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Deterrent: discourages the attempt in the first place (warning signage, visible cameras, guards on site)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "4d5306ef-8f37-4fd8-be02-1127baf5674a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Split into three functions:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b02268e8-9638-4167-b90b-800c6e54062c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Facility access examples: badges, biometric scanners, turnstiles, guards, visitor logs/badges."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0199745c-a7f3-4094-97ca-be4ad9bee97f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Mantrap: two-door airlock setup, first door locks before second opens, one person through at a time. Main purpose is killing tailgating."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a1af5984-dfb5-4439-8aa2-5f7dd0eebf28",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Surveillance/monitoring layer (CCTV, motion sensors, alarms) serves four purposes: discourages attempts, feeds investigations, produces evidence, gives real-time visibility."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "20b3bcdf-cd2e-4b9b-9d43-a4ae04c49589",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Environmental protection (guards against damage, not intrusion): fire suppression, smoke detectors, temp/humidity control, UPS, generators, water leak sensors."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "50c63cb8-2cf9-4130-9349-d8ff06627326",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Device/media handling: cable locks, locked cabinets, clean desk policy, asset tagging, and secure disposal (shredding, degaussing, wiping drives) so data doesn't walk out the door on retired hardware."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "f39d05ef-da25-4a8f-be35-8e09a2c37cd2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common physical attack vectors: tailgating, shoulder surfing, dumpster diving, stolen laptops/phones, rogue devices plugged into a jack, USB baiting (dropped drives)."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "4fba392e-067c-4534-aa28-798bbcfded83",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Power Resiliency"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "cbba7ee7-4d47-42f9-803b-086cdc7e05c8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Power is the base dependency everything else sits on; outages cascade into every other control failing."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7841442e-9b98-4403-9cce-80acdc8499b2",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "UPS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Uninterruptible Power Supply): short-term bridge power for blackouts, brownouts, surges."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "UPS type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Behavior"
+              }
+            ]
+          ],
+          "id": "a4ac4cef-29f0-473c-a6e4-03de1bf84aad",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Offline/standby"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Idle until power fails, then switches to battery"
+              }
+            ]
+          ],
+          "id": "80bee65a-c918-4401-96df-950ff92a72f1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Line-interactive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Regulates voltage on the fly, switches to battery on loss"
+              }
+            ]
+          ],
+          "id": "085afc0b-8c60-4e67-b9bf-0bda29396cc7",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Online/double-conversion"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Always running off the battery/inverter, no switchover gap"
+              }
+            ]
+          ],
+          "id": "5b9cf5f9-1cf7-4a89-8598-3c7e5032d7d8",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "28ad5840-2aca-46ac-886f-fb41de4913ec",
+      "type": "table"
+    },
+    {
+      "id": "817d1ce6-244e-49ff-be8b-bfa0365f298f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "UPS features worth checking: auto shutdown on low battery, battery capacity/runtime, number of protected outlets, phone/network line surge suppression."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1e778bc7-da85-4434-8f40-eb4af6fd8d69",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Generators: long-term backup power, need fuel storage and periodic testing. Takes a few minutes to spin up, so a UPS covers the gap while the generator starts. Generator-fed outlets are usually labeled separately from normal building outlets."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9d64876e-b083-425e-842d-ee515a2ceab7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Redundancy & Resilience"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "36cd161c-2048-43e4-8c24-f2cd88dfbfd0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cyber resilience: keep operating through a disruption, recover fast, come back stronger. Tightly linked to the \"A\" (availability) in the CIA triad."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "52595e9c-fe96-4811-8346-43e5cb5cc17b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Redundancy: duplicate a component or path so no single failure takes the whole system down."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d230abb8-c19f-4b08-aeb4-ab5cc5edc529",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common redundancy plays:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "52ca54c3-28d3-4f93-9788-def98e3b3af6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Dual power supplies, UPS + generator combo"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8a09990b-3d73-47cf-8e9d-52dcd3f0b4d9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "RAID arrays"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f22a64ed-f1ad-4dd9-9e03-cf91383f1e08",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Load balancers, failover servers"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7137dafe-e414-405b-ae0b-3f531f2af903",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Multiple ISP/network links, secondary DNS"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1a90aa54-907e-4c3f-8db9-1b1f903c46ab",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Database replication, multi-AZ cloud deployments"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0085f1de-ee86-4a8f-bb54-5d6a8e134524",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Additional resilience concepts:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "22ff3ac8-eb18-4aed-8168-025d4c39eb9f",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (high availability): always-on, always-available design. Redundancy alone doesn't guarantee this if failover still needs a human to flip a switch manually."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "df345e66-a800-40d4-aa63-973c6e79814e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Server clustering: multiple servers combined so they appear and operate as a single logical server, users only see one endpoint. Adding nodes scales capacity, cluster members usually run the same OS."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a9a5f4ac-46f2-4c7d-abd2-7cdecfaed60b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Load balancing: spreads client load across multiple servers/devices that are often unaware of each other; the balancer adds or removes nodes based on health checks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "69c4fe25-5c2e-43e7-b94d-f5d880e21696",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Platform diversity: spread systems across different OSes/vendors so an OS-specific vulnerability can't take down everything at once (most Windows vulnerabilities don't touch Linux/macOS and vice versa)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cb5fa36c-0535-4c6e-b9c7-97433a49e026",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Multi-cloud: spread workloads across more than one cloud provider (AWS, Azure, GCP) so a breach or outage at one provider doesn't take out everything, adds geographic and provider dispersion at the cost of more management complexity."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7757b602-5188-441c-a942-00d56d7bf5b2",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "COOP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Continuity of Operations Planning): fallback to manual processes (paper receipts, phone-based transaction approvals) for when the technology stack itself is down. Has to be documented and tested ahead of time, not improvised mid-disaster."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e2b76e7e-7e56-4363-9203-c245c228cc1c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Backup Strategies"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "06d65aa3-838c-40d1-a5a5-bf25d5d8a1c5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Backup = restorable copy of data, the safety net for deletion, corruption, ransomware, hardware death, or full disaster."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it copies"
+              }
+            ]
+          ],
+          "id": "65ce3e06-c596-4e54-a8e7-5f108c8a295e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Full"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "everything selected"
+              }
+            ]
+          ],
+          "id": "99ef8c65-b87d-4a68-8b74-43d4ed785777",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Incremental"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "changes since the last backup (any type)"
+              }
+            ]
+          ],
+          "id": "0ce4326f-f941-44e6-a6e7-a1238c29fe6d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Differential"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "changes since the last full backup"
+              }
+            ]
+          ],
+          "id": "ce7e1285-1c66-41b7-a7a5-83559d5e187e",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "e008c683-7b3b-4367-bb48-3ac59543225a",
+      "type": "table"
+    },
+    {
+      "id": "11c92444-a5c6-4b09-a83a-3b60b6a97c40",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Good hygiene: encrypt the backups, lock down the credentials that can touch them, actually test restores (not just the job succeeding), keep an offline or immutable copy somewhere, and don't store backups on the same systems they're protecting."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d3b9396b-0471-412d-8bcc-fbba6dc2fd70",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Backup planning factors: total data volume, backup type, backup media, storage location, backup/recovery software, and which day/time each job runs."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "517fff79-a4e2-4498-85c9-3523c7e95ee8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Onsite backups: no internet link needed, immediately available, generally cheaper, but sit right next to whatever they're protecting."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "77cda643-923a-495f-a1d6-117500d103c0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Offsite backups: moved over the internet/WAN, available after a site-level disaster, restorable from anywhere. Most orgs run both onsite and offsite for speed plus disaster coverage."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cedbeb18-cc10-46af-9b67-9e06eb622b51",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Multiple backup sets on different cadences (daily/weekly/monthly) mean more media to manage but more restore points to pick from."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bf61387e-789d-4ada-9e26-15ce7f8d046b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Snapshot: instant point-in-time backup of an entire system's config and data, popular on VMs and in cloud environments. A snapshot taken later only stores the delta since the previous one, can revert to any snapshot point, fast to take and restore."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "327225f3-3992-4e77-abda-5c71a0b25dd7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Replication: near real-time, ongoing copy of data kept synced across multiple locations. There's always a copy available somewhere, useful since disasters can hit at any time."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6248d73f-07cd-41d8-86db-c767216135b1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Journaling: before writing data to storage, log the intended write in a journal first, then clear the journal entry once the write completes. If power drops mid-write, the journal shows what needs replaying instead of leaving corrupted, unrecoverable data."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "998505c4-a5e9-47fe-90a2-e3e9ed0eb734",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recovery testing isn't optional: disaster recovery testing simulates the actual scenario, restores from backup, and confirms the restored app/data actually works, not just that the backup job reported success. Run periodic audits (weekly/monthly/quarterly) to keep confidence current."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3304dc5f-1d59-48e0-8c8c-b73c09cf15f2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recovery Terms"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Term"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Meaning"
+              }
+            ]
+          ],
+          "id": "fa9a3b7f-8b3f-4cb0-8992-099dccd5c34b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "RTO"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Recovery Time Objective: target time to get a service back up"
+              }
+            ]
+          ],
+          "id": "fc761ad4-c274-4aa6-ab69-98b0a5723216",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "RPO"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Recovery Point Objective: how much data loss is tolerable, measured backward in time"
+              }
+            ]
+          ],
+          "id": "e1e4e66a-4005-4d4a-a51d-6f54b07bf533",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MTD"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Maximum Tolerable Downtime: hard ceiling on outage length"
+              }
+            ]
+          ],
+          "id": "9515df6a-81f7-47c9-abe1-4e242c4b8f35",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MTTR"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mean Time To Repair"
+              }
+            ]
+          ],
+          "id": "547a662f-0970-465a-82d6-639c0df6de25",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MTBF"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mean Time Between Failures"
+              }
+            ]
+          ],
+          "id": "1e7a84e9-bf5a-46e8-9155-a1fe0f1032a4",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "ffa9a4c4-9867-4276-8825-1618a054bec9",
+      "type": "table"
+    },
+    {
+      "id": "17ae2d40-6906-4d34-b8da-6aba1060fbd5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recovery site tiers:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Site"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Readiness"
+              }
+            ]
+          ],
+          "id": "7b2ad4be-0b8f-47ba-939c-1c4dabe49b36",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Hot"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Fully live, data and systems ready almost immediately"
+              }
+            ]
+          ],
+          "id": "9f8c3e9f-0363-4be4-8230-2a5ebb4c7e58",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Warm"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Some infrastructure in place, needs setup before it's usable"
+              }
+            ]
+          ],
+          "id": "2495ee5e-0dbe-49e1-bce8-58aab5d66a5e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Cold"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Just a facility, little to no equipment pre-staged"
+              }
+            ]
+          ],
+          "id": "e1736931-b96b-44d1-b844-21a3d807ec44",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "3fe6bb8c-71c1-4cea-8e01-c8b64812dff8",
+      "type": "table"
+    },
+    {
+      "id": "80063426-269f-4fec-a2c1-3bd2159d93aa",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Business continuity: keeps core business functions running during the disruption (e.g. payroll still gets processed somehow)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b31d0293-f0f0-444f-85c3-b54425c6ee89",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Disaster recovery: the technical rebuild, getting the actual systems back (e.g. restoring the payroll servers)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cc616f67-1a1a-4c53-9367-ef448e0636a6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "None of this counts until it's been tested: restore drills prove backups actually work, tabletop exercises rehearse the decisions and communication under pressure."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bf9b1433-63ed-45f1-b93f-2998111f9f51",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Site failover process: recovery site stays data-synced ahead of time, a disaster gets formally declared, business processes fail over to the alternate site (can take hours, weeks, or longer depending on severity), then reverting back to primary is its own documented process, tested in both directions."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bcd02d26-16ca-494f-8881-6c126761f25e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recovery Testing"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1b2db1d0-d5c8-4835-9162-c26e3c25f7da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Test before an actual event happens: scheduled sessions (annual, semi-annual) using well-defined rules of engagement so production systems don't get touched, with a specific limited-time scenario and a documented evaluation afterward."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "731d76ff-66cf-4e09-9a59-1e2638da8e41",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Tabletop exercise: key stakeholders talk through a simulated disaster around a table, no systems touched. Cheaper and faster than a full-scale drill, still surfaces logistics and communication gaps."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4dd0583c-bef7-441d-8107-50cedafa5c06",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Simulation: run a scripted, limited-scope live test against real users (a phishing email sent to the actual user community) to see who clicks, whether the filter caught it, and who needs more training."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bc35aac6-dadd-4b54-8875-bd70dbf37549",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Failover: a failure is a \"when,\" not an \"if.\" A redundant infrastructure (multiple routers, firewalls, switches) lets the operational unit take over automatically, so this gets tested to confirm it actually triggers without manual intervention."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d7dda35d-ecb5-4392-90c6-852b66f4f1dc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Parallel processing: splits a workload across multiple CPUs/cores or multiple machines. Improves performance (split large transactions across processors) and improves recovery (pull a faulty processor out of the pool and keep running on what's left)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6c009e30-c2bd-452e-b73b-935c8a5ca056",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Capacity Planning"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1408c715-25b7-407e-807b-a83e424a31e0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Goal: match supply to actual demand. Too little supply causes application slowdowns and outages, too much means paying for capacity nobody uses."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "51a5d271-ff6d-4618-aeaf-82b2c3595596",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "People: some services need human hands (call centers, support desks). Understaffing is slow to fix since hiring/training takes time; overstaffing means idle payroll that needs redeploying or cutting."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "45410e86-0d7b-4447-b44d-4ffa3042018a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Technology: pick systems that can actually scale up or down, e.g. distribute load across multiple web servers, cluster/split databases to add capacity, or lean on cloud services for on-demand capacity (seemingly unlimited if the budget allows)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "73633005-5a23-4b87-b380-9d925d0674f6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Infrastructure: the underlying compute/network/storage framework needs the same scalability thinking. Physical devices are slower to purchase/configure/install; cloud-based devices deploy faster and absorb unexpected capacity changes more easily."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aa514ce0-84af-4b32-bc04-f067840a9b05",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Architecture Principles"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "85dfa690-56ef-4b46-909f-0763967e94f5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security architecture: designing networks, apps, cloud resources, and controls up front so confidentiality/integrity/availability hold up, rather than bolting on fixes later. Fewer attack paths in, less blast radius when something does fail."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1d06020c-2386-4fdf-b5fb-1a3e1034f8da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Defense in depth: stack multiple, unrelated layers of controls so one failure doesn't equal full compromise. Firewall + MFA + endpoint protection + segmentation + logging + backups + user awareness training, layered together rather than any one of them alone."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "82dc5649-fd79-49f8-88ca-37203dfdaf77",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Zero trust: default posture is \"trust nobody yet,\" verify continuously, assume attackers could already be inside the perimeter, not just outside. In practice: verify identity every time, apply least privilege, check device posture, keep access segmented, monitor and re-evaluate risk on an ongoing basis."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aa98a3eb-ee3c-4596-8964-a6b8041400aa",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Segmentation: split the network/systems into smaller isolated zones so a breach in one doesn't automatically spread. Guest Wi-Fi kept off the internal LAN, servers separated from user workstations, payment systems walled off from everything else. Built with VLANs, firewalls, ACLs."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b29f7931-1513-4c17-b5e6-f608e3b304da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Least privilege: give accounts and systems only the access their job actually requires, nothing extra \"just in case.\" Shrinks the damage a compromised account or process can do."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b0d83266-6e6c-4b36-8074-30595559661f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud architecture design points: shared responsibility model (split between what the provider secures and what the customer owns), IAM roles/permissions, security groups, encryption, logging, key management, backups, and watching for accidental public exposure."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "16b07197-2c44-438c-a497-190cb9f2b505",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application architecture design points: authentication, authorization, input validation, secure session handling, secured APIs, sane error handling that doesn't leak internals, logging, and secrets management."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c32d2480-a220-4022-a8f9-8232c03621bb",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud Infrastructure"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "92942268-3e15-48f2-aff6-ea700cf8b391",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud responsibility matrix: who secures what shifts by service model. Rough split (exact division always varies by provider and contract, confirm against the vendor's actual published matrix):"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Layer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "SaaS"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "PaaS"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "IaaS"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "On-prem"
+              }
+            ]
+          ],
+          "id": "6def64b4-f4ed-40ae-b0c1-f8e749e2cb83",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data, accounts, identities"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "1bf41bf7-b744-427c-96c7-98a544776f61",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Applications"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "e5cac454-7ee2-48d6-a787-375c170f78d0",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Identity/directory infra"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Split"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mostly provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "76c4044f-b09d-40c9-8c81-dc86c129fa6f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Network controls"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Split"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "ba8a409e-8a0d-4eeb-bed2-989a38db7e42",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Operating systems"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "a0d390e7-6eb1-4600-9761-d45352b6cd09",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Physical hosts/network/datacenter"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Provider"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Customer"
+              }
+            ]
+          ],
+          "id": "ef9c53e2-efee-45ab-a4ab-354f9f5de6d6",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "1d2b70f8-551d-4d02-bcf4-89814964a4a0",
+      "type": "table"
+    },
+    {
+      "id": "8c3a4a20-01b6-4bb9-955f-083edbf2449a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Third-party vendors: the cloud stack usually spans the org, the primary provider, and other third parties (infrastructure tech, cloud-based appliances). Needs ongoing vendor risk assessments as part of a broader vendor risk program, third-party impact folded into incident response planning, and continuous monitoring for unusual activity."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d0582b50-c857-410a-b034-4e60c487528d",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IaC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Infrastructure as Code): servers, network, and app config defined as code instead of built by hand. Versioned the same way as application code, and rebuilding from the code produces the same environment every time, key to reliable cloud deployments."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3557bb0b-9d9c-4138-858e-4d4725efecd7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Serverless / "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "FaaS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Function as a Service): app logic split into small standalone functions, no OS to manage. Developer writes the server-side logic, it runs inside a stateless compute container, often event-triggered and ephemeral (spins up for one event, then gone). OS-level security sits entirely with the provider."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2278bccf-b8d6-4265-84f2-ea8d6c9c133a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monolithic vs microservices: monolithic app is one large codebase handling UI, business logic, and data together, hard to change safely as it grows. Microservices split the same functionality into independent services glued together by "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "API"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "s, usually behind an API gateway. Trade-off: more scalable (scale just the piece under load) and more resilient (one service's outage stays contained), but more moving parts to secure and monitor."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "783c02fd-91ed-429b-97ae-90db2b1ba665",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network Infrastructure Concepts"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b6e10bc5-7750-4142-a3af-a43835a4b4a3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical isolation: devices kept on genuinely separate hardware/network paths, e.g. an air gap between switch A and switch B, or a web server rack physically separate from a database server rack. Nothing crosses paths unless directly connected, so no accidental data mixing between tenants."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f533a070-d8a8-411d-98c4-4c04dedf88b0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical segmentation: separation enforced by dedicated infrastructure per zone (separate switches/units), not just config."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "601d8473-62d9-4346-b280-ac0ead7dc837",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Logical segmentation ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "VLAN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "s): separate broadcast domains built in software rather than hardware. Devices on different VLANs can't reach each other without a layer 3 device (router) bridging them."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "080b5d45-80f7-412f-aa49-8788be1eb141",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SDN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Software Defined Networking): splits a network device's functions into three separate planes instead of bundling them."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Plane"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Role"
+              }
+            ]
+          ],
+          "id": "a41bad1e-caad-4d76-a15e-788cacadb297",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data (infrastructure layer)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Forwards actual frames/packets: forwarding, trunking, encrypting, NAT"
+              }
+            ]
+          ],
+          "id": "d856dd1d-b151-4e4e-a525-323d9d9e80bd",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Control"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Manages the data plane's behavior: routing/session/NAT tables, dynamic routing updates"
+              }
+            ]
+          ],
+          "id": "392a1f9b-8218-4fe7-a2a4-b12d91007aa5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Management (application layer)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Configures/administers the device: SSH, browser UI, API"
+              }
+            ]
+          ],
+          "id": "12621fd5-fd6c-46fd-9462-4df9ce05a560",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "c2e8aaa0-776f-4a49-824e-14cb661a727b",
+      "type": "table"
+    },
+    {
+      "id": "91495764-c690-46ca-9b47-32b6703b084f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Separating the planes lets networking functions be managed centrally and programmatically, which is why SDN fits cloud environments so well."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "64538ac8-63d8-4157-886f-f11918433811",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Other Infrastructure Concepts"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "848fded4-0b58-498a-b715-30e98cd46930",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Centralized vs decentralized security: most orgs are physically decentralized (many sites, cloud providers, OSes), which makes consistent security hard. Centralizing the security management function (correlated alerts, consolidated log analysis, one view of patch/system status) helps, at the cost of a single point of failure and possible performance bottlenecks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6ee68397-b80e-48c6-a40e-b3da27e57a0e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Virtualization: multiple OS instances running on shared hardware through a hypervisor, each VM carrying its own full guest OS. Adds overhead and complexity, comparatively expensive versus bare metal."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5764126e-3143-4699-9264-ef6b4e855a13",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Containerization: app packaged with its code and dependencies as a standardized, portable unit. Runs as an isolated process on a shared host OS/kernel instead of carrying a full guest OS, lighter than a VM, self-contained so apps can't interfere with each other. The container image is what makes it portable across hosts."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "886e95c4-e234-4c39-9ec9-5f2c08e498c8",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IoT"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Internet of Things): sensors (HVAC, lighting), smart/home-automation devices (video doorbells), wearables (watches, health monitors), facility automation (temperature, air quality). Common weak point: manufacturers ship weak defaults since they aren't security companies first."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "adfaa4a0-f2e1-456a-8479-d9205c34aa77",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SCADA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " / "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ICS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Industrial Control Systems): large-scale, often multi-site systems managing physical equipment (power generation, refining, manufacturing, logistics). Distributed control systems need real-time information and control, so heavy segmentation is standard, no access permitted from outside the environment."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "308b6ebc-65fc-4116-8ccf-475ae2763825",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Embedded systems: purpose-built hardware/software for one specific function, optimized for size/cost rather than flexibility (traffic light controllers, digital watches, medical imaging systems)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "46b3f303-2863-4583-bc84-d36ddaa4691b",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RTOS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Real-Time Operating System): deterministic processing schedule, no waiting around for other processes (industrial equipment, automotive, military use). Extremely sensitive to security issues since these systems must stay available, and it's often unclear what security is even built in."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "662b488b-f80d-423e-a540-6982daa6726e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Infrastructure Considerations"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4dbdd6f1-9e53-49a7-9fa4-1f0895a1c945",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Availability: system uptime, whether people can actually get to their data and finish transactions. Foundational IT security metric, but a balancing act: available to the right people, not available to everyone."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9a59b295-6b65-472b-b4f8-6639b0126d79",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Resilience (as a system attribute): whether a system maintains availability through disruption and how fast it recovers if it can't. Depends on root cause, replacement hardware lead time, patch availability, and how much redundancy already exists. Commonly measured as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MTTR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "faff7465-e101-40f7-8997-045f5cab9ea9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cost: everything comes down to money eventually. Initial install cost varies a lot across platforms, plus ongoing maintenance, replacement/repair, and tax treatment (operating vs capital expense)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7fe37c53-727d-4c1d-9135-30d81e889be7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Responsiveness: how quickly a system replies to a request, matters most for interactive applications since users notice delay immediately. Every component in the chain contributes, and there's always a weakest link."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "07d8d47d-0864-4993-b1ca-e24449b65778",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scalability / elasticity: how fast capacity can flex up or down, sometimes needed multiple times a day. Security monitoring has to scale along with the system, not lag behind it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9b6a4409-7dac-4e7a-bf33-37f144ca4ddf",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ease of deployment: apps with many moving parts (web server, database, cache, firewall) can be simple or painful to stand up depending on how much is orchestrated/automated. One missed config detail during the engineering phase causes deployment issues later."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "eca7cef5-00e1-4aa9-87c3-e7028a2697e6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk transference: shifting risk to a third party instead of absorbing it directly. Cybersecurity insurance is the common example (popular given the rise in ransomware): covers attack/downtime costs, recovers internal losses, and helps limit exposure to customer legal claims."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "12ec75ac-73b0-4d91-91c6-a6a308ccdae1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ease of recovery: how fast a mess gets cleaned up when something breaks, e.g. reloading an OS from scratch versus from a pre-built corporate image is a real time difference (an hour versus ten minutes) worth designing around."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7153d56b-06f0-46ac-b048-20de6652d575",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patch availability: software isn't static, updates handle bugs and security fixes. Some vendors patch on a predictable cadence (Microsoft's monthly schedule), some rarely patch at all, which becomes its own risk factor."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5df13ae4-679d-404f-97ac-c1fabb3b0de9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Inability to patch: embedded systems (HVAC controls, time clocks) often aren't built for end-user updates at all. Compensate with additional controls around the device itself (e.g. a firewall in front of a time clock) since the device can't defend itself."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "eafb7cb6-081f-4739-9c94-12a4a33febbf",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Power: foundational requirement, can need serious engineering. Primary power usually comes from one or more utility providers; backup handled by UPS and generators."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1b5da634-73a6-4119-97a9-5af8ed21019a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compute: an app's processing engine, can be limited to a single CPU/processor (simpler to develop) or spread across multiple CPUs/multiple clouds (more complexity, more scalability)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "732efcb7-a3c1-41b5-b5f2-5a132099477b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network Architecture & Firewalls"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "04309979-3765-4437-8c09-ab1ffcc18fef",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Core network security tooling:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "fdb82d41-8217-4d6a-8755-a3f583531277",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Firewall"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": allows or drops traffic based on rule sets"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2bd0358f-f1ff-48ff-bc0e-bb5d0530586b",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IDS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Intrusion Detection System): watches traffic, flags suspicious activity, doesn't block"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "16c6f089-266e-4482-a6c6-64ef5a20aa24",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IPS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Intrusion Prevention System): same detection, but actively blocks"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "768fa837-2a7a-4b1f-9835-8ca08f8bafc0",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Proxy"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": sits between clients and the web, filters/monitors that traffic"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b8e6b426-e8e7-474c-aecd-b4fc8795ceb6",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "WAF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Web Application Firewall): shields web apps from common attack classes (injection, XSS, etc.)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e32f322d-9c95-4de8-bf9a-a9dd10d1fea5",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NAC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Network Access Control): gatekeeps which devices are even allowed to connect"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "540b9361-9662-4b67-9145-2c32c6ef4b1e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure network design:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "4a61056b-9fad-4375-8454-c657bb1354ff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Device placement: firewalls separate trusted from untrusted zones and add inspection checkpoints; other services (honeypots, jump servers, load balancers, sensors) often need their own dedicated security treatment rather than inheriting the firewall's protection."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d9e61093-2f16-40ee-bf72-e598a635563b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security zones: traffic grouped by zone (trusted/untrusted, internal/external, inside/screened) rather than by raw IP range, which is more flexible and simplifies policy. Typical flow: trusted-to-untrusted allowed outbound, untrusted-to-screened allowed to public-facing services (web/mail/FTP/database servers, honeypots), untrusted-to-trusted blocked."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "918dfb61-cfe7-44bb-bb8f-8766d8e85a26",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attack surface: every exposed entry point (app code, open ports, the authentication process itself, human error) is a potential vulnerability. Minimize it by auditing code, blocking unneeded ports at the firewall, and monitoring traffic in real time."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1ab3af26-d001-4066-aef0-fb9d59fefb75",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Connectivity: the network connection itself is part of the attack surface. Secure the physical cable drops, and layer encryption at the app level (if the app already handles TLS) and the network level (IPsec tunnels, VPNs) for anything that doesn't."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "27ab3503-9ca1-440e-8026-11745ce057c8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IPS/IDS failure and monitoring modes:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0d567dd9-dbd1-4ca1-ba80-ea0e07aaa997",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Fail-open: when the device dies, traffic keeps flowing (availability wins, inspection stops)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1b6f1369-7d33-4ab8-9c32-06ca8e8818b6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Fail-closed: when the device dies, traffic stops (security wins, availability stops). Pick based on what the business can tolerate."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e659b081-c490-4c00-9ef7-4a6d6a750347",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Active (inline) monitoring: device sits directly in the traffic path, can block in real time as data passes through, how IPS normally works."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6eb9b59c-278c-48c5-b530-da80a31ee5c1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Passive monitoring: device only sees a copy of traffic (via tap or port mirror), can alert but can't block in real time, how IDS normally works."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bd0786de-9106-4622-a2f8-3f6ac602e607",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network appliances:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0bacdc55-f19c-457a-af4e-a8e8863dab88",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Jump server: hardened, heavily monitored box used as the single access point into a protected zone (SSH/RDP/VPN to the jump server, then hop from there). Compromise of the jump server is a serious breach, since it's the gateway to everything behind it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Proxy type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it does"
+              }
+            ]
+          ],
+          "id": "a4a94035-d318-4c25-99a8-d1ca3b0b0289",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Forward proxy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Internal proxy, controls/protects user access out to the internet"
+              }
+            ]
+          ],
+          "id": "5f625647-6ba2-421f-ae52-3de87839c6fb",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Reverse proxy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Sits in front of an internal service, handles inbound traffic from the internet"
+              }
+            ]
+          ],
+          "id": "5c33849a-9b0e-40cd-854a-745c64e5f510",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Open proxy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Uncontrolled third-party proxy, often abused to bypass existing controls"
+              }
+            ]
+          ],
+          "id": "9367e39d-b7a0-4e27-ab16-1f9e0a8f1935",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Transparent proxy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Invisible to the client, no explicit client configuration needed"
+              }
+            ]
+          ],
+          "id": "a4f57a63-2abb-4607-a1b9-9311dbb79006",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Application proxy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Understands one or a handful of specific application protocols (e.g. HTTP-only versus a multipurpose HTTP/HTTPS/FTP proxy)"
+              }
+            ]
+          ],
+          "id": "d9ecf241-c736-44ea-aa92-b76168e87f99",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "cdbb86af-e12a-4514-9914-1b866ec44efa",
+      "type": "table"
+    },
+    {
+      "id": "51eefdb2-44b5-4cf6-8cc9-792af3d5c812",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NAT"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " is the simplest form of proxy: network-level only, no application awareness."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7f4754c1-39ca-4d6f-b7ca-d7110fde374e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Load balancer modes: active/active runs all nodes simultaneously (scalable, fault tolerant, losing one node doesn't take the service down); active/passive keeps standby nodes idle until the active one fails, then fails over."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e0de13eb-d059-424c-a5e7-a29951f0658d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Extra load balancer functions: TCP offload (absorbs protocol overhead), SSL offload (handles encrypt/decrypt so backend servers don't have to), caching, QoS-based prioritization, content switching (routes based on the actual application request)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "80c1a1c6-c38e-40ae-bfcf-b58a6711e068",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sensors: gather raw telemetry from network devices, built-in or standalone (IPS alerts, firewall logs, auth logs, web server access logs, database transaction logs, email logs)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "17db7f66-3fa3-4d50-8a33-4b5cd28c9f74",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Collectors: aggregate what sensors produce, either proprietary vendor consoles or centralized SIEM/syslog servers. SIEMs commonly run a correlation engine to tie disparate sensor data together into one picture."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "46a9d665-b9d1-4b50-b76b-9ea2cc96d225",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Port security:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "43ba84bb-16c7-4cf0-a3f4-eef60c106ee6",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "802.1X"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": port-based "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NAC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", no network access granted until the device authenticates."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cbddd295-a939-4d69-a963-56c0264198ab",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EAP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Extensible Authentication Protocol): the authentication framework 802.1X relies on; many vendor-specific EAP methods exist under the same RFC umbrella. Pairs with a backend auth database (RADIUS, LDAP, TACACS+, Kerberos)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "be52bb78-197a-4554-a001-7f6874e8545b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Roles in 802.1X/EAP: supplicant (the client requesting access), authenticator (the switch/AP gating access), authentication server (validates the credentials, e.g. RADIUS)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a4757477-2c57-4508-bc2f-4571e83ebfa0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Firewall types:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Layer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Notes"
+              }
+            ]
+          ],
+          "id": "bb93cc9f-6694-40a6-a2fb-55a67f5968ec",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Traditional/network-based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Layer 3-4"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Filters by IP/port, fast, no app awareness"
+              }
+            ]
+          ],
+          "id": "2d88f19a-9c54-4ace-b644-7333871395bd",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "NGFW"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Next-Gen Firewall)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Layer 7"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Full app-layer/deep packet inspection, identifies specific apps (not just ports), applies app-specific vulnerability signatures, doubles as an IPS"
+              }
+            ]
+          ],
+          "id": "0ee4783e-8c2e-428f-a704-fbc7f5a03dec",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "UTM"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Unified Threat Management)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mixed"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "All-in-one appliance: URL/content filtering, spam filter, IDS/IPS, bandwidth shaper, VPN endpoint bundled together"
+              }
+            ]
+          ],
+          "id": "0c43b1a1-fb00-443b-8227-7604ce06fcc5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "WAF"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Layer 7 (HTTP/HTTPS only)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Purpose-built for web traffic, allows/denies based on expected input shape, primary defense against injection-style attacks, a major PCI DSS focus"
+              }
+            ]
+          ],
+          "id": "39e8366e-80d5-4497-b3bc-dbfd52e04070",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "425d8804-b37d-40d5-b107-c65d3b8e1824",
+      "type": "table"
+    },
+    {
+      "id": "e1bcb27c-76cf-4e1f-9679-08565e982282",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Most firewalls can also act as a layer 3 device (routing, NAT, authenticating dynamic routing protocols) and usually sit right at the network's ingress/egress point."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b6d75194-0e29-4347-b4a2-f6dda1518191",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "VPN & Remote Access"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "8599f65c-691c-40ff-becd-38e14b588c2d",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "VPN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": builds an encrypted tunnel for remote connections, keeping traffic private over untrusted networks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b03ef96f-5411-47ce-9c29-297f57be0237",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "VPN concentrator: dedicated encrypt/decrypt endpoint for VPN traffic, often built into a firewall, available as hardware-accelerated or software-based."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5e76583e-b0e8-46eb-9758-f74a7b186bb5",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SSL/TLS VPN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": rides the standard TLS protocol (tcp/443), so it rarely trips firewall rules. No heavy client needed, works from a browser or a light client, doesn't require certificates or shared secrets the way IPsec does. Typical for remote user access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2aa7f117-9d15-466a-9e8d-bb1ee7a1fac7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Site-to-site "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IPsec VPN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": always-on (or close to it) tunnel between two locations, usually terminated on firewalls already acting as VPN concentrators on both ends."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1c21a5fd-1645-4e0d-aeea-7ce17ebe84b3",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SD-WAN"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": software-defined networking applied to the WAN, built for cloud-first traffic. Since cloud apps talk directly to the cloud, there's no need to backhaul everything through a central data center anymore. Manages connectivity but doesn't cover security on its own."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9ee450b5-6273-4b8d-b4c5-f6d68e49ddd9",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SASE"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Secure Access Service Edge): bundles network-as-a-service (SD-WAN, VPN, QoS, routing, SaaS acceleration) with security-as-a-service (zero trust network access, cloud secure web gateway, CASB, firewall-as-a-service, DLP, DNS security, threat prevention) into one cloud-delivered edge, with a consistent client on every device. Positioned as VPN's cloud-native successor, requires real planning to roll out."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "41c37ea6-c249-4e3a-9a6c-0c0dd300cd84",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Endpoint & Monitoring Infrastructure"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a221deb9-0400-4247-a218-247140981da1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Endpoint-side controls: antivirus (signature-based malware detection/removal), "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EDR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Endpoint Detection and Response, watches behavior over time and supports investigation, not just known-signature matching), host firewalls, disk encryption (protects data if the device itself is lost/stolen), and application allow-listing (only approved software runs)."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d649cbe4-d3af-489e-96f1-f64f4748d63c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring/response stack:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0f0244e3-2e00-471f-aac4-7372298fb486",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SIEM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": aggregates and correlates logs across the environment for security visibility"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d1b15a7d-f4cb-40f5-a28a-f312737db27b",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOAR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": automates and orchestrates the response workflows once something fires"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7766457e-0008-440e-a2dd-89bf81018ed6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Syslog servers: centralized log collection point"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6b195d52-522f-4a93-a11a-50e842603565",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Packet capture: raw traffic recording for deep analysis"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c950b899-5822-492f-adf1-2244408250f2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data protection tooling: "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DLP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Data Loss Prevention, blocks sensitive data from leaving where it shouldn't), encryption platforms, backup systems, key management systems, rights management tools."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "052932ef-2769-47c7-a3bf-c336d8ea811a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "No single tool in this list is sufficient on its own; a firewall without endpoint, identity, logging, and data controls behind it leaves plenty of gaps."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "24ff88b4-12ef-4ab1-a9fe-0ec47149166d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data Types and Classifications"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "236317c3-e93a-4dd3-aa9b-f9fbdca0cb77",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data types: regulated (governed by external law/statute), trade secret (an org's own confidential formulas/processes), intellectual property (may be publicly visible but protected by copyright/trademark), legal (court records, attorney materials, often bundled with PII), financial (internal financials, customer payment/bank data), human-readable versus non-human-readable (encoded data, barcodes, images) versus hybrid formats (CSV, XML, JSON)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ce65739f-4497-47c7-99a6-08bc7ad11b75",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PII"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Personally Identifiable Information): anything that identifies a specific person (name, date of birth, mother's maiden name, biometrics)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2ba1d9a8-4268-4b46-b6c9-a069986bc708",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PHI"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Protected Health Information): health status, care records, and payments for care tied to an individual."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "01aa223d-6272-4013-8cd4-04837d7bd545",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Not all data needs the same handling: higher-sensitivity data gets extra permissions, a different review process, and restricted network access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Level"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Meaning"
+              }
+            ]
+          ],
+          "id": "10663782-b6bf-4f48-bae8-f646f78b3050",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Sensitive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "IP, PII, PHI"
+              }
+            ]
+          ],
+          "id": "dd71b6ae-5c03-467e-898f-2538ff2a53c3",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Confidential"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Very sensitive, requires approval to view"
+              }
+            ]
+          ],
+          "id": "982019f1-7262-4287-a59d-42b95c23e594",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Public/unclassified"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "No viewing restrictions"
+              }
+            ]
+          ],
+          "id": "fc0710fc-82d5-48c0-bdb8-5db46997776f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Private/classified/restricted"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Restricted access, may require an NDA"
+              }
+            ]
+          ],
+          "id": "12cf97e4-b6e7-4702-aaea-c6691d03b101",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Critical"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Must always be available"
+              }
+            ]
+          ],
+          "id": "ebabf6f3-cee0-41ba-b059-de5c98011fcb",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "c76ef891-27c3-4037-9617-46fd35c13a5a",
+      "type": "table"
+    },
+    {
+      "id": "343ce0f2-43c4-4271-aa2d-f06c4c465c1e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "States of Data"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b7710194-fcc1-4298-a74d-3f6ddd259330",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data at rest: sitting on a storage device (HDD, SSD, flash). Protect with whole-disk, database-level, or file/folder-level encryption, plus access control lists so only authorized accounts reach it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0e692f17-37c4-4ab4-be1b-a46263375240",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data in transit (in motion): moving across the network through switches/routers/devices outside the owner's control, so it gets little protection by default unless it's actively encrypted. Covered by transport encryption ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "TLS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IPsec"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") plus network-based controls (firewall, IPS)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5441f63a-55c6-4d13-9e44-202fe1649baa",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data in use: actively being processed in memory (system RAM, CPU registers/cache), almost always decrypted at that point since the system needs to work with it. Prime target: an attacker with memory access can pull plaintext straight out of RAM. Target Corp's 2013 breach (110 million cards) is the textbook case: data-at-rest and data-in-transit encryption were both in place, but attackers scraped card numbers straight out of point-of-sale RAM before encryption ever applied."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "18e2242a-bd86-4a1f-b969-38f26a978f4b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data sovereignty: data is subject to the laws of whatever country it physically resides in (legal monitoring, court orders, etc). "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "GDPR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " requires EU citizens' data to stay stored within the EU, one example of compliance dictating where data can even live."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4c879cdc-2ee8-4bbe-97e1-cfcc87942c32",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Geolocation: pinpoints where a device/user actually is, via 802.11 wireless positioning, mobile carrier data, or GPS, with accuracy roughly increasing in that order."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "151508d8-d904-4858-b48e-f338cec3f6f7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Geofencing: automatically allows or restricts access based on physical location (e.g. an app that only runs near the office); also used to grant enhanced admin access inside a secure area and restrict it everywhere else."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0c3ba452-250e-41a7-a126-dae438136a2e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Protecting Data"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f61353ff-4f5c-4537-bf6a-e3238bd096c7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hashing: represents data as a short fixed-length string (message digest, fingerprint). One-way, can't be reversed to the original message. Used to store passwords and to verify a downloaded file matches the original (integrity check). A good hash function shouldn't produce the same digest for two different inputs (collision)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2078bde5-ecf8-432b-ad5e-fb14676a66d3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Obfuscation: takes readable code/data and turns it into something unreadable to a human while it still functions identically. Makes finding security holes by reading the source harder, not impossible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a8ad1a74-1ab7-487d-8566-f7a3acec2f93",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Masking: a type of obfuscation, hides part of the original data from view (protects PII) while the underlying data often stays intact in storage; access to the unmasked version is gated by permissions. Techniques include substituting, shuffling, encrypting, or masking out characters."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "97360f3f-7a3d-4156-8666-35a4a972bffc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Tokenization: swaps sensitive data for a non-sensitive placeholder token (e.g. a card number tokenized to an unrelated string), common in card payment processing. Not encryption or hashing, since the token and original data aren't mathematically related; an attacker who captures the token can't reverse it to the real value, and there's no crypto overhead."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "166a0987-251b-4e31-b695-77bc235e29f3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Segmentation (for data protection): don't keep everything in one giant data store, since a single breach then exposes all of it at once. Spread data across separate stores, and give the most sensitive data the strongest protection."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b3485936-6d59-4416-be1c-2385ff830d2e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Permission restrictions: access control is more than username/password, it's password policy, authentication factor policy, and what happens after login (what the account can actually touch once authenticated), all working together as layered defense."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a5571619-6147-4475-8c99-b05b84367d03",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IAM Concepts"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "7ce5c61f-b379-45c8-bbac-913737b6a2b7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IAM (Identity and Access Management): the processes/tech for managing who identities are and what they can touch. Boils down to two questions: who is this, and what should they be allowed to access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b2a0fbf2-635d-42fe-9b83-e79d22fb1401",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "AAA model:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "6174c3de-d0f8-4f41-863f-b5d08870f836",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Authentication: proves identity (password + MFA at login)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a2426e93-b64f-4e73-9030-6a4d48308185",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Authorization: decides what that identity can reach (e.g. finance folder only)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8d5423f3-6521-4e4b-a3c3-f937d10cb779",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Accounting: logs what actually happened, for audit and investigation trails"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d01e79e6-e3c0-4738-9092-b288f4ccb930",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Authentication Methods"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f9724d49-b28b-4409-97c7-b0b821205002",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Factor categories:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "45ad575a-55c1-483f-8385-c6331cc34717",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Something you know: password, PIN"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "edda4043-193a-42c2-b065-62e1a2fe9eea",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Something you have: hardware token, smart card, authenticator app"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a4d8cb48-721e-4136-85b0-207f05f5f42f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Something you are: biometric (fingerprint, face, etc.)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5a1624be-9006-4da4-8274-32849d084938",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Somewhere you are: location-based check"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5657a5d2-4e32-408e-93d2-9766e8b26255",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Something you do: behavioral pattern"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a34a4fec-6e4c-489f-bbe3-595edc68dd54",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MFA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": combines two or more different factor categories (not two passwords, that's still one category). Cuts risk sharply if a password alone leaks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0acf6a37-56df-40f3-b0eb-90c85e3b177d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Examples: password + authenticator app, smart card + PIN, password + biometric."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "99501df4-1a7a-4d9f-9311-a8b70f5365f5",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Access Control Models"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Model"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "How access is decided"
+              }
+            ]
+          ],
+          "id": "dd78a8ef-d347-4f05-98c6-73cd29c5177a",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "DAC"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Discretionary)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Resource owner grants access at their discretion"
+              }
+            ]
+          ],
+          "id": "cf182251-da4c-4dc5-96fb-c6b60fd14629",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MAC"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Mandatory)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access tied to classification labels, enforced system-wide, owner doesn't decide"
+              }
+            ]
+          ],
+          "id": "48efea7e-8511-45a6-95b1-1f58d528f1e6",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "RBAC"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Role-Based)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access follows job role/title"
+              }
+            ]
+          ],
+          "id": "9a96ae14-5d72-4a8d-a22a-4124c1a205dc",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "ABAC"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Attribute-Based)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access evaluated against attributes: user, device, time, location, risk score"
+              }
+            ]
+          ],
+          "id": "7a479512-db8b-4702-b2de-fc669f3339fc",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Rule-Based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access governed by predefined rule logic"
+              }
+            ]
+          ],
+          "id": "39388f2f-653c-4b41-9384-8302fa51450d",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "600cf6a7-a1e0-4e72-ae2c-85b2d86e2172",
+      "type": "table"
+    },
+    {
+      "id": "b9204a45-1489-4db8-ad47-30487c512776",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity Lifecycle & Privileged Access"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "33a0c10d-b2d8-4e31-aaee-c8cb972cb63d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity lifecycle, roughly in order:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c2daf7e1-eecb-4ed0-81d8-7f26d76782fe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Provision the account once access is approved"
+        }
+      ],
+      "type": "numbered_list_item"
+    },
+    {
+      "id": "73ed06fd-bc4f-40ac-85e5-b8404ca7485d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Grant least-privilege access from day one"
+        }
+      ],
+      "type": "numbered_list_item"
+    },
+    {
+      "id": "62c428d7-78ef-488d-a0e3-952a59e1650b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Periodically review what access still makes sense"
+        }
+      ],
+      "type": "numbered_list_item"
+    },
+    {
+      "id": "40d74038-2348-48af-8cf1-e57c18593d21",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Adjust access when the role changes"
+        }
+      ],
+      "type": "numbered_list_item"
+    },
+    {
+      "id": "c2758150-db1c-46a9-a734-9e5215a7b14d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Deprovision promptly on offboarding"
+        }
+      ],
+      "type": "numbered_list_item"
+    },
+    {
+      "id": "32c65b08-12e1-4615-9c3d-546beb60cb27",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PAM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Privileged Access Management): extra scrutiny and controls specifically for high-privilege accounts, since these are the ones attackers want most. Expect MFA enforcement, heavier logging, approval workflows before elevation, session recording on sensitive actions, and time-boxed (just-in-time) access rather than standing privilege."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fac5a2be-e078-4a7e-b102-593f76317d48",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity is one of the highest-value targets in real attacks; compromised credentials show up constantly as the initial foothold, which is why account protection gets so much weight in the domain."
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-08-19",
+  "id": "3c1042e6-0b87-817d-b371-d654b1b8715c",
+  "properties": {
+    "Name": "SY701 Notes - 3. Security Architecture",
+    "Source": "Prof. Messor",
+    "Status": true,
+    "Tags": [
+      "Sec+"
+    ],
+    "Type": "Notes",
+    "URL": null
+  },
+  "slug": "sy701-notes-3-security-architecture",
+  "tags": [
+    "Sec+"
+  ],
+  "title": "SY701 Notes - 3. Security Architecture"
+}

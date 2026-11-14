@@ -1,0 +1,223 @@
+{
+  "blocks": [
+    {
+      "id": "12dcfd57-b38b-4195-b3bf-c9c9a8033c51",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "dd517c88-5062-45b4-84e9-d49b9cfccf5f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a file called "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "\"--spaces in this filename--\""
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " located in the home directory."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "92e23122-a870-4217-a1ae-ab9b388612f8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4ecea9d5-a248-4ede-a442-75736642a9d0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit2@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Similar to the last level, the filename in the home directory has dashes and spaces in it. Catting the filename as-is fails for two reasons: the leading dashes get read as the start of a parameter (as in "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat --help"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), and the spaces split the name into what looks like several separate files (as in "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat file1 file2"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "). We use a relative path with the filename in quotes so the whole thing is treated as a single argument. Escaping each space ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "\\ "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " instead of a literal space) works the same way."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "f5b35519-f8d8-4abb-a327-e4c0b5fa6f2d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "This is the second level in a row built around filenames that fight the shell's own parsing rules. Tecmint's writeup on "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "https://www.tecmint.com/manage-linux-filenames-with-special-characters/",
+          "italic": false,
+          "plainText": "handling filenames with spaces and special characters"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " covers quoting and escaping options beyond the ones used here."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "91a667b4-5e75-4264-8432-407190d1ecb2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-8099-a8fb-ddccd91281a9",
+      "type": "image",
+      "url": "/notion-media/803751098f55fd11.png"
+    },
+    {
+      "id": "402042e6-0b87-8021-b975-ea48e8ac361a",
+      "type": "image",
+      "url": "/notion-media/e08b39bd2f1a8d77.png"
+    },
+    {
+      "id": "0aa7f8e6-86a8-422a-be9a-242f830fd612",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "8625d671-b015-4e5a-bb21-ed6d84e018ff",
+      "richText": [],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81e2-a752-e95d71a79621",
+  "properties": {
+    "Name": "Level 2 \u2192 Level 3",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-2-level-3",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 2 \u2192 Level 3"
+}

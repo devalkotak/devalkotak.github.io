@@ -1,0 +1,294 @@
+{
+  "blocks": [
+    {
+      "id": "f17b83a7-2156-44e3-a09b-8d17b28f0619",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a17b12b7-cb66-4eae-ba9c-394169909bb5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in the file "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", which is a "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "hexdump of a file that has been repeatedly compressed"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". It may be useful to create a directory under "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/tmp"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to work in, e.g. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "mkdir /tmp/myname123"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "02c33cf6-1ebf-462f-aaef-6b509bd03e49",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "9bbc521a-a6a0-4613-8896-ba59a695c176",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit12@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " isn't a compressed file itself \u2014 it's a hex dump (a text representation) of one, so we can't just "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "gzip -d"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it directly. We work in a scratch directory under "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/tmp"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " since the home directory here isn't writable enough for this much back-and-forth, and other bandit users could read anything we leave in a shared world-readable spot otherwise. We copy "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data.txt"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in, then use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "xxd -r"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to reverse the hex dump back into real binary data. From there we run "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "file"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on the result to identify what kind of archive it actually is, apply the matching decompression tool, and repeat \u2014 each round of decompression just reveals another layer of compression underneath, until "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "file"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " finally reports plain ASCII text."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c30ada29-09b1-4ec7-bda3-7787b0cd4185",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-8008-8e7f-e6c0a5785346",
+      "type": "image",
+      "url": "/notion-media/a46d8ede2abe6b46.png"
+    },
+    {
+      "id": "402042e6-0b87-8004-ab11-ffe437a0d8b7",
+      "type": "image",
+      "url": "/notion-media/7bf814db79f11673.png"
+    },
+    {
+      "id": "402042e6-0b87-80b5-ab65-f48e55690e69",
+      "type": "image",
+      "url": "/notion-media/f1b8ac7894bfd7f1.png"
+    },
+    {
+      "id": "bcec2605-a2bc-4e80-9f90-e38fb0615be1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "qQYQiHOBPR8zR61qxYqX45quvihF2uzk"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-813e-b1a1-f4ba3e43d44e",
+  "properties": {
+    "Name": "Level 12 \u2192 Level 13",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-12-level-13",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 12 \u2192 Level 13"
+}

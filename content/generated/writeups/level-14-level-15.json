@@ -1,0 +1,254 @@
+{
+  "blocks": [
+    {
+      "id": "e1e390ec-f51c-4575-bf2d-0c3e7b971108",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "234b6244-3e81-4634-85b6-b78093d9d2ac",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level can be retrieved by "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "submitting the password of the current level to port "
+        },
+        {
+          "bold": true,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "30000"
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": "http://localhost/",
+          "italic": false,
+          "plainText": "localhost"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "ab489e52-5017-4be2-8ed5-1ad89098fe77",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "121c23db-86e9-40fa-88b1-813a32d62914",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit14@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Port "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "30000"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " isn't SSH - it's a plain TCP service running locally on the same box, so we reach it with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "nc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (netcat) instead of "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". We connect, then send the current level's password (read straight out of "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/etc/bandit_pass/bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", which we can read now that we're logged in as "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit14"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") as the only line of input. The service reads that line, checks it, and if it matches, writes back the password for "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit15"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "25e2aec5-7c59-4343-ab90-7af5fd5275ac",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-80fc-ae4d-cad78d74ba49",
+      "type": "image",
+      "url": "/notion-media/81f7d69ba167f1e2.png"
+    },
+    {
+      "id": "402042e6-0b87-80c5-81d8-eb59ba681847",
+      "type": "image",
+      "url": "/notion-media/83d13291862d6d50.png"
+    },
+    {
+      "id": "b9f6f18c-5b61-4715-9239-6bd8e77addff",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-8156-8a8f-fe176623e81e",
+  "properties": {
+    "Name": "Level 14 \u2192 Level 15",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-14-level-15",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 14 \u2192 Level 15"
+}

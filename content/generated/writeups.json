@@ -1,13 +1,135 @@
 {
   "error": null,
-  "generatedAt": "2026-08-03T18:36:16Z",
+  "generatedAt": "2026-11-14T17:00:13Z",
   "writeups": [
     {
-      "category": "Bandit",
-      "date": "2026-04-12",
-      "id": "340042e6-0b87-80c4-8767-ffa2f598961e",
+      "category": "Notes",
+      "date": "2026-09-24",
+      "id": "3e5042e6-0b87-81ea-a6ae-dd42cc8bd043",
       "properties": {
-        "Name": "Bandit",
+        "Name": "XSS Notes",
+        "Source": "Portswigger",
+        "Status": true,
+        "Tags": [
+          "XSS",
+          "WSA"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "xss-notes",
+      "tags": [
+        "XSS",
+        "WSA"
+      ],
+      "title": "XSS Notes"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-08-19",
+      "id": "3c1042e6-0b87-8195-a8a5-e6e67c819a17",
+      "properties": {
+        "Name": "SY701 Notes - 5. Security Program Management & Oversight",
+        "Source": "Prof. Messor",
+        "Status": true,
+        "Tags": [
+          "Sec+"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "sy701-notes-5-security-program-management-oversight",
+      "tags": [
+        "Sec+"
+      ],
+      "title": "SY701 Notes - 5. Security Program Management & Oversight"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-08-19",
+      "id": "3c1042e6-0b87-81b3-b63d-f31b35a5ca89",
+      "properties": {
+        "Name": "SY701 Notes - 4. Security Operations",
+        "Source": "Prof. Messor",
+        "Status": true,
+        "Tags": [
+          "Sec+"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "sy701-notes-4-security-operations",
+      "tags": [
+        "Sec+"
+      ],
+      "title": "SY701 Notes - 4. Security Operations"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-08-19",
+      "id": "3c1042e6-0b87-817d-b371-d654b1b8715c",
+      "properties": {
+        "Name": "SY701 Notes - 3. Security Architecture",
+        "Source": "Prof. Messor",
+        "Status": true,
+        "Tags": [
+          "Sec+"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "sy701-notes-3-security-architecture",
+      "tags": [
+        "Sec+"
+      ],
+      "title": "SY701 Notes - 3. Security Architecture"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-08-19",
+      "id": "3c1042e6-0b87-8159-8af4-da0ebca3052e",
+      "properties": {
+        "Name": "SY701 Notes - 2. Threats, Vulnerabilities & Mitigations",
+        "Source": "Prof. Messor",
+        "Status": true,
+        "Tags": [
+          "Sec+"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "sy701-notes-2-threats-vulnerabilities-mitigations",
+      "tags": [
+        "Sec+"
+      ],
+      "title": "SY701 Notes - 2. Threats, Vulnerabilities & Mitigations"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-08-19",
+      "id": "3c1042e6-0b87-81e0-9a89-d2a503dea394",
+      "properties": {
+        "Name": "SY701 Notes - 1. General Security Concepts",
+        "Source": "Prof. Messor",
+        "Status": true,
+        "Tags": [
+          "Sec+"
+        ],
+        "Type": "Notes",
+        "URL": null
+      },
+      "slug": "sy701-notes-1-general-security-concepts",
+      "tags": [
+        "Sec+"
+      ],
+      "title": "SY701 Notes - 1. General Security Concepts"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8101-8071-c941e2642433",
+      "properties": {
+        "Name": "Level 21 \u2192 Level 22",
         "Source": "OverTheWire",
         "Status": true,
         "Tags": [
@@ -16,51 +138,491 @@
         "Type": "Bandit",
         "URL": null
       },
-      "slug": "bandit",
+      "slug": "level-21-level-22",
       "tags": [
         "Linux"
       ],
-      "title": "Bandit"
+      "title": "Level 21 \u2192 Level 22"
     },
     {
-      "category": "Apprentice",
-      "date": "2026-04-09",
-      "id": "33d042e6-0b87-80bc-b265-deb5de247fae",
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-810b-b48e-e8f7f827abf7",
       "properties": {
-        "Name": "SQLi - 2",
-        "Source": "Portswigger",
+        "Name": "Level 9 \u2192 Level 10",
+        "Source": "OverTheWire",
         "Status": true,
         "Tags": [
-          "SQLi"
+          "Linux"
         ],
-        "Type": "Apprentice",
+        "Type": "Bandit",
         "URL": null
       },
-      "slug": "sqli-2",
+      "slug": "level-9-level-10",
       "tags": [
-        "SQLi"
+        "Linux"
       ],
-      "title": "SQLi - 2"
+      "title": "Level 9 \u2192 Level 10"
     },
     {
-      "category": "Apprentice",
-      "date": "2026-03-17",
-      "id": "326042e6-0b87-804d-a5dd-cc7e5d0b1163",
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8115-b26f-dd9368966435",
       "properties": {
-        "Name": "SQLi - 1",
+        "Name": "Level 1 \u2192 Level 2",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-1-level-2",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 1 \u2192 Level 2"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-812d-9cff-d548a050be89",
+      "properties": {
+        "Name": "Level 8 \u2192 Level 9",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-8-level-9",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 8 \u2192 Level 9"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-812d-ac1c-d440dab74784",
+      "properties": {
+        "Name": "Level 19 \u2192 Level 20",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-19-level-20",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 19 \u2192 Level 20"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8134-9668-e5a1e62d764f",
+      "properties": {
+        "Name": "Level 10 \u2192 Level 11",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-10-level-11",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 10 \u2192 Level 11"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-813a-aea0-f585531d22c2",
+      "properties": {
+        "Name": "Level 11 \u2192 Level 12",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-11-level-12",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 11 \u2192 Level 12"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-813b-83e5-d09b59230bd2",
+      "properties": {
+        "Name": "Level 18 \u2192 Level 19",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-18-level-19",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 18 \u2192 Level 19"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-813e-b1a1-f4ba3e43d44e",
+      "properties": {
+        "Name": "Level 12 \u2192 Level 13",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-12-level-13",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 12 \u2192 Level 13"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8154-936d-d6cf565ff7b8",
+      "properties": {
+        "Name": "Level 22 \u2192 Level 23",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-22-level-23",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 22 \u2192 Level 23"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8156-8a8f-fe176623e81e",
+      "properties": {
+        "Name": "Level 14 \u2192 Level 15",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-14-level-15",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 14 \u2192 Level 15"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-815f-a718-d7ed83f10026",
+      "properties": {
+        "Name": "Level 7 \u2192 Level 8",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-7-level-8",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 7 \u2192 Level 8"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-8176-9a48-ed6a1a8905fc",
+      "properties": {
+        "Name": "Level 4 \u2192 Level 5",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-4-level-5",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 4 \u2192 Level 5"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-817e-aa2a-e3860cef2a44",
+      "properties": {
+        "Name": "Level 13 \u2192 Level 14",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-13-level-14",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 13 \u2192 Level 14"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-818e-a356-db2daf7665a1",
+      "properties": {
+        "Name": "Level 20 \u2192 Level 21",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-20-level-21",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 20 \u2192 Level 21"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-819c-a08c-fe8c3175c7d3",
+      "properties": {
+        "Name": "Level 3 \u2192 Level 4",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-3-level-4",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 3 \u2192 Level 4"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81b4-b80e-fb03655f3eae",
+      "properties": {
+        "Name": "Level 5 \u2192 Level 6",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-5-level-6",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 5 \u2192 Level 6"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81c2-b1e8-e7afb7f1c002",
+      "properties": {
+        "Name": "Level 6 \u2192 Level 7",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-6-level-7",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 6 \u2192 Level 7"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81e2-a752-e95d71a79621",
+      "properties": {
+        "Name": "Level 2 \u2192 Level 3",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-2-level-3",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 2 \u2192 Level 3"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81f0-b2fb-d4907369ead2",
+      "properties": {
+        "Name": "Level 17 \u2192 Level 18",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-17-level-18",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 17 \u2192 Level 18"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81fc-9c79-c5961bfb73ec",
+      "properties": {
+        "Name": "Level 0 \u2192 Level 1",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-0-level-1",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 0 \u2192 Level 1"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81fd-9487-ea990014012c",
+      "properties": {
+        "Name": "Level 16 \u2192 Level 17",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-16-level-17",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 16 \u2192 Level 17"
+    },
+    {
+      "category": "Bandit",
+      "date": "2026-08-11",
+      "id": "3b9042e6-0b87-81ff-aa2c-e3c2ac82fb28",
+      "properties": {
+        "Name": "Level 15 \u2192 Level 16",
+        "Source": "OverTheWire",
+        "Status": true,
+        "Tags": [
+          "Linux"
+        ],
+        "Type": "Bandit",
+        "URL": null
+      },
+      "slug": "level-15-level-16",
+      "tags": [
+        "Linux"
+      ],
+      "title": "Level 15 \u2192 Level 16"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-04-09",
+      "id": "33d042e6-0b87-8072-9207-e0ef97209f04",
+      "properties": {
+        "Name": "Authentication Vulnerabilties Notes",
+        "Source": "WebSec Academy",
+        "Status": true,
+        "Tags": [
+          "WSA"
+        ],
+        "Type": "Notes",
+        "URL": "https://www.youtube.com/watch?v=mox6DL4zK7I"
+      },
+      "slug": "authentication-vulnerabilties-notes",
+      "tags": [
+        "WSA"
+      ],
+      "title": "Authentication Vulnerabilties Notes"
+    },
+    {
+      "category": "Notes",
+      "date": "2026-04-09",
+      "id": "33d042e6-0b87-809e-b373-ceabbcb7253f",
+      "properties": {
+        "Name": "SQLi Notes",
         "Source": "Portswigger",
         "Status": true,
         "Tags": [
-          "SQLi"
+          "WSA"
         ],
-        "Type": "Apprentice",
-        "URL": "https://portswigger.net/web-security/sql-injection/lab-retrieve-hidden-data"
+        "Type": "Notes",
+        "URL": null
       },
-      "slug": "sqli-1",
+      "slug": "sqli-notes",
       "tags": [
-        "SQLi"
+        "WSA"
       ],
-      "title": "SQLi - 1"
+      "title": "SQLi Notes"
     }
   ]
 }

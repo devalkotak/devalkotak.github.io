@@ -1,0 +1,1794 @@
+{
+  "blocks": [
+    {
+      "id": "33d042e6-0b87-808e-a92e-cbc1069d27e0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Source: Rana Khalil \u2014 Authentication Vulnerabilities | Complete Guide (Web Security Academy Series). Built from the video's actual narration (YouTube auto-captions via yt-dlp, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "android"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " player client), not just the slide deck."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-802c-8e4f-c654da5fdbfd",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Authentication is the mechanism used to identify a user and confirm they are who they say they are. Example: Alice logs into her account \u2014 the application needs a way to verify her identity before showing her data, and does that with form-based authentication, asking for a username and password. If they're correct, Alice gets her information. That's authentication in a nutshell: the ability to verify a user's identity."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "33d042e6-0b87-8071-9410-d1b54b186428",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "HTML form-based authentication is what most websites use today, but it isn't the only mechanism \u2014 multi-factor authentication (MFA) and Windows-integrated authentication using NTLM or Kerberos also exist (the latter mostly seen on internal/intranet networks, so users aren't repeatedly logging into internal apps). This topic focuses on the first two: form-based auth and MFA."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "33d042e6-0b87-806c-b86c-dc145db0f7e6",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "What is Authentication?"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-806b-81ca-e0c8c0283489",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Authentication vulnerabilities arise from an insecure implementation of an application's authentication mechanisms \u2014 the result of a design flaw, a business logic flaw, or a configuration flaw. There's no clean exhaustive list of every possible authentication vulnerability, so the useful approach is knowing the most common patterns seen in real-world applications."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "33d042e6-0b87-8018-b220-ff7f041319f3",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "What is an Authentication Vulnerability?"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-80bb-a1f1-c50766ca50c3",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Weak Password Requirements"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "33d042e6-0b87-8005-a96a-d229d33bcfa8",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Little or no control over password quality/complexity \u2014 applications that allow very short or blank passwords, dictionary words or names, or a password identical to the username. All of this makes brute-forcing or guessing the password (and getting unauthenticated access to the account) easier."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "33d042e6-0b87-8042-91d9-e27e6418dd28",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "A related pattern: shipping off-the-shelf software with default credentials still intact. On a pen test, checking a piece of off-the-shelf software's documentation for its default credentials and trying them works roughly half the time \u2014 and those defaults are usually tied to a high-privilege account like an administrator."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "33d042e6-0b87-809d-ab0c-ce9af9fb6de9",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Consumer Authentication Strength Maturity Model (CASMM)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " is a useful mental model for where a user sits on the authentication-strength spectrum, and what that leaves them vulnerable to:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "33d042e6-0b87-808b-b261-fa24feb1ab8f",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level 1 \u2014 Shared Passwords"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": same password reused across multiple sites (the majority of internet users). Vulnerable to "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "credential stuffing"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 breaches leak millions of passwords daily, and an attacker who compromises your Gmail password will simply try it against Netflix, your bank, and everywhere else. One breach compromises every account sharing that password."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80cd-bbcf-e3ed17a8e486",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level 2 \u2014 Unique Passwords"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ": unique per site, but too short, simple, or built from personal information. Vulnerable to live password guessing."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80cb-a372-e22d995a538b",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Higher levels move through quality passwords, password managers, SMS 2FA, app-based 2FA codes, app-based codeless 2FA, up to "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Level 8 \u2014 Passwordless"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (WebAuthn/FIDO2, hardware tokens, or a device's built-in trust center), which is only vulnerable to physical hardware compromise \u2014 genuinely difficult since it requires physical access to the user's device."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "34c33001-e02e-401e-a393-890da920e08d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Bare minimum for being secure today: Level 5 or 6 and up \u2014 meaning MFA has to be enabled. Single-factor authentication alone is no longer defensible given how routinely credentials leak."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "fb6ee0f9-9c69-42e9-9fe6-35c4dc8dcb6d",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Improper Restriction of Authentication Attempts"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "d8e579f3-e842-4682-988a-cb00a94ef66e",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The application permits brute-force or other automated attacks against an authentication mechanism \u2014 the login page, the OTP/MFA page, or the change-password page. Login pages usually get "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "some"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " rate-limiting; OTP, MFA, and change-password pages routinely don't. Every authentication mechanism needs brute-force protection, not just the login form."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "baa83448-39b5-46a6-bd3c-cdc1011b2675",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Verbose Error Messages"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "d79c0ee5-af58-4c2c-87cc-8c97f5478385",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The login functionality returns a different error for a bad username (\"Sign in failed. Incorrect username.\") versus a bad password (\"Sign in failed. Incorrect password.\"). That difference lets an attacker enumerate the list of valid usernames in the application, which is the first step toward a targeted credential-stuffing or brute-force attack."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "70e37ea2-6ca1-4fe6-b876-4916120dcacb",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Vulnerable Transmission of Credentials"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "cadf78bd-43ab-4b8c-95cc-51f7c5abe7ff",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Credentials or cookies sent over an unencrypted channel (HTTP) \u2014 anyone on the same network can intercept and read them in plaintext. Demonstrated against OWASP Juice Shop: intercepting traffic over HTTP showed the username and password in clear text in Wireshark; the same login over HTTPS showed only encrypted gibberish. All authentication traffic needs to run over HTTPS."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "1f7f4163-52ae-43e6-b943-121ee1ee7766",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Insecure Forgot Password Functionality"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "4f45f5cd-7fdc-4928-b17b-5031164223a5",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Design weaknesses in password-reset flows are usually the weakest link in an application's overall authentication logic. Example: a secret question like \"What street did you live on in Sierra Vista?\" \u2014 insecure for two reasons: the pool of valid street names is finite (guessable by brute force), and a bit of OSINT (open-source intelligence) against the user's social media accounts can often find the real answer outright. Compromising the account through the forgot-password flow ends up easier than compromising the password directly on the login page \u2014 which is exactly why every authentication mechanism, not just the login page, needs testing."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "96b15124-137c-4256-9a35-9b68c3269607",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Defects in Multistage Login Mechanism"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "f7f9c49d-024f-46d4-a9c8-3660c402d5d6",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "A business logic flaw in how multi-stage/multi-factor login is implemented. Example flow:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "f5ce18d7-a02c-42ca-ba21-1ece773ccd9d",
+          "language": "javascript",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Request 1: POST /login-steps/first\n  Host: vulnerable-website.com\n  username=carlos&password=qwerty\n\nRequest 2: POST /login-steps/second\n  Host: vulnerable-website.com\n  Cookie: account=carlos\n  verification-code=123456"
+            }
+          ],
+          "type": "code"
+        },
+        {
+          "id": "223cd3f5-556e-4c77-8c12-f60cb08247ea",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "The verification code isn't tied to the user's identity \u2014 instead, the second request's session is tracked purely by an "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "account"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " cookie set to the username. If the code isn't cryptographically bound to that cookie, an attacker can log in with their "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "own"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " self-registered credentials, receive their "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "own"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " valid verification code on their own phone, submit it correctly \u2014 but swap the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "account"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " cookie to the victim's username before sending request 2. The application only checks that "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "a"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " valid code was entered, not that it belongs to the account named in the cookie, so the attacker ends up authenticated as the victim without ever knowing the victim's password or verification code. One mistake in the multi-stage logic can compromise every user on the system."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "43c8f145-18a8-402c-b6bc-0e438d1b13f1",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Insecure Storage of Credentials"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "bca39c66-405c-4ebf-b539-bcf4c744432a",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Both a cryptographic-failure and an authentication vulnerability: storing passwords as plaintext, encrypted, or weakly hashed leaves every user exposed the moment the database leaks. Ranked worst to less-bad:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "e18001cb-8673-427e-8b1c-6b7e15d57425",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Plaintext"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " ("
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "Password1!"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") \u2014 worst case, an attacker with database access reads passwords directly"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "cdc1e71a-9faf-4006-b7b0-04391dcb6265",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Encrypted"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " ("
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "jc2ZRviEVUuLV7Ljc2q7YQ=="
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") \u2014 not obvious to most people why this is wrong, but passwords should never be "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "reversible"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " by anyone, including the application's own administrators or anyone with server access. Encryption is reversible by design; that's the problem."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "99143580-cda3-448d-b128-5efdfe3dfcb5",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Cryptographically weak hash"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (MD5 \u2014 "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "0cef1fb10f60529028a71f58e54ed07b"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") \u2014 MD5 is known to have collisions and is not considered secure for password storage"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "938e8d07-7f09-4f03-be00-95f55b325bc3",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Unsalted strong hash"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (SHA-256 \u2014 "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "1D707811988069CA760826861D6D63A10E8C3B7F171C4441A6472EA58C11711B"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ") \u2014 a cryptographically sound algorithm without a per-user salt is still vulnerable to dictionary/rainbow-table attacks against the whole database at once"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "33d042e6-0b87-8023-a461-ef027a4904e5",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Types of Authentication Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-800b-9402-db93ed1fd4c9",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Authentication vulnerabilities let you compromise a user's account, so by definition all three legs of the CIA triad are affected: Confidentiality (view the account's data), Integrity (update it), Availability (delete the user and their data). Once an authentication bypass is found, the natural next goal is chaining it with another vulnerability to escalate to remote code execution on the underlying server."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "33d042e6-0b87-806d-907e-dacb507a8a57",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "How common/critical?"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " Tracked loosely via the OWASP Top 10 across three revisions:"
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "children": [
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "2013"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "2017"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "2021"
+                  }
+                ]
+              ],
+              "id": "cf96e348-6905-46c8-b930-0daa6ee3e43a",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A1 \u2013 Injection"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A1 \u2013 Injection"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A1 \u2013 Broken Access Control"
+                  }
+                ]
+              ],
+              "id": "1b79d35a-8f7a-49a2-9d71-414a33fc4f1e",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": true,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A2 \u2013 Broken Authentication and Session Management"
+                  }
+                ],
+                [
+                  {
+                    "bold": true,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A2 \u2013 Broken Authentication"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A2 \u2013 Cryptographic Failures"
+                  }
+                ]
+              ],
+              "id": "af47e6ae-2eff-4cfd-bce7-2b2fdb19829a",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A3 \u2013 Cross-Site Scripting (XSS)"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A3 \u2013 Sensitive Data Exposure"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A3 \u2013 Injection"
+                  }
+                ]
+              ],
+              "id": "86b28593-ebaa-49f6-9f02-2c576c84d13d",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A4 \u2013 Insecure Direct Object References"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A4 \u2013 XML External Entities (XXE)"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A4 \u2013 Insecure Design"
+                  }
+                ]
+              ],
+              "id": "70ee02a3-5fef-47a5-9f79-99b62cba02b3",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A5 \u2013 Security Misconfiguration"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A5 \u2013 Broken Access Control"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A5 \u2013 Security Misconfiguration"
+                  }
+                ]
+              ],
+              "id": "a7c2df5b-8068-451a-99d2-346405523204",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A6 \u2013 Sensitive Data Exposure"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A6 \u2013 Security Misconfiguration"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A6 \u2013 Vulnerable and Outdated Components"
+                  }
+                ]
+              ],
+              "id": "44763321-9546-4e2f-969c-185b860f9d48",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A7 \u2013 Missing Function Level Access Control"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A7 \u2013 Cross-Site Scripting (XSS)"
+                  }
+                ],
+                [
+                  {
+                    "bold": true,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A7 \u2013 Identification and Authentication Failures"
+                  }
+                ]
+              ],
+              "id": "ead860a4-a959-4c8b-9f22-12dc10952ffd",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A8 \u2013 Cross-Site Request Forgery (CSRF)"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A8 \u2013 Insecure Deserialization"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A8 \u2013 Software and Data Integrity Failures"
+                  }
+                ]
+              ],
+              "id": "7c984f19-8c18-45ca-9760-e81ab3b95aa9",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A9 \u2013 Using Components with Known Vulnerabilities"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A9 \u2013 Using Components with Known Vulnerabilities"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A9 \u2013 Security Logging and Monitoring Failures"
+                  }
+                ]
+              ],
+              "id": "9c7671b1-a294-4831-9e5c-297e54b1fd89",
+              "type": "table_row"
+            },
+            {
+              "cells": [
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A10 \u2013 Unvalidated Redirects and Forwards"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A10 \u2013 Insufficient Logging & Monitoring"
+                  }
+                ],
+                [
+                  {
+                    "bold": false,
+                    "code": false,
+                    "href": null,
+                    "italic": false,
+                    "plainText": "A10 \u2013 Server-Side Request Forgery (SSRF)"
+                  }
+                ]
+              ],
+              "id": "f8da3ad0-8124-459b-8b07-8c67019dbd87",
+              "type": "table_row"
+            }
+          ],
+          "hasColumnHeader": true,
+          "id": "9041358f-d62b-4be8-9e7a-37a81085543b",
+          "type": "table"
+        },
+        {
+          "id": "08d36f13-685b-4564-bf6a-2c6f686c9139",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Authentication vulnerabilities sat at #2 in both 2013 and 2017, then dropped to #7 in 2021 \u2014 still solidly top 10. The reasoning for taking it seriously regardless of rank: compromising an account gives an attacker a much wider attack surface, since they move from public-only pages to everything an authenticated user can reach \u2014 exactly the springboard toward chaining into RCE mentioned above."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "33d042e6-0b87-8031-8414-d11bc7a767eb",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Impact of Authentication Vulnerabilities Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-807e-9c80-e0f31cc46c9b",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Given an application to test, work through each pattern above systematically. Applies across "
+            },
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "every"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " authentication mechanism in the app \u2014 login, OTP/MFA, change-password, forgot-password \u2014 not just the login page."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "eb323027-c273-420a-a934-48550151f153",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Weak password requirements"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 check the site for any documented password rules; if self-registration exists, try registering a very short/blank password, a common dictionary word or name, and a password identical to the username. Also check the change-password flow separately \u2014 rules enforced on registration are sometimes forgotten there."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "3d8b6034-4900-44e6-9b77-bc4a0bd81602",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Improper restriction of authentication attempts"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 manually submit several bad logins against an account you control. If 10 failed attempts don't trigger a lockout, there's likely no lockout mechanism at all \u2014 confirm with a brute-force tool (Hydra, Burp Intruder). If there "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": true,
+              "plainText": "is"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " a lockout, it isn't automatically secure either: monitor requests/responses while getting locked out to check if the lockout mechanism itself (e.g. cookie-based tracking) can be bypassed."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "3102ec45-8393-48c1-ab9d-7dd208ddf9ae",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Verbose error messages"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 submit a valid username with an invalid password, then an invalid username with an invalid password; compare both responses for differences in status code, redirects, on-screen text, HTML source, or response timing (a tool like Burp Comparer helps). Any difference means usernames can be enumerated \u2014 automate that enumeration next."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "f6c13be0-8685-4a46-9217-4ddaafe3fdc0",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Vulnerable transmission of credentials"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 perform a successful login while capturing all traffic; look for credentials appearing in a URL query string, a cookie, or reflected back to the client. If the app defaults to HTTPS, try forcing HTTP in the URL and see if login still completes \u2014 showing credentials in clear text (a Wireshark capture is enough) is sufficient proof without going further into an actual man-in-the-middle attack."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "bc09b17f-28fe-473f-a967-32805e55b82a",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Insecure forgot password functionality"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 walk through the flow on a controlled account while intercepting everything in a proxy, checking for username enumeration, brute-forceable secret questions, or design flaws. If a reset email contains a recovery URL, collect several and look for predictable patterns or leaked information in the URL, and check whether the URL is long-lived or reusable."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "74fd35fe-473c-405b-ad19-4ad387a9c07c",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Defects in multistage login mechanism"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 same proxy walkthrough approach: identify whether the app has a multi-stage flow, then check whether it allows enumeration, brute-forcing, or a design flaw like the account-cookie/verification-code mismatch above."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "a30192ad-0f92-4b5e-ab2d-bc27db701f94",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Insecure storage of credentials"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 review authentication functionality for any place a password (plaintext or obfuscated) gets sent back to the client, which signals insecure backend storage. If RCE is achieved separately, review the database directly. Absent either, the most reliable real-world method is simply asking the developers how passwords are stored."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "33d042e6-0b87-8063-86d9-d5d0ed1531c3",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How to Find Authentication Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-8069-8262-e5200b38b4bc",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Brute-Forcing Weak or Unrestricted Login Mechanisms"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "33d042e6-0b87-800b-8941-ed22f51e1432",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Once weak passwords or missing rate-limiting are confirmed, run an automated brute-force attack (Hydra, Burp Intruder) against the known valid usernames to enumerate working passwords."
+            }
+          ],
+          "type": "paragraph"
+        },
+        {
+          "id": "e1186a6c-9022-46a4-8b5a-78c5592adb06",
+          "isToggleable": false,
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Exploiting the Multi-Stage Login Cookie Flaw"
+            }
+          ],
+          "type": "heading_3"
+        },
+        {
+          "id": "13c1c9ce-a550-488f-aa01-f085327dd798",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Register your own account, log in with your own username and password, receive your own valid verification code, enter it correctly \u2014 but before submitting, change the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "account"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " cookie from your own username to the target victim's. Because the verification code isn't cryptographically tied to the account cookie, the application authenticates you as the victim without ever needing their password or code."
+            }
+          ],
+          "type": "paragraph"
+        }
+      ],
+      "id": "33d042e6-0b87-8029-8364-cf5c70522743",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How to Exploit Authentication Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-8006-8cc8-fa6cf54304cd",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Application Vulnerability Scanners"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (WAVS) \u2014 Burp Suite, Arachni, Skipfish, Wapiti, Acunetix, w3af, and similar. Good at catching a subset of authentication issues (credentials in a URL, credentials over an unencrypted channel), but they typically miss vulnerabilities rooted in design or business logic flaws \u2014 hands-on testing is still required to cover those."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80b1-a02f-f436b348ecdb",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Application Security Testing Guide (WSTG)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " \u2014 Section 4.4, Authentication Testing: a comprehensive step-by-step methodology worth checking during any pen test to avoid missing coverage."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "33d042e6-0b87-807c-be42-dc65f9584a47",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automated Exploitation Tools"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-804a-86a9-c4633c9c1102",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Implement multi-factor authentication wherever possible."
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " Password breaches happen constantly and millions of credentials leak daily \u2014 single-factor authentication alone is no longer sufficient anywhere."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-8018-97a2-c310c8ad99ed",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Change all default credentials"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " before deploying any off-the-shelf software, in both non-prod and prod environments."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80ea-971a-faeea4322531",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Always use an encrypted channel (HTTPS)"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " when transmitting credentials \u2014 the Juice Shop Wireshark comparison above is the concrete illustration of why."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80c3-9cdb-c9fe9ca2f1bb",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Only use POST requests to transmit credentials."
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " GET requests expose credentials in the URL, which means shoulder-surfing risk and credentials ending up logged in server/proxy logs."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80fd-ade8-ecc32b48ed6e",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Hash and salt stored credentials"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " using cryptographically secure algorithms \u2014 hashing is one-way (computationally infeasible to reverse), and salting defeats rainbow-table attacks."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80a9-867e-d1dad2f5c355",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Use identical, generic error messages"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " on login failures regardless of whether the username or password was wrong, to prevent username enumeration."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-8028-9a0c-d7ee82e811ba",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Implement an effective password policy"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " compliant with NIST 800-63B \u2014 consider a real-time strength checker (e.g. the "
+            },
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "zxcvbn"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " JavaScript library) so users get feedback and are more likely to choose a strong password."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "cb0333bc-5ff4-4a74-b992-9e4fe0ab7f3d",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Implement robust brute-force protection on every authentication page"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": ", not just login \u2014 ideally at both the application layer and the WAF layer."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "4378d0e1-c86b-4f59-907b-1298183ccaa6",
+          "richText": [
+            {
+              "bold": true,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Audit and verify all authentication logic thoroughly"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " to catch the kind of design/business-logic flaws (like the multi-stage cookie issue above) that scanners routinely miss."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "33d042e6-0b87-8044-a43a-ce15a63513e7",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "How to Prevent Authentication Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "id": "33d042e6-0b87-80e2-bc94-ec2a7fc9a139",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Security Academy \u2013 Authentication Vulnerabilities \u2014 https://portswigger.net/web-security/authentication"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-8025-ab63-fdab53519d2d",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Web Application Hacker's Handbook \u2014 Chapter 6 (Attacking Authentication)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-8086-af66-f5bc9e831902",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP Web Security Testing Guide \u2013 Authentication Testing (Section 4.4) \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README",
+              "italic": false,
+              "plainText": "https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-80c3-a56b-c0e7f535fe22",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP Top 10 \u2013 A07:2021 Identification and Authentication Failures \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/",
+              "italic": false,
+              "plainText": "https://owasp.org/Top10/A07_2021-Identification_and_Authentication_Failures/"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "33d042e6-0b87-802c-9a5b-c482c113fb58",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "OWASP Application Security Verification Standard (ASVS) \u2013 Chapter 2, Authentication Verification Requirements \u2014 "
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": "https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf",
+              "italic": false,
+              "plainText": "https://owasp.org/www-pdf-archive/OWASP_Application_Security_Verification_Standard_4.0-en.pdf"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "33d042e6-0b87-80b5-b381-c2275d7e4499",
+      "isToggleable": true,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Resources"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-04-09",
+  "id": "33d042e6-0b87-8072-9207-e0ef97209f04",
+  "properties": {
+    "Name": "Authentication Vulnerabilties Notes",
+    "Source": "WebSec Academy",
+    "Status": true,
+    "Tags": [
+      "WSA"
+    ],
+    "Type": "Notes",
+    "URL": "https://www.youtube.com/watch?v=mox6DL4zK7I"
+  },
+  "slug": "authentication-vulnerabilties-notes",
+  "tags": [
+    "WSA"
+  ],
+  "title": "Authentication Vulnerabilties Notes"
+}

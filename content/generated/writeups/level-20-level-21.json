@@ -1,0 +1,299 @@
+{
+  "blocks": [
+    {
+      "id": "4c7b90cc-b98b-44b8-bfa5-84b6eec4217f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f083a4d0-7040-48fa-9079-2d43498e34dc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "There's a setuid binary "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "suconnect"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in the home directory. It connects to "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "localhost"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on whatever port we pass it as an argument, reads a line of text from that connection, and compares it to the password of the next level ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit21"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), which it already knows internally. If what we send matches, it sends back the password for "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit21"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "291c7bb9-0ead-4412-afff-28c800649223",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "46a63c3b-1d68-41b4-90d8-aa7486f9228f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit20@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "suconnect"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " is the client here, not the server, so it needs something listening on the port we give it before it has anything to connect to. We open a second terminal session (a second SSH connection to "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit20"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") and start "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "nc -l"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " listening on an arbitrary local port, feeding it the current level's password as the data it'll send once something connects. Back in the first terminal, we run "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "./suconnect <port>"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " against that same port. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "suconnect"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " connects to our listener, reads the password we fed it, and since it matches what "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "suconnect"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " expected, it prints the password for "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit21"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " straight to our first terminal."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "38d4a6f9-64c1-433a-88dc-64766574c078",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "404042e6-0b87-802b-bb27-ebbf8975b41e",
+      "type": "image",
+      "url": "/notion-media/78554a8664c8256c.png"
+    },
+    {
+      "id": "404042e6-0b87-80a3-8a1b-d6de434b79da",
+      "type": "image",
+      "url": "/notion-media/9dc8556a5b99b1e9.png"
+    },
+    {
+      "id": "404042e6-0b87-8085-8dc2-de02fc7f9927",
+      "type": "image",
+      "url": "/notion-media/d9e305c77d072900.png"
+    },
+    {
+      "id": "404042e6-0b87-8014-be76-c8d01c7d687d",
+      "type": "image",
+      "url": "/notion-media/11e7a9b1654f8f39.png"
+    },
+    {
+      "id": "fed3d4ab-afd8-4576-a9ca-5e4812653369",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-818e-a356-db2daf7665a1",
+  "properties": {
+    "Name": "Level 20 \u2192 Level 21",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-20-level-21",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 20 \u2192 Level 21"
+}

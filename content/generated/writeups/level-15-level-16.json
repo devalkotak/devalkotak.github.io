@@ -1,0 +1,252 @@
+{
+  "blocks": [
+    {
+      "id": "bd821c9e-d3d4-42e9-9444-37c15c0a7c00",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "803c8e5d-cdc8-4026-91d7-35329dc8012b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level can be retrieved by submitting the password of the current level to port "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "30001"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " on "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://localhost/",
+          "italic": false,
+          "plainText": "localhost"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "using SSL encryption"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d95d1db9-4eb8-4ce4-aa25-cebf3f7400f1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "2bbd7988-8c89-48d4-ae7e-afffc104fe72",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit15@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. Plain "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "nc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " sends data in the clear, but this service expects a TLS/SSL handshake before it'll talk to us \u2014 connecting with regular "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "nc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " just hangs or drops the connection. We use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "openssl s_client -connect"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", which negotiates SSL first and then gives us an interactive (or pipeable) plaintext channel underneath it. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-quiet"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " suppresses the certificate chain and handshake noise "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "s_client"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " prints by default, so only the password exchange shows in the output."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a81e6edd-31eb-491b-b0f4-00b213faeb20",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-8032-b1d9-f0814ffc909c",
+      "type": "image",
+      "url": "/notion-media/04836781a31defec.png"
+    },
+    {
+      "id": "402042e6-0b87-801b-9299-cc7006d98279",
+      "type": "image",
+      "url": "/notion-media/21b4212c95c07cc4.png"
+    },
+    {
+      "id": "7f34ce0b-30f0-413b-a972-02604811bf53",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "df713792-2d8d-46cf-b9bd-5291eb1da9dc",
+      "richText": [],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81ff-aa2c-e3c2ac82fb28",
+  "properties": {
+    "Name": "Level 15 \u2192 Level 16",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-15-level-16",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 15 \u2192 Level 16"
+}

@@ -1,0 +1,243 @@
+{
+  "blocks": [
+    {
+      "id": "f4c1f89e-4d21-4aec-aa9a-598cf9e66c8e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4b6cb682-106d-4002-a2c6-649ea8871688",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The credentials for the next level can be retrieved by submitting the password of the current level to a port on "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://localhost/",
+          "italic": false,
+          "plainText": "localhost"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in the range "
+        },
+        {
+          "bold": true,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "31000"
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "-"
+        },
+        {
+          "bold": true,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "32000"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". Only one of the listening ports actually hands back credentials \u2014 the rest just echo whatever we send."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "7e314f6d-91ec-493f-a6d5-3ddf5ed1e2d3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "e19c23f3-8164-4ebf-97e4-c3e781bc7622",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit16@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. A thousand-port range is too wide to probe by hand, so we scan it first with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "nmap -sV"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to see which ports are open and which service nmap thinks is running on each. Most of the open ports either echo our input back or drop the connection; the one that matters is the port nmap can't fingerprint a normal service on but that responds to an SSL handshake. We confirm that with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "openssl s_client"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " the same way as the previous level, then submit the password. Since this level hands us an SSH key instead of a plaintext password (same pattern as level 13), the response is a private key we redirect into a file, lock down with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "chmod 600"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", and use to log into "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "bandit17"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3952f2a3-768f-4445-bccf-06a186f8fe2e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-805d-96e0-ec0210e299ec",
+      "type": "image",
+      "url": "/notion-media/82cf7ca95a5bc8c5.png"
+    },
+    {
+      "id": "402042e6-0b87-80bc-ae3b-d92cb9e84012",
+      "type": "image",
+      "url": "/notion-media/f2168e549199fd94.png"
+    },
+    {
+      "id": "402042e6-0b87-80af-8209-eaccaa28fe86",
+      "type": "image",
+      "url": "/notion-media/12a95af6ee0197d9.png"
+    },
+    {
+      "id": "402042e6-0b87-80eb-a8d9-c32181cc0cab",
+      "type": "image",
+      "url": "/notion-media/ae78d84d8edd14a2.png"
+    },
+    {
+      "id": "6bc53cba-3f72-448a-a78a-ffb1d7a531e6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "pWXMAZoxGC8JmDMfmT5MGEsobMM3vnj2"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81fd-9487-ea990014012c",
+  "properties": {
+    "Name": "Level 16 \u2192 Level 17",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-16-level-17",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 16 \u2192 Level 17"
+}

@@ -1,0 +1,279 @@
+{
+  "blocks": [
+    {
+      "id": "ef3b3ece-62ca-494b-87d2-c962b280c44d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1439bb0e-f3e3-4fa7-b9b5-a44ef4f5c555",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a file somewhere under the "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "inhere"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " directory and has all of the following properties:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "31a408ce-4f4e-4036-835b-823dc38f80f5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "human-readable"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "46fa3cb4-2347-4c9d-ae67-12c8dc634cbc",
+      "richText": [
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "1033 bytes"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in size"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "31406cf2-78bc-4669-96ba-1c9d846b3a01",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "not executable"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "061a9b6e-e148-4511-9b19-478a019bff61",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a4e76b45-4628-49cc-9dd0-3da844f5bb8f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit5@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. We navigate to the "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "inhere"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " directory, where listing its contents shows 20 subdirectories, each with a handful of files. Since we know the exact target size (1033 bytes), we use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "du"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " with "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "-ab"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to print every file's size in bytes, pipe that through "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "grep"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "1033"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to find the matching path, then "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " that file to read the password."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b96d012f-7a73-46c3-87db-b7c239c4fa12",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-80df-8dae-d352c72a742c",
+      "type": "image",
+      "url": "/notion-media/0313449ca8e47519.png"
+    },
+    {
+      "id": "402042e6-0b87-80ee-99d2-e7109438bd36",
+      "type": "image",
+      "url": "/notion-media/d17a50b8093d4f79.png"
+    },
+    {
+      "id": "b70b828b-ae35-4001-b71c-220c34dd0a4b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "pXa26xhMWaC2SvDotA4r9EgZkulOeSBW"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-81b4-b80e-fb03655f3eae",
+  "properties": {
+    "Name": "Level 5 \u2192 Level 6",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-5-level-6",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 5 \u2192 Level 6"
+}

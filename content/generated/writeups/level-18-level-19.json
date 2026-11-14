@@ -1,0 +1,293 @@
+{
+  "blocks": [
+    {
+      "id": "27732b44-82f7-42e4-9d96-e4f77d2238f7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "efcf3daa-18e5-448e-ac61-3c39c5cb4f0d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a file "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "readme"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " in the home directory. Someone has modified "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".bashrc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "log us out immediately"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " whenever we log in over SSH."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "efec34d5-1f5b-4b7d-bc37-3336a27439e1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a057fbd1-c1f7-44e9-b65e-72f558313732",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit18@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. On a normal login attempt, the session drops back to our own terminal before we can type anything \u2014 "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".bashrc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " runs on every interactive login and this one ends the session straight away. We never actually need an interactive shell here, though: SSH lets us pass a command directly on the command line, which it runs over the connection instead of starting the usual interactive shell (and instead of the environment that triggers "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".bashrc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "'s startup logic in the same way). We pass "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat readme"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " as that command, so the file's contents come back to our terminal before the connection closes."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "e97cd1e5-b57d-4b2d-a3ad-9dfe2c560935",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "This works because a non-interactive SSH command and a login shell trigger different startup behavior. "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://ssh.com/",
+          "italic": false,
+          "plainText": "SSH.com"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "'s guide to "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "https://www.ssh.com/academy/ssh/command",
+          "italic": false,
+          "plainText": "running remote commands over SSH"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " covers that distinction directly. linuxize's "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "https://linuxize.com/post/bashrc-vs-bash-profile/",
+          "italic": false,
+          "plainText": "explanation of .bashrc vs. .bash_profile"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " is useful background on why "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".bashrc"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " is the file that got weaponized here in the first place."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "826ad10f-60d3-4bbe-a89d-92394ad6a6c3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-808e-b18a-d76708774973",
+      "type": "image",
+      "url": "/notion-media/da2d8362a08b10c3.png"
+    },
+    {
+      "id": "402042e6-0b87-801b-ae89-d2d24525eaf9",
+      "type": "image",
+      "url": "/notion-media/9bad587e9c6ea113.png"
+    },
+    {
+      "id": "402042e6-0b87-8056-a2e2-ec0251bfe6a7",
+      "type": "image",
+      "url": "/notion-media/9b0c349d0e26687a.png"
+    },
+    {
+      "id": "c72439cb-299b-4ca0-aa09-904f7b83363c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag -"
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI"
+        }
+      ],
+      "type": "heading_2"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-813b-83e5-d09b59230bd2",
+  "properties": {
+    "Name": "Level 18 \u2192 Level 19",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-18-level-19",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 18 \u2192 Level 19"
+}

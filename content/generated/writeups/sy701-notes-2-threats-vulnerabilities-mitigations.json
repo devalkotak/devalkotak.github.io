@@ -1,0 +1,4790 @@
+{
+  "blocks": [
+    {
+      "id": "0aff6ee5-461c-4fd3-82a0-a4a90f4db637",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat Actor Basics"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c9c5f1d7-34ed-43d9-8bba-a64927e4a517",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat actor: any person, group, or org capable of doing harm to systems, data, or operations. Not always deliberate, unintentional harm counts too."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "87782c72-2f29-4448-873a-999842ee3b70",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Point of profiling an actor: their skill level and motive shape what tactics and targets to expect, which in turn shapes what defenses matter."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8823371f-7a40-4b4f-98d5-8ea089fa4436",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat Actor Types"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Profile"
+              }
+            ]
+          ],
+          "id": "801113c6-d401-4ca3-881c-56090f5037bd",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unskilled attacker"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Runs pre-built tools/scripts, little underlying knowledge"
+              }
+            ]
+          ],
+          "id": "88082ec9-0586-467d-974e-5a241ed821b5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Hacktivist"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Driven by political, social, or ideological cause"
+              }
+            ]
+          ],
+          "id": "047e45fe-9cca-463d-aebe-27c9bd5543a7",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Organized crime"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Financially motivated, often structured like a business"
+              }
+            ]
+          ],
+          "id": "8256ee1f-7016-4752-908a-67ec8547e517",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Nation-state"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Government-backed, well-resourced, advanced tradecraft"
+              }
+            ]
+          ],
+          "id": "76193a95-aba8-4247-b7dd-7d537e4446b1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Insider threat"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Employee, ex-employee, contractor, or partner abusing legitimate access"
+              }
+            ]
+          ],
+          "id": "1f6f944c-245e-4219-b5c6-7f249fd1f097",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Competitor"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "After IP or business intel, not general chaos"
+              }
+            ]
+          ],
+          "id": "2b9b139d-93e3-4a09-85b6-2a811115119f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Shadow IT"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Internal staff standing up their own unsanctioned infrastructure (cloud accounts, apps) to route around IT, not malicious but widens the attack surface"
+              }
+            ]
+          ],
+          "id": "1be6bca7-ad0f-44c2-9801-a866fa644077",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "5eea55b0-d38d-4c8a-a57a-150d80a110ea",
+      "type": "table"
+    },
+    {
+      "id": "2e2728f1-492c-4454-ace2-54ff07dcfb64",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat actors also get profiled on three attributes: location (internal/external), resource level (limited to extensive funding), and sophistication (unskilled to nation-state). Nation-state and organized crime sit at the top on all three; unskilled attackers and shadow IT sit at the bottom."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "9c417053-5a4d-4a1b-865f-2f77bf609a33",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Motivations"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b5d7949a-b397-4124-9b6b-328d5b4179fc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common drivers: money, espionage, data theft, revenge, ideology/politics, pure disruption, warfare, \"ethical\" hacking, extortion/blackmail."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "bdcfde49-5aaf-48a5-890a-e7257c4ec764",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ransomware crews: usually just chasing payout."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a8beb2c1-f01a-4ade-91d6-f5b5c82c385a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Nation-state actors: usually chasing intelligence, not cash."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fb66e0c9-a59b-4765-92fc-c696d4aee43e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Internal vs External Threats"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f999ac81-118b-4839-a9c7-1d46394357e2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Internal: originates inside the org (employee abusing access they already have)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "831ad1ff-ee5a-44cb-bd71-5c14d0ee3b36",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "External: originates outside (attacker brute-forcing a VPN login from the internet)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d66f90ca-416b-4430-9500-d9f505bbbfc2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Insider threats aren't all malicious, buckets are: malicious, negligent, accidental, or compromised (an outsider using a legit insider's stolen credentials)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "40eab4b2-84e2-4b3c-b420-00d6e83ef9d2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat Vectors and Attack Surface"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "ea745512-708d-4e99-8a54-a58358df7e3e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat vector: the specific path an attacker rides in on, email, a web app, removable media, a phone call, SMS, a cloud service, a remote access portal, wireless."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b5e55833-e04e-437e-b318-ac6bcd59763c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attack surface: the full set of exposed entry points, taken together, an org has to defend, public site, VPN portal, user accounts, inboxes, APIs, open ports, third-party integrations."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2dc86b8e-841b-4de0-b999-c3f381e0e3c8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vector is the door used, surface is every door that exists."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5027c8f7-d2c0-4cbd-b62d-7609ce153cc2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat Vector Categories"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Category"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Notes"
+              }
+            ]
+          ],
+          "id": "d03fc021-2bd5-4da5-9df9-5f8d25141cf9",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Message-based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Phishing links/attachments over email, text, IM"
+              }
+            ]
+          ],
+          "id": "aaf04adc-7834-4270-8ee2-2e39d628860b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "File-based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Malicious code hidden in PDFs, ZIP/RAR archives, Office docs with macros or add-ins, not just raw executables"
+              }
+            ]
+          ],
+          "id": "156b736f-87b0-4786-a33c-b815c7674a14",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Image-based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "SVG"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " files describe images in XML, can smuggle HTML/JavaScript, browsers need to validate input to avoid running it"
+              }
+            ]
+          ],
+          "id": "0e9d6349-1b8b-4a83-9857-70547e8748c1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Voice call"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Vishing"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": ", spam over IP, war dialing (still happens), call tampering to disrupt calls"
+              }
+            ]
+          ],
+          "id": "ee9d38b5-269b-42e2-a3b9-244536a11202",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Removable device"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "USB drives carrying malware, can bridge air-gapped networks; a USB can also emulate a keyboard ("
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "HID"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " attack) and type commands on plug-in; also used for bulk data exfiltration with zero network footprint"
+              }
+            ]
+          ],
+          "id": "5707b3e9-30df-4356-8068-549e590c1f7a",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Vulnerable software"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Client-based (installed executable, needs constant patching) vs agentless (no local install, runs server-side, one compromised instance affects every user)"
+              }
+            ]
+          ],
+          "id": "ff584764-df0e-44f5-ac8c-cf9845e79f0e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unsupported systems"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unpatched or EOL software, no more security fixes, single old system can be the entry point for a whole breach"
+              }
+            ]
+          ],
+          "id": "ef048607-70f5-48b6-b96d-ea438e0973d3",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unsecure network"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Wireless using outdated protocols ("
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "WEP"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": ", "
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "WPA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": ", "
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "WPA2"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": ") or open/rogue APs, wired ports without 802.1X, Bluetooth reconnaissance and implementation bugs"
+              }
+            ]
+          ],
+          "id": "8e469ff4-9566-4c88-b4fe-bec05cc983f6",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Open service ports"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Every open TCP/UDP port is a potential opening, more running services means bigger attack surface"
+              }
+            ]
+          ],
+          "id": "e1a8d91a-0e50-42fa-accc-59474db99fa5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Default credentials"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unchanged default username/password on a device hands over full admin control"
+              }
+            ]
+          ],
+          "id": "2035aacc-7241-4709-9051-112bdc13174c",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Supply chain"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attacking upstream: MSPs with access into many customer networks, or suppliers shipping counterfeit/backdoored hardware"
+              }
+            ]
+          ],
+          "id": "1e13890e-a0f8-4a0d-adfa-90aa1f958f75",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "a6b125f5-6c53-41bf-82eb-7c4da79f4524",
+      "type": "table"
+    },
+    {
+      "id": "de35e16b-73ff-4d66-a44a-3ef4a784e613",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Deception Technologies"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Term"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it is"
+              }
+            ]
+          ],
+          "id": "1205ab86-4fbe-4da6-8f0c-6112e3f9c55f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Honeypot"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Decoy system that lures attackers in for observation"
+              }
+            ]
+          ],
+          "id": "1e6ee7df-8b21-4463-9060-01135c58084b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Honeynet"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Multiple honeypots networked together"
+              }
+            ]
+          ],
+          "id": "0463ab0b-127c-4513-bd3e-ce149b3d5b32",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Honeyfile"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Bait file that flags unauthorized access when touched"
+              }
+            ]
+          ],
+          "id": "63e1fd7d-2d1b-4971-ba40-bc43c82de940",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Honeytoken"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Fake credential/data planted to catch misuse"
+              }
+            ]
+          ],
+          "id": "a3c63cec-af53-4b89-b28e-213cac28d7b8",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "97942d20-d5a2-4758-845c-623e612dd92c",
+      "type": "table"
+    },
+    {
+      "id": "4a4a1515-c81b-4d90-a05c-3808fa47b81d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Social Engineering"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "ad613453-1683-4acf-a7cc-0aeeb00f59e6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Manipulation of people (not systems) into handing over access, info, money, or performing an action. Works by exploiting trust, urgency, fear, curiosity, or perceived authority rather than exploiting code."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b1b03915-8ea2-47dd-be8f-a9f08302a8bd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Classic examples: a caller posing as IT asking for a password reset, a fake bank email, a text with a malicious link, someone tailgating into a badge-controlled door."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d61109ef-9305-4494-b648-91c7d597c54a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Phishing Variants"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Term"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Target/method"
+              }
+            ]
+          ],
+          "id": "7507fcf1-4091-415d-aedc-b3f7e302d0b5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Phishing"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Generic email/message lure to steal info or plant a click"
+              }
+            ]
+          ],
+          "id": "9166f913-3c8a-4ca0-99dc-1c82e67ccc44",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Spear phishing"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Aimed at one specific person or group"
+              }
+            ]
+          ],
+          "id": "5ab7ad18-fbcd-4787-b5e4-f658260d3ab6",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Whaling"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Aimed at execs/senior leadership"
+              }
+            ]
+          ],
+          "id": "78f32777-2dca-40a9-bb25-686ceda7a86e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Vishing"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Phishing over a voice call"
+              }
+            ]
+          ],
+          "id": "69c65493-9275-489e-a5f5-80eb44384f5d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "Smishing"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Phishing via SMS"
+              }
+            ]
+          ],
+          "id": "1ab92721-f815-4a7b-aeb9-c4e0f5c51af2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "BEC"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (business email compromise)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attacker poses as a trusted exec or business contact, usually to redirect a payment"
+              }
+            ]
+          ],
+          "id": "a6d395ea-8f6a-4e1f-8837-6b74f9489351",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "edce55d0-8251-4b46-8a11-63de7c18e4e3",
+      "type": "table"
+    },
+    {
+      "id": "d9220c3f-ca28-479b-a9d5-f3aab8352aad",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Typosquatting"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (also brandjacking): registers a misspelled or lookalike domain of a real site, catches people who fat-finger a URL, can also be a whole different phrase or TLD ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " instead of "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": ".com"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ")."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c2bcb5c8-d25e-45b8-a528-1cc14808d36c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Manipulation Techniques"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "b063659d-eb82-49e6-9dd1-f2487a9384af",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Pretexting: inventing a plausible cover story to earn trust."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "19972260-3ef2-41d0-922d-f3b3412a0f15",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Baiting: dangling something tempting (a labeled USB drive left in a parking lot) to get a victim to take an action."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "79559a9c-5355-4e77-8552-8fe5ffe0667b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Quid pro quo: trading a fake favor or service for information."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "06cacf46-8bd9-481c-9599-2673a11fb406",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Urgency: rushing the target so they skip verification."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7020e683-9d4a-4a52-9015-d536a0668a5f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Authority: posing as someone the target won't question."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "12a4fbf9-b48f-4768-b6f7-dc29c339ad95",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Familiarity: faking rapport, acting like they already know the target or org."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b141222e-2652-45f0-a51d-b6715db3fd56",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Impersonation"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "27e33d6e-8490-4b01-ad29-15c85aa5e11d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Posing as a trusted person or org: a fake help desk tech, a fake vendor rep, a fake manager, a fake delivery driver, even a fake law enforcement/government official."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a95701cb-0063-4280-85ae-7d4822418181",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Eliciting information: drawing sensitive details out of a target through conversation rather than a direct ask, victim often doesn't realize it happened, pairs well with vishing."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cd19bae2-046a-446f-b0d5-dcae4fe1b30b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity fraud grows out of a successful impersonation/data theft: credit card fraud (new account or charges in the victim's name), bank fraud (account takeover or new account), loan fraud (loan taken out under the victim's identity), government benefits fraud (attacker claims benefits on the victim's behalf)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9cba1e6b-40d6-42ee-9236-7296f224e29b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Watering Hole Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "abb25155-5767-490b-bb21-9cc0332850e0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Instead of attacking a hardened target directly, compromise a third-party site the target group is known to visit, then wait for them to come to it."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "418c9d98-b6a9-4d0b-a123-407a9fa94b36",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Requires recon on which sites the victim group frequents (industry forums, local coffee-shop wifi page, trade publications)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2c767f9a-41ed-4e8b-ba32-bbf340d80ccd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attacker infects that third-party site (exploiting a site vulnerability or planting malicious code), site then serves malware to visitors."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7c3b4912-2009-463e-bbfb-7a99a7881d37",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Payload can be scoped narrowly, e.g. only fires for visitors whose IP matches a target bank or financial regulator, so the broader public never sees anything."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6b4e8c85-1f16-4540-a650-27612440fec6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Defense is the usual layered stack: firewalls/IPS to catch bad traffic before it lands, updated antivirus signatures to catch known malicious code even on a legitimate-looking site."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8d764113-6ded-4b58-97e8-1fe9ffff48e6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Other Social Engineering Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "db5158a9-1ae8-41f7-b1d1-97abae2dab26",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Misinformation/disinformation: spreading factually wrong information to sow confusion or division, often run as an organized influence campaign (nation-states divide, distract, persuade), amplified through fake accounts posting/liking/sharing on social media until mainstream media picks the story up."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "678a4968-0dc1-4ba0-830a-ede81cc5c428",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Brand impersonation: fake sites/apps pretending to be a known brand, gets indexed by search engines or pushed through ads, tricks visitors into a pop-up (\"you won!\", \"download now\") that delivers malware, tracks activity, or exfiltrates data."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ad4f2168-8ac3-4b7e-ac45-bc4a5e979b65",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical Social Engineering"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "ca6b31fe-bf15-4ccb-9987-f8c91eb16765",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Tailgating"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": slipping in behind someone with legitimate access, without their cooperation."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1a92b4b2-2650-4ad1-b31a-431c2473afee",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Piggybacking: same idea but the authorized person knowingly (often just out of politeness) lets them in."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8c5c7385-04bc-49dd-bd4f-230bba6d62f4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Shoulder surfing: reading sensitive input over someone's shoulder."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b8ed40b8-741e-40f9-8a05-3d5a9603f448",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Dumpster diving: mining discarded paperwork/media for useful info."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "abf1aeff-0497-4aa1-8cdb-8288c4437bad",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "USB baiting: dropping infected media somewhere it'll get picked up and plugged in."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e6af5948-5164-46e1-8349-fbbf677e7085",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Countermeasures"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "0f779432-0b19-405e-b949-bd6575b65347",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Verify anything unexpected before acting on it, report suspicious messages instead of ignoring them, never hand over passwords or MFA codes regardless of who's asking, check sender addresses and links before clicking, lock screens when stepping away, challenge unrecognized visitors per policy, shred/dispose of sensitive paper securely."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "752b9569-e82a-4ae5-8298-636535204d12",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malware Types"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d6842a43-79f0-4862-98a5-6edfede77073",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malicious software built to damage systems, steal data, disrupt operations, spy, or open unauthorized access. Delivery paths: email, drive-by downloads, removable media, malicious sites, scripts, exploited vulns."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Behavior"
+              }
+            ]
+          ],
+          "id": "f6188978-20dd-4a55-94bb-d84a37a4a087",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Virus"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attaches to a file/program, needs the host to run (usually a user opening it) to activate"
+              }
+            ]
+          ],
+          "id": "1111c7b9-f80c-47ac-9bb4-61eedad41717",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Worm"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Self-replicates and spreads on its own across a network, no host file or user action required"
+              }
+            ]
+          ],
+          "id": "a9ec55d7-674a-4ef0-be83-26bd3fb95af4",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Trojan"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Disguised as legitimate/useful software, does something malicious once installed"
+              }
+            ]
+          ],
+          "id": "1bf41fd0-caf9-4c9f-a5f8-fc45f792a4c9",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Ransomware"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Encrypts or locks data, demands payment; may also exfiltrate data first for double extortion"
+              }
+            ]
+          ],
+          "id": "254671c2-e2e5-4342-a68e-1161f3c3ad81",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Spyware"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Quietly harvests information in the background"
+              }
+            ]
+          ],
+          "id": "4b92c13c-81b9-4687-b427-0a5df3cea98c",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Keylogger"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Captures keystrokes, aimed at passwords and other sensitive input"
+              }
+            ]
+          ],
+          "id": "412e34aa-0015-4aeb-8fa8-596d4d1ebc85",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Rootkit"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Hides its own presence, keeps privileged access, hard to detect since it can tamper with normal system behavior"
+              }
+            ]
+          ],
+          "id": "1861d7a2-913d-4d32-b876-65f187643c85",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Botnet"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Herd of compromised machines under one attacker's control, used for DDoS, spam runs, credential attacks, or spreading more malware"
+              }
+            ]
+          ],
+          "id": "b596a74c-c5eb-4060-8bd9-06029460e45f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Bloatware"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Manufacturer-preinstalled apps nobody asked for, eats storage/resources and can widen the attack surface"
+              }
+            ]
+          ],
+          "id": "cda4003e-c83c-4fbd-a522-4e5c1849a7a1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Logic bomb"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Dormant code that triggers on a predefined event (a date, a user action), often left by an insider with a grudge, no signature to detect since each one is custom-written"
+              }
+            ]
+          ],
+          "id": "44b14909-c644-4348-87b9-112c00697ae1",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "8f7dc513-71d8-4328-991a-16be86a90550",
+      "type": "table"
+    },
+    {
+      "id": "74b2558a-2733-46db-9c36-74ae7d0d7e09",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Virus subtypes: program viruses (bundled into an application), boot sector viruses (run before the OS even loads), script viruses (OS/browser-based), macro viruses (common in Office docs)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e01bf3e2-0e5c-4bd4-8dba-449786fae54a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Fileless virus: runs entirely in memory after exploiting a browser/plugin flaw, never touches disk as a file, evades signature-based antivirus, still needs a way to persist (e.g. a Registry auto-start entry)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f2e36cff-78a1-423a-83f0-12ff33e0f1c2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Real-world logic bomb: March 2013 South Korea, malware delivered via a trojanized bank-themed email sat dormant then triggered at a set time, wiped storage and the master boot record across multiple organizations at once. Dec 2016 Ukraine grid attack used a time-triggered logic bomb against SCADA control systems to cut power."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c28a9670-11cf-42c1-894f-8d3694a9879e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Rootkit detection: invisible to Task Manager and often to normal antivirus, look for a rootkit-specific removal tool (usually built only after the rootkit's been found), or trust secure boot (UEFI) to catch tampering before the OS loads."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5d5fa455-06e4-4f42-bfb1-5fbec7d607aa",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malware Indicators"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "0ebb93fa-480a-4285-ac84-a0f38aeeba8e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Unknown/unexpected process running, spiking CPU or network use, security tooling disabled without cause, files suddenly encrypted, a new startup entry, an odd scheduled task, connections to unfamiliar IPs, browser redirecting somewhere unasked."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "80f09060-8bb1-4d37-b9c5-06a9649c7a5a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malware Mitigation"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "c24c1a5f-99fa-4f8c-93ad-19a7d9fcccba",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patch consistently, run endpoint protection, apply least privilege, block known-bad domains, turn off macros where they're not needed, train users on attachment hygiene, keep backups that are actually tested, isolate infected hosts fast."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "8c729a4f-d1f9-4fd3-87f7-c3707b8326ec",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "81d6069f-5072-4d42-8fff-17114d31086a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Brute force (physical): no digital cleverness needed, force a door, window, or lock, an OS can't stop someone standing at an unlocked server rack."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d724bc00-17fb-4e4e-b2fc-1246a8027c39",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RFID"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " cloning: access badges/key fobs read and duplicated with cheap (sub-$50) hardware in seconds, a reason to layer MFA on top of a badge instead of relying on the card alone."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "91b0bad9-8304-45f5-b4e2-773849b9abd9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Environmental attacks: target the systems that support the technology rather than the technology itself, power monitoring/cutoffs, tampering with HVAC or humidity controls (data centers need consistent cooling), interfering with fire suppression."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e46f9406-ba36-4710-8018-68e1db4ed6c8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability Categories"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "6e0c3926-3858-4db7-bafe-bbb335a43f8a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Memory Injection"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "41484967-7a12-40ec-aca1-726a2288dff8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attacker adds code into the memory space of an already-running process instead of dropping a new file, hides malware inside a legitimate process and inherits that process's rights and permissions (useful for privilege escalation)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "301a198a-f39c-4911-883c-15bf947ca21e",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DLL injection"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": forces a target process to load a path to a malicious "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DLL"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Windows Dynamic-Link Library) so the injected code runs as part of that process, one of the easier and more common injection methods."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4469c0c5-d391-44f5-ba4b-7b4a162b4a9d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Buffer Overflows"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "e9381a22-486c-454f-8315-406ca3bb031b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Writes more data into a buffer than it's sized for, the overflow spills into adjacent memory and can corrupt neighboring variables or, worse, get executed as code."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c1b9825e-0f7b-42f1-93a6-d7234dfc1ab1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Root cause: missing bounds checking in the app."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a0bd4da0-c252-403b-bf37-153d369323bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hard to weaponize reliably: attacker needs the overflow to avoid crashing the target while landing exactly the payload they want, but a working overflow is repeatable and can fully compromise the system."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f96365bc-7fea-4cc7-a9dc-1caebdaaa6e9",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Race Conditions"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "a62e7ef6-3a22-4fca-a25f-eedb5aadfd74",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "TOCTOU"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (time-of-check to time-of-use): a gap between when a system checks a condition and when it acts on that check, if the underlying state changes in that gap the action executes against stale data."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8f12a5b0-851f-43fa-a4a7-f73d493f2e56",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Classic example: two concurrent transfers both read the same starting account balance before either write lands, letting a user withdraw more than the account should allow."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3f148d9b-44f3-460f-a817-e11059f26ce7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Real incidents: 2004 Mars rover Spirit reboot-loop from a race in the file system; 2023 Pwn2Own Tesla Model 3 TOCTOU against the Bluetooth infotainment stack, escalated to root."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "448bed52-bcaf-4862-9876-2cf230774a9f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malicious Updates"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "1efb7ec2-e57e-4eab-8a18-03253890d475",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Update pipeline itself is an attack surface, not every update source is trustworthy."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6da4d656-c9bf-4385-b7a6-8bd34a9bb6b7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Confirm updates come from the vendor's own site, not a random pop-up or downloaded installer; OS-level app stores restrict installs to signed apps for this reason."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ad4a1045-50c8-444b-b514-b77924b96045",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SolarWinds Orion"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " supply chain attack (reported Dec 2020): attackers compromised the SolarWinds build system and slipped malicious code into legitimate signed Orion updates, reaching hundreds of government agencies and companies that trusted the auto-update."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "28422150-c31c-43f1-bee0-39621d4dede5",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "OS Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "ff69529f-1511-4c7a-bc15-46174e192340",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "OS is a huge, complex target (millions of lines of code), the unfound vulnerabilities are already sitting in there."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0da1852d-cb88-49ec-9d73-a77089a7258a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vendors ship on a predictable cadence (Microsoft's Patch Tuesday, 2nd Tuesday monthly); a single patch batch can cover elevation-of-privilege, security-feature-bypass, remote-code-execution, information-disclosure, denial-of-service, and spoofing bugs all at once."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9fb7028c-a5ed-41e0-bdc3-84a0bf8ee5f0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patches may need testing before rollout (risk of breaking something else) and often a reboot, so keep a fallback/backup plan ready."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "94ace424-c43b-4007-b4d5-dfcd6cbd1d14",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hardware Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "634b5920-b958-476e-94f4-8805f9a7c812",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IoT and embedded devices (thermostats, cameras, door locks) often ship with no real OS-level security model, huge and growing attack surface."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "78077461-8924-46a7-8479-7b043ba153cc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Firmware is the device's own embedded OS, only the vendor can patch it, and that depends on them knowing about and caring about the flaw."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5dbcac10-7e6a-4832-976a-99052bacfd6a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "End of life ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EOL"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "): vendor stops selling the product, may still support it. End of service life ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EOSL"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "): vendor stops all support, no more patches (sometimes available at premium cost)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8995d656-6732-4cb8-b959-736fc22acd93",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Legacy platforms: old OS/apps/middleware still in production past their supported life, may need compensating controls (extra firewall rules, IPS signatures) since they can't be patched."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3b79c073-cec9-4824-bc42-61bf5b829440",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Virtualization Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "0d0f30bd-ede5-4b16-ae3a-224cf8388d1f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "VM environment resembles a physical one but adds complexity (and therefore opportunity): local privilege escalation, command injection, information disclosure inside the hypervisor stack."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "98248e5b-678c-40cf-843a-1b58b1740ddf",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "VM escape: breaking out of the guest VM to interact directly with the host OS or hardware, full control of the host means full control of every other guest VM on it, demonstrated live at Pwn2Own (JS engine bug in a browser sandbox, kernel bug in a guest OS)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3fb0fdb5-438b-4360-80fc-62252ed380dd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Resource reuse risk: hypervisor allocates and reclaims RAM/storage/CPU across VMs, if memory isn't properly wiped between allocations data can leak from one VM to another."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "abf52aef-1955-4fa2-a3e1-db5233cb940f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud-specific Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "1676e826-f396-4a52-9fbd-684bfe32f58e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Near-universal cloud adoption means sensitive data concentrated where attackers already know to look."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "248387b9-d7d1-436e-a09e-d8be2c93429d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common weak spots: "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DoS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", authentication bypass (exploiting weak/faulty auth), directory traversal from faulty configuration, remote code execution against unpatched cloud workloads, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "XSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " from poor input validation, out-of-bounds write, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SQLi"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " for direct database access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1dcc0a18-4ac9-43bb-982b-554b180be85e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Web app frameworks running in the cloud (e.g. Log4j, Spring Cloud Function) have produced easy, high-reward exploit chains when unpatched."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f97de250-9909-45e2-a5e5-e984a2ea184c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Supply Chain Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "2bc94052-3b3f-46cb-8ed5-beac90e0a418",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Chain includes raw materials, manufacturers, distributors, and every vendor/service provider in between, compromising one link can compromise everyone downstream."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9610a276-dbed-40c5-b472-dbfa8909382a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Service providers (MSPs, cloud, payroll, cleaning/facilities) often carry internal network access an org can't directly control, worth ongoing security audits written into the contract."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0cf0c873-0cc1-46c6-9ff9-a8fb2c55a503",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hardware providers: counterfeit networking gear can ship with backdoors baked in (2022 DHS case: reseller sold $1B+ of counterfeit Cisco gear)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9c6baf83-701b-4c8d-954f-ab9001651fcc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Software providers: trust starts at install (verify digital signatures) and continues through every update; open source isn't immune, the source itself can be compromised."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d7b69a87-526f-4377-80ee-8f1648172840",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "2013 Target breach: attackers phished an HVAC vendor, stole VPN credentials, used the vendor's network access to reach every cash register at 1,800 stores, 40 million cards stolen."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4e4abb46-fc6d-4b70-b57a-50108b01b5f6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Misconfiguration Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "a1d4db9e-e744-4552-8458-5d4c386fa8df",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Open permissions: easiest door to leave unlocked, especially common with cloud storage buckets left public (2017 Verizon: 14 million records exposed via an open S3 bucket)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "878f3dd9-4823-4af6-9549-e0591e551ff9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Unsecured admin accounts: root/Administrator left reachable with a weak or default password, best practice disables direct login to the privileged account and forces "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "su"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "/"
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "sudo"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " instead, and keeps the list of accounts with root access short."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bbf8c548-b2dd-4e3f-a849-35215098ee59",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Insecure protocols: unencrypted traffic (Telnet, FTP, SMTP, IMAP) sends everything in the clear, swap for encrypted equivalents (SSH, SFTP, IMAPS), verify with a packet capture."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8570839e-86f3-4928-82d5-a5425cdefa1c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Default settings: unchanged default logins on network/IoT gear are exactly how the Mirai botnet built itself out of cameras, routers, doorbells, garage door openers."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "00fd817f-630f-4402-a002-8b419bf28360",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Open ports and services: every listening service is a door, manage exposure with a firewall and audit the ruleset regularly since rules get complex and mistakes creep in."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "662d71c3-3825-47c3-b969-d16984283a86",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Mobile Device Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "5e719c19-d800-4519-959b-808cb8ec9f71",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Small, easy to lose track of, always connected, and carrying a lot of sensitive personal/organizational data, harder to secure than a desktop."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8dbc5480-8da5-44b0-809e-f3a6c330e586",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Jailbreaking (iOS) / rooting (Android): removes the vendor's restrictions to get full OS access, often installs custom firmware, defeats the purpose of an "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MDM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " since the device's security controls are no longer trustworthy."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c09a81ae-6d6f-44de-b15c-1b28dfa30d3a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sideloading: installing apps outside the official app store, bypasses vetting, a single trojanized app can cause a full data breach."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "704494ca-b1f2-46fd-b5c7-961033313580",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Zero-day Vulnerabilities"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "4b90ad6d-d1a7-4ded-b9ae-38b42d198d2e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A flaw nobody (vendor included) has found or fixed yet, existing in software right now, waiting."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1040730a-d75e-4c0b-b85c-ebc396cc357f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Zero-day attack: exploit built and used before a patch or any mitigation exists, defender is racing to catch up rather than getting ahead."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "937d0960-7014-4ecc-9a94-f722622b19a5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Tracked publicly once known via "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "CVE"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Common Vulnerabilities and Exposures, "
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://cve.mitre.org/",
+          "italic": false,
+          "plainText": "cve.mitre.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ")."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "afcf71e1-5dc3-4b70-804a-0fabc6ac89f9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recent examples: 2023 Chrome zero-day (memory corruption, sandbox escape); 2023 Microsoft Secure Boot zero-day (attacker-run UEFI-level self-signed code); 2023 Apple iOS/iPadOS zero-days (sandbox escape, info disclosure, arbitrary code execution, seen actively exploited)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2f6168ef-3da7-4f15-a34b-dd1595c699c4",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common Vulnerabilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1bff2fb0-00c5-4581-a488-8fbf5d740481",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Missing patches, weak or default credentials, misconfigured firewall rules, cloud storage left public, excessive permissions, sensitive data stored unencrypted, poorly secured APIs, weak input validation, unsupported/EOL software, open ports and services nobody's using."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "f954d938-2439-4cff-ae5f-aa2f8b2e6732",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "13a745be-65e0-4927-b15c-c014e1c7842d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Phishing: covered above, tricking a user into revealing info or running something."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6a7bbf82-91a3-49a0-9422-b29451e48989",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malware: covered above."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9ec2633a-6a36-408c-84db-827c2f986024",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ransomware: covered above."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a0d9d437-afe4-46b0-b293-f1d136dbcfb4",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DoS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "/"
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DDoS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": floods a service to knock it offline or degrade availability."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2e003af6-1c3d-48a7-a5d8-81b2e3a5ad7f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Privilege escalation: turning limited access into higher-level permissions than originally granted."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a33184fe-de98-4b41-af2f-3cbaf3550fba",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Man-in-the-middle: sitting between two parties to intercept or tamper with their traffic."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "557c8a97-5478-46b2-9e60-73df55b14131",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Denial of Service"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "2f88a13c-de4c-47e5-b47e-c7e3bc2cce66",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Forces a service to fail or become unusable, exploits a design flaw/vulnerability or just overwhelms available resources, doesn't have to be complicated (cutting power works too)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "512c52dc-8d67-4fde-8b9e-1e2f2a37ee80",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DDoS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": same goal but launched from a whole botnet of compromised machines at once, gives an asymmetric advantage since the attacker's own resources can be far smaller than the victim's (Zeus botnet peaked at 3.6 million infected PCs)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4367b91d-b90f-4d4c-98e0-704a02f51ade",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reflection and amplification: attacker spoofs the victim's source IP in requests to a third-party service ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NTP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DNS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ICMP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " are common because they have little/no built-in authentication), the service's much larger response floods the victim instead of the attacker, turning a small request into a big attack."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "81a19b5b-8b80-47fd-88c7-fbb8e984496f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "\"Friendly\" DoS: unintentional self-inflicted outage, a Layer 2 loop without "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "STP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", a bandwidth-hogging download, or literally anything that saturates a link nobody meant to saturate."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ccd02dea-c7d2-4b75-b6ca-e8b4349af1ba",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "DNS Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "e35aa800-292b-46b2-a1c8-2611d79b897c",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DNS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " poisoning: feeds a false record into a DNS server, a client's local host file, or a direct fake response to a DNS query, redirects the victim without them ever noticing the URL was wrong (real-time redirection, counts as an on-path attack)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c698e4e1-62a3-473d-bbab-1fe0fe3864ae",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Domain hijacking: attacker gets control of the actual domain registration, no need to ever touch the real servers, they control where the DNS names point going forward (gained through brute force, social engineering, or compromising the registrar account's email)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c934676f-3d13-43ae-9cb0-7562e7fab001",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "URL hijacking"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " / typosquatting: profiting from user typos, options include an outright misspelling, a typing error, a different phrase, or a different top-level domain, monetized through ads, selling the domain back, redirecting to a competitor, or serving a phishing page/drive-by download."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "49bde7ed-1ddf-4ab7-bce0-592909b3ce0a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c19d86ac-1a0e-4862-96f0-2c0da50bba48",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless deauthentication: forges 802.11 management frames to knock a client off an AP, a real wireless DoS since original wireless standards sent management frames unauthenticated and unencrypted; "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "802.11w"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (2014) encrypts the sensitive management frames (disassociate, deauthenticate, channel switch) and is mandatory for 802.11ac compliance."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "994e1e56-8346-4908-970a-8c6bb80f612c",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RF jamming"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": floods the frequency with interfering signals so the receiver can't distinguish the real signal from noise, denies wireless communication; can be constant or reactive (only jams when it detects real traffic), needs to be physically close to be effective."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ca6ba470-5e76-447f-ab50-0f56a89774be",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "On-path Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b2bb2464-7504-4a36-af32-0e7bc4fd0fbe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Formerly \"man-in-the-middle\": attacker sits inline on the traffic path, redirects it through themselves, then forwards to the real destination so the victim never knows."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "28132c75-a409-4b99-aa38-2bde93fe267d",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ARP poisoning"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": on-path technique local to an IP subnet, exploits the fact ARP has no built-in security/authentication."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f8284553-33fd-4537-a1f1-7463afd9addd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "On-path browser attack (formerly \"man-in-the-browser\"): the middleman is malware/a trojan running on the victim's own machine instead of on the network, proxies encrypted traffic easily since it operates after decryption on the endpoint, waits for the victim to log into a bank then drains the session."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d3a948a8-e4c6-49e6-b10b-1f0c0ac04bb3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Replay Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "cdb3f013-03ee-41b6-bdb1-1bf42f2aba84",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Captures legitimate data off the wire (via a network tap, ARP poisoning, or endpoint malware) and reuses it later to impersonate the original party, distinct from an on-path attack since the replay doesn't need the original session live."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "562aa3c1-7a4c-46f3-8efe-896d02b92d1b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Pass the hash: attacker captures a username and hashed password during authentication, then sends their own authentication request using that captured hash directly, never needs the plaintext password."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f989d062-8933-4a2a-a11b-623dd7b70a71",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Session hijacking ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "sidejacking"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "): attacker intercepts a valid session ID issued by the server and reuses it to access the service as the victim, without needing credentials at all."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0d5146c2-fd88-4e70-8063-ce862c87f411",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Header manipulation / cookie theft: tools like Firesheep, Scapy, or browser cookie-manager add-ons capture and modify session cookies to ride along on someone else's session."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "52132301-ec14-46ac-82b6-e2b39e3754e7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Mitigation: encrypt end-to-end (HTTPS-only, HSTS/Force-TLS) so the session ID is never visible in transit; where that's not possible, at least encrypt end-to-somewhere with a personal VPN to avoid capture over a local/public wireless network."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b13389a8-2329-4b10-a45b-d1667d2c6112",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attack"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mechanism"
+              }
+            ]
+          ],
+          "id": "359b94c0-246a-4336-a308-36caed18e740",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "SQLi"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (SQL injection)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Slips SQL commands into app input to read or modify backend database data, e.g. injecting "
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "' OR '1'='1"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " into a query so it always evaluates true"
+              }
+            ]
+          ],
+          "id": "64ee2be5-ff3c-4f35-9c8a-05d6ccef9fc3",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "XSS"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (cross-site scripting)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Gets malicious script to execute inside a victim's browser session"
+              }
+            ]
+          ],
+          "id": "0cf3fbad-9e70-4b7a-99ee-ca0afa9d7a0d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "CSRF"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (cross-site request forgery)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Tricks a logged-in user's browser into firing off an action they didn't intend"
+              }
+            ]
+          ],
+          "id": "43922f7e-77ec-4e55-bc45-2164cfc41a26",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Directory traversal"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Walks outside the intended directory to reach files that should be off-limits"
+              }
+            ]
+          ],
+          "id": "82b63d35-107e-47d4-85d3-93074e761164",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "5dbcabf2-6db1-47a8-ae06-582bde3219e8",
+      "type": "table"
+    },
+    {
+      "id": "1a9191fc-291d-4966-8ab4-75d915ba5d21",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "XSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " variants: non-persistent/reflected (malicious link runs a script that's reflected back by the site, one-off, needs the victim to click each time) vs persistent/stored (payload gets saved server-side, e.g. posted to a social feed, fires for every visitor with no specific target needed)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1aeb230b-bee3-4573-bcb0-daa541c67b64",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "CSRF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " works because the site trusts the victim's already-authenticated browser, not the request's actual origin; mitigated with a per-session anti-forgery token the app checks on every state-changing request."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3e6e395f-da0c-4e50-a91f-ed9a308a5bf2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Privilege escalation: exploiting a bug or design flaw to gain access above what was granted. Vertical (regular user to admin/SYSTEM) is the higher-priority patch target; horizontal (user A reaching user B's resources at the same privilege tier) is subtler but still a breach. Mitigations: patch fast, keep AV/EDR current, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DEP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Data Execution Prevention, blocks code from running in data-only memory regions), "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ASLR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Address Space Layout Randomization, randomizes memory addresses so a buffer overflow can't reliably target a known offset)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "321fe564-2e5a-432a-bd04-108a65007d4b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cryptographic Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "04525670-f129-4a64-b351-eb75cfd76304",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attacker without the key goes after weaknesses in the cryptography or its implementation instead of brute-forcing the key itself."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5b87f4ba-7c49-4da3-91ff-6c19de379ad9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Downgrade attack: forces two systems to fall back from strong encryption to a weaker, breakable option. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "POODLE"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (2014, Padding Oracle On Downgraded Legacy Encryption): on-path attack that forces a TLS client to fall back to SSL 3.0, which has known cryptographic holes; modern browsers now refuse that fallback entirely."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a6e816eb-e580-4806-808f-ded5b51caeee",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SSL stripping"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": on-path attacker rewrites HTTPS links to HTTP on the fly, victim's traffic runs in the clear while the attacker maintains the HTTPS leg to the real server, silently capturing credentials in between."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5133bae8-628c-492f-8966-a57b8aae6de4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Birthday attack: exploits the birthday paradox (in a room of 23 people there's a ~50% chance two share a birthday) applied to hash collisions, attacker brute-forces plaintext variants looking for any two that produce the same hash rather than targeting one specific hash; larger hash output size is the defense."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e106a565-8f66-4cd3-92bc-4ae1049ffd14",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Collisions: two different inputs producing the same hash digest, which defeats the point of a hash (should be unique per input). "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MD5"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (1992) had collisions demonstrated in 1996 and again in 2008, when researchers used an MD5 collision to forge a CA certificate that appeared legitimately issued."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a7ea0546-29bc-4c88-b986-478e30b4fa0f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password Attacks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "878f767e-9318-47d3-a4b4-03f4721e1190",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Plaintext passwords: some (rare, bad) apps store credentials with no encryption at all, readable by anyone who reaches the file/database, correct fix is switching applications rather than patching around it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "030b3f3d-bcf6-4100-aa20-a2386a4a442a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hashing: a password stored as a fixed-length digest instead of plaintext, one-way (the original text shouldn't be recoverable from the hash), a common storage format is SHA-256."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5a7dde6b-38fa-47c1-91d6-26feb2d88855",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Brute force: grinds through password combinations exhaustively. Online brute force hits the live login form, slow and usually trips a lockout after a few failed attempts. Offline brute force works against a stolen hash list directly, no lockout to worry about, just computational cost, and a strong hashing algorithm is what slows this down."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "29184634-d617-4800-b4bf-fa18c50e2d05",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password spraying: tries a small set of common passwords across a large number of accounts (stays under lockout thresholds)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e3e2bf3a-142f-49a8-9d75-42bda14d8a4d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Credential stuffing: replays username/password pairs leaked from a different breach."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "13875ca8-3e40-4c2e-9f9c-be4889f45b9f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Dictionary attack: works through a wordlist of likely passwords instead of pure brute force."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c2cb3e3f-abf3-4c6d-8ee4-da87dda20e1b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Malicious Activity: Indicators and Triage"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c8555c78-1a17-4919-86ed-4deca6030ee0",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Indicators of Compromise ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IOC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ")"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "16cd0a57-0fd2-49c5-b73a-028c35474261",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Signs a system, account, network, or app may already be compromised: a known malware hash, a suspicious source IP, a malicious domain in the logs, an unrecognized process, unusual outbound traffic, a burst of failed logons, a successful login from a location that doesn't make sense, a new admin account nobody created on purpose, security tooling that's been switched off, an odd scheduled task."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "01aaa446-b8fd-4f93-9fb6-5fd794e635b5",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log Sources Worth Checking"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "d44d45b9-8d11-43fc-8acf-d0ba78099803",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Windows Security logs, Linux auth logs, firewall logs, DNS logs, VPN logs, proxy logs, EDR alerts, email security logs, cloud audit logs, web server logs."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "04b303ed-07f9-4be9-bfd0-41c7a7e4327a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Suspicious Authentication Patterns"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "c6c8c71b-1802-4642-b65e-04f0f1564864",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A run of failed logins immediately followed by a success, logins outside normal hours, logins from an unexpected country, MFA push-fatigue attempts (spamming approval prompts hoping for an accidental tap), a disabled account still getting login attempts, a new admin account appearing out of nowhere."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "241d70a5-c486-464a-9164-284318267348",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Endpoint Indicators"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "30066c0d-46a6-4dd6-8b9e-1e5c2ed952f9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Unknown process running, security tool disabled, sketchy PowerShell command executed, files unexpectedly encrypted, new persistence mechanism planted, a parent-child process relationship that doesn't fit normal behavior."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "ef68dca4-2b80-4937-bf14-c1e56a44a606",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network Indicators"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "9eedbdab-1dea-49dd-9666-1fff28871c03",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Traffic to a known-bad IP, unusual DNS query patterns, a large outbound data transfer, a beaconing pattern (regular check-ins to an external host), traffic headed to a rare/unfamiliar destination."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c6725002-5244-43c8-8632-3bc62e8f2c40",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Triage Questions"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "7952cf55-44d6-4c9e-b4dc-18be2fb694e4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "What set off the alert, which user/host/IP/process is involved, is this expected activity, what happened immediately before and after, any sign of lateral movement, does this need containment right now."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "091cef6c-49bc-46cc-a13a-ed3ef7767cc8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "More IOC Patterns"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Pattern"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it looks like"
+              }
+            ]
+          ],
+          "id": "7736376a-1edf-46bb-9c69-9ed92a37ed26",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Account lockout"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Legit user suddenly locked out, or an account gets administratively disabled, both can mean an attacker got there first and is now resetting/abusing it"
+              }
+            ]
+          ],
+          "id": "79723ea9-58fa-42c8-8e59-424f7e533385",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Concurrent session usage"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Same account logged in from multiple locations at once, physically impossible for one person"
+              }
+            ]
+          ],
+          "id": "7686f091-17f8-4d66-ab05-36c591da59de",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Impossible travel"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Login from one location, then a login minutes later from somewhere no flight could reach, easy to automate detection for via log correlation"
+              }
+            ]
+          ],
+          "id": "a8c99764-c03f-414f-8b4a-e1fe928795a0",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Blocked content"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attacker disables auto-update connections, links to security patch sites, or third-party anti-malware/removal tools to stay resident longer"
+              }
+            ]
+          ],
+          "id": "a7653fb9-d414-4bcc-b483-832f22325c67",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Resource consumption"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unusual bandwidth spike (e.g. a large outbound transfer at 3 AM), server going unresponsive, or a service outage that's really the result of a failed exploit attempt"
+              }
+            ]
+          ],
+          "id": "01ce663f-615c-4d39-b69e-e7f0c80b0ca1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Out-of-cycle logging"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Patch or firewall log activity happening outside the normal patching schedule, worth checking why"
+              }
+            ]
+          ],
+          "id": "a469e09d-43be-40e1-8a41-964f3130ea9f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Missing logs"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Attackers cover tracks by deleting logs (auth, file access, firewall, proxy, server), a gap in the log record is itself a red flag"
+              }
+            ]
+          ],
+          "id": "e5b98ee9-3e4d-4e01-bd4b-62bc5b0ca559",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Published/documented data"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Company data or a description of the breach shows up publicly (often tied to a ransomware extortion attempt), sometimes the only sign an exfiltration happened at all"
+              }
+            ]
+          ],
+          "id": "ecf19cb9-fda9-4dce-8661-5a59dee9b146",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "18986755-1a3d-47fe-bf19-42d74eb1b89b",
+      "type": "table"
+    },
+    {
+      "id": "1d440d4e-580f-4733-9822-4816015778ac",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Segmentation and Access Control"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "478ce029-7e30-40b9-8760-e446c1c80dab",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Segmentation splits a network into isolated zones, physically, logically (VLANs), or virtually, for performance (keep high-bandwidth traffic off shared links), security (users shouldn't talk directly to a database server, only specific apps in the core should), or compliance (PCI scope reduction, easier change control)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9b105fbe-750f-462e-9efa-f58210befe30",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ACL"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (access control list): explicit allow/deny rules tied to source, destination, port, time of day, or application, restricts which devices/users can reach what. Careless ACL changes can lock out the admin making them."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a0590878-71d4-4941-a95e-4859b28785ab",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application allow/deny lists enforce which software can even run, matched on: application hash (unique per binary), certificate (only apps signed by trusted publishers), path (only run from approved folders), or network zone (only apps launched from a trusted network segment)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "686ec75f-0afd-4fba-988e-ebc3f99daf62",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Mitigation Techniques"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "071aa044-3795-47fd-b904-641bcff6c107",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patching: monthly incremental cycle for stability/security, plus third-party updates (app vendors, device drivers) that don't ride the OS patch schedule, plus emergency out-of-band patches for zero-days. Auto-update is convenient but not always the safest default."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d9f39153-b1dc-428f-837b-c64ed114c4be",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Encryption: file system encryption for app data at rest, full disk encryption ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "FDE"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", BitLocker/FileVault) for the whole drive, file-level encryption (Windows "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EFS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") for individual files, application-level encryption managed by the app itself."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a7e21723-023f-4fcc-93f8-8d19a9dba99f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring: sensors (IPS, firewall logs, auth logs, web/database transaction logs, email security logs) feed collectors (SIEM consoles, syslog servers), a SIEM's correlation engine ties disparate sensor data together into one picture."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "af31498c-7732-438d-a81b-4fe9797e0085",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Least privilege: every account/app gets only the rights needed for its job, no standing admin rights for regular users, shrinks the blast radius of any single compromised account."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fb3fb702-dc35-4bc8-9017-320aea683785",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Configuration enforcement: posture assessment run each time a device connects, checks OS patch level, EDR version/status, firewall status, certificate validity; anything out of compliance gets quarantined to a restricted VLAN until it's fixed and rechecked."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c103929a-9ffc-4a8c-8b04-b8b33ab18938",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Decommissioning: formal policy for retiring storage media (hard drives, SSDs, USB drives), not just tossed in the trash, either securely wiped for reuse or physically destroyed."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6849e76d-1dc2-49d3-9c89-1f31ea4a7a50",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hardening Techniques"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "800dbb93-05d0-48af-88e6-79d3d07aa77a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Securely configuring systems and stripping out anything unnecessary, the goal is cutting down how many ways in an attacker actually has."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "2ddf0297-83d0-4ba8-a0c7-4b8c7af1883e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "General steps: remove unused software, disable services not in use, patch, change default passwords, disable default accounts where possible, turn on logging, enforce MFA, restrict admin access, encrypt data."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "aec9f79e-80d4-47d5-960b-cf9d0c269925",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "System Hardening"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "84de20ee-8d8e-472f-bbeb-fff01a89e50e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patch the OS, enable endpoint protection, configure the host firewall, enforce account lockout policy, disable ports not in use, restrict local admin rights, enable audit logging."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "baa8b43a-d305-4827-91e6-b97a79447801",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network Hardening"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "5139b3cb-93e0-4af0-b094-eef1deefcf16",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Review firewall rules regularly, disable unused switch ports, use secure management protocols (not plaintext ones), segment the network, keep firmware current, lock down wireless settings, disable insecure protocols."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "1029bbd7-c6b8-48a3-8feb-8dd8168b1f36",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud Hardening"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "43cb639a-7091-46b7-91b4-fe092ecc70d7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Least-privilege IAM, storage private by default, tightly scoped security groups, cloud audit logging on, data encrypted, access keys rotated, configuration changes monitored."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "00b69681-cdc7-4d1f-ad2e-2521ae7624b8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application Hardening"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "8ecae19a-0e5e-45fb-9417-52dc91d77f7b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Validate input, protect secrets properly (not hardcoded), use secure headers, keep dependencies patched, enforce authentication and authorization checks, log security-relevant events, avoid verbose error messages that leak internals."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "afe226c0-cc63-4a82-adbd-1706cd894c29",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Baseline Configuration"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "eeb33e2b-1fd1-4647-89c2-f91bd7647cd3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Baseline = the minimum approved config a system has to meet. Keeps systems consistent and auditable instead of drifting into one-off configs nobody can reason about."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0c1a2366-5ed9-476d-8da8-baa16ac99a06",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Typical baselines: Windows server, Linux server, firewall, cloud IAM, browser security."
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-08-19",
+  "id": "3c1042e6-0b87-8159-8af4-da0ebca3052e",
+  "properties": {
+    "Name": "SY701 Notes - 2. Threats, Vulnerabilities & Mitigations",
+    "Source": "Prof. Messor",
+    "Status": true,
+    "Tags": [
+      "Sec+"
+    ],
+    "Type": "Notes",
+    "URL": null
+  },
+  "slug": "sy701-notes-2-threats-vulnerabilities-mitigations",
+  "tags": [
+    "Sec+"
+  ],
+  "title": "SY701 Notes - 2. Threats, Vulnerabilities & Mitigations"
+}

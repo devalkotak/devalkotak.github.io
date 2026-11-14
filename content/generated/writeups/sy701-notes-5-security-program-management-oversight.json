@@ -1,0 +1,3938 @@
+{
+  "blocks": [
+    {
+      "id": "3c1042e6-0b87-80a8-8023-cc2c5f1da542",
+      "type": "table_of_contents"
+    },
+    {
+      "id": "3c1042e6-0b87-80ac-abad-c179ef0e303f",
+      "type": "divider"
+    },
+    {
+      "id": "c7487283-519e-4381-b671-514d21bcdb84",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Policies"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c4e7d46f-11fa-41b2-be26-9499a7859103",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Policy sets the \"what\" and \"why\" (CIA framing: confidentiality, integrity, availability); technical controls handle the \"how\"."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "82ff2695-bc69-48fb-8e59-e4127f256ca6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "High-level strategy: data storage rules, security event handling. Detailed goals sit underneath: acceptable Wi-Fi use, remote access requirements."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2701074a-3b9b-4f36-af48-9718a8172e18",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Information security policy: the master catalog of every security-related policy an org runs, a centralized reference tied to compliance requirements and roles/responsibilities. Only useful if actually enforced."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a4f9b976-9910-4944-837b-0ad11b6944e3",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "AUP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Acceptable Use Policy): defines acceptable use of company assets (internet, phones, computers, mobile devices), often folded into the employee handbook or Rules of Behavior. Limits legal liability and documents grounds for dismissal."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bb5b67e2-03c6-42d4-8694-39d010242bfc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Business continuity policy: fallback for when systems fail (manual transactions, paper receipts, phone-based approvals). Has to be documented and tested before a real disruption hits, not during one."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7f8ec9d6-978e-4b36-876c-4e376e31acfe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Disaster recovery plan: IT-specific piece of business continuity, covers natural disasters, tech/system failures, human-caused incidents. Comprehensive plan spells out recovery location, data recovery method, application restoration order, IT/employee availability."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "faca4cc6-ddb6-4275-8526-89d724400cbc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security incident examples: user executes malware from an email attachment that then calls out to external servers, DDoS via botnet, data theft for extortion or public leak, P2P software accidentally exposing internal access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "eb406a77-50ab-464b-8845-2a94ac185497",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Incident response roles: incident response team (trained, tested specialists), IT security management (corporate support), compliance officers (regulatory knowledge), technical staff (in the trenches), user community (first to spot something off)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "900932ab-fc16-456a-8a1f-df5462bd88cf",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NIST SP 800-61"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " incident handling lifecycle: preparation, detection and analysis, containment/eradication/recovery, post-incident activity."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "68d61e1c-abba-4c62-951d-0d982c6fa15a",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SDLC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (software/systems development life cycle): no single \"right way\" to go from idea to shipped app, but a framework helps balance customer requirements, schedule, and budget."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "39b4c4e4-9bcd-47f8-b38d-9e11ca9e6bac",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Change management: covers how a change gets made (software upgrade, firewall config change, switch port change). One of the most common risk sources in an enterprise, frequently skipped or rushed. Needs clear policy on frequency, duration, install process, fallback procedure."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7280429f-19e0-49bb-b164-6398fcfb250e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Standards"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1f6a0df7-b97a-4ca5-be61-574e003aca91",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Standard = formal, mandatory spec for applying a security technology or process. More prescriptive than a policy's high-level direction. Complete documentation cuts risk because everyone works from the same expectations."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "924b6258-c919-4b21-8cc3-3c600312fad1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "May be written in-house (org-specific requirements) or adopted from an existing body ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ISO"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NIST"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ")."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "abb1e44a-6d5b-4658-8cca-fcde01f2f1d5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password standard: complexity requirements, approved authentication methods (e.g. LDAP-only, no local accounts), secure reset workflow that avoids unauthorized resets, change frequency, storage requirements, password manager guidance."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a76c3977-9376-4433-9412-b8a1b27b0e4f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Access control standard: defines which data, at what time, under which circumstances access is granted. Specifies the access control model in use (discretionary, mandatory, etc.), documents how privilege is granted, and how it's removed (termination, expiration, contract renewal)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "415724c5-8c39-478c-90f1-95eb1fd5fc0e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical security standard: rules for building/door access and property security, different procedures for employees vs visitors, electronic locks, ongoing monitoring, motion detection, mandatory escorts, ties into offboarding."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "df5370b0-e5c6-4253-85fd-77eafe2312d2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Encryption standard: algorithm and implementation requirements for securing data, password storage method, minimum encryption requirements for data at rest, in transit, and in use (often different per state)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6900be4c-efe3-4163-8a3d-e06352469c60",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Procedures"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d44f6392-e131-4051-b988-8d04713ed5b8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Change control: the formal process wrapped around change management to avoid downtime, confusion, mistakes. Steps: scope the change, analyze the risk, build a plan, get end-user approval, present to the change control board, have a backout plan ready, document the result."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "61b915b9-e669-4ae8-996e-45500ddedeeb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Onboarding: create accounts tied to the right groups/departments, get the AUP/IT agreement signed (often bundled into the employee handbook), issue preconfigured hardware."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8cdff2a2-a08b-4226-9af7-0ac6ff187aeb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Offboarding: should be pre-planned rather than figured out on the spot. Covers what happens to hardware, what happens to data, and account deactivation (deactivated isn't always the same as deleted)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "404fc6dc-e46b-4929-80d5-ae00ec1dbcff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Playbooks: conditional, step-by-step process for a given scenario (data breach investigation, ransomware recovery). Works as a manual checklist or feeds a "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOAR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Security Orchestration, Automation, and Response) platform to automate the response and pull in third-party tools/data."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ee22b7f1-eb45-4329-a593-d01a7a07413f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Procedures need ongoing monitoring and revision: shifts in security posture tighten change control and add playbooks, an update to one procedure ripples into related playbooks, new threats prompt new checks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "911ee0f9-22ae-435d-ba6a-4b6b4601cd90",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Governance structures: boards (panel of specialists, gathers info for a committee), committees (make the actual decisions, weigh board input), government entities (bring legal, administrative, and political constraints, often open to public records), centralized governance (decisions made from one location/group) vs decentralized (spread across multiple individuals or locations)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "18cbb066-7595-4283-95cd-177eab5ef1ee",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Considerations"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "7207b0b9-f7d1-4641-a2d7-ec1f1928b294",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Regulatory: security processes like logging, data storage, protection, and retention usually exist as a foundational response to a regulation. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOX"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Sarbanes-Oxley Act, 2002) governs accounting/financial reporting integrity. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " sets healthcare data storage, use, and transmission standards."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f530647d-366a-4462-ba5a-ff8303ac97ca",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Legal: security teams often carry legal duties, reporting illegal activity, preserving data under legal hold. Breach notification is a legal requirement in many jurisdictions. Cloud data moving across jurisdictions without human intervention makes this harder to track."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ad5ac4be-8ca2-4d88-8b15-00c7536984b0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Industry: requirements vary by vertical. Utilities need isolated, protected control systems. Medical needs tightly secured data storage, access logging, and encryption."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9b62744e-d67b-48ed-b899-4b05fb528947",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Geographical scope: local/regional (city/state government records, uptime of end-user services), national (federal defense concerns, multi-state coordination, protecting state secrets), global (multinational operations, global financial markets, legal requirements varying widely by country)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ddcb363c-de40-43ca-9c44-6d5f5212d6a4",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data Roles and Responsibilities"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "0179a01c-775f-4a3a-b914-86aa41c08378",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data roles are organizational assignments, not always technical ones."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4e857bb6-03e9-49d0-9d08-ee2c761f343d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data owner: accountable for a specific data set, usually a senior officer (VP of Sales owns customer relationship data, Treasurer owns financial data)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "be444241-d11c-4db0-b0f4-952d20cbeb09",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data controller: decides the purpose and means by which personal data gets processed."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "63ee1671-036e-443d-82f9-91bc6866861c",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Example: payroll department is the controller (sets pay amounts and timing), payroll vendor is the processor (runs payroll, stores employee data)."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "535f891d-01f4-4388-9694-32766b69ed2b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data processor: processes data on the controller's behalf, often a third party or separate group."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "13e7e6d0-0175-4716-9b80-d749c03ad2c0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data custodian/steward: hands-on role, responsible for data accuracy, privacy, and security day to day. Applies sensitivity labels, keeps processing compliant with applicable law/standards, manages access rights, implements the actual security controls."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "391987ff-df57-4cba-8bad-56e15ad7c309",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk Management Concepts"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "77f3a238-fe74-4166-847c-187c344f7f93",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk management = identify, analyze, prioritize, treat, monitor. Goal isn't zero risk, it's getting risk down to a level leadership can live with."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6dd5af8f-a09d-465f-9cdb-54d4951857d2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Used to triage: what gets fixed now, what waits, what needs sign-off from above."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "320fd4e9-0d83-47e6-b9fe-a502ace10c73",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Core building blocks:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "9565ea85-e12f-423b-9291-4bab843dcf5c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Asset: anything worth protecting (data, servers, laptops, accounts, cloud storage, apps, business processes)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3fa4dfe0-dd60-43fb-aa93-67221b669c75",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat: anything capable of causing harm, disclosure, disruption, or loss."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "422e903c-05c7-49c5-8c7d-5f76e2e75cfd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability: a weakness a threat can exploit."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c79805b3-0a31-4deb-8075-17b1bbaf8b6f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk: the chance a threat actually exploits that weakness and hurts an asset or the org."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4eceec85-2821-4494-9bf0-3d6d90c618fb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Worked example: payroll server (asset) + external attacker (threat) + unpatched CVE (vulnerability) = attacker pulls payroll data (risk realized)."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c51e2e3b-a3e8-4a6b-b0ca-81dc7b2b1e62",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Likelihood vs impact:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d50f3500-42e8-4ff4-bd08-d8639cbd1767",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Likelihood: how probable the event is."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "83bfa963-7664-4e4d-a455-496f9186ce88",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Impact: how bad it gets if it happens, covers financial loss, downtime, data loss, legal/regulatory fallout, reputation damage, safety."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fcc54686-86e6-4964-961d-c93b418d6456",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "High likelihood + high impact = top priority. Low + low = candidate for acceptance or just watching it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b54c10f8-fd1a-41fd-bbb1-4442d0481ed6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk categories:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "8de82eaf-c0dc-42e8-9510-29188e823211",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Inherent risk: what's there before any controls are applied."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fa16c345-e67f-40c8-8272-9ec617025eef",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Residual risk: what's left over after controls are applied. (Turning on MFA cuts account-compromise risk, doesn't zero it out, the leftover is residual.)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "803b0cf7-1253-43cd-8012-84f0eacd3a19",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Control risk: the chance a control itself fails or doesn't work as designed."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "a24c0c45-889a-4623-9a6a-ab049362f42c",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Appetite posture comes in three flavors: conservative (low risk-taking), neutral (balanced), expansionary (high risk-taking for growth)."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "320cfba8-7083-44a0-82ed-d2f83bb0d041",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk appetite: how much risk the org says it's willing to carry, in general."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a5f28f64-6b6a-49f6-9fd8-2f90664d2da7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk tolerance: how far actual risk can drift from that appetite before it's a problem, usually a larger acceptable variance than the appetite itself (like a speed limit: the posted number is the appetite, how far over it before a ticket gets written is the tolerance, and it can shift with conditions)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b899bd2e-0578-4488-a3bd-1298b5552e3e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk threshold: the cost of mitigating a risk should be at least equal to the value gained by mitigating it, otherwise the fix costs more than the problem."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1d4a3314-83dd-46c8-9ad8-eea4da5eb53d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Assessment cadence:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "445caa18-5b1a-49b7-a6c7-3b64ae5e3012",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ad hoc: no formal recurring process, run when a situation demands it (e.g. leadership wants a check after a new attack type makes news). A committee stands up for the assessment and disbands after, no need to revisit unless something changes."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5474f4a0-b7e9-4556-aa14-91e87eac12a5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recurring: runs on a set interval, could be internal (quarterly) or mandated by a regulation (PCI DSS requires annual risk assessments)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "85b2a96c-25f6-442c-a81f-83eaaaadf852",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Continuous: baked into an existing process, e.g. change control requiring a risk assessment as part of every change."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "37c7a4b3-1844-4364-8899-d1c9288402bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk register additions:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3e84f89f-0cb6-40fd-a9d9-d98ad480f99c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Key risk indicators (KRIs): metrics tracked to flag risks that could impact the org, each one assigned a risk owner to manage it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "095c950d-e7ee-4e6a-a88c-b738ac903114",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Asset value ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "AV"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "): dollar value of the asset to the org, including replacement cost and downstream effects like lost sales or regulatory fines."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b9af4e92-7847-4610-9291-a39dc8ab2960",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exposure factor ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "): percentage of asset value lost in a single incident (0.25 = quarter of the value lost, 1.0 = total loss)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "af600585-3813-48b9-bcf3-cdc5acbe326c",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SLE"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " = "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "AV"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " x "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". Example: $1,000 laptop (AV) stolen outright (EF 1.0) = $1,000 SLE."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b0213cb3-5f97-46b6-ad38-a19942b90074",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk Response"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Strategy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it means"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Example"
+              }
+            ]
+          ],
+          "id": "038bdc52-d093-4601-945d-ed95a27b24a4",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Accept"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Acknowledge and monitor, no further action"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Low-severity finding on a non-critical internal box"
+              }
+            ]
+          ],
+          "id": "bb8d2df5-8807-4839-bc4a-7888f74dd611",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Avoid"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Kill the activity that creates the risk"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Decommissioning an unsupported public-facing service"
+              }
+            ]
+          ],
+          "id": "e1d1fbc5-1fe3-46b2-9f26-53df56a2c488",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Transfer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Push responsibility or cost to a third party"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Cyber insurance, outsourcing with contractual security terms"
+              }
+            ]
+          ],
+          "id": "6f0ac1aa-571c-491b-936f-7d126f4e114e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mitigate"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Cut likelihood or impact via controls"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Patching, MFA, encryption, segmentation, backups"
+              }
+            ]
+          ],
+          "id": "58ba6cba-63ea-4e67-ab61-b991ca9cc60c",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "240c38f7-d385-4a01-bb57-43648f41fbf2",
+      "type": "table"
+    },
+    {
+      "id": "05010824-9381-49a8-9a47-0dec0e1d1e9d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Acceptance has two special-case flavors:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "ea93deb8-c2da-4f1f-9e99-4445e8f837af",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exemption: a security policy or regulation genuinely can't be followed (limited by available controls, org size, asset type), needs formal sign-off to waive it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "35c13c1c-2d5c-40f8-ae39-903ef564fdc2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exception: an internal policy isn't applied in a specific case (e.g. policy says patches within 3 days, but a patch crashes a critical package, so an exception extends the timeframe)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "009088a8-b606-4dad-b912-3aabfd852d93",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk reporting: formal document built for senior management, lists identified risks with supporting detail so leadership can decide on resourcing, budget, and priority. Usually leads with the critical and emerging risks."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "9685aad1-8a50-4e8f-a5c5-5e3a877ca9b9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk register: the tracking document, one row per risk, capturing risk ID, affected asset/system, description, threat, vulnerability, likelihood, impact, rating, existing controls, recommended treatment, owner, due date, status. Gives the team a shared, trackable view of what's outstanding."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b59982d7-13b0-41dd-884c-37e9397bccdd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk analysis, two approaches:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "af3f93bd-23ff-4892-a1e1-a30f4b1efdcd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Qualitative: descriptive buckets (low/medium/high)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "ee5451b1-e34a-4ebf-b12f-1eb0dd30a581",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "SLE"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " = Single Loss Expectancy (cost of one occurrence)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "1fa3241b-4352-4eb8-ad9c-a415c2266e94",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ARO"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " = Annualized Rate of Occurrence (how often per year)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "f3bb929b-64ca-47ab-a3cd-91e0c9113cbf",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "ALE"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " = Annualized Loss Expectancy = SLE x ARO"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "6b52140e-5af8-4fd3-bac9-25c880dc9290",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Example: $10,000 per outage, twice a year expected = $20,000 ALE."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "24d9860f-1fb4-45cd-82d0-dc468594ee28",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Quantitative: dollars and probabilities."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "71aca70a-58ab-4b0f-a7bb-ca26845b50de",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Business Impact Analysis (BIA): maps out which business functions matter most and what disruption costs, feeds recovery prioritization. Key terms:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b63c92f5-51a8-4045-bb89-e27fc602e858",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RTO"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Recovery Time Objective): max acceptable time to get a system back up."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9ae34452-e403-462c-8ec0-3f8b12cc3325",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RPO"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Recovery Point Objective): max acceptable data loss, measured in time."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c87004ed-6764-4c72-a348-34b740acfcaa",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MTD"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Maximum Tolerable Downtime): the outer limit before an outage becomes existential."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "569bbfb1-5581-406b-9a9a-ad555f0973e7",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MTTR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Mean Time to Repair): average time to fix an issue, including diagnosis time. Key input for costing unplanned outages."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2371a8f3-3242-4846-8a2d-ae299e1a8872",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "MTBF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Mean Time Between Failures): average time between outages (total uptime / number of breakdowns), used as a historical-performance-based prediction for planning around future failures."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f89dbc10-840f-4fb9-8a27-5931bfe65200",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Third-Party Risk"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "76186185-2d04-4341-949d-683eb1e21110",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Third-party risk = exposure created by anyone outside the org touching business operations: cloud providers, payroll vendors, MSPs, software vendors, data processors, contractors, hardware suppliers. Any access they get (systems, data, network, physical space) inherits their security posture as a weak link."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "bcd8d199-2318-4299-90db-500e7799dd62",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Supply chain risk is the broader version: risk baked into the products, software, hardware, and subcontractors an org depends on. Attackers go after the trusted vendor relationship instead of hitting the target directly. Examples: poisoned software update, vulnerable third-party library, compromised vendor account, insecure API integration, malicious code slipped into a dependency, cloud provider outage."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "fdff1e0b-806b-45a4-8723-3c525b8ea209",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Supply chain analysis: evaluates the full path a product/service takes from supplier to customer, checks coordination between groups, identifies improvement areas, assesses the IT systems supporting the operation, documents process changes. Case study: SolarWinds, malware inserted into a signed software update between March and June 2020, announced December 2020, at least 18,000 of 300,000 customers potentially exposed to a compromise that carried a valid digital signature."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "ded560b9-541a-4f0c-9923-ef0d4ecf34b1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vendor selection: due diligence checks a company out before doing business (financial status, pending/past legal issues, background checks, personnel interviews). Watch for conflict of interest: a potential partner also serving a top competitor, a vendor employing a relative of a decision-maker, a vendor offering gifts tied to signing a contract."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b646fd1e-4dfb-4bde-a97f-12a41a410d83",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Right-to-audit clause: contract language giving the org the legal option to perform a security audit of the vendor at any time, agreed to by both sides up front. Matters most with partners handling shared data or outsourced processing, so security can be verified before a breach forces the question."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "887e1af5-9fee-4fa8-a8b1-dc827b6bd586",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Independent assessments: bringing in an outside specialist firm to evaluate security and provide recommendations. Their value is doing this work full-time across many orgs, so they've seen options an internal team might not have considered."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b7de8aae-f56d-4706-894c-6fde9c352324",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Questionnaires: a due diligence and ongoing-monitoring tool, gets answers straight from the vendor (due diligence process, DR plans, data storage method, and more). Results feed back into updating the vendor risk analysis throughout the relationship, not just at signing."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "13c746a3-79f3-424e-aa5c-a47174bec702",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vendor due diligence, before signing anything, check for:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "5bc7281a-96da-4e11-b401-9f1487fd032b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security questionnaire responses"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a5c960ed-e844-4745-b32d-0992b61c50b4",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOC 2"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " report"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "beaf5336-1ebf-4c37-8c7b-4c15ae7c673a",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ISO 27001"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " certification"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c7d33b78-3e25-4e64-9c57-18b27cf02940",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PCI DSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " / "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " compliance evidence where relevant"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ce0eb6bb-917f-40e4-8b84-903509531cef",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data handling and encryption practices"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e155a925-af62-4ec9-ab55-70708a45bffd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Access control and incident response processes"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9cd63373-501d-4320-96df-dd7d1351ff22",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "BC/DR plan"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cea4b610-9840-428f-b063-de9beffa6acb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability management process"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3af3f4d8-c01c-4e4e-b691-543f25a95c57",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Subcontractor list (fourth-party exposure)"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d3f8bf37-eda4-495c-8f95-a2ab41e8c44f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Contracts and SLAs should nail down: data ownership, breach notification window, audit rights, encryption requirements, logging/monitoring expectations, uptime commitments, RTO/RPO, termination rights, and secure data return or destruction on exit. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SLA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " = the document that spells out expected service performance."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "f92b4324-86de-4d00-aa8e-3e201e0cb0a5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vendor access control:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "7505bf3b-f3c2-4b5d-83b2-dd77697df185",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Least privilege, time-boxed where possible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "df81b2dd-e00a-466d-bfa6-d653a7661db7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Named accounts over shared credentials, MFA required."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c76181fd-6cac-4f79-a162-a003a22d8fc3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Restrict by time window, source IP, role."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aaf65280-c38f-4b43-97e6-4e3dba60aced",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log everything vendors touch, review privileged access on a schedule."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ff82a445-67e2-4080-9783-af901b37db8e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vendor relationships need ongoing monitoring, not a one-and-done review at signing: annual reassessment, periodic access reviews, contract renewal checks, incident notification review, compliance report refresh, watching for breach news about the vendor."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "79df75d7-7233-4195-8c62-5983160b0219",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Offboarding a vendor matters because stale access is a lingering hole: disable accounts, revoke API keys/tokens, pull VPN/remote access, get company assets back, confirm data was deleted or returned, update the documentation, pull logs if there's any question."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d511bca4-7f00-4a5c-b23f-8cd54bdb7685",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Third-party penetration testing is often a compliance mandate rather than optional, may also be a legal requirement in some contracts. Rules of engagement defines purpose and scope so every party knows the test parameters: type of test and schedule (on-site physical breach, internal, external, business-hours only vs after-hours), in-scope IP ranges, emergency contacts, how sensitive info gets handled, in-scope and out-of-scope devices/applications."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b6f410f2-73ba-45ea-a31d-fb61010151f9",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Agreement Types"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Agreement"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Purpose"
+              }
+            ]
+          ],
+          "id": "23a9cf91-7176-4ee3-ba37-ef8731421f4d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "SLA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Service Level Agreement)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Minimum terms for service delivery, uptime, response time; common between customer and provider"
+              }
+            ]
+          ],
+          "id": "a2810ec5-512b-4dd9-94fe-467fa00dacfd",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MOU"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Memorandum of Understanding)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Informal letter of intent, states common goals, not a signed contract"
+              }
+            ]
+          ],
+          "id": "efae5e60-d171-4ab6-b433-c742804fa793",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MOA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Memorandum of Agreement)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Step above an MOU, both sides conditionally agree to objectives, can be legally binding even without contract-style language"
+              }
+            ]
+          ],
+          "id": "8cf7b369-7dbb-4910-967e-1c66d8f813df",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "MSA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Master Service Agreement)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Legal contract setting broad terms that future work will build on, detailed negotiations happen up front"
+              }
+            ]
+          ],
+          "id": "9f03259c-3fe6-4826-9ae7-4a98b0323526",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "WO"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "/"
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "SOW"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Work Order / Statement of Work)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Specific list of deliverables, scope, schedule, acceptance criteria, used alongside an MSA"
+              }
+            ]
+          ],
+          "id": "b775c62b-c77c-448c-8914-614192c9f243",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "NDA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Non-Disclosure Agreement)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Confidentiality agreement protecting trade secrets and business activity, unilateral (one-way) or bilateral/multilateral (mutual), signatures required"
+              }
+            ]
+          ],
+          "id": "772bc24d-8fed-426b-94ab-62a88cd7d3af",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "BPA"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " (Business Partners Agreement)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Financial contract for going into business together, spells out owner stake, decision-making authority, contingency plans for financial issues or disaster recovery"
+              }
+            ]
+          ],
+          "id": "46f36032-0177-4399-a55f-33bc163c5a98",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "2b8b3eef-8ec1-43b4-b8d5-ebceb77cb6af",
+      "type": "table"
+    },
+    {
+      "id": "1aeae849-1c57-4f95-bbda-7540809f690b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Governance & Compliance"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d53fcbdb-3d55-45e0-af3e-da58658018fe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Governance: how an org steers, controls, measures, and improves its security program. Sets who owns risk decisions, who signs off on policy, how exceptions get handled, and how performance gets reported up. Ties security work back to business objectives rather than letting it run as its own silo."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "e606c9d4-b9ff-41a3-bab6-7ac7482a03ae",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compliance: following the laws, regulations, contracts, standards, and internal policies that apply. Doesn't guarantee an org is actually secure, but it builds accountability and creates a paper trail. Common compliance areas: privacy law, card data ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PCI DSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), healthcare data ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), financial data, security awareness training requirements, access review cadence, incident reporting obligations."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d6a62adb-86b6-4540-a646-e4f1cc6d8ed1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Governance document hierarchy:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Purpose"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Example"
+              }
+            ]
+          ],
+          "id": "ad6f523c-6b64-4d11-ae62-e3eacc6f318a",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Policy"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "High-level management direction"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "\"All users must protect company data\""
+              }
+            ]
+          ],
+          "id": "f4282a41-ab1e-4e32-bc54-72ae716efff0",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Standard"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Specific, mandatory requirement"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "\"Passwords must be 14+ characters\""
+              }
+            ]
+          ],
+          "id": "5676b1fd-a2d5-4af3-acee-87826cbae6c5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Procedure"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Step-by-step how-to"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Steps to disable an account during offboarding"
+              }
+            ]
+          ],
+          "id": "39a15da0-00a9-48ca-bc35-cdd85c817a81",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Guideline"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Recommended, not mandatory"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "\"Use a password manager\""
+              }
+            ]
+          ],
+          "id": "faddd44f-f22b-405e-a92b-29a9fdf76440",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Baseline"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Minimum approved configuration"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Windows workstation hardening baseline"
+              }
+            ]
+          ],
+          "id": "c1de1a4d-d440-42a4-a733-051c8f26d486",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "a1449c1f-3720-4072-b0c5-33c10e9d8a60",
+      "type": "table"
+    },
+    {
+      "id": "a87e9353-cec0-451d-9ebe-42cc61de4fe9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Typical named policies an org maintains: acceptable use, password, access control, data classification, remote access, incident response, change management, backup, vendor risk, mobile device."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "5794b9b5-6eba-464e-bee1-d0767cddff8e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Control ownership: every control needs a named owner accountable for implementing it, keeping it running, producing evidence, and improving it over time. Split usually looks like: HR owns onboarding/offboarding steps, IT owns patching, security owns SIEM rules, management owns risk acceptance decisions."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "d7a1105c-b51f-4b27-a2b8-ec945499832d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compliance evidence (proof a control is actually operating): policy/procedure docs, access review exports, config screenshots, audit logs, vulnerability scan reports, patch reports, backup test results, awareness training completion records, incident response records."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "0a19b63e-7e2e-441b-8d7c-9d332c7a4e97",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Frameworks and regulations that come up repeatedly: "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "NIST"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " Cybersecurity Framework, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ISO 27001"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOC 2"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PCI DSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "GDPR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", CIS Controls, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOX"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "GLBA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Gramm-Leach-Bliley Act, 1999, governs disclosure of privacy info by financial institutions)."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "8e1a8c60-cc69-4c07-819c-de45ffad8e81",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compliance reporting splits internal vs external:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "acb64078-1c52-4a7b-b84c-81851efcf260",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Internal: monitors and reports on the org's own compliance effort, large orgs often name a Central Compliance Officer ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "CCO"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), also used to brief customers or investors."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "454e7b8e-feac-4793-9da7-22666082f52b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "External: documentation required by regulators or industry bodies, may need annual or ongoing reporting, missing or invalid reporting risks fines/sanctions."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "03fb9f05-e6de-45b1-88aa-f56c62664bd1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA non-compliance penalties scale with intent, from civil fines (up to $100/violation, capped at $25,000/year for an identical violation) up through felony tiers for false pretenses ($100,000 fine, up to 5 years) and intent to sell/use health data for gain ($250,000 fine, up to 10 years)."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "667ea7ab-a9b0-4358-a0eb-cd7744430f4f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Consequences of non-compliance go beyond fines:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "458b6aad-b691-400c-a4fa-3cd68044ad82",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reputational damage: disclosure requirements mean a breach often becomes public, stock price can take a short-term hit. Case study: Uber's October 2016 breach exposed 25.6 million names/emails/phone numbers, wasn't disclosed until November 2017, the company paid the attackers $100,000 and had them sign an NDA instead of reporting it, then paid $148 million in fines in 2018; the attackers pleaded guilty in 2019 and Uber's former CSO was sentenced in May 2023 to three years probation plus a $50,000 fine."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0c4542d6-639b-44d6-b63b-8e43ee6dd30f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Loss of license: a significant economic sanction, the org can't sell its product and others can't legally buy from it, re-licensing can be costly."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "631f0aa8-54e6-4a80-b7ea-e3146f64931c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Contractual impacts: some deals require a minimum compliance level, falling below it puts the contract in breach, resolvable with or without going to court."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "691bf4d3-480a-4521-85a6-a3f1b2df8a78",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compliance monitoring keeps day-to-day operations aligned with requirements:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "aabb2153-7502-41c7-907a-69f4707db0ff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Due care: acting honestly and in good faith, tends to describe internal activities."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "416b68cf-19bc-4cfa-a551-44ac97dfcffa",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Due diligence: investigating and verifying before acting, tends to describe activities tied to a third party."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "839e6aa8-7df9-4379-8472-52e765c793da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attestation and acknowledgment: someone formally signs off on compliance documentation and is ultimately accountable if it turns out incorrect."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e1986557-4d05-4d09-8e6f-748cc384452c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automation is close to mandatory at scale: monitoring tools differ across vertical markets, collect data from people and systems, compile it into reports."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0238be5c-98ab-4cd9-a7c5-738588518b2f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Privacy"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "0a696064-818c-49ae-9748-797d15aafe1c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Privacy guidance is a constantly shifting set of rules, scoped locally/regionally (state/local privacy limits, vehicle registration, medical licensing), nationally (HIPAA, children's online privacy under 13), and globally (multiple countries coordinating on privacy standards)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c67d1d41-47db-47fe-84ee-54743618278e",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "GDPR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (General Data Protection Regulation): EU regulation covering data protection and privacy for individuals, applies to name, address, photo, email, bank details, social media posts, medical info, even a computer's IP address. Controls export of personal data, gives "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "data subjects"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " a right to be forgotten (removal from search engines and, where applicable, deletion), lets users decide where their data goes."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d32f6caf-be58-43c6-a455-02685a17209f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data subject: any identified or identifiable natural person, defined broadly (name, ID number, address, genetic makeup, physical characteristics, location data). Privacy is written from the data subject's perspective, not the org's."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f8cfcb58-9fe7-47b1-8144-d188af35c7f8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data inventory and retention: document what data the org stores, who owns it, how often it updates, and its format. Internal use covers project collaboration, security work, quality checks; external use means selecting what's safe to share publicly under existing law/regulation."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1244a79f-620e-4ce4-9baf-e35b4268c339",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Audits & Assessments"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "41f08da9-3a45-472a-a918-918a9f3b52a6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Audit: formal check on whether controls, policies, procedures, standards, regulations, or contract terms are actually being followed. Can be internal or external, may originate findings that require remediation. Goals: verify compliance, confirm controls actually operate, surface gaps, back up regulatory requirements, produce evidence for leadership or customers."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "bcdd20a8-c84c-4772-ab40-2d82e2e7d347",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Assessment: broader review aimed at understanding risk, control effectiveness, technical weaknesses, or overall posture, generally more improvement-oriented than an audit's compliance focus."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Assessment type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What it checks"
+              }
+            ]
+          ],
+          "id": "10b460ee-872e-4f1b-95e2-a7a217b1f5f9",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Risk assessment"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Identifies and ranks risks"
+              }
+            ]
+          ],
+          "id": "7f66b0c4-c8b9-4884-8ac6-92285b93d36b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Vulnerability assessment"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Finds and prioritizes technical weaknesses"
+              }
+            ]
+          ],
+          "id": "32c9060d-bfeb-4e22-a080-da1137cd4236",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Penetration test"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Actively exploits weaknesses to prove real impact"
+              }
+            ]
+          ],
+          "id": "f0900d80-0d8a-46a5-8a1e-1f3492f744a3",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Configuration review"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Compares systems against secure baselines"
+              }
+            ]
+          ],
+          "id": "d4a02ee7-bffe-4027-8859-6b925edfa0c5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access review"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Checks whether granted permissions are still appropriate"
+              }
+            ]
+          ],
+          "id": "81f1d358-ccd4-4d0b-8024-871c58b79546",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Tabletop exercise"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Walks a scenario to test response decision-making"
+              }
+            ]
+          ],
+          "id": "e4d32e1d-2bed-4831-a672-49dbdf5e60e1",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Compliance assessment"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Checks alignment against a standard/regulation"
+              }
+            ]
+          ],
+          "id": "b3b96d05-7507-4b44-9d2d-6fa77bce6146",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "2fc80fb9-13f4-4097-9e91-f88fe2f0c8f2",
+      "type": "table"
+    },
+    {
+      "id": "3da9a5db-7818-43c3-a5b0-4953e64f1c85",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Evidence backs up both audits and assessments: policy/procedure docs, config screenshots, access review exports, vuln scan reports, patch reports, backup test results, log samples, incident reports, training completion records."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "4edb7d89-b129-4c48-acc4-73feb0ac4e51",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Findings: a documented issue from an audit/assessment, should include description, affected system/process, supporting evidence, risk/impact rating, recommendation, owner, due date, status."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a700bd27-5b27-448e-a43c-e4b60e572450",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Remediation tracking: findings stay open until proven fixed, not just marked closed on someone's word. Example: finding is \"local admin rights too broad,\" recommendation is \"remove unneeded local admin,\" closure evidence is an updated group membership export plus access review sign-off."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "283f7933-a19f-4a7e-9202-b735768824a5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cybersecurity audit examines IT infrastructure, software, and devices, checks whether policies/procedures are actually effective, aims to find vulnerabilities before attackers do. Can run internally or via a third party."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "495a7e8d-a101-4e99-b363-f4e5be454bb6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Attestation: an opinion on the truth or accuracy of an org's security posture, an auditor formally attests to what they found."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a25b9cde-4680-4fec-8911-a6f37b43c94d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Internal audits: not just for third-party relationships, orgs run these on themselves to check regulatory/industry compliance. An audit committee oversees risk management activity and owns the audit lifecycle start to finish. Self-assessments (the org checking its own work) roll up into ongoing reports."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "dd0af3a2-ef44-4021-b32a-40e26dab58c1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "External audits: often triggered by a regulatory requirement, with type and frequency dictated by that regulation. Involves hands-on examination, reviewing records, compiling reports, gathering supporting detail. The resulting assessment covers current state and may recommend future improvements."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "372eb6da-6505-4442-9e0c-d8a4799029d4",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Penetration Tests"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "72d003f8-03f6-4f38-b9be-e8f97ae80362",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Physical penetration testing: OS-level security can be bypassed entirely through physical access (modify the boot process, boot from external media, swap OS files), so physical controls (locked doors, badge access, elevators) get tested directly, not just assumed."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6d85ae4f-3079-4fa6-a525-31ce28dcc940",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Pentesting perspectives:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Perspective"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Role"
+              }
+            ]
+          ],
+          "id": "d394a009-8c8d-4d1e-8e84-770ca956c080",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Offensive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Red team, attacks systems and hunts for exploitable vulnerabilities"
+              }
+            ]
+          ],
+          "id": "67767c7c-3943-4987-8eb3-8ad9f74002ae",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Defensive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Blue team, detects attacks in real time and blocks unauthorized access"
+              }
+            ]
+          ],
+          "id": "dbc159b1-1562-4219-a86e-d8adf3b0748e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Integrated"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Ongoing cycle combining both, find and patch exploitable systems, then retest"
+              }
+            ]
+          ],
+          "id": "12510539-94ff-4513-8f54-d2d04174a0d0",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "a051dadd-695e-43dc-b17d-c3f83fdf0b3b",
+      "type": "table"
+    },
+    {
+      "id": "7a8dde20-38b8-44b2-91f6-50bf531b8b6e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Working knowledge going in defines the test type: known environment (full disclosure, tester has full system info), partially known environment (mix of known/unknown, focused on specific systems/apps), unknown environment (tester starts blind, a \"blind\" test)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "24c36827-24c7-4945-8efb-d1cc04c620f2",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Passive recon: open-source info only (social media, corporate site, forums, Reddit, social engineering, dumpster diving, business filings), hard to detect or prevent since nothing touches the target directly."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "24a16ae0-c13a-46d1-bd94-cb2d2e3704f8",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Active recon: touches the target directly and risks detection (trying doors to see what's unlocked, ping/port scans, DNS queries, OS fingerprinting, service/version scans), shows up in network traffic and logs."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "224f053f-8ee1-4ff8-a6c9-c12312f350ca",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reconnaissance gathers a digital footprint before any attack begins, maps the security posture and network layout, narrows the attack area to key systems."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e34e9928-b36e-4234-acec-00d0f1fde7ca",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Awareness Training"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4bb00b5f-d09b-4d2c-8484-92b21acfb4df",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security awareness = training and comms aimed at getting users to recognize threats and act securely. People get targeted specifically because human error routinely bypasses technical controls that would otherwise stop an attack."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "76a9656c-455e-4965-9eff-3bd49252fbb1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Standard awareness curriculum: phishing, password hygiene, MFA usage, data handling, safe browsing, removable media risk, physical security, remote work security, incident reporting, clean desk habits, acceptable use."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3421c2d4-47fc-4c8e-b12a-83a1f28f83b7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Social engineering: manipulating people into handing over access, information, money, or taking some action on the attacker's behalf. Red flags to train on:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "70afd80e-47b1-425d-934a-19380f4097a8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Artificial urgency or pressure"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d72f051d-2d58-43fa-97d1-82b8789056d4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Requests to keep something secret"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f1a4fe9e-e40c-4bcd-9e0e-5f047ada8f67",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Unexpected attachments or suspicious links"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aa5a828c-b22d-4c31-8f28-14bf99d9e86e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sender address that looks slightly off"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f81113e2-f5ce-4a3c-b99a-60dc3299dc25",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Anyone asking for a password or MFA code directly"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d293338d-afd3-451a-90c4-b12d0309849c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Gift card or payment requests"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "01de3fb2-a61f-4681-bc9a-7512ea062f01",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Impersonation of an executive, vendor, or IT support"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "10d7c26e-316f-4b3c-898a-cb9d7210d306",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Phishing defense habits: verify sender address, treat attachments with suspicion, hover links before clicking, watch for lookalike domains and spelling tricks, never enter credentials via a link that arrived unexpectedly, report anything suspicious rather than ignoring it."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "1e338003-8e8d-451d-b8de-0eae180607a4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Remote work introduces its own risk set: public Wi-Fi, shared devices, shoulder surfing, lost/stolen laptops, weak home router config, unsanctioned cloud storage use. Counter with VPN when required, screen locking, MFA, keeping devices patched, careful handling of company data, and fast reporting of lost hardware."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "e033212a-16bf-4816-8410-b16e1481791c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reporting culture matters as much as the training content. Users should know how to flag: suspicious email, a lost device, suspected credential compromise, unusual system behavior, accidental data exposure. Awareness only pays off if reporting is easy and the org actually encourages it rather than punishing people for raising a hand."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "30eb96a5-cf53-45e7-b199-df5fa939a035",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Phishing campaigns as an internal testing tool: orgs send their own phishing emails to measure how many employees click, an automated process with centralized reporting on incorrect clicks. Users who click get immediate feedback and follow-up training, sometimes scheduled in person. Recognition cues to train on: spelling/grammar errors, domain or email inconsistencies, unexpected attachments, requests for personal info."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "04f61f9d-d6e1-4118-af5b-109624314d90",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Anomalous behavior recognition, three buckets:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Category"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Examples"
+              }
+            ]
+          ],
+          "id": "8af4c1a8-53af-41d5-a240-93591a3eb987",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Risky"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Modifying the hosts file, replacing a core OS file, uploading sensitive files"
+              }
+            ]
+          ],
+          "id": "607b5af4-cc0d-4dfe-bbea-d215b6e8fe92",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unexpected"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Logon from another country, spike in data transfers"
+              }
+            ]
+          ],
+          "id": "b7f73d0c-f0a4-4148-824e-bc45ee70e44f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unintentional"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Typo'd domain name, misplaced USB drive, misconfigured security setting"
+              }
+            ]
+          ],
+          "id": "5046aae6-79c4-4ef2-afa7-aa1322030819",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "3dd416c7-15b2-4474-aeb7-010df0daacb5",
+      "type": "table"
+    },
+    {
+      "id": "e8812383-9b73-4c78-91c0-40e77f3fe2e0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reporting and monitoring: track metrics like phishing click rate, password manager adoption, MFA use, password sharing, ideally through automation. First occurrence of an issue is a training opportunity; recurring occurrences flag a long-term monitoring problem and need extra help for repeat offenders."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "cbf05da0-d6d1-4451-9b54-88fedb717f55",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Program development: stand up a security awareness team (roles for training, monitoring, policy creation), set a minimum awareness level (delivery mix of emails/posters/notices/training, depth scaled to job function), fold in compliance mandates ("
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "PCI DSS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "HIPAA"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "GDPR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), define metrics to know if the program's working and where to focus updates."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "7e8a3a0d-ff10-4d0f-8f64-30dc96db58b2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Program execution: build the training materials, document how success gets measured, identify the stakeholders who need ongoing metrics, deploy through whatever mix fits (classroom, posters, weekly emails), track training completion via an automated reporting system."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "200b529f-c09c-4820-a018-f5493bceb61b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Insider threat: hard to guard against since the access is already legitimate. Countered with multiple-approval requirements on critical processes and heavy monitoring of files/systems, the goal is making an unauthorized change difficult to slip through unnoticed."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "4cd33718-69a7-4eec-82e9-830f1e7cd32f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Situational awareness for users: stay alert to software attacks (email links, attachments, unusual URLs, suspicious texts) and physical attacks (a USB drive left in a FedEx envelope, an unlocked building door). Policy/handbooks should document the requirements and stay referenceable online."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "20fecef9-d431-4f03-add6-1c9767a02674",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Operational security: view the org's data the way an attacker would, so users can identify what's actually sensitive and keep it private."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3abd054f-5618-44d7-9745-1a6c42e82d9d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Removable media and cables: unknown USB drives can carry malware, unknown cables can connect to a malicious device on the other end, both worth flagging in training."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "97ab7ac6-a80a-4f53-bed7-97182918d562",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hybrid/remote work environments carry their own risk set beyond the general remote-work bullets above: no access to office-level physical/social safeguards, so additional endpoint security and VPN-specific policy matter more."
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-08-19",
+  "id": "3c1042e6-0b87-8195-a8a5-e6e67c819a17",
+  "properties": {
+    "Name": "SY701 Notes - 5. Security Program Management & Oversight",
+    "Source": "Prof. Messor",
+    "Status": true,
+    "Tags": [
+      "Sec+"
+    ],
+    "Type": "Notes",
+    "URL": null
+  },
+  "slug": "sy701-notes-5-security-program-management-oversight",
+  "tags": [
+    "Sec+"
+  ],
+  "title": "SY701 Notes - 5. Security Program Management & Oversight"
+}

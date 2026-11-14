@@ -1,0 +1,5585 @@
+{
+  "blocks": [
+    {
+      "id": "58df71e3-8e81-475d-9670-f8ae71ff5dc7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Control Types (Preventive, Detective, Corrective, Compensating)"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "ad3e2cfe-ad3a-4349-ad05-713d0a23b647",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Controls layer together, no single one is enough on its own."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Type"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Purpose"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Examples"
+              }
+            ]
+          ],
+          "id": "edfc65ca-9b12-4455-8d17-580de8cc3602",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Preventive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Blocks an incident before it starts"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "MFA, firewall rules, least privilege, encryption, patching, security awareness training, hardened baseline config"
+              }
+            ]
+          ],
+          "id": "7215d949-e09e-465f-b2ba-03af761ba121",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Detective"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Surfaces activity that looks off"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "SIEM/IDS/EDR alerts, file integrity monitoring, log review, vuln scans, user behavior analytics"
+              }
+            ]
+          ],
+          "id": "fed79d63-a85d-48a9-be84-68eabd43d6c9",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Corrective"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Cleans up or limits damage after the fact"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Deploying a patch, removing malware, resetting an account, restoring from backup, rolling back a config, adding a firewall block"
+              }
+            ]
+          ],
+          "id": "889e2595-2e1b-4e36-b466-5d228f69e283",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Compensating"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Stand-in when the real fix isn't ready yet"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Patch not available yet: restrict access via firewall rule and watch the host more closely until it can be patched"
+              }
+            ]
+          ],
+          "id": "b5f75d9f-d9e1-42f8-9b7e-a2b35ee797b6",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "4a4d6226-0dca-4d09-bc29-bba582b45619",
+      "type": "table"
+    },
+    {
+      "children": [
+        {
+          "id": "fd6ef251-cb79-42bc-863d-5285c288d91a",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Hashing: confirms data hasn't been altered (integrity)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "e1b6e988-2136-4dbb-a62b-80395bfbd8a6",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Encryption: keeps data unreadable to unauthorized parties (confidentiality)"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "f5f78de3-198f-41ef-801c-c64fa4d9af9a",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Digital signatures: bundle integrity, authentication, and non-repudiation together"
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "0abbfd24-f32e-4c25-817c-79dd71809363",
+          "richText": [
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": "Certificates: anchor trust for encrypted sessions"
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "1832a774-223d-4b45-a430-9e3b694fd213",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cryptographic building blocks tie back to these controls:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1bb33c99-6c19-42ec-a790-5b27562968bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Operational side (the non-technical half of \"control\"): change management, periodic access reviews, IR playbooks, backup restore testing, tabletop exercises, ongoing monitoring, user training."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "114d2f54-1d72-4034-a1a0-f9168a744989",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure Baselines & Hardening Targets"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "1b6a8cc0-7b36-4f1b-866b-84311fe94512",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A baseline is the documented, locked-down configuration state (firewall settings, patch level, OS file versions) every instance of an app/OS/device is expected to match."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a02c09c7-846a-4704-a775-457b6220e3bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Baselines usually come from the vendor: application developer, OS manufacturer, appliance manufacturer. Windows alone has 3,000+ group policy settings, only a subset security-relevant."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b4893e47-52b4-4561-816b-4cf269f06219",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Deploy via a central console (Active Directory group policy, MDM) rather than by hand, automation is what makes it feasible across hundreds/thousands of devices."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "97f02615-1693-4fe2-b183-bff61bc0c4c2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Integrity checks confirm devices still match the baseline; drift needs immediate correction, not a ticket for later."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a2881301-d26c-4e6b-a9b9-1431273d3f42",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Maintenance: most settings are \"set once, rarely touched\" best practice, but some need revisiting when a new vuln surfaces, an app gets updated, or a new OS ships. Test changes first, conflicting baselines are common in complex environments."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "62f91294-ee75-4bf6-98ea-157f79656ab6",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Hardening by target type"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Target"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Key hardening points"
+              }
+            ]
+          ],
+          "id": "e4a4fada-d440-42dc-ab79-a1eb982d0d1d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mobile devices"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Manufacturer hardening checklists, timely OS/app patching, segmentation (separate corporate vs. personal data), managed via MDM"
+              }
+            ]
+          ],
+          "id": "eeaab34e-6ed9-4349-8a4e-8a8ec439292d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Workstations"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Constant patch/update cycle (OS, apps, firmware), monthly patch automation, joined to a policy management system (AD group policy), strip out unneeded software"
+              }
+            ]
+          ],
+          "id": "b895e092-1f27-427b-9e1c-3d464207c82a",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Network infra (switches, routers)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Purpose-built devices with limited OS access, disable default credentials, apply vendor security updates (infrequent but important)"
+              }
+            ]
+          ],
+          "id": "960950ee-b490-421b-a073-721e48a5eb38",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Cloud infrastructure"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Lock down the cloud management workstation (holds the keys), least privilege on all services/settings/permissions, "
+              },
+              {
+                "bold": false,
+                "code": true,
+                "href": null,
+                "italic": false,
+                "plainText": "EDR"
+              },
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": " on anything touching the cloud, backups including cloud-to-cloud (C2C)"
+              }
+            ]
+          ],
+          "id": "0c4b5d5b-ba04-4050-92b0-0533b762bfc3",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Servers"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Wide OS variety (Windows, Linux, iOS, Android), OS/service pack patching, password length/complexity + account lockout, restrict network access, AV/anti-malware"
+              }
+            ]
+          ],
+          "id": "756a4888-35a3-4101-9324-dada2cb17ce2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "RTOS (Real-Time OS)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Deterministic processing schedule, no waiting on other processes (industrial equipment, automobiles, military use), isolate the system, run minimum services, host-based firewall"
+              }
+            ]
+          ],
+          "id": "806dbeea-9846-4e26-8d96-aec58706f8c5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "SCADA / ICS"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Supervisory Control and Data Acquisition, large multi-site Industrial Control Systems managing power generation, refining, manufacturing; distributed real-time control; needs extensive segmentation, no outside access"
+              }
+            ]
+          ],
+          "id": "2638181d-ba7a-4a8a-a6a9-333e750bbe2b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Embedded systems"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Hardware/software built for one specific function (or as part of a bigger system), hard to upgrade (some, like watches/TVs, easier than others), patch what can be patched, segment and firewall the rest"
+              }
+            ]
+          ],
+          "id": "57af2d7c-99c4-4243-9f9d-e5c9c365f5d2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "IoT devices"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Heating/cooling, lighting, wearables, smart speakers; weak vendor defaults (change them), slow to get updates, put them on their own VLAN"
+              }
+            ]
+          ],
+          "id": "07c7e803-b655-42da-8624-d1b8b7ca20fb",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "0e88234b-c7a9-4652-b926-b318b93fb29f",
+      "type": "table"
+    },
+    {
+      "id": "38a67a31-2e35-4521-a250-e73aaec49cf2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Securing Wireless and Mobile"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "7d60f8f2-9156-4ab1-8912-a682101e71d7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Site surveys: sample the existing wireless spectrum, map access points already in the area (not all controlled by the org), plan around interference, build a heat map of signal strength. Surveys need to repeat, RF environments change."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0735fc7d-93a9-4acc-a146-2a2f95794497",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless survey tools: signal coverage, interference detection, vendor built-in tools, third-party tools, spectrum analyzer."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b7407b79-8ccf-4e31-8001-884a59b185c7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "MDM (Mobile Device Management): centralized management of company- and user-owned mobile devices, sets policy on apps/data/camera/etc., can control an entire device or just a work \"partition,\" enforces screen lock/PIN."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "618d2515-5935-4b3a-926d-9af81245dc0e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Device ownership models:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Model"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Who owns it"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Notes"
+              }
+            ]
+          ],
+          "id": "f52bff66-4cc7-46eb-b8df-ec4984695d39",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "BYOD (Bring Your Own Device)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Employee"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Hardest to secure, dual-purpose device, unclear data protection at sale/trade-in"
+              }
+            ]
+          ],
+          "id": "cb400d06-77ad-4957-ac95-e418c5f2be9d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "COPE (Corporate Owned, Personally Enabled)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Company"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Company buys it, used for both work and personal, org keeps full control, wipeable anytime"
+              }
+            ]
+          ],
+          "id": "d8d90dc8-3172-4c80-9fee-79c7b2613a5c",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "CYOD (Choose Your Own Device)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Company (user picks model)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Same control model as COPE, just user choice of hardware"
+              }
+            ]
+          ],
+          "id": "7b06cfc7-981d-42a8-a618-5912b5e3b60b",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "f6d5c6d9-6045-47aa-a637-fcd191d1e561",
+      "type": "table"
+    },
+    {
+      "id": "f742f3a9-2ec4-4733-973f-37e59dbc628d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cellular: \"cell\" phones split coverage into geographic cells on 4G/5G; security concerns are traffic monitoring, location tracking, worldwide reachability of the device."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a806b42c-70d5-40e6-97af-d0b2f036860d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wi-Fi: same security concerns as any Wi-Fi client, plus data capture (encrypt it), on-path attacks (modify/monitor traffic), and DoS via frequency interference."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1fd14ae4-f913-498f-867f-414b4762f227",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Bluetooth: short-range PAN, used for tethering, headsets, health monitors, auto integration, smartwatches, external speakers."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "92a49800-f7c5-415e-837c-192691c79f00",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless Security Settings"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "24dc77da-64d1-4b1c-b4e3-4ecf9cd90885",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless network security must cover: authenticating users before granting access (username/password/MFA), encrypting all traffic, and verifying integrity (message integrity check)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "329c90e7-f114-40f3-b02a-4bfe357541ff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "WPA2 PSK problem: attacker captures the four-way handshake (or derives the hash without it) and brute-forces the pre-shared key offline. Gets easier every year (GPU cracking, cloud cracking). Once the PSK is cracked, every client's traffic on that network is exposed, no forward secrecy."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "id": "ca2872b2-581e-4432-b681-4407a0c1da32",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "GCMP"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (Galois/Counter Mode Protocol) block cipher: AES data confidentiality + Message Integrity Check via Galois Message Authentication Code (GMAC), stronger than WPA2's cipher suite."
+            }
+          ],
+          "type": "bulleted_list_item"
+        },
+        {
+          "id": "40b26460-a08b-489a-a5b7-7c3387fab117",
+          "richText": [
+            {
+              "bold": false,
+              "code": true,
+              "href": null,
+              "italic": false,
+              "plainText": "SAE"
+            },
+            {
+              "bold": false,
+              "code": false,
+              "href": null,
+              "italic": false,
+              "plainText": " (Simultaneous Authentication of Equals, the \"dragonfly handshake,\" an IEEE standard): replaces the PSK exchange with a Diffie-Hellman derived key exchange plus mutual authentication. No four-way handshake to capture, no hash to brute-force, and every client session key differs even on a shared PSK."
+            }
+          ],
+          "type": "bulleted_list_item"
+        }
+      ],
+      "id": "2a40d379-27d7-45d9-978e-967b9e59a42b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "WPA3 (2018) fixes this:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ffed66d5-d46c-4b46-acc0-9c6c499f170e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Wireless security modes:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Mode"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Auth"
+              }
+            ]
+          ],
+          "id": "c057eb9a-3771-489a-803e-b282dc532778",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Open System"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "No password"
+              }
+            ]
+          ],
+          "id": "8834c005-c693-4e13-9e91-b297689b0167",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "WPA3-Personal / WPA3-PSK"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Shared 256-bit key, everyone uses the same key"
+              }
+            ]
+          ],
+          "id": "fb51985f-d715-4ae3-a846-899b77301e55",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "WPA3-Enterprise / WPA3-802.1X"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Per-user authentication against an auth server (RADIUS)"
+              }
+            ]
+          ],
+          "id": "28422e9a-78e4-4d45-b280-ce09601d55f7",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "f06bf432-12ce-45bb-83af-36c661e35be6",
+      "type": "table"
+    },
+    {
+      "id": "d5f23b03-9783-42d4-bbc3-b71dcaf2701f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "AAA framework: Identification (claimed identity, usually a username) -> Authentication (proving it, password + factors) -> Authorization (what that identity is allowed to do) -> Accounting (logging login time, data sent/received, logout time)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "57a97ec7-f218-4722-9c77-15b17b55558e",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "RADIUS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Remote Authentication Dial-in User Service): common AAA protocol, not just for dial-in anymore. Centralizes auth for routers, switches, firewalls, remote VPN access, and 802.1X network access; runs on nearly any server OS."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "93042130-64da-4c91-90d5-663dfb0a44ba",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "802.1X: port-based Network Access Control, no network access until authentication succeeds, works with a backing directory like RADIUS, LDAP, or TACACS+."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "004d64ac-d8d1-4a43-a638-303efff28518",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "EAP (Extensible Authentication Protocol): an authentication framework, not one method, RFC-standardized but vendors can build their own EAP types. Integrates with 802.1X to gate network access until auth completes."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c4233601-82d7-4b35-b964-5a69779bb7d3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "802.1X + EAP roles: supplicant (the client), authenticator (the device granting access, e.g. switch/AP), authentication server (validates credentials, e.g. RADIUS)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ba610719-ddc5-4a66-8879-4f07656faea3",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application Security"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f110db3b-8cf0-4828-9b07-b0dade010053",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure coding is a balance of time vs. quality, security-minded programming is often the thing that slips first. QA testing catches some of it, but vulnerabilities will still surface post-release."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f4d5071f-03fd-46d0-9a29-52a32b243f7a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Input validation: define expected input up front (forms, fields, type), validate actual input against expected, normalize/correct bad input (e.g. a zip code must be exactly N characters, one letter in a fixed column). Fuzzers exist to find what validation misses."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "15d71f9d-c212-4a3e-a84e-b83facf14844",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure cookies: browser-stored data used for tracking/personalization/session management, not executable and not inherently risky unless someone gets access to it. The "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " attribute forces the browser to only send the cookie over HTTPS. Cookies aren't meant to be secure storage, don't put sensitive data in one."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9888c64f-fe83-4fc1-a51e-9f318a67b6da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Static code analyzers (SAST): scan source without running it, catches common classes like buffer overflows and injection flaws easily, but misses things like auth logic or crypto misuse. Findings still need human verification, false positives happen."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0d044273-2631-4bc0-a3c0-cd32a762478f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Code signing: developer signs code with their private key (asymmetric), a trusted CA signs the developer's public key (internal apps can use an internal CA). Confirms the code hasn't been modified and came from a known developer."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "05710002-df91-463c-853e-db6909841dc1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sandboxing: an app runs isolated, can't touch unrelated resources. Common in development and as a production technique. Implementations: VMs, mobile app sandboxes, browser iframes, Windows UAC."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ecc65958-f96c-4269-93c0-baa02489e709",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application security monitoring: real-time usage/access stats, view blocked attacks (SQLi attempts, patched vulns), audit logs for recon/hidden attack activity, anomaly detection (unusual file transfers, spikes in client access)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c650f6df-f2f0-41d9-a76e-80d7ec9fd84c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Asset Management"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "db203f7a-e5ec-4d4a-b4ef-748810f1ca22",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Acquisition/procurement: multi-step purchasing process, request -> budgeting/approvals -> supplier negotiation (terms and conditions) -> purchase/invoice/payment."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d074bc29-b339-4852-8bdb-3880a7ec7a32",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Assignment/accounting: central asset tracking system used org-wide. Ownership ties a person to an asset (useful for tracking). Classification: hardware = capital expenditure, software = operating expenditure."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f4080897-c098-4d49-a372-2954b740d019",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring/asset tracking: inventory every device (laptops, desktops, servers, routers, switches, cables, fiber modules, tablets), tie a support ticket to make/model, enumerate all parts of an asset (CPU, RAM, storage, peripherals), tag assets (barcode, RFID, visible ID)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d25fa83a-4f0a-4a75-a12d-be2ca75061c5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Disposal/decommissioning: completely remove data so nothing usable remains. Different needs: wipe a drive for reuse vs. permanently delete one file, it's a one-way trip once done, no forensic recovery."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "515bfe1a-4b5e-4dd2-8de1-5a5e8963e9a8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Media sanitization / physical destruction options: shredder/pulverizer (complete destruction), drill/hammer through the platters, degaussing (removes the magnetic field, destroys and disables the drive), incineration."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6a8d0ee8-3be8-4fbc-a4ee-42be84e8782e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Certificate of destruction: third parties usually handle destruction, get confirmation the data is actually gone, a paper trail of exactly what was destroyed and how."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "56cc3918-4389-406b-b0ec-154ee6818b36",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Data retention: back up data (how much, where, versioning, lifecycle, purge old data), driven by regulatory compliance (emails, financial records) and operational needs (accidental deletion, DR). Retention should differ by data type and use case."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "54206c55-e4e7-46a8-8ced-9f725a5d5f8e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability Management"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "91d02e67-6c4a-4bbc-a396-47164731c134",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Not a one-off scan, it's a recurring loop: find assets, scan them, confirm findings are real, rank by risk, hand off to an owner, fix (or apply a compensating control), re-check that the fix actually worked, then report on trends."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b5eb330e-28ff-4117-95b9-de230dfbc5ea",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A \"closed\" ticket doesn't guarantee the weakness is gone, validation after remediation is the step that actually proves it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "11ef2530-80aa-47cf-92be-f090b7e3bd50",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scan Types"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Scan"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "How it works"
+              }
+            ]
+          ],
+          "id": "3ecafa7f-bec7-4d10-847f-c5e8e1bfe745",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Authenticated"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Scanner logs into the host, sees deeper config/patch detail"
+              }
+            ]
+          ],
+          "id": "1d8d09e2-abb2-4564-8614-be3f04e48e78",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Unauthenticated"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Scanner only sees what's exposed externally, no credentials"
+              }
+            ]
+          ],
+          "id": "19057a3c-68a0-4d99-8e2c-fd3b4c0b61ce",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Agent-based"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "A local agent on the host reports its own vuln data"
+              }
+            ]
+          ],
+          "id": "60336b1c-2a26-4421-ac1b-33ee7e3c4bf2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Network"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Sweeps reachable hosts/services from outside"
+              }
+            ]
+          ],
+          "id": "9c217073-46e3-4ff7-85f2-d09c73d4c47f",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Application scan"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Targets desktop/mobile app code and behavior"
+              }
+            ]
+          ],
+          "id": "e1be15c8-899e-47cc-8c89-e1cd41b2348d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Web application scan"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Targets software running on a web server"
+              }
+            ]
+          ],
+          "id": "6f470a34-de9e-462a-b03d-d806839f20f8",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "eebd5477-09de-4ec7-92da-ba31e7b924c3",
+      "type": "table"
+    },
+    {
+      "id": "c066c20f-0443-4bd3-92ce-b69137a39ee1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability scanning itself is usually minimally invasive (unlike a pentest): port scan to see what's open, identify systems and security devices, test from both outside and inside (insider threats count), gather everything, sort signal from noise later."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "46e84411-681c-49d6-901e-cd269293c427",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Static analysis (SAST): same tool/limits as under Application Security above, finds common flaw classes fast, needs manual verification, false positives are a known issue."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "db347d47-23b6-409c-84ca-34d318f456cd",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Dynamic analysis (fuzzing): throws random/malformed input at a running app (fault injection, robustness testing, syntax testing, negative testing), watches for crashes/errors/exceptions. Traces back to a 1988 University of Wisconsin class project by Professor Barton Miller (the \"Fuzz Generator\") studying OS utility reliability. Fuzzing engines are platform/language specific and resource-heavy; CERT (Carnegie Mellon) publishes the Basic Fuzzing Framework (BFF)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "34455024-4a1c-44e0-bf51-6f31c0f6f1cb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Package monitoring: apps distributed as packages (especially open source) need supply-chain integrity checks, confirm the source is trusted, no malware added, no embedded vulns, before deployment."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "52539ad6-51d1-4606-8ee4-97f42dedf6cc",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "CVE, CVSS, and classification"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "2955cb61-569a-4f55-9e1a-d559426c87ca",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "CVE (Common Vulnerabilities and Exposures): cross-referenced public vulnerability catalog ("
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://cve.mitre.org/",
+          "italic": false,
+          "plainText": "cve.mitre.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "), the National Vulnerability Database ("
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": "http://nvd.nist.gov/",
+          "italic": false,
+          "plainText": "nvd.nist.gov"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ") syncs to it. Not everything is definitively identifiable this way, some systems need manual checking once a scanner flags something as possible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0c85cc3b-db50-4f29-8ad8-a78890f36497",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "CVSS (Common Vulnerability Scoring System): quantitative 0-10 severity score, standards evolve (2.0 vs 3.x scored differently), industry collaborates on feed sharing/automation."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "980ebd25-8775-4d00-ab20-cee27c73bc72",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scanner coverage is signature-based, \"looks for everything\" really means \"everything it has a signature for.\" Keep signatures current or new vulns go undetected."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a335fb03-9f69-4a38-aaa4-50de8b118082",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "False Positives / False Negatives"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Term"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Meaning"
+              }
+            ]
+          ],
+          "id": "75d57c8b-316e-4cb8-a503-4f3c68675e2b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "False positive"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Scanner flags a vuln that doesn't actually exist (different from a real but low-severity finding)"
+              }
+            ]
+          ],
+          "id": "0c403c16-832a-4977-958e-0d2659de594b",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "False negative"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "A real vuln exists but the scanner missed it"
+              }
+            ]
+          ],
+          "id": "4254c9eb-1c37-4040-a82a-8e0cd3bafd8d",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "b99ded60-26fd-4b56-9ddb-07bc0ddb3d6d",
+      "type": "table"
+    },
+    {
+      "id": "81c59b1e-ad7e-44d3-af25-7c12bb9bb0b4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Fix: update signatures, and work with the scanner vendor if it's still missing things specific to the environment."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3d1b2c7e-687b-468d-b301-b48ac98cd42a",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Prioritization"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "d6cc9e12-8090-483b-81d4-56cd4052cf47",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Severity score alone doesn't decide what gets fixed first. Factors that push something up the queue:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "4f6cee86-0711-4060-b5b9-e6fca094bcad",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "CVSS score"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fc342dc3-06f0-47ad-821e-bfc545de1ab3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "how critical the affected asset is"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8a540dcf-cf7e-4630-90f7-950ef57e7186",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "whether it's internet-facing"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fed1870d-4780-438b-9d88-2dfd9fbfcbcf",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "active/known exploitation in the wild"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1c9c7a63-aa16-414b-86cb-d22d492089b7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "public exploit code available"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "70617676-63e0-4e7d-9cf2-05f0a4b260cf",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "sensitive data at risk"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e84b2254-5ddc-4455-9e7d-245119f7b4e7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "whether a patch even exists yet"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0e554e92-27f8-454e-a50c-f561ebe22aa5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "other controls already mitigating it"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f123fb47-55db-4150-a940-8ac221b731d2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "business impact if it's hit"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2f85598f-5827-432b-92a7-999c0198c148",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exposure factor: percentage of value/business function lost if the vuln is exploited (e.g. a small DDoS limiting access might be a 50% exposure factor, a buffer overflow that fully disables a service is 100%). Worst-case outcome generally wins prioritization ties."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "4266535b-3fe4-467c-8a95-f8435564e1fe",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Environmental variables: same CVE means different things in different places, internal server vs. public cloud vs. isolated test lab all warrant different patch urgency. Factor in user count (internal/external), whether the app generates revenue, and real exploit potential."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "af6bb379-b329-418d-871e-e4e859955ef8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Industry/organizational impact: consequences scale with what the org does. Tallahassee Memorial HealthCare ransomware (Feb 2023) closed the facility two weeks, diverted emergency cases, canceled surgeries. Salt Lake City / LA County power utilities (Mar 2019) took DDoS hits from an unpatched known vulnerability."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d65c1c0e-f78f-4d19-bc22-e21ffa6210ba",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Risk tolerance: zero risk isn't realistic. Patching immediately skips proper testing; testing takes time and leaves the window open. The right timing sits somewhere in the middle and shifts with severity."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "72188d56-05a7-4b8e-b5ba-0750f21970b8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Remediation Options"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "126d35a8-b9ab-4dc8-955c-b1909a0f39c5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patching is the obvious one, but not the only lever: upgrade the software, turn off the vulnerable service, fix the insecure setting, tighten access, remove software nobody uses, rotate exposed credentials, or just add monitoring around it as a stopgap."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c6bab471-46f9-4a94-92ab-8307565ecdee",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reporting"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "cd94abe5-5725-4660-a0ec-7c459de1152f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Fields worth including per finding: what was found, which asset, severity, supporting evidence, business impact, recommended fix, assigned owner, due date, current status, and the result once validation is run."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "f269c8e0-b2d1-4524-aa3d-5b82361eb86d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat Intelligence"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "edd1d228-1981-41e0-bd3d-662317a42321",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Research into threats and threat actors: their tools, group profiles, TTPs. Used to make prevention decisions (where to actually invest), consumed by researchers, SOC teams, and others."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "088e4ec4-5a3d-40b4-bbcd-02d1a96d40b7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "OSINT (Open-Source Intelligence): publicly available data, good starting point. Sources: internet discussion groups/social media, government data (public hearings, reports, sites), commercial data (maps, financial reports, databases)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c32c6d18-f6b7-4b42-9af5-d27f5420ee04",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Proprietary/third-party intelligence: paying for threat intel someone else already compiled, threat analytics services correlate across many data sources, feed constant monitoring and automated prevention workflows."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "68f74b34-edca-4bfb-9450-207f5560c6f9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Information-sharing organizations: public threat intel is often classified, private companies pool resources instead. Cyber Threat Alliance (CTA): members upload formatted threat intel, CTA scores/validates each submission, other members extract the validated data. Real-time, high-quality sharing is the goal."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d20416de-982e-42de-81a0-fad7f0acfae7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Dark web intelligence: overlay networks needing specific software/config to reach, host hacking group activity, tools/techniques, stolen credit card sales, account/password dumps. Monitor forums for company or executive names showing up."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6b27223f-19de-47d8-be6b-d112373f9628",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Penetration Testing"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "7a3bd1ab-dd04-47cd-b460-f7947404205d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Simulates an actual attack, not just scanning: exploits the vulnerability rather than just identifying it. Often a compliance mandate, done regularly by a third party. Reference: NIST's Technical Guide to Information Security Testing and Assessment (SP 800-115)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "38b657b8-3d0a-411c-80b8-61b2eca664da",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Rules of engagement: the document that defines purpose, scope, and everyone's expectations before testing starts. Covers: type of test and schedule (on-site physical, internal, external; working hours or after-hours only), IP ranges in scope, emergency contacts, how to handle sensitive data found, and explicit in-scope/out-of-scope systems."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c9dda090-172e-440f-97da-60bb758314b1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Environments/types: physical breach testing, internal testing, external testing; offensive (red team, attacking), defensive (blue team, defending/detecting), and integrated (purple team, both sides collaborating) approaches all apply depending on objective."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6b11f05e-c1ff-4870-bd34-8d02d86fb271",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Process: initial exploitation (get in) -> lateral movement (pivot system to system, inside networks tend to be softer targets) -> persistence (backdoors, new accounts, verify default creds still work so there's a way back in) -> the pivot (using a compromised system as a proxy/relay to reach otherwise unreachable systems)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "dc339ab7-9869-419a-91fc-5b3860c83ed8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exploiting vulnerabilities: risk of causing real DoS or data loss doing this for real, buffer overflows can crash things, goal is often privilege escalation. May need to chain multiple vuln classes: password brute-force, social engineering, DB injection, buffer overflow. Only bypassing security proves the exposure is real, if the tester can get through, so can an attacker."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e35b9638-a128-4180-b058-28b7acdb6f75",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Responsible disclosure / bug bounty: fixing takes time (code changes, testing, deployment), so disclosure is controlled: researcher reports privately, manufacturer builds a fix, vulnerability gets announced publicly after. Bug bounty programs pay researchers to find and document vulnerabilities instead of exploiting them."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c2244de1-2e5b-4322-b0e2-6440295b429f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability Remediation"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "2f9b8331-dafb-4915-8db4-97f20e5457c1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Patching: most common fix, straightforward when the vuln is known and a patch file exists. Scheduled patch cycles (monthly, quarterly) vs. unscheduled/zero-day patches that need to go out urgently. Ongoing process, patches never really stop."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "12f961fe-a02e-48aa-ae55-286151a20a3f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Segmentation: limits blast radius by separating devices into their own networks/VLANs, a breach in one segment doesn't automatically reach everything. Physical segmentation uses separate hardware/infrastructure; logical segmentation with VLANs separates traffic without separate wiring (a Layer 3 device/router is required for cross-VLAN communication). Internal NGFWs can block unwanted east-west traffic and catch malicious internal traffic. Air-gapping (full disconnect) is the extreme version when patching isn't possible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "64a4363a-21ee-49af-ad18-8e1fa76f8cd5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Compensating controls: used when the ideal fix isn't available (no patch yet, no internal firewall). Options: disable the vulnerable service, revoke app access, limit external reach, tighten internal security controls/software firewalls, as coverage until the real fix lands."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "69b40be4-b4e6-467f-b374-9e3fb6fbbf8f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exceptions and exemptions: not everything can realistically be patched (needs physical access, local login, breaks something else). An exception is a formal, approved deviation balancing service availability against risk."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "880bb68d-b49a-46f0-a7c2-67614ddb7463",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cybersecurity insurance: covers costs like lost revenue, data recovery, phishing losses, privacy lawsuits, has grown in popularity alongside ransomware. Doesn't cover everything (intentional acts, funds transfers excluded), applies org-wide."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "70545650-1d05-459a-9dd3-a5984313ab41",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Validation: confirm the patch actually closes the exploit and covers every vulnerable system, then rescan (a full vuln scan, not a spot check)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1d82726c-e128-4b2c-bfe2-29800a6b4511",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Audit and reporting: check remediated systems actually got the patch, manually verify security where needed. Ongoing/continuous because new vulns never stop appearing; report tracks count of identified vulns, patched vs. unpatched, new threat notifications, and outstanding errors/exceptions/exemptions."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "52d7ab11-c709-4179-919e-63dc40b75542",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log Sources & Monitoring"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "6f0fe967-4807-45ba-bc14-58ae0c08d046",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring = pulling in and reviewing activity across hosts, network, apps, cloud, and security tooling so normal vs. abnormal behavior is visible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "089ec363-2dc4-4f35-8b73-a19f689c33cc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common feeds analysts pull from: auth logs, firewall logs, "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DNS"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " logs, VPN logs, proxy logs, endpoint logs, cloud audit logs, email security logs, web server logs. Investigations lean on the same set plus email headers, file timestamps, and process execution logs."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b46ed025-ffdd-4de2-a21e-186b0108bd17",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security monitoring runs 24/7/365, covers every entry point (logins, public-facing services, storage, remote access), reacts to events (account access, firewall rulebase changes, extra scanning), rolls up into status dashboards."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "230b6c32-d184-4e93-8670-b52150b12976",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring computing resources: systems (auth from unusual locations, server activity/backups/versions), applications (uptime, response time, data transfer volume, vendor security notices), infrastructure (remote access activity, firewall/IPS attack type and frequency)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cf020232-b1ea-4567-ab37-8705ac4d3c69",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scanning is a moving target: new vulns daily, apps/services constantly changing, systems and people constantly moving. Gather OS type/version, driver versions, installed apps, and flag anomalies."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cc14d4e7-5a74-4354-bb8f-541b73f4808b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reporting turns raw data into actionable status: patch compliance %, systems on old OS versions, impact assessment when a new vuln drops (\"how many systems are exposed\"), plus ad hoc summaries for the unexpected."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d0145476-79c8-4a84-9260-70a9ddcdde91",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Archiving: average time to identify and contain a breach runs about 9 months (IBM security report, 2022), so long-term log access matters. Archival period is often mandated by state/federal law or internal policy, not just convenience."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2c7acfc4-a898-410e-b5e3-b7e0d9585b31",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security Monitoring Tools"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "4f69e15b-2343-467e-adf6-b4616333cb9f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "SCAP (Security Content Automation Protocol): NIST-managed specification letting different tools (NGFWs, IPS, vuln scanners) evaluate against the same criteria, validate config, confirm patch installs, scan for breach indicators. Especially valuable in large mixed-OS/mixed-app environments, enables cross-tool automation for ongoing monitoring, alerting, and remediation of noncompliant systems."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "312a68ba-cf6c-41a4-bf92-baacae61b875",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Benchmarks: apply security best practices/minimum bar to a device type (e.g. mobile: disable screenshots/screen recording, prevent calls while locked, force encrypted backups, disable extra VPN profiles, configure lost-phone messaging). CIS (Center for Internet Security) publishes widely used benchmarks."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "df56b6cf-858a-415f-bf43-3378fcba55c3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Agent vs. agentless compliance checks:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Method"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Behavior"
+              }
+            ]
+          ],
+          "id": "6aaea7e1-253d-4ab0-903b-04e86ea502e2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Agent"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Installed software, always monitoring, real-time alerts, more detail, needs maintenance/updates"
+              }
+            ]
+          ],
+          "id": "3ed362d3-2192-4536-b350-542ee97a21e7",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Agentless"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "On-demand check, no formal install, runs then disappears, no ongoing update burden, won't alert if not actively run"
+              }
+            ]
+          ],
+          "id": "829bd72e-4e29-4e7c-ae09-82a83992fdbb",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "646144ac-4869-42f2-bc9b-792e98611c6b",
+      "type": "table"
+    },
+    {
+      "id": "ada50ac8-a379-4f9e-a186-89ac2147a16b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "SNMP (Simple Network Management Protocol): polls devices (servers, firewalls, workstations, switches, routers) at fixed intervals over udp/161, data lives in a MIB (Management Information Base) addressed by OIDs (Object Identifiers), builds historical performance graphs."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bb7745f3-b61f-4593-8e53-6cb548042fc8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "SNMP traps: instead of waiting to be polled, the monitored device pushes an alert over udp/162 when a threshold is crossed (e.g. CRC error count jumps by 5), gives an immediate reaction instead of waiting for the next poll cycle."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "815e68c5-37cc-48f5-b98e-9f9ba655d077",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "NetFlow: gathers traffic statistics across all flows, standard collection method with many vendor implementations. A probe watches network communication and sends summary records to a collector; reporting is usually a separate app tied closely to the collector."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "835fc396-ea75-4ed5-a1d4-bf70fc001c2f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Antivirus / anti-malware: \"antivirus\" historically meant trojans/worms/macro viruses specifically, \"malware\" is the broader category (spyware, ransomware, fileless malware included). The terms are used interchangeably in practice now, modern AV products are effectively full anti-malware suites."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9874ef15-0f9e-422c-8843-62ea5a2dadc6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "DLP (Data Loss Prevention): finds where sensitive data lives (SSNs, card numbers, medical records) and stops it leaving before an attacker gets it. Usually needs multiple deployment points: endpoint clients, cloud-based systems, email/cloud storage/collaboration tools."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "07c217fc-32a0-431f-90f1-03b4d4910b1b",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "SIEM & SOAR"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "89a926ef-622e-4994-bb97-c1ccfd6d96fa",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SIEM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Security Information and Event Management): central place logs land, get correlated across sources, searched, and turned into alerts."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cd6d607a-e2d2-4168-ba45-d201b10d62e0",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SOAR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Security Orchestration, Automation, and Response): the layer on top that wires alerts to playbooks, tooling, approval steps, and actual response actions."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7c779613-671c-4eb8-97a3-042fdc685795",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Orchestration itself just means chaining automated steps across different tools/teams into one workflow, e.g.: SIEM fires an alert -> IP gets auto-enriched -> checked against threat intel -> ticket opens -> analyst gets pinged -> a firewall block gets staged for someone to approve."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0677ba83-be44-4c63-9b88-a500cebf7043",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automation"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "3ef5fce4-30ee-43a6-b620-b4469f65acd8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Best fit: tasks that repeat often and follow a predictable pattern (parsing logs, building reports, opening tickets, kicking off scans, sending notifications)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9cee01c1-66f8-4890-8090-6f3557dd3f68",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Security use cases beyond the basics: enriching IPs/domains, disabling compromised accounts, blocking known-bad indicators, pulling endpoint evidence, generating compliance reports, pushing patches."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b37fd005-72ba-4b5a-a08f-6701de27dc72",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Payoff: quicker response, fewer manual mistakes, consistent process, cleaner evidence trail, less analyst grunt work."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e970b9ad-aede-4740-8b78-e81db6773ef6",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Downside: bad logic executes at machine speed too. Automation with more permissions than it needs can do real damage, so high-impact actions (disabling an account, blocking a range) usually still want a human approval gate, and every automated action should be logged and reviewed like any other change."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "873a14ca-745c-4d73-ab1e-5d9ce8d17b3f",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Firewalls"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f74b69cb-2e61-432d-89b9-d4cbbdca1274",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network-based firewalls: filter by port number or application (traditional vs. NGFW), can encrypt traffic (site-to-site VPN), most operate at layer 3 (routers), handle NAT and dynamic routing."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "94b48cb4-95d0-450c-a178-e3f85dec866f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "NGFW (Next-Generation Firewall): operates at the OSI application layer (layer 7), also called application layer gateway, stateful multilayer inspection, or deep packet inspection. Every packet gets analyzed, categorized, and a security decision applied, not just port/protocol matching."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b4533947-6f6c-4de3-8efb-4507158833a9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Ports and protocols: forwarding decisions based on protocol (TCP/UDP) and destination port. Traditional firewalls are port-based only, NGFWs add app-level policy on top. Common pairs: web server tcp/80 tcp/443, SSH tcp/22, RDP tcp/3389, DNS udp/53, NTP udp/123."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c352ef94-36db-4a96-b5ac-5918658c8857",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Firewall rules: evaluated top-to-bottom as a logical path, specific rules sit near the top, general ones lower. Implicit deny sits at the bottom of most firewalls even if never explicitly written. ACLs (Access Control Lists) group rule criteria: source IP, destination IP, port, time of day, application. Rules can be individual or grouped, and get customized per group; balancing tight rules against alert noise/false positives takes time to tune (rule sets can run into the thousands)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "429e0a64-cc62-4ca8-ab36-92310166d658",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screened subnet: an added layer between the internal network and the internet, public resources stay reachable while private data stays inaccessible."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "89197c05-f4f9-478a-ad0b-ec21edb77288",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IPS (Intrusion Prevention System): usually built into an NGFW, inspects traffic in-line as it passes. Signature-based detection looks for an exact known-bad match; anomaly-based builds a baseline of \"normal\" and flags deviations. Response options (block, allow, alert) are configurable per rule."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6defac82-e8d2-4086-9ffe-e256a528c28e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Web Filtering"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "0e6e4b65-5b88-4ad5-a7b3-f5bf027acad7",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Content filtering: controls traffic based on the data itself (URL filtering, category filtering), enforces corporate policy on outbound/inbound sensitive material, blocks not-safe-for-work content and known-bad sites (AV/anti-malware protection built in)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1b4ff2f4-2904-46b7-86d0-88955f0e2709",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Proxies: sit between users and the external network, receive the request and forward it on the user's behalf. Useful for caching, access control, URL filtering, content scanning. Explicit proxies require app configuration to use them; transparent proxies are invisible to the client. A forward proxy is a centralized internal proxy protecting/controlling outbound internet access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d8e2edc0-e87c-42fc-b466-dcec72e0a465",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "URL scanning: allow/block by URL or URI, managed by category (auction, hacking, malware, travel, recreation, etc.), usually built into an NGFW. Limited on its own since URLs aren't the only way to browse."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "052acd30-e9f4-45f3-8c03-105f07429bdc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Agent-based filtering: client software installed on the device itself, filtering decisions happen locally so it works from anywhere, centrally managed, always-on. Updates get pushed to all agents from the cloud, status visible at the console."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aff8433c-c474-44ba-aa4a-5d885fc1493d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Block rules: matched against a specific URL (allow/deny by pattern) or a category of site content (50+ categories: adult, educational, gambling, government, home/garden, legal, malware, news, etc.), each category gets its own disposition (allow, allow+alert, block)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ed4fc599-8c48-4f1c-86cf-9573eaba92d0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reputation-based filtering: URLs classified by perceived risk (trustworthy, low, medium, suspicious, high), automated scanning assigns most reputations, admins can manually override. Dispositions map to the URL filter (e.g. high risk = block, trustworthy = allow)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "01391760-c16b-43ae-aed9-57b3b49d1d15",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "DNS filtering: DNS lookup happens before any connection, so filtering at that layer stops resolution for harmful sites (no IP returned, no connection possible). Threat intelligence lists (commercial and public) keep DNS filters current, applies to any DNS lookup, not just web browsing specifically."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5dbacd76-9da7-4dd9-8975-26bf6152899e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Operating System Security"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "c05d7d6a-a6c0-4c03-b064-e1d535d5563e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Active Directory: Windows-centric database of everything on the network (computers, user accounts, file shares, printers, groups). Manages authentication (users log in with AD credentials) and centralized access control (who can reach what resource). Commonly used by the help desk for password resets and account changes."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c8b8af7d-e1eb-4f3d-8391-018de33a66e4",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Group Policy: manages computers or users via local or domain policies, edited through the Group Policy Management Editor. Provides central control over login scripts, network config (QoS), and security parameters, hundreds of configuration options available."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "1e4059f2-aeda-4133-8d07-afeaa2eda9b0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "SELinux (Security-Enhanced Linux): adds Mandatory Access Control on top of Linux's traditional Discretionary Access Control, ships as security patches for the kernel. Limits application access on the least-privilege principle so a breach in one app has a limited blast radius. Open source, already an option in most Linux distributions."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7b2f83e5-2e72-4b08-8b78-e8cc9c582507",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Secure Protocols"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b519c42e-1cf7-4e5d-87d6-ecad5ade07f5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network traffic is data that needs protection, but plenty of legacy protocols send everything in the clear: Telnet, FTP, SMTP, IMAP. A packet capture is the way to confirm what's actually being sent."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f553850b-2b3d-4455-acce-fea4582865bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Protocol selection: prefer a protocol with encryption built in, if no secure version exists that can be a deal-breaker for a design."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "224c11d7-b2d3-426a-9ee7-e05310363917",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Port selection: secure and insecure versions of an app protocol can run on different ports simultaneously, common in the wild."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Application"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Insecure Protocol"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Secure Protocol"
+              }
+            ]
+          ],
+          "id": "f45405e0-980a-4c54-afdc-9d3c61b00cb2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Remote console"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Telnet"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "SSH"
+              }
+            ]
+          ],
+          "id": "d2f892ef-77a1-4d33-ab6a-3cf89f704242",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Web browsing"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "HTTP (port 80)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "HTTPS (port 443)"
+              }
+            ]
+          ],
+          "id": "5eef6a59-7337-42ac-b0ce-56b52374241a",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Email client access"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "IMAP"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "IMAPS"
+              }
+            ]
+          ],
+          "id": "c35f09d7-eb99-4cdc-81f6-32611a2b73b4",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "File transfer"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "FTP"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "SFTP"
+              }
+            ]
+          ],
+          "id": "d3e602a2-1623-4d8c-9618-e481a2697b65",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "2b9122ba-9c03-4e37-a159-20d363c045f0",
+      "type": "table"
+    },
+    {
+      "id": "025804a6-0b3e-4dcf-abd2-b070c121e7c8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Port number alone doesn't guarantee security, confirm the security features are actually turned on."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fb20c64e-fefd-4096-aba6-c9f7efe6c305",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Transport method: rather than trust the application, encrypt the whole network transport. 802.11 wireless with WPA3 encrypts all user data at the link layer; an open access point has no transport-level encryption at all. A VPN builds an encrypted tunnel so all traffic through it is protected regardless of the app protocol (often needs third-party software/service)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ab13b698-ba2e-410d-bba9-8a29619d5b0d",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Email Security"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "6c4cab87-fc29-425e-99f7-c414389063d8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Email transfer protocols carry relatively few built-in security checks, spoofing a sender address is trivial (check the spam folder, it happens constantly). A reputable sender publishes email validation info publicly on their DNS."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d8e05a93-6d4b-4f7d-9e59-b9488fae916f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Mail gateway: the inbound gatekeeper, evaluates the source of every inbound message and blocks bad ones before they hit the user's inbox, deployed on-site or cloud-based."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0fdd4911-0f0b-42dc-b04a-abbfca766467",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SPF"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Sender Policy Framework): domain owner publishes the list of servers authorized to send mail for that domain in a DNS TXT record, receiving servers check incoming mail against it."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e7a00eb2-2070-4542-951b-f48e6b84e35e",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DKIM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (DomainKeys Identified Mail): mail server digitally signs all outgoing mail, public key published in a DKIM DNS TXT record, receiving server validates the signature (usually invisible to the end user)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b97a72d3-8304-46eb-94fa-667fb4567ebe",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "DMARC"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Domain-based Message Authentication, Reporting, and Conformance): extension layered on top of SPF and DKIM. Domain owner decides in a DNS TXT record what receiving servers should do with mail that fails validation (accept, send to spam, reject), and gets compliance reports back showing how mail from the domain is being received/handled."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0680d341-39ee-465b-8250-9d24be0f00e5",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Monitoring Data"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "161ad2d4-3d0d-4417-ab28-8fcff40d7f9b",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "FIM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (File Integrity Monitoring): watches OS and app files that should never change (or rarely should), flags any modification. Windows uses SFC (System File Checker), Linux commonly uses Tripwire; many host-based IPS tools include this."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2c94fafd-c41c-4f92-b3fa-2455f904af6e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "DLP locations/states:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Location"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data state"
+              }
+            ]
+          ],
+          "id": "64819282-6782-407b-8d08-68fbdecaeffe",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Workstation (endpoint DLP)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data in use"
+              }
+            ]
+          ],
+          "id": "bd103565-8b15-4784-8700-2bef3d5177c2",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Network"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data in motion"
+              }
+            ]
+          ],
+          "id": "2486a28a-82cc-4f7b-a207-f9e3965cc5fa",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Server"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Data at rest"
+              }
+            ]
+          ],
+          "id": "788d22e1-5925-4a05-b335-a938be49b524",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "85ae8e22-368a-437d-b74e-2b73180f5807",
+      "type": "table"
+    },
+    {
+      "id": "50d962b0-2ce2-40d0-bd88-4ee81fb9172a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "USB blocking: DLP agent on the workstation allows/denies removable media use. Notable case: Nov 2008, US DoD banned removable flash media org-wide after the \"agent.btz\" worm spread via USB, ban lifted Feb 2010 and replaced with strict usage guidelines instead of an outright block."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "7850899e-5c45-407c-b9b9-183d3fb05897",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Cloud-based DLP: sits between users and the internet, watches every byte of network traffic with no local hardware/software needed, blocks org-specific custom data strings, manages/limits file transfers to cloud storage, and blocks malware/viruses traversing the network."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "965ac69c-0808-456e-bf5a-d8e1a0bd8e0d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Email stays the top risk vector for both inbound threats and outbound data loss, check every email in both directions (internal system or cloud-based). Inbound rules block keywords/impersonation attempts and quarantine suspect mail; outbound rules catch things like fake wire transfer requests, W-2 data leaving, or other employee-info leaks. A 2016 case: a Boeing employee emailed a spreadsheet template to a spouse that had hidden columns containing SSNs and DOBs for 36,000 employees, Boeing's own DLP product wasn't applied to that traffic since it was reserved for classified work."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "72ce3939-a2ca-4775-b5bc-8584bede1595",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Endpoint Security"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "aa7096ec-69e9-4198-bf9a-e4232449c685",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The endpoint is where the user's access, apps, and data live, needs to stop both inbound and outbound attacks across mobile and desktop. Defense in depth applies here same as anywhere: no single control is enough."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5ec6287f-1a60-4055-b050-e96919d450ce",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Edge control (internet link, firewall rules that rarely change) vs. access control (works from anywhere, rules by user/group/location/app, easily revoked/changed on the fly)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "17b02692-8d0f-455a-b8b0-fde77cce67bc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Posture assessment: don't trust any device blindly, especially BYOD. Before granting network access, check: is it a trusted/managed device, running AV (which one, updated?), has required corporate apps, is the disk encrypted. Device type (Windows/Mac/Linux/iOS/Android) doesn't change the requirement."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "abf411ac-6239-4f19-bebd-949b252132db",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Health check delivery methods:"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Method"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Behavior"
+              }
+            ]
+          ],
+          "id": "6f95a1a0-e0a7-450e-ba28-69189e3b0d6d",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Persistent agent"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Permanently installed, needs periodic updates"
+              }
+            ]
+          ],
+          "id": "d26f6b04-dfa7-4b53-ab02-1ecda6376a1c",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Dissolvable agent"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "No install, runs only during the assessment, terminates after"
+              }
+            ]
+          ],
+          "id": "f960825a-9bfc-49bb-85b5-90d858e806f0",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Agentless NAC"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Integrated with Active Directory, checks run at login/logoff, can't be scheduled independently"
+              }
+            ]
+          ],
+          "id": "48cfd398-1b69-4745-bbef-cdc3680d8d8b",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "21c486e9-4fcc-4e85-88be-3dde5300689c",
+      "type": "table"
+    },
+    {
+      "id": "eb03df6e-f09e-48ce-b693-f1a261ebc3ca",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Failing the assessment: device gets quarantined (just enough network access to fix the problem), administrators notified, retry once resolved (may need further fixes)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "08462ae5-d21a-4181-8dd5-d20bff9b28e1",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "EDR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Endpoint Detection and Response): scales beyond signature-based AV. Detect (behavioral analysis, machine learning, process monitoring via a lightweight endpoint agent), investigate (root cause analysis), respond (isolate the system, quarantine the threat, rollback to a known-good config, API-driven with no technician required)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6efa3415-22d3-4d43-8712-a7cbc6188ff4",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "XDR"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Extended Detection and Response): evolution of EDR aimed at reducing missed detections/false positives/long investigation times since real attacks span more than just the endpoint. Adds network-based detection, correlates endpoint + network + cloud data to improve detection rates and simplify investigations."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "54a10d64-30da-4e19-95ff-beee6b62af57",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "User behavior analytics: usually bundled into XDR, extends anomaly detection to users/hosts/network traffic/data repositories. Builds a normal-activity baseline over time (rules, pattern matching, statistical analysis), goal is catching unusual activity early."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0b154805-2464-4e35-a030-139d54c4b537",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity and Access Management"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "5460567a-80f9-45fc-aca3-eed448c1bc20",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Applications and data live everywhere (desktop, browser, mobile, cloud, private datacenter), and many different populations need access: employees, vendors, contractors, customers. "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "IAM"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "'s job: right permissions, right people, right time, preventing unauthorized access."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "dcd6beb4-1780-493b-90e7-24e63a831c9b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity lifecycle management: every entity (human or non-human) gets a digital identity; access control limits each entity to what it needs; authentication/authorization prove and enforce claimed identity; identity governance tracks resource access over time (often a regulatory requirement)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d2690eb6-9524-4113-814e-70fa871f7c04",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Provisioning / de-provisioning: account creation and removal processes, triggered by hiring, transfers, promotions, and separation events. Provisioned accounts carry name, attributes, group permissions; new accounts should start limited, nobody gets administrator by default."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f21143b3-542b-4d95-8b85-d5992ba7f007",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Identity proofing: confirming who someone actually is before granting an identity. Resolution (who the system thinks the person is), validation (gathering proof: password, security questions), verification/attestation (passport check, in-person meeting, or automated verification)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "95541bf6-d54b-4f18-936a-f4a651891021",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SSO"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Single Sign-On): authenticate once, get access to every resource that trusts the SSO session without re-entering credentials, usually time-boxed (e.g. 24 hours before re-auth is required). Needs the underlying auth infrastructure to actually support it, not always available."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fc31e542-d539-44dd-9ecd-3402af7a20ee",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "LDAP"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Lightweight Directory Access Protocol): protocol for reading/writing directory data over IP, structured like a phone directory. Based on the X.500 spec (International Telecommunications Union) but lightweight compared to X.500's DAP (which ran on the full OSI stack). Used to query/update directories like Active Directory, Apple OpenDirectory, Novell eDirectory. X.500's Directory Information Tree is hierarchical: container objects (country, org, org unit) hold leaf objects (users, computers, printers, files)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "46a959fe-aecc-4b93-b7b7-864babb53731",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "SAML"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " (Security Assertion Markup Language): open standard for authentication and authorization through a third party, one standard covering identity + access decisions. Wasn't originally built for mobile apps, which has limited its mobile adoption."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "95baa60b-e9db-4731-9821-b8c3556f103f",
+      "richText": [
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "OAuth"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ": an authorization framework (not authentication), decides what resources a user can access once identity is established. Built by Twitter/Google and widely adopted (Twitter, Google, Facebook, LinkedIn). OpenID Connect is the companion piece that actually handles SSO-style authentication; OAuth itself just governs authorization between apps."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "df7118ed-be20-4efc-81c6-2df40712f088",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Federation: extends access beyond employees to partners, suppliers, customers, provides SSO across organizational boundaries (\"login with Facebook\" is federation in consumer form). Requires a trust relationship (and an agreed degree of trust) between the two orgs."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "76af5c3b-6a1e-4653-a88e-b86b5b2f494b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Interoperability: many ways an app can talk to an auth server, driven by what's already in place (a VPN concentrator talking LDAP, a new app needing OAuth API access). Fitting a new app into existing IAM infrastructure is often a bigger design question than the auth method itself."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2bfb7c03-b7cc-4ab8-acaf-f44fcc1500e2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Access Controls"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "3e179d29-a8a5-4a08-acfb-2f721afb4ecb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Authorization: enforcing only the rights a policy grants, based on the access control model chosen and business/mission requirements."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f162dba2-6bde-4658-9824-ef4b4fc814a8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Least privilege: rights/permissions set to the bare minimum needed for the job, applications should run with minimal privileges too, users shouldn't run with admin rights day to day, limits how much damage malicious activity can do."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Model"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "How access is decided"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Notes"
+              }
+            ]
+          ],
+          "id": "8ea96f9c-d286-4672-81e2-4daa83e197c7",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "MAC (Mandatory Access Control)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "OS enforces access based on security labels (confidential, secret, top secret) on every object"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Admin sets the level, users can't change it"
+              }
+            ]
+          ],
+          "id": "64b5200b-b417-4229-944f-be4c3897f5a4",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "DAC (Discretionary Access Control)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Object owner decides who gets access"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Default in most OSes, very flexible, but weak security since the owner can grant access at will"
+              }
+            ]
+          ],
+          "id": "4796e472-5bc9-4707-a0b9-12af12d22f35",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "RBAC (Role-Based Access Control)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Access follows organizational role (manager, team lead, project manager)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Windows Groups implement this, rights gained implicitly through role membership"
+              }
+            ]
+          ],
+          "id": "0ecd7626-b67a-4a0d-bcaa-313e2e6ae080",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Rule-based access control"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "System-enforced rules tied to the object, not the requester's identity"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "e.g. lab access only 9AM-5PM, only Chrome browsers may submit a form; admins configure, users can't override"
+              }
+            ]
+          ],
+          "id": "c4067f26-0fdd-431b-b618-4f9b2d8f262e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "ABAC (Attribute-Based Access Control)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Evaluates many parameters at once (resource info, IP, time of day, action requested, relationship to the data)"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "\"Next-generation\" model, context-aware, handles complex user-to-resource relationships"
+              }
+            ]
+          ],
+          "id": "7ab3e467-c7bb-4a94-9fd5-e9d60bb94cb7",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "af60c713-3838-4ea4-9e0e-a6c12be3b495",
+      "type": "table"
+    },
+    {
+      "id": "66087cf5-2294-4055-b2ef-8c0c5f70fbe3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Time-of-day restrictions: nearly all security devices support this, restricts access by time/day but is rarely the only control in play. Harder to apply cleanly in 24-hour environments. Example rules: training room network dead midnight-6AM, conference room access cut off after 8PM, R&D database only reachable 8AM-6PM."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c7bbbade-a7b2-4c8e-a8eb-3cac2bce18e7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Multifactor Authentication"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "711c5011-f0d2-41bd-8058-93a9d42a431a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Proving identity by combining multiple factor categories, not just stacking two things from the same category."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Factor"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Examples"
+              }
+            ]
+          ],
+          "id": "1ed08b5b-5541-49b3-8f75-497326840702",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Something you know"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Password/passphrase, PIN, pattern"
+              }
+            ]
+          ],
+          "id": "e0f7fbfe-8864-4607-9d16-358256190994",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Something you have"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Smart card (may need a PIN), USB security key (cert on the device), hardware/software token generating pseudo-random codes, SMS code to phone"
+              }
+            ]
+          ],
+          "id": "0a74172a-22b7-4ec3-965d-4d6a551636e4",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Something you are"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Biometric: fingerprint, iris scan, voice print (usually stores a mathematical representation, not the raw print, hard to change if compromised, not foolproof)"
+              }
+            ]
+          ],
+          "id": "63121942-fe51-4b09-9950-d90c4ddd5d3e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Somewhere you are"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Location-based factor: IP address (imperfect, weaker on IPv6), mobile geolocation via GPS/known network (not a perfect identifier either)"
+              }
+            ]
+          ],
+          "id": "41ce66aa-0076-4ed9-bcba-b1de871770cc",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "43636a7a-9cbf-4f70-a264-d920c8a2648f",
+      "type": "table"
+    },
+    {
+      "id": "e8abb11b-5430-4202-bf3a-4eacd81bb20a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A PIN isn't typically stored anywhere on the card/token itself, it has to be something the user separately knows."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bb682a53-9f15-4187-8925-f70e3dff6fd1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password Security"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "a25053cf-4ad3-4729-9a67-81a104d03b31",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Complexity/length: resist guessing and brute-force by mixing case, numbers, special characters, avoiding single dictionary words. Entropy matters more than a fixed rule; 8+ characters is a common floor and rises as cracking speed improves. A passphrase can substitute for pure complexity."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "e07f1658-9ae8-468b-b83f-b0fbe31cdd5f",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Age and expiration: password age = time since last change; expiration forces a change after a set window (30/60/90 days), critical systems may rotate weekly or every 15 days. Systems typically track password history to block immediate reuse."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8e61933e-95c1-4294-b1ed-73f0b0755bd3",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password managers: store every credential in one encrypted vault so users aren't reusing weak passwords out of necessity, can include MFA tokens too. Built into many OSes/browsers already; enterprise password managers add centralized management and recovery."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f3948c0a-a451-4570-a8cb-ce1ca9b58750",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Passwordless authentication: most breaches trace back to poor password hygiene (weak passwords, bad implementation), so removing the password removes that failure class. Facial recognition and hardware security keys are common passwordless factors, though passwordless is often paired with another factor rather than standing entirely alone."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "5f307d5f-75d8-4b67-8031-a4597180924e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Just-in-time (JIT) permissions: standing admin/root rights are a prime attack target. JIT grants elevated access only for a limited window instead of permanently, requested through a central clearinghouse that grants/denies against predefined policy; a breached account with no standing elevated rights has a much narrower blast radius."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "265f8d2b-5f4c-4654-9e6d-0c6b64baea1b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Password vaulting: primary credentials for privileged accounts are stored in a vault that controls who can check them out. Access is temporary: JIT creates an ephemeral account, the admin receives one-time credentials, the primary password is never actually revealed, and access is deleted after the session ends."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2a0b43fe-5b73-41fc-832d-6c0fb464dc19",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scripting and Automation"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d6cb92ec-a02a-4f81-a3fc-5c7671c4c0f5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automation runs at machine speed with no typing, no delay, no human error, and it doesn't need to be told twice, it works while nobody's watching."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bd3f02a6-7fef-49b3-8bbd-205e2ddb3bc1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Common cases: user/resource provisioning (onboarding/offboarding, resource assignment), guard rails (automated validations that constantly check implementation and cut errors), security group membership changes with constant audit trails, automatic ticket creation from identified issues or email submissions, escalation (correct issues before a human gets pulled in, page the on-call tech if unresolved), enabling/disabling services and access on a schedule instead of \"set and forget,\" continuous integration/testing, and API-driven integrations with third-party devices/services (cloud, firewalls, other OSes)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "fd4bee9c-8f76-4bee-ae5c-8f1c5be1820c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Benefits: no manual typing, enforces baselines automatically (patches installed the moment they're identified), standardizes infrastructure config (a script builds the same secure router/firewall config every time), secures cloud scaling (security scales along with resource scaling instead of lagging behind), frees staff from repetitive work (retention benefit), reaction time drops to machine speed, and it multiplies the workforce (runs 24/7 so people can do higher-value work)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "21786135-e959-454c-8491-b8c42233b86c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Considerations/risks: complexity (many moving parts that all have to keep working together), cost (building and maintaining automation both cost money), single point of failure (what happens when the script itself breaks, could be a real deal-breaker), technical debt (patching around a problem now can get more expensive to properly fix later), and ongoing supportability (a script that works today may not work tomorrow, needs a maintenance plan)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a470024d-dd30-4ed0-8d00-c69906231ecb",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Alerting"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "d5f2ed51-ee79-4949-b10f-e09499475510",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "An alert just flags activity that might need a human to look at it, sourced from SIEM, EDR, IDS/IPS, firewall, cloud tooling, or email security."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "24d26ab9-1a17-4fe0-b3c3-96d7ce3c4012",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "A well-formed alert carries: name, severity, user, host, IP, timestamp, which log it came from, why it fired, and suggested next steps for triage."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bc0a9fd8-9785-49b4-800e-7172a5cc540b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recurring alert scenarios: repeated failed logons, a successful login right after a string of failures, impossible-travel logins, malware hits, suspicious PowerShell activity, a new admin account appearing, public exposure of cloud storage, unusually large outbound transfers."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "cc09b524-25dd-4550-8e63-b22192e5aa37",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Tuning"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "2bda5db1-2fa5-4857-9577-cf1e8952959c",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Adjusting alert logic so it fires on the right things and stays quiet otherwise, via thresholds, allow lists, suppression windows, factoring in asset criticality/user context, or correlating with related alerts. Point is cutting false positives before they burn out an analyst."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "ec3497a7-969b-4aa2-966f-9ce6b890ed64",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Triage"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "d1f712de-faaf-4444-88e9-9a6f83810fee",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "First questions on any alert: what actually triggered it, is this expected behavior for that user/system, who and what is involved, what happened immediately before and after, does this need containment right now."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "b5ef6c2e-eac3-4bb7-b639-da4e5ab0793e",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Incident Response Process"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "48d37888-2ca5-46c1-9e70-cc262703fd5d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Structured process exists so people aren't improvising under pressure."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "children": [
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Phase"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "What happens"
+              }
+            ]
+          ],
+          "id": "69d2ea7d-0448-4cd8-9227-bfc228df5138",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Preparation"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Playbooks written ahead of time, contact lists current, logging in place, tools ready, access permissions sorted, backups tested, staff trained, tabletops run"
+              }
+            ]
+          ],
+          "id": "1ea623fb-296e-4729-8a1b-8519bd4ccb3e",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Detection & Analysis"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Confirm the alert is a real incident, figure out who/what/where is affected, start building a timeline"
+              }
+            ]
+          ],
+          "id": "e986d9c0-2d7a-4730-8dfc-1e165d6daf89",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Containment"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Stop it from spreading: disable the account, isolate the endpoint, block the IP/domain, pull the box off the network, kill the leaked API key"
+              }
+            ]
+          ],
+          "id": "cc1de190-1e62-46bc-879d-74825ea5c1ca",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Eradication"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Remove the actual cause: strip out malware, patch the exploited hole, delete persistence mechanisms, rebuild the box, remove rogue accounts"
+              }
+            ]
+          ],
+          "id": "13a04d7a-cb2f-4ad0-8685-cccc51dd6b16",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Recovery"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Get back to normal: restore from backup, reconnect the cleaned system, force credential resets, watch for a repeat, confirm the business service actually works again"
+              }
+            ]
+          ],
+          "id": "1cce4659-4310-48f1-8a50-049701c08da5",
+          "type": "table_row"
+        },
+        {
+          "cells": [
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Lessons Learned"
+              }
+            ],
+            [
+              {
+                "bold": false,
+                "code": false,
+                "href": null,
+                "italic": false,
+                "plainText": "Post-incident review: root cause, timeline, impact, what was done, what should change next time"
+              }
+            ]
+          ],
+          "id": "e272999b-b0dc-4df8-8bdb-f7cc731245ba",
+          "type": "table_row"
+        }
+      ],
+      "hasColumnHeader": true,
+      "id": "5d6cf4de-999f-4714-a08e-3a457af7556e",
+      "type": "table"
+    },
+    {
+      "id": "41f6c61a-1bac-425a-85a4-612486829d3a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Detection/analysis questions worth asking every time: what happened, when, which assets, is the attacker still in there, what evidence backs the conclusion."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "22eafb51-bcea-4c95-85fa-154090d4c44a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Evidence and documentation matter at every phase, not just at the end."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f65b636a-f711-4ce5-badf-331db8e5b125",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "This process traces to NIST SP800-61 Rev. 2 (\"Computer Security Incident Handling Guide\")."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "8abedb34-d880-49ac-a73f-ffb06869ef19",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The challenge of detection: sources vary in detail/perception, incoming volume is constant, incidents are almost always complex enough to need real analysis rather than a quick glance. Signals worth watching: web server logs showing scanner activity in use, exploit announcements (a monthly patch release, an Adobe update implying a known flaw), and direct threats from a hacking group."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "71d84b8d-360b-484b-a2ef-fb5b287a1ad0",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Preparing for an incident ahead of time: communication methods and contact lists ready, incident handling hardware/software staged (laptops, removable media, forensic tools, cameras), analysis resources on hand (documentation, network diagrams, baselines, known-good file hashes), mitigation software ready (clean OS/app images), and clear policy so everyone already knows their role."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "c4541ae6-de53-46a2-922e-b799ba67d21a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Isolation and containment: letting an incident run its course is generally the wrong call, it spreads fast and containment failure is on the responder. Sandboxes give an isolated OS to detonate and analyze malware safely, wiped after use. Isolation can backfire though, some malware monitors its own connectivity and triggers destructive action (deletion/encryption) the moment it senses it's cut off."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "2793bb20-c454-4aa7-b36b-ceca016768b9",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Recovery: remove the bad, keep the good. Eradicate (remove malware, disable breached accounts, fix the underlying vulnerabilities), recover (restore from backup, rebuild from scratch, replace compromised files, tighten the perimeter on the way back up)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ba25513e-9afc-4870-9957-f095eb365fc5",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Lessons learned: no system is perfect, hold a post-incident meeting with everyone affected, don't wait too long, memories fade and by-then-irrelevant details get lost. Answer directly: what happened (timestamped), did the incident plan actually work, what would be done differently next time, which indicators/precursors deserve closer watching going forward."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a0961b0e-2038-4f9e-90bf-4c92ee16acd8",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Training: little of this can be learned on the job mid-incident, train ahead of time on initial response, investigation planning, and incident reporting. Can get expensive fast with larger response teams."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0ebab00f-8db3-4eac-b6cc-e174f5d20d32",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Incident Planning"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "f8fc8387-2913-4916-9cb9-fdfcafc8d7fc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Exercising: test the team before a real event happens, on a defined schedule (annual, semi-annual), with well-defined rules of engagement that keep hands off production systems, a specific limited-time scenario, then evaluate and document the response afterward."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "bae4baf2-5d04-4122-8005-468b6e4562f2",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Tabletop exercises: a full-scale disaster drill is costly and time consuming, a tabletop gets key players in a room to talk through a simulated disaster instead, most of the logistics can be worked out analytically without physically running the drill."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "16217064-25e1-44a2-9684-9a1ad591bce1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Simulation: test against a simulated event (phishing attack, password reset requests, staged data breach). A phishing simulation sends a crafted phishing email to the real user community to see who clicks, whether it got past the filter in the first place, and whether flagged users need more training."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "764e901a-ca2d-4980-8c38-10e224a395de",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Root cause analysis: chase the actual \"why\" behind an incident, not just its symptom, build a fact-backed set of conclusions. Avoid tunnel vision, more than one root cause is common. Mistakes will happen, the response to the mistake is what actually differentiates a mature program."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "f5e4ba6c-b1e0-4f72-83db-df9ea6d1114d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Threat hunting: a constant cat-and-mouse game, proactively finding the attacker before they find the org. Attacker strategies keep shifting as defenses improve (stronger firewalls push more effort into phishing, for instance). Standard intel is reactive by nature, hunting is the attempt to get ahead of that lag using technology to speed up reaction time."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "03f36982-ab2e-4f65-9c7b-37320808bfc1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Digital Forensics / Investigating an Incident"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "b5a320ac-df46-4eb1-a7dd-a9172b36fd27",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Investigation = evidence-driven reconstruction of what happened, how, what got touched, and what needs to happen next. Assumptions don't substitute for evidence."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "65dc5e49-ee44-4423-89f1-f42a76d3e629",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Evidence pool overlaps heavily with the log sources list above, plus email headers, file timestamps, EDR alerts, and process execution history."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "230e66eb-97f6-4c6f-ab85-5341bb3889ec",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Standard forensic process: acquisition, analysis, reporting, all of it detail-oriented with extensive notes. RFC 3227 (\"Guidelines for Evidence Collection and Archiving\") is a widely referenced best-practices baseline."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0d0d15eb-532b-40e4-9305-7963f713eaa8",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Timeline"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "0cc362c4-4e61-4430-96ea-93240aba7939",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Chronological record of events around the suspicious activity. Useful fields per entry: timestamp, source, user, host, IP, the event itself, analyst notes."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "9482e1d5-2aa4-4dd5-b3bb-9fea21885a65",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Sample sequence:"
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "a687c654-1a13-42bc-9a7a-b9e7c80ba6bb",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "10:03 - repeated failed logins from an external IP"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "b0726228-bc88-4ae6-9916-534d3c8d5007",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "10:08 - login succeeds"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "75c669e6-96f7-40a0-97f1-94dd43636bce",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "10:12 - a new mailbox forwarding rule gets created"
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0391f7e9-5bdd-43da-b683-c26376007d78",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Scope"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "d85e52b4-267c-4e27-b99b-80b415ce18cc",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Boundaries of what got hit. Questions to work through: single user or several, single host or several, was sensitive data touched, was there a privilege escalation attempt, is the attacker still active, are there related alerts elsewhere."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "81712c00-62a6-4dcf-b132-487ac628bfe2",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Root Cause"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "bab4f2e7-ea63-47b4-8fc6-e8321604941b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The actual reason the incident happened, not just the symptom. Common ones: stolen credentials, a missing patch, misconfigured cloud storage left open, a phishing email that landed, a weak password, an exposed remote access service."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "3ecbce03-fcc0-4dd8-89e8-3ecc2d9def31",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Legal hold and chain of custody"
+        }
+      ],
+      "type": "heading_3"
+    },
+    {
+      "id": "c00c7735-6c7b-4103-bd9c-9622dd575210",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Legal hold: a legal technique to preserve relevant information ahead of impending litigation, initiated by legal counsel. Hold notification instructs custodians to preserve data; electronically stored information (ESI) usually gets its own repository with its own retention/workflow requirements. Once notified, the obligation to preserve is ongoing, it doesn't lapse after the initial collection."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "95bfb02a-c96e-48f4-af49-3ee6d8231b72",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Chain of custody: controls evidence to maintain its integrity. Everyone who touches the evidence gets logged (hashes and digital signatures help prove no tampering occurred), and everything gets labeled/cataloged, digitally tagged for ongoing documentation, then sealed and stored."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "a3ad0cc2-75d6-4e09-a5b8-eb937b0bee67",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Acquisition: obtaining the actual data, which can span disk, RAM, firmware, OS files, and sources beyond a single system (servers, network data, firewall logs). For virtual systems, a snapshot captures the entire VM state and its files at once. Also look for left-behind artifacts: log info, recycle bins, browser bookmarks, saved logins."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9285ff93-7f57-4521-8005-6ae9feec66e1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Preservation: isolate and protect evidence so it can be analyzed later without alteration, work from copies rather than originals, and manage the collection process for mobile devices specifically. Live collection (grabbing data before power-off) has become an important skill since data may be encrypted or unrecoverable once a device is powered down. Following best practices here is what keeps the data admissible in court later."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "23a17b15-5ab3-43e0-89d8-11c9179966ad",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Reporting: document findings for internal use or legal proceedings, cover summary info (overview of the event), a detailed step-by-step explanation of the data acquisition process, the findings themselves, and a conclusion presenting professional results given the analysis."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "6d5ca65e-d332-4228-91f6-f96765aad882",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "E-discovery (electronic discovery): the process of collecting, preparing, reviewing, interpreting, and producing electronic documents required by a legal process. Gathers what's needed without generally analyzing intent, works alongside digital forensics (e.g. e-discovery obtains a drive that turns out smaller than expected, forensics experts then determine data was deleted and attempt recovery)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "0bdf62df-36d6-41b1-8be7-d88ed9b7a4de",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log Data"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "fb294eea-b63e-4940-b1a8-d7d4968f7079",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Firewall logs: traffic flows through the firewall (source/destination IP, port numbers, disposition). NGFWs additionally log the application in use, URL filtering categories, and flagged anomalies/suspicious data."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9bf4dcfb-a89b-4bb7-8005-12d8f1213fa1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Application logs: content varies widely by app. Windows keeps these in Event Viewer's Application Log; Linux/macOS write to "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "/var/log"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ". Parse and filter out the noise before it hits the SIEM."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "aebea381-1d2e-4a6f-91e3-ceececff354b",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Endpoint logs: attackers frequently land on endpoints first (phones, laptops, tablets, desktops, servers), so there's a lot of relevant data here: logon events, policy changes, system events, process execution, account management, directory service activity. All of it rolls up to the SIEM, correlated with IPS events and endpoint status."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "d90cfb14-d6b7-42d3-af91-c880dbb46284",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "OS-specific security logs: monitoring apps, brute-force attempts, file changes, authentication details. Goal is catching problems before they happen (brute-force attacks, disabled services), may need filtering so the SIEM isn't flooded with everything."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "ec841ed5-63aa-4cbb-b885-a8261b16faff",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "IPS/IDS logs: usually built into an NGFW, log info tied to predefined vulnerability signatures (known OS vulns, generic security events). Common fields: timestamp, attack type/class, source and destination IP, source and destination port."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "9f424a80-b365-49ad-9bf3-58ce87b4cb0d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Network logs: switches, routers, access points, VPN concentrators, and other infra devices logging routing updates, authentication issues, and network security events."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "02e072fe-941e-44d4-abf3-f53192f10b7d",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Metadata: data describing other data. Email metadata includes header details, sending servers, destination address. Mobile metadata includes phone type and GPS location. Web metadata includes OS, browser type, IP address. File metadata includes name, address, phone number, title fields embedded in the document itself."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "232640bc-a60a-4300-9621-cd9cef4b4f95",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Vulnerability scan logs: flag lack of security controls (no firewall, no AV, no anti-spyware), misconfigurations (open shares, guest access enabled), and real vulnerabilities (mostly newer ones, occasionally old unpatched ones still lingering)."
+        }
+      ],
+      "type": "bulleted_list_item"
+    },
+    {
+      "id": "3190d5e0-d096-45da-95af-dd8489e27068",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Automation & Orchestration Risks"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "18776201-390a-482a-9a5c-7752f7c31d3e",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Worth repeating separately from the benefits above: wrong logic in an automated playbook fires wrong actions just as fast as right ones, and automation running with more access than it needs turns a small mistake into a bigger one. Keep high-impact actions behind an approval step, and log/test/review automated actions the same as any manual change."
+        }
+      ],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Notes",
+  "date": "2026-08-19",
+  "id": "3c1042e6-0b87-81b3-b63d-f31b35a5ca89",
+  "properties": {
+    "Name": "SY701 Notes - 4. Security Operations",
+    "Source": "Prof. Messor",
+    "Status": true,
+    "Tags": [
+      "Sec+"
+    ],
+    "Type": "Notes",
+    "URL": null
+  },
+  "slug": "sy701-notes-4-security-operations",
+  "tags": [
+    "Sec+"
+  ],
+  "title": "SY701 Notes - 4. Security Operations"
+}

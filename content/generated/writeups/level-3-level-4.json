@@ -1,0 +1,224 @@
+{
+  "blocks": [
+    {
+      "id": "3a6716fd-535c-4d8e-9c17-6a426b0d8034",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Level Goal"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "6865c942-cd38-4c16-b5c7-60f35ec65ff1",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "The password for the next level is stored in a hidden file in the "
+        },
+        {
+          "bold": true,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "inhere"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " directory."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "c93d2948-8c1b-468f-8526-e0ce8c5c06f7",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Solution"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "9f7d0145-bbb6-48cc-8b0a-e132a02bfb6a",
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Log in using "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ssh -p 2220 bandit3@bandit.labs.overthewire.org"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " and the password obtained in the last level. We navigate into the "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "inhere"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " directory. Running "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ls"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " shows nothing, since hidden files (dotfiles) don't appear by default. We use "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "ls -la"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " to list all files including hidden ones, and find a file named "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "...Hiding-From-You"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": ", which gives us the password for the next level when we "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "cat"
+        },
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": " it."
+        }
+      ],
+      "type": "paragraph"
+    },
+    {
+      "id": "099c57f8-4382-4cfa-aacc-bb7b1c56c02c",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Screenshot"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "402042e6-0b87-80c9-981e-dde84285e779",
+      "type": "image",
+      "url": "/notion-media/693e1af2784d76f6.png"
+    },
+    {
+      "id": "402042e6-0b87-80fc-9444-e54f7fb14a6e",
+      "type": "image",
+      "url": "/notion-media/82ee9e4ffc6669f1.png"
+    },
+    {
+      "id": "dad74b96-6919-4ae1-89ba-aa512c31b9c1",
+      "isToggleable": false,
+      "richText": [
+        {
+          "bold": false,
+          "code": false,
+          "href": null,
+          "italic": false,
+          "plainText": "Flag - "
+        },
+        {
+          "bold": false,
+          "code": true,
+          "href": null,
+          "italic": false,
+          "plainText": "xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq"
+        }
+      ],
+      "type": "heading_2"
+    },
+    {
+      "id": "cab39ef1-3a97-4aa6-8cc0-68871846de67",
+      "richText": [],
+      "type": "paragraph"
+    }
+  ],
+  "category": "Bandit",
+  "date": "2026-08-11",
+  "id": "3b9042e6-0b87-819c-a08c-fe8c3175c7d3",
+  "properties": {
+    "Name": "Level 3 \u2192 Level 4",
+    "Source": "OverTheWire",
+    "Status": true,
+    "Tags": [
+      "Linux"
+    ],
+    "Type": "Bandit",
+    "URL": null
+  },
+  "slug": "level-3-level-4",
+  "tags": [
+    "Linux"
+  ],
+  "title": "Level 3 \u2192 Level 4"
+}
