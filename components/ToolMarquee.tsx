@@ -6,6 +6,7 @@ type ToolMarqueeProps = {
 export default function ToolMarquee({ items }: ToolMarqueeProps) {
   return (
     <div
+      role="group"
       className="marquee relative overflow-hidden border-y border-border py-4"
       aria-label={`Tools I use: ${items.join(", ")}`}
     >

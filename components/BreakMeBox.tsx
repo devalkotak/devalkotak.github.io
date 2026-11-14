@@ -69,7 +69,7 @@ export default function BreakMeBox() {
         placeholder="Try something friendly, or something with angle brackets"
         autoComplete="off"
         spellCheck={false}
-        className="mt-3 h-10 w-full border border-border bg-background px-3 text-sm text-foreground outline-none transition placeholder:text-faint focus:border-accent/60"
+        className="mt-3 h-10 w-full border border-border bg-background px-3 text-sm text-foreground outline-none transition placeholder:text-muted focus:border-accent focus-visible:ring-2 focus-visible:ring-accent/40"
       />
 
       <div className="mt-3">
@@ -107,7 +107,7 @@ export default function BreakMeBox() {
           </p>
         </div>
       )}
-      <p className="mt-4 text-xs leading-5 text-faint">
+      <p className="mt-4 text-xs leading-5 text-muted">
         *It is sanitized, and always was. The asterisk was the tell.
       </p>
     </div>

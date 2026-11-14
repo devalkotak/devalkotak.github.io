@@ -74,8 +74,16 @@ export default function RootLayout({
       <body
         className={`${instrumentSans.variable} ${jetBrainsMono.variable} antialiased`}
       >
+        <a
+          href="#main"
+          className="fixed left-4 top-4 z-[100] -translate-y-24 rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition focus:translate-y-0"
+        >
+          Skip to content
+        </a>
         <Nav />
-        <main className="min-h-screen pt-28 pb-12">{children}</main>
+        <main id="main" tabIndex={-1} className="min-h-screen pt-28 pb-12 outline-none">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

@@ -94,6 +94,12 @@ body {
  * are softer.
  */
 @layer base {
+  /* One visible focus ring everywhere, in the action colour. */
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
   :where(span, kbd).border {
     border-radius: 9999px;
   }
@@ -124,6 +130,17 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.45s var(--ease-smooth) both;
 }
 
 @keyframes marquee {

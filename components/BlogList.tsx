@@ -89,7 +89,7 @@ function Chip({
       }`}
     >
       {label}
-      <span className={active ? "text-accent/70" : "text-faint"}>{count}</span>
+      <span className={active ? "text-accent" : "text-muted"}>{count}</span>
     </button>
   );
 }
