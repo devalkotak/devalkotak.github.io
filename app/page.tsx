@@ -64,7 +64,7 @@ export default async function Home() {
             <div className="mt-8 flex flex-wrap gap-3">
               <a
                 href="#work"
-                className="inline-flex h-12 items-center rounded-full bg-accent px-7 text-base font-semibold text-background transition hover:brightness-110"
+                className="inline-flex h-12 items-center btn-glass rounded-full px-7 text-base font-semibold text-foreground"
               >
                 See the work
               </a>

@@ -21,7 +21,7 @@ export default function ResumePage() {
           <a
             href="/resume.pdf"
             download
-            className="inline-flex h-12 items-center gap-2.5 rounded-full bg-accent px-6 text-base font-semibold text-background transition hover:brightness-110"
+            className="inline-flex h-12 items-center gap-2.5 btn-glass rounded-full px-6 text-base font-semibold text-foreground"
           >
             Download
             <Download size={14} />
