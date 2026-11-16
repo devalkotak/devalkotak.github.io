@@ -139,7 +139,7 @@ function TrackCard({ group, index, onJump }: { group: TrackGroup; index: number;
   );
 
   const shell =
-    "glass group flex min-h-[15rem] w-[78%] shrink-0 snap-start flex-col p-5 text-left transition sm:w-[45%] md:w-auto";
+    "track-card group flex min-h-[15rem] w-[78%] shrink-0 snap-start flex-col p-5 text-left transition sm:w-[45%] md:w-auto";
 
   return count > 0 ? (
     <a
@@ -148,12 +148,13 @@ function TrackCard({ group, index, onJump }: { group: TrackGroup; index: number;
         event.preventDefault();
         onJump();
       }}
-      className={`${shell} hover:-translate-y-0.5 hover:border-accent/60`}
+      className={`${shell} hover:-translate-y-0.5 hover:border-accent/60 hover:bg-surfaceHover`}
     >
       {body}
     </a>
   ) : (
-    <div className={`${shell} opacity-70`}>{body}</div>
+    // Not faded: dimming the whole card made its text hard to read.
+    <div className={`${shell} border-dashed before:hidden`}>{body}</div>
   );
 }
 

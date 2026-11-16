@@ -237,31 +237,52 @@ a {
   }
 
   /*
-   * Primary button in the same tinted glass: blue light pooled at the top,
-   * a thin highlight on the upper edge and a soft glow underneath.
+   * Primary button: a solid surface pill with a blue-to-pink edge, the two
+   * site colours. No glow or haze, so the label stays crisp. On hover the
+   * fill picks up a little blue and the pill lifts.
    */
   .btn-glass {
-    border: 1px solid rgb(var(--rgb-accent) / 0.55);
+    border: 1px solid transparent;
     background:
-      radial-gradient(120% 160% at 50% -50%, rgb(var(--rgb-accent) / 0.55), transparent 70%),
-      rgb(var(--rgb-accent) / 0.14);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.16),
-      0 10px 30px -12px rgb(var(--rgb-accent) / 0.75);
+      linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+      linear-gradient(100deg, var(--color-accent), var(--color-signal)) border-box;
     transition:
-      border-color 0.25s var(--ease-smooth),
+      background 0.25s var(--ease-smooth),
       box-shadow 0.25s var(--ease-smooth),
-      background-color 0.25s var(--ease-smooth),
       transform 0.25s var(--ease-smooth);
   }
 
   .btn-glass:hover {
-    border-color: rgb(var(--rgb-accent));
-    background-color: rgb(var(--rgb-accent) / 0.26);
-    box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.22),
-      0 14px 36px -12px rgb(var(--rgb-accent) / 0.95);
+    background:
+      linear-gradient(rgb(var(--rgb-accent) / 0.14), rgb(var(--rgb-accent) / 0.14)) padding-box,
+      linear-gradient(var(--color-surface), var(--color-surface)) padding-box,
+      linear-gradient(100deg, var(--color-accent), var(--color-signal)) border-box;
+    box-shadow: 0 8px 24px -14px rgb(var(--rgb-accent) / 0.8);
     transform: translateY(-1px);
+  }
+
+  /*
+   * Blog track card: flat surface so the text sits on one even colour, with
+   * the accent kept to a thin line along the top edge.
+   */
+  .track-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: var(--color-surface);
+    transition:
+      border-color 0.25s var(--ease-smooth),
+      background-color 0.25s var(--ease-smooth),
+      transform 0.25s var(--ease-smooth);
+  }
+
+  .track-card::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent), rgb(var(--rgb-accent) / 0));
   }
 
   .content-shell {
