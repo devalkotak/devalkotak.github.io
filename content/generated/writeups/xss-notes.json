@@ -8,49 +8,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "Source: Rana Khalil \u2014 Cross-Site Scripting (XSS) | Complete Guide (Web Security Academy Series). No free YouTube upload exists for this video (checked extensively \u2014 not in her channel's Playlists tab, no search hit). Transcribed locally from the downloaded video ("
-        },
-        {
-          "bold": false,
-          "code": true,
-          "href": null,
-          "italic": false,
-          "plainText": "D:\\Sync\\RK-WSA\\Videos\\01. Cross-Site Scripting (XSS) - Complete Guide.mp4"
-        },
-        {
-          "bold": false,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": ") using "
-        },
-        {
-          "bold": false,
-          "code": true,
-          "href": null,
-          "italic": false,
-          "plainText": "faster-whisper"
-        },
-        {
-          "bold": false,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": " ("
-        },
-        {
-          "bold": false,
-          "code": true,
-          "href": null,
-          "italic": false,
-          "plainText": "small"
-        },
-        {
-          "bold": false,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": " model, CPU) since no online transcript source was available."
+          "plainText": "Based on Rana Khalil's Web Security Academy series: Cross-Site Scripting (XSS), Complete Guide."
         }
       ],
       "type": "paragraph"

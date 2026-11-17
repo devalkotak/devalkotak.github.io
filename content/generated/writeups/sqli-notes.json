@@ -3374,6 +3374,7 @@
     "Source": "Portswigger",
     "Status": true,
     "Tags": [
+      "SQLi",
       "WSA"
     ],
     "Type": "Notes",
@@ -3381,6 +3382,7 @@
   },
   "slug": "sqli-notes",
   "tags": [
+    "SQLi",
     "WSA"
   ],
   "title": "SQLi Notes"

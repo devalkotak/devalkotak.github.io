@@ -8,21 +8,7 @@
           "code": false,
           "href": null,
           "italic": false,
-          "plainText": "Source: Rana Khalil \u2014 Authentication Vulnerabilities | Complete Guide (Web Security Academy Series). Built from the video's actual narration (YouTube auto-captions via yt-dlp, "
-        },
-        {
-          "bold": false,
-          "code": true,
-          "href": null,
-          "italic": false,
-          "plainText": "android"
-        },
-        {
-          "bold": false,
-          "code": false,
-          "href": null,
-          "italic": false,
-          "plainText": " player client), not just the slide deck."
+          "plainText": "Based on Rana Khalil's Web Security Academy series: Authentication Vulnerabilities, Complete Guide."
         }
       ],
       "type": "paragraph"
@@ -1781,6 +1767,7 @@
     "Source": "WebSec Academy",
     "Status": true,
     "Tags": [
+      "Auth Vuln",
       "WSA"
     ],
     "Type": "Notes",
@@ -1788,6 +1775,7 @@
   },
   "slug": "authentication-vulnerabilties-notes",
   "tags": [
+    "Auth Vuln",
     "WSA"
   ],
   "title": "Authentication Vulnerabilties Notes"

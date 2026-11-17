@@ -1,6 +1,6 @@
 {
   "error": null,
-  "generatedAt": "2026-11-16T09:41:44Z",
+  "generatedAt": "2026-11-17T08:51:35Z",
   "writeups": [
     {
       "category": "Notes",
@@ -593,6 +593,7 @@
         "Source": "WebSec Academy",
         "Status": true,
         "Tags": [
+          "Auth Vuln",
           "WSA"
         ],
         "Type": "Notes",
@@ -600,6 +601,7 @@
       },
       "slug": "authentication-vulnerabilties-notes",
       "tags": [
+        "Auth Vuln",
         "WSA"
       ],
       "title": "Authentication Vulnerabilties Notes"
@@ -613,6 +615,7 @@
         "Source": "Portswigger",
         "Status": true,
         "Tags": [
+          "SQLi",
           "WSA"
         ],
         "Type": "Notes",
@@ -620,6 +623,7 @@
       },
       "slug": "sqli-notes",
       "tags": [
+        "SQLi",
         "WSA"
       ],
       "title": "SQLi Notes"
